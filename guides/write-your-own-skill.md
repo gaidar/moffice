@@ -2,13 +2,13 @@
 title: Write your own skill
 type: guide
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Turn a job you do repeatedly into a skill with a fixed procedure and output, including skills that prepare work for your CMS, CRM or email tool.
 ---
 
 ## Who it is for
 
-A marketer who keeps repeating the same job in chat, or who needs output shaped for their own tools. The Marketing Office has limited connectors to external tools, so this is how you fit the office to your CMS, CRM or email setup. Your skill drafts, and you, the marketer, decide. Say so in the skill.
+A marketer who keeps repeating the same job in chat, or who needs output shaped for their own tools. The Marketing Office has limited connectors to external tools, so this is how you fit the office to your CMS, CRM or email setup.
 
 ## What you need
 
@@ -28,10 +28,10 @@ A marketer who keeps repeating the same job in chat, or who needs output shaped 
    ```
 
 3. Check the draft with this test: could a model produce the output from this skill alone, plus a filled context pack? If not, rewrite the vague steps.
-4. Fill in the fields at the top. `owner` is the file name of one agent role from [the agent roster](../office/agent-roster.md). `reads` lists the context pack files the skill uses.
+4. Fill in the fields at the top. `owner` is the file name of one agent role from [the agent roles](../agents.md). `reads` lists the context pack files the skill uses. `you_bring` says what the marketer must have ready, and shows at the top of the skill page. `also_for` lists the words someone might search for when they need this skill, and feeds the filter in the skills library.
 5. Test it twice on real tasks. Change the procedure every time you have to correct the output for the same reason.
 6. Run [Review any output](../skills/marketing-ops/review-any-output.md) on the skill's first real output.
-7. Add the file to your tool the same way as the other skills. If you want to share it, see [Contributing](../CONTRIBUTING.md).
+7. Upload the file to your project next to `all-skills.md`, or paste it into the chat. `my-context-pack.md` stays as it is. If you want to share the skill, see [Contributing](../CONTRIBUTING.md).
 
 ### Skill template
 
@@ -42,12 +42,14 @@ type: skill
 function: <one of the 16 function folder names>
 owner: <agent role file name>
 reads: [<context pack file names>]
+you_bring: <what the marketer must have ready, in one short sentence>
+also_for: [<words someone might search for, such as pipeline or website>]
 version: 0.1.0
 updated: <YYYY-MM-DD>
 summary: <one sentence>
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -78,8 +80,10 @@ summary: <one sentence>
 
 ## How to run it
 
+(The prompt in a fenced block, because the Copy prompt button copies the first block under this heading.)
+
 Use the skill "<title>". Read the context pack.
-Task: <what they want>.
+Task: <the specific things the marketer must state, and any export or notes to attach>.
 ```
 
 ### Skills for your own tools
@@ -90,7 +94,7 @@ The office cannot publish, send or pull data by itself. A skill can still make t
 - **CRM:** a skill that takes a pasted export, checks the column names first, and refuses to proceed if a column is missing.
 - **Email:** a skill that outputs subject, preview text, body and segment rules in the order your email tool asks for them.
 
-Name the tool's fields in the Output format section. If your AI tool has its own connection to these systems, follow the vendor's documentation. The office does not cover that.
+Name the tool's fields in the Output format section. If your AI tool has its own connection to these systems, follow that tool's documentation. The office does not cover that.
 
 ## What success looks like
 

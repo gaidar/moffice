@@ -4,12 +4,14 @@ type: skill
 function: brand-and-design-briefs
 owner: brand-and-creative-director
 reads: [company, personas, messaging, proof-points, brand-voice]
+you_bring: At least five writing samples the company has published or would publish, each marked with its channel and date.
+also_for: [tone of voice, style guide, we all sound different, copy sounds generic, how should we sound, writing guidelines, ai sounds robotic]
 version: 0.1.0
 updated: 2026-11-01
 summary: Builds or updates brand-voice.md from writing samples the marketer pastes, with evidence for every rule.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -20,10 +22,10 @@ Use this when brand-voice.md is blank, or when the company's writing has changed
 - [[context-pack:brand-voice]]: the current file, if filled, to compare against the samples.
 - [[context-pack:company]]: public name.
 - [[context-pack:personas]]: who the writing is for, to set the reading level.
-- [[context-pack:messaging]]: words to use and words to avoid, so that the voice does not contradict them.
-- [[context-pack:proof-points]]: which quotes belong to customers, so that they are not counted as the company's voice.
+- [[context-pack:messaging]]: words to use and avoid.
+- [[context-pack:proof-points]]: which quotes belong to customers, not the company.
 
-The marketer supplies in the prompt: at least five writing samples the company has published or would publish, ideally from more than one channel, each marked with its channel and date. Add any lines the company would never publish, and any visual rules.
+The marketer supplies: at least five writing samples the company has published or would publish, ideally from more than one channel, each marked with its channel and date. Add any lines the company would never publish, and any visual rules.
 
 ## Procedure
 
@@ -149,5 +151,6 @@ None.
 
 ```
 Use the skill "Codify the brand voice". Read the context pack.
-Task: <what they want>.
+Task: <any lines the company would never publish, and any visual rules>.
+<paste five or more samples here, each with channel and date>
 ```

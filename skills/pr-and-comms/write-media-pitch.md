@@ -4,12 +4,14 @@ type: skill
 function: pr-and-comms
 owner: pr-and-communications-manager
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The type of journalist or outlet, what they have covered recently, and any news hook or date.
+also_for: [press coverage, pitch a journalist, get media attention, trade press, earned media, story idea, pr outreach, reporter email]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces one short pitch and angle for one type of journalist or outlet, using only public proof.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -135,5 +137,5 @@ Would a conversation about this be useful for your readers?
 
 ```
 Use the skill "Write a media pitch". Read the context pack.
-Task: <what they want>.
+Task: <the type of journalist or outlet, recent coverage, name if known, and any news hook or date>.
 ```

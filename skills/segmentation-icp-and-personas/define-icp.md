@@ -4,12 +4,16 @@ type: skill
 function: segmentation-icp-and-personas
 owner: insights-analyst
 reads: [icp-and-segments, product, company, goals-and-kpis]
+you_bring: A customer export with one row per customer, lost deals with reasons, and notes on why customers succeeded or left.
+also_for: [ideal customer, who to target, wrong leads, junk leads, bad fit customers, who to disqualify, target accounts, customers who churn]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Defines fit criteria and disqualifiers from customer data.
+judge: ["Do your best customers really look like this or is it who you wish you sold to?", "Does this describe companies that stay and grow or only companies that were easy to close?", "If you had to pick ten accounts today would this make the choice easy?", "Are there enough companies like this to reach your goals?"]
+show_to: whoever talks to customers after the sale, and ask which of these companies they would not sign again
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -124,5 +128,6 @@ Evidence basis: <"Data" with row count and number excluded, or "Hypothesis", one
 
 ```
 Use the skill "Define the ICP". Read the context pack.
-Task: define our fit criteria and disqualifiers from the customer export pasted below.
+Task: <why customers succeeded or left, if known>.
+<paste the customer export and lost deals here>
 ```

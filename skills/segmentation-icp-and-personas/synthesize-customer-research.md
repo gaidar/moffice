@@ -4,12 +4,14 @@ type: skill
 function: segmentation-icp-and-personas
 owner: insights-analyst
 reads: [personas, icp-and-segments, messaging, proof-points]
+you_bring: The research itself, and for each source the date, company type, role and how the person was chosen.
+also_for: [customer interviews, survey results, voice of customer, interview notes, what customers say, call notes, customer feedback, make sense of research]
 version: 0.1.0
 updated: 2026-11-01
 summary: Turns interview notes, survey exports and call notes into findings with evidence.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -139,5 +141,6 @@ F2
 
 ```
 Use the skill "Synthesize customer research". Read the context pack.
-Task: turn the interview notes pasted below into findings with evidence.
+Task: <the question the research was meant to answer>.
+<paste the notes or survey results here>
 ```

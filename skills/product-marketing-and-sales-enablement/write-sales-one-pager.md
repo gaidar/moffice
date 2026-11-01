@@ -4,12 +4,16 @@ type: skill
 function: product-marketing-and-sales-enablement
 owner: product-marketing-manager
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, channels-and-tools]
+you_bring: The segment, the person it is for, and whether sales will hand it over or it goes online.
+also_for: [sales sheet, leave behind, sales collateral, product sheet, flyer, handout for prospects, sales asked for something, demo follow up]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Writes one page for one segment or persona that sales can hand to a buyer, with proof chosen by where the page will be used.
+judge: ["Would a salesperson hand this over in a meeting or leave it in a folder?", "If the buyer forwarded this to their boss with no note would the boss see why it matters?", "Is the headline about the buyer's problem or about your product?"]
+show_to: a salesperson, and ask which line they would cross out before sending it
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -123,7 +127,10 @@ Next step: <max 20 words, with contact or placeholder>
 
 **Next step:** Start an 8-week paid pilot for up to 40 learners. [Sales contact needed]
 
-**Draft notes:** Proof used is all public; the first benefit is a product fact. Tom Ferrant, 2 days.
+**Draft notes**
+
+- Proof used: all Public; the first benefit is a product fact.
+- Approvals needed: Tom Ferrant, 2 days.
 
 **Assumptions and open questions**
 
@@ -133,5 +140,5 @@ Next step: <max 20 words, with contact or placeholder>
 
 ```
 Use the skill "Write a sales one-pager". Read the context pack.
-Task: <the segment, the persona, and whether use is one-to-one or open>.
+Task: <the segment, the person it is for, and whether use is one-to-one or open>.
 ```

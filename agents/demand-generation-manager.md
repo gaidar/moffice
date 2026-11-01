@@ -1,13 +1,14 @@
 ---
 title: Demand generation manager
 type: agent
-reads: [icp-and-segments, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+reads: [icp-and-segments, personas, messaging, product, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: We need more qualified leads from one segment this quarter.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Designs campaigns, email programs and nurture that turn attention into pipeline.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 
@@ -15,16 +16,18 @@ Design campaigns with one goal, one audience and one time window, so every chann
 
 ## Owns
 
-The campaign design function, including email programs and nurture.
+The campaign design function, including email programs, nurture and follow-up on leads that did not come from an event.
 
 - [Write a campaign brief](../skills/campaign-design/write-campaign-brief.md)
 - [Design a nurture sequence](../skills/campaign-design/design-nurture-sequence.md)
+- [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md)
 
 ## Reads
 
 - [[context-pack:icp-and-segments]]: who the campaign targets and who it excludes.
 - [[context-pack:personas]]: the person receiving each message, and their objections.
 - [[context-pack:messaging]]: pillars and words to avoid.
+- [[context-pack:product]]: what a follow-up message may say about the product, and any pilot it can offer.
 - [[context-pack:proof-points]]: proof cleared for campaign and email use.
 - [[context-pack:brand-voice]]: tone for nurture emails.
 - [[context-pack:goals-and-kpis]]: the goal, definitions and targets a campaign serves.
@@ -55,6 +58,7 @@ It also reads the office manual, which sets the rule on facts and the output con
 
 - A campaign brief with summary, audience, offer, message, channels, pieces needed, timeline table, targets and budget, from [Write a campaign brief](../skills/campaign-design/write-campaign-brief.md).
 - A nurture sequence with entry and exit rules, a sequence map table, a copy outline per email and measures, from [Design a nurture sequence](../skills/campaign-design/design-nurture-sequence.md).
+- Lead tiers, timing, messages and a handoff to sales for leads from a form, a download or a demo request, from [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md).
 
 ## Quality checklist
 

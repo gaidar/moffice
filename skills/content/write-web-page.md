@@ -4,12 +4,14 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, channels-and-tools]
+you_bring: The page type, the reader, the one action the page asks for, and any SEO page brief.
+also_for: [website copy, landing page, homepage, website rewrite, pricing page, website not converting, demo request page, product page]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces section-by-section copy for one web or landing page, with one reader, one action and every proof item checked for permission.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

@@ -4,12 +4,14 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, icp-and-segments, messaging, proof-points, goals-and-kpis, channels-and-tools]
+you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, and hours per item if you know them.
+also_for: [content plan, editorial calendar, what to publish, blog schedule, social schedule, posting schedule, content ideas, content for demand]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a dated content calendar for a set period, with every item tied to a goal or campaign and checked against capacity and approval times.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

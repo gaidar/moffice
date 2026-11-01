@@ -45,6 +45,10 @@ defaults:
     values: { layout: content }
   - scope: { path: "guides/" }
     values: { layout: content }
+  - scope: { path: "try.md" }
+    values: { layout: content }
+  - scope: { path: "examples.md" }
+    values: { layout: content }
   - scope: { path: "setup.md" }
     values: { layout: content }
   - scope: { path: "context-pack.md" }

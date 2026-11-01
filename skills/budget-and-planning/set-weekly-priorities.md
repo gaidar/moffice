@@ -4,12 +4,14 @@ type: skill
 function: budget-and-planning
 owner: head-of-marketing
 reads: [goals-and-kpis, channels-and-tools, company]
+you_bring: Last week's numbers, what is due in the next two weeks, what slipped, and the days you have this week.
+also_for: [what should i do this week, too much to do, weekly plan, what to drop, overloaded, pipeline behind, monday planning, to do list]
 version: 0.1.0
 updated: 2026-11-01
 summary: Top three priorities and a do-not-do list from last week's numbers and plan.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -94,7 +96,7 @@ Days needed: <number> | Days available: <number> | Result: <fits, or what was dr
 | # | Priority | Done by Friday means | Owner | Goal served | Days |
 |---|---|---|---|---|---|
 | 1 | Finish professional services campaign page and emails | Drafts ready for the February 15 launch | The marketer | Campaign by February 15 | 2.5 |
-| 2 | Find out why pipeline is behind | Search ads export reviewed, likely cause named | The marketer | $1.2 million pipeline | 1 |
+| 2 | Find out why pipeline is behind, with [Diagnose a pipeline gap](../analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) | Search ads export reviewed, likely cause named | The marketer | $1.2 million pipeline | 1 |
 | 3 | Send conference budget for approval | Request with Marta Ilves, CEO, who needs 3 days | The marketer | Pipeline, SQLs | 0.5 |
 
 **Do not do this week**
@@ -126,5 +128,6 @@ Days needed: 4 | Days available: 4 | Result: fits
 
 ```
 Use the skill "Set weekly priorities". Read the context pack.
-Task: set priorities for the week of <date>, using last week's numbers and the plan pasted below.
+Task: <the week's start date and the days you have>.
+<paste last week's numbers, what is due, what slipped and new requests here>
 ```

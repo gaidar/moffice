@@ -36,6 +36,21 @@
     if (button) copyRaw(button);
   });
 
+  // Copy prompt: the first code block under "How to run it" or "How to invoke".
+  var promptButton = document.querySelector(".office-copy-prompt");
+  if (promptButton) {
+    promptButton.addEventListener("click", function () {
+      var heading = document.getElementById("how-to-run-it") || document.getElementById("how-to-invoke");
+      var node = heading ? heading.nextElementSibling : null;
+      while (node && !node.querySelector("pre") && node.tagName !== "PRE") node = node.nextElementSibling;
+      var code = node ? node.querySelector("code") || node : null;
+      if (!code) return;
+      navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+        setStatus(promptButton, "Prompt copied. Paste it into your AI tool.");
+      });
+    });
+  }
+
   // A Copy button on each code block, because most of them are text to paste.
   document.querySelectorAll(".doc-body pre").forEach(function (pre) {
     var button = document.createElement("button");
@@ -57,13 +72,33 @@
   if (filter) {
     var rows = document.querySelectorAll(".doc-body tr[data-skill]");
     filter.addEventListener("input", function () {
-      var q = filter.value.trim().toLowerCase();
+      // Match on any word of three letters or more, so "pipeline down" and "leads are bad" still find something.
+      var words = filter.value.toLowerCase().split(/\s+/).filter(function (w) {
+        return w.length > 2 && ["are", "the", "and", "our", "for", "not", "why", "how", "next", "month"].indexOf(w) === -1;
+      });
+      var shown = 0;
+      function haystack(row) {
+        return (row.textContent + " " + (row.getAttribute("data-keywords") || "")).toLowerCase();
+      }
+      function has(row, w) {
+        return haystack(row).indexOf(w.replace(/s$/, "")) !== -1;
+      }
+      // Rows that match every word come first. Only if there are none, show rows that match any word.
+      var strict = Array.prototype.some.call(rows, function (row) {
+        return words.length > 0 && words.every(function (w) { return has(row, w); });
+      });
       rows.forEach(function (row) {
-        row.hidden = q !== "" && row.textContent.toLowerCase().indexOf(q) === -1;
+        var hit = words.length === 0 || (strict
+          ? words.every(function (w) { return has(row, w); })
+          : words.some(function (w) { return has(row, w); }));
+        row.hidden = !hit;
+        if (hit) shown += 1;
       });
       document.querySelectorAll(".skill-group").forEach(function (group) {
         group.hidden = !group.querySelector("tr[data-skill]:not([hidden])");
       });
+      var empty = document.querySelector(".filter-empty");
+      if (empty) empty.hidden = shown !== 0;
     });
   }
 })();

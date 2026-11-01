@@ -4,12 +4,16 @@ type: skill
 function: segmentation-icp-and-personas
 owner: insights-analyst
 reads: [icp-and-segments, product, channels-and-tools, goals-and-kpis]
+you_bring: A customer export with industry, size, contract value, days to close and status, plus won and lost deals if you have them.
+also_for: [which market to target, market segments, who should we sell to, target market, rank segments, focus on one segment, too many markets, where is demand]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Splits the market into segments and ranks them from data the marketer supplies.
+judge: ["Would you actually market differently to these segments or are they only different labels?", "Can you reach the top segment through a channel you already have?", "Did the top segment win on buying evidence or because its data was easier to find?", "What will you stop doing for the segments at the bottom?"]
+show_to: your sales lead, and ask whether the top segment matches the deals they would chase first
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -119,5 +123,6 @@ Data used: <sources and row counts, one line>
 
 ```
 Use the skill "Build a market segmentation". Read the context pack.
-Task: split our market into segments and rank them, using the customer export pasted below.
+Task: <any market size figures, with sources>.
+<paste the customer and deal exports here>
 ```

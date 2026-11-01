@@ -1,25 +1,24 @@
 ---
 layout: default
 ---
-{%- assign skills = site.pages | where: "type", "skill" | size -%}
-{%- assign agents = site.pages | where: "type", "agent" | size -%}
-{%- assign templates = site.pages | where: "type", "context-template" | size -%}
 <header class="page">
   <div class="wrap">
     <p class="eyebrow">Free and open source, for Claude, ChatGPT/Codex, Grok and Google Gemini</p>
     <h1>{{ page.heading }}</h1>
     <p class="lede">{{ page.summary }}</p>
+    <p class="bring">{{ page.scope_note }}</p>
     <div class="cta-row">
-      <a class="btn primary" href="{{ '/guides/start-here.html' | relative_url }}">Start here</a>
-      <a class="btn" href="{{ '/skills.html' | relative_url }}">See the skills</a>
-      <a class="btn" href="https://github.com/{{ site.repository }}">Open on GitHub</a>
+      <a class="btn primary" href="{{ '/try.html' | relative_url }}">Try it in 10 minutes</a>
+      <a class="btn" href="{{ '/guides/start-here.html' | relative_url }}">Start here</a>
+      <a class="btn" href="{{ '/skills.html' | relative_url }}">Find a skill</a>
     </div>
     <div class="statrow">
-      <div class="stat"><div class="v">{{ skills }}</div><div class="k">Skills</div></div>
-      <div class="stat"><div class="v">{{ agents }}</div><div class="k">Agent roles</div></div>
-      <div class="stat"><div class="v">{{ templates }}</div><div class="k">Context pack files</div></div>
-      <div class="stat"><div class="v">{{ site.data.functions | size }}</div><div class="k">Marketing functions</div></div>
+      <div class="stat"><div class="v t">10 minutes</div><div class="k">Try it on a sample company</div></div>
+      <div class="stat"><div class="v t">About 1 hour</div><div class="k">Give it your company's facts</div></div>
+      <div class="stat"><div class="v t">About 30 minutes</div><div class="k">Set up your AI tool</div></div>
+      <div class="stat"><div class="v t">Each week</div><div class="k">Run the routine</div></div>
     </div>
+    <p class="note" style="margin-top:10px">Times are estimates from the steps, not measurements.</p>
   </div>
 </header>
 <div class="wrap">

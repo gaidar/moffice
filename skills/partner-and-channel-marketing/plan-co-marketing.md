@@ -4,12 +4,14 @@ type: skill
 function: partner-and-channel-marketing
 owner: partner-marketing-manager
 reads: [product, icp-and-segments, personas, messaging, proof-points, goals-and-kpis, channels-and-tools]
+you_bring: The partner's name, its audience, what it can contribute, each side's budget, and the rules on sharing leads.
+also_for: [joint webinar, joint campaign, co-branded content, partner campaign, share leads with a partner, partner event, pipeline through partners, cross promotion]
 version: 0.1.0
 updated: 2026-11-01
 summary: Plans a joint campaign with one partner, including the split of work, lead handling and approvals.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -134,5 +136,5 @@ Status: Draft
 
 ```
 Use the skill "Plan co-marketing with a partner". Read the context pack.
-Task: <what they want>.
+Task: <the partner, what it sells, its audience and contribution, each side's budget, and lead-sharing rules>.
 ```

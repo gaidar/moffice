@@ -8,12 +8,25 @@ These five corrections override the requirements document where they conflict.
 
 - No zip is provided. Guides send the marketer to GitHub, using GitHub's own Code and Download ZIP buttons to get many files at once. `scripts/build-zip.sh` is gone.
 - `bundles/all-skills.md` and `bundles/all-agent-roles.md` are now committed files, because ChatGPT's project limit needs them and the zip no longer carries them. `scripts/build-bundles.sh` generates them, and the workflow fails if they are stale.
-- PDFs exist only for playbooks and guides, except the FAQ. "Standard operating procedures for people to read" was read as those 16 documents. Skills, charters, the context pack and office documents have no PDF, and link to their text files on GitHub.
-- "Avoid duplication with PDFs" was read as: PDFs drop from 105 to 16, and all are generated from the same markdown as the web page, so nothing is maintained twice. HTML pages for skills and charters stay, because they cost no upkeep and the original spec asks for them. Removing them is a small change if the owner prefers GitHub only.
+- PDFs exist only for playbooks and guides, except the FAQ. "Standard operating procedures for people to read" was read as those documents, now 18. Skills, charters, the context pack and office documents have no PDF, and link to their text files on GitHub.
+- "Avoid duplication with PDFs" was read as: PDFs drop from 105 to 18, and all are generated from the same markdown as the web page, so nothing is maintained twice. HTML pages for skills and charters stay, because they cost no upkeep and the original spec asks for them. Removing them is a small change if the owner prefers GitHub only.
 - The site design follows marketingoffice.net: its palette, Archivo, Source Serif 4 and IBM Plex Mono fonts, a top bar, full-length pages and SVG diagrams. just-the-docs is removed, which also removes its site search. The Skills page has a filter instead.
 - Diagrams live in `_includes/diagrams/` and are named in a page's frontmatter, so they do not appear in the raw markdown or the PDFs.
 - Fonts load from Google Fonts, as on the reference site, with system fallbacks. This replaces the spec's system or Aptos font stack.
 - The sample company is CogniATion, as the owner named it. The rest of the example was built to fit.
+
+## Reviews during the build
+
+A CMO review and a new marketer review were run and acted on. The reviews themselves are in `dev/reviews/`, which is not committed.
+
+- Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60.
+- The default setup is 3 files rather than 74. One combined context pack replaces 10 separate files, and the office manual accepts this. The 10 templates remain as the source.
+- Setup stays in the top bar and the function table stays on the home page, because the Definition of done and the website spec name them, though the CMO wanted both cut.
+- "Unverified" labels stay in the vendor guides, though the CMO wanted them moved. Nothing was tested on paid accounts, and the spec requires them.
+- PDFs now cover 18 documents, because the two new guides are procedures people read.
+- Worked examples were produced by following the skills by hand with the sample context pack, and are labeled where figures are illustrative. They were not run in a live vendor account.
+- A new skill's goal options use a 15% growth starting rule when there is no history. It is labeled a starting rule, not a benchmark.
+- "How to judge this" questions are the reviewers' and writers' judgment, not sourced from research.
 
 ## Spec gaps and conflicts
 
@@ -38,7 +51,7 @@ These five corrections override the requirements document where they conflict.
 - Added `scripts/requirements-pdf.txt`, beyond the three scripts listed, to pin the PDF tools.
 - Context pack references in skills render on the site as links to the blank templates.
 - Internal markdown links use relative `.md` paths so they work on GitHub. The layout rewrites them to `.html` on the site.
-- `bundles/` combines all skills and all charters into one file each. The spec did not ask for this. ChatGPT's verified project file limits (25 on Plus, 40 on Pro) cannot hold 74 separate files.
+- `bundles/` combines all skills, all charters and all templates into one file each, and holds the trial file. The spec did not ask for this. ChatGPT's verified project file limits (25 on Plus, 40 on Pro) cannot hold the separate files.
 - `dev/` holds the owner's development documents, including the requirements. It is gitignored, and the validator and Jekyll skip it.
 
 ## Tooling

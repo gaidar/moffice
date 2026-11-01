@@ -4,12 +4,14 @@ type: skill
 function: paid-demand-gen
 owner: paid-media-manager
 reads: [personas, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The channel, the audience, the destination page, and the character limit for every ad field.
+also_for: [ad copy, ad headlines, search ad text, ads to test, new ad creative, social ad copy, ad fatigue, demo ad]
 version: 0.1.0
 updated: 2026-11-01
 summary: Writes ad copy sets by angle, within the character limits the marketer supplies.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -121,5 +123,5 @@ Status: Draft
 
 ```
 Use the skill "Write ad variations". Read the context pack.
-Task: <what they want>.
+Task: <the channel, audience, destination page, and character limit for every ad field>.
 ```

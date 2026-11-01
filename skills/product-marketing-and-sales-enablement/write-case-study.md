@@ -4,12 +4,14 @@ type: skill
 function: product-marketing-and-sales-enablement
 owner: product-marketing-manager
 reads: [product, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The customer's name, the interview notes or transcript, the interview date, and where it will appear.
+also_for: [customer story, success story, customer proof, testimonial write-up, reference customer, customer result, website proof, sales proof]
 version: 0.1.0
 updated: 2026-11-01
 summary: Turns interview notes into a case study, starting with a permission check on the customer, each number and each quote.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -135,5 +137,6 @@ Next step: <max 15 words>
 
 ```
 Use the skill "Write a case study". Read the context pack.
-Task: <the customer, where it will appear; interview notes pasted below>.
+Task: <the customer, the interview date, and where it will appear>.
+<paste the notes or transcript here>
 ```

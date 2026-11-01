@@ -3,31 +3,29 @@ title: Glossary
 type: office
 version: 0.1.0
 updated: 2026-11-01
-summary: One term per concept across the repo, with the words not to use instead.
+summary: What the words in the office mean.
 ---
 
 ## Office terms
 
-Use the term in the first column everywhere. Do not use the terms in the last column for the same concept.
-
-| Term | Meaning | Do not call it |
-|---|---|---|
-| Marketing Office | This project: the skills, agent roles, context pack, playbooks and guides together | The system, the tool, the platform, the product |
-| Marketer | The one person running the office | User, operator, customer |
-| Context pack | The 10 files with the facts about the marketer's company | Knowledge base, brand book, company profile |
-| Context pack file | One of the 10 files | Doc, sheet |
-| Skill | A written procedure with a fixed output format | Prompt, template, recipe, workflow, tool |
-| Agent role | One of the 14 job descriptions | Agent persona, bot, assistant, character |
-| Charter | The document that defines one agent role | Role card, job description |
-| Office manual | The document loaded into persistent instructions | System prompt, base prompt, instructions file |
-| Playbook | A sequence of skills for a period or a project | Runbook, process |
-| Guide | Instructions for the marketer on setting up and running the office | Tutorial, how-to, doc |
-| Output | What a skill or agent role produces | Deliverable, artifact, or asset as a general word |
-| Draft | An output not yet reviewed by the marketer | Final, version one |
-| Review | A critique of an output against the context pack and a checklist | Audit (unless the skill says audit), QA |
-| Plain-chat fallback | Running the office with only chat and file upload, with no vendor feature beyond those | Basic mode, lite version |
-| Vendor | The company whose AI tool the marketer uses: Anthropic, OpenAI, xAI or Google | Provider, platform |
-| Persistent instructions | The place in a vendor's tool where text applies to every chat in a project or account. Its exact name differs by vendor and is given in each setup guide | Memory, settings |
+| Term | Meaning |
+|---|---|
+| Marketing Office | This project: the skills, agent roles, context pack, playbooks and guides together |
+| Marketer | The one person running the office |
+| Context pack | The 10 files with the facts about the marketer's company |
+| Context pack file | One of the 10 files |
+| Skill | A written procedure with a fixed output format |
+| Agent role | One of the 14 job descriptions |
+| Charter | The document that defines one agent role |
+| Office manual | The document loaded into persistent instructions |
+| Playbook | A sequence of skills for a period or a project |
+| Guide | Instructions for the marketer on setting up and running the office |
+| Output | What a skill or agent role produces |
+| Draft | An output not yet reviewed by the marketer |
+| Review | A critique of an output against the context pack and a checklist |
+| Plain-chat fallback | Running the office with only chat and file upload, with no vendor feature beyond those |
+| Vendor | The company whose AI tool the marketer uses: Anthropic, OpenAI, xAI or Google |
+| Persistent instructions | The place in a vendor's tool where text applies to every chat in a project or account. Its exact name differs by vendor and is given in each setup guide |
 
 ## Marketing terms
 
@@ -55,6 +53,13 @@ These are working definitions. If goals-and-kpis.md defines a term differently, 
 | Asset | One specific item made for a launch, campaign or design job, such as a landing page or a design file. Not a general word for output |
 | Permission status | What proof-points.md allows for a customer, number or quote: public, sales only, internal only, pending or none |
 | Approver | The person channels-and-tools.md names to sign off on a kind of output |
+| Baseline | The number you compare against, such as last quarter's result. If you have no target, use last quarter |
+| Pace | Where a number should be by today if the quarter's goal is to be met |
+| Lag | The time between something happening and it showing in your numbers, such as a lead becoming an SQL |
+| First touch | The first marketing activity recorded for a lead |
+| Last touch | The last marketing activity recorded before a lead became an opportunity |
+| Bet | One thing you choose to put time and money on this quarter, with an expected effect you can later check |
+| Run of show | The minute-by-minute plan for an event or webinar |
 | GTM | Go-to-market: the plan for how a product reaches and wins its market |
 
 ## Assumption labels

@@ -4,12 +4,16 @@ type: skill
 function: product-marketing-and-sales-enablement
 owner: product-marketing-manager
 reads: [competitors, product, icp-and-segments, personas, messaging, proof-points, channels-and-tools]
+you_bring: The competitor's name, today's date, and any new sourced material or lost-deal notes with dates.
+also_for: [rival keeps appearing in deals, competitor comes up on calls, sales needs help against a competitor, how to beat a rival, objection handling, competitive sheet, losing to a competitor, talk track]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Produces a short internal sheet for sales against one named competitor, using only sourced and dated facts from competitors.md.
+judge: ["Could a salesperson find the answer in the ten seconds they have on a call?", "Does it help win on what buyers care about or only list what the competitor lacks?", "Would someone who used to work at this competitor call it fair?", "What should a salesperson say when the buyer already prefers the competitor?"]
+show_to: the salesperson who last lost to this competitor, and ask what the card gets wrong
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

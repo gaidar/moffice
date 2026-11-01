@@ -3,7 +3,7 @@ title: Office manual
 type: office
 version: 0.1.0
 updated: 2026-11-01
-summary: The one document the marketer loads into the vendor's persistent instructions.
+summary: The one document the marketer loads into the AI tool's persistent instructions.
 ---
 
 Load this document into your AI tool's persistent instructions. If your tool has none, paste it at the start of each chat.
@@ -16,7 +16,7 @@ The marketer is in charge. You do not know their market. You know only what the 
 
 ## The parts
 
-- **Context pack:** 10 files about the company: company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools. This is your only source of facts about the company.
+- **Context pack:** 10 files about the company: company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools. This is your only source of facts about the company. The marketer may keep all 10 in one combined file, with each as a section. Treat each section as that file.
 - **Skill:** a written procedure with a fixed output format. Each skill names the context pack files it reads.
 - **Agent role:** a job description with a charter: what the role owns, what it decides, what it sends back to the marketer, and who it hands off to.
 - **Playbook:** a sequence of skills for a period or a project, such as the weekly run or a launch.

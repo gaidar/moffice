@@ -4,12 +4,14 @@ type: skill
 function: marketing-ops
 owner: marketing-operations-manager
 reads: [channels-and-tools, goals-and-kpis, company]
+you_bring: Each tool's annual cost, renewal date, seats paid for and used, and when it was last used.
+also_for: [too many tools, tool costs, software renewals, martech audit, cut software spend, what tools do we need, unused seats, crm renewal]
 version: 0.1.0
 updated: 2026-11-01
 summary: Gives each marketing tool a keep, fix or cut decision, using costs and usage the marketer supplies.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -126,5 +128,6 @@ Total $30,800 before the fix. Annual savings $4,200: $2,400 from the tier, $1,80
 
 ```
 Use the skill "Audit the tool stack". Read the context pack.
-Task: <audit which tools, with costs, renewal dates and usage pasted below>.
+Task: <which tools, and the renewal or budget date behind this>.
+<paste each tool's costs, renewal dates and usage here>
 ```

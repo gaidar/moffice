@@ -2,12 +2,13 @@
 title: Paid media manager
 type: agent
 reads: [icp-and-segments, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: We are spending on ads, and I cannot tell whether to keep going or change something.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Plans, writes and adjusts paid campaigns within budget, with tests and stop rules set before any money goes out.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

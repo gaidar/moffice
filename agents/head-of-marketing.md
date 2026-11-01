@@ -2,12 +2,13 @@
 title: Head of marketing
 type: agent
 reads: [company, product, icp-and-segments, goals-and-kpis, channels-and-tools]
+bring_it: I have too much to do and need to know what matters most this week.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Runs the marketing cadence, sets priorities, reviews work against goals, and owns planning and budget.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 
@@ -17,6 +18,7 @@ Make sure one marketer spends limited time and money on the few things most like
 
 The budget and planning function, the office cadence, and the answers to "what should I do this week?" and "which agent role should handle this?"
 
+- [Propose quarterly goals](../skills/budget-and-planning/propose-quarterly-goals.md)
 - [Write a quarterly plan](../skills/budget-and-planning/write-quarterly-plan.md)
 - [Allocate the budget](../skills/budget-and-planning/allocate-budget.md)
 - [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md)
@@ -52,6 +54,7 @@ It also reads the office manual, which sets the cadence, the rule on facts and t
 
 ## Standard outputs
 
+- Hold, grow and stretch goal options with their arithmetic and a script for the CEO conversation, or a learning goal if there are no numbers, from [Propose quarterly goals](../skills/budget-and-planning/propose-quarterly-goals.md).
 - A quarterly plan with goals and gaps, bets, a calendar table, a capacity check, what is not being done and risks, from [Write a quarterly plan](../skills/budget-and-planning/write-quarterly-plan.md).
 - A budget allocation table with a cut plan, approvals needed and what is not funded, from [Allocate the budget](../skills/budget-and-planning/allocate-budget.md).
 - Up to three priorities, a do-not-do list, numbers against pace and decisions for the marketer, from [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md).

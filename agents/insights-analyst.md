@@ -2,12 +2,13 @@
 title: Insights analyst
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, goals-and-kpis, channels-and-tools]
+bring_it: We are not sure who we should be selling to, or why they really buy.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Defines who to sell to through segmentation, ICP, personas and market research, based on evidence the marketer supplies.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 
@@ -21,6 +22,7 @@ The segmentation, ICP and personas function, including market and customer resea
 - [Define the ICP](../skills/segmentation-icp-and-personas/define-icp.md)
 - [Write a persona](../skills/segmentation-icp-and-personas/write-persona.md)
 - [Synthesize customer research](../skills/segmentation-icp-and-personas/synthesize-customer-research.md)
+- [Write an interview guide](../skills/segmentation-icp-and-personas/write-interview-guide.md)
 
 ## Reads
 
@@ -61,6 +63,7 @@ It also reads the office manual, which sets the rule on facts and the output con
 - A one-sentence ICP, fit criteria, disqualifiers, buying triggers and a scoring rule, from [Define the ICP](../skills/segmentation-icp-and-personas/define-icp.md).
 - One persona with job, triggers, objections and answers, language and where they get information, from [Write a persona](../skills/segmentation-icp-and-personas/write-persona.md).
 - Findings with evidence, contradictions, implications, proposed context pack changes and quote permissions, from [Synthesize customer research](../skills/segmentation-icp-and-personas/synthesize-customer-research.md).
+- A recruiting list, invitation, questions and note-taking format for customer or lost-deal conversations, from [Write an interview guide](../skills/segmentation-icp-and-personas/write-interview-guide.md).
 
 ## Quality checklist
 

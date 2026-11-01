@@ -4,12 +4,16 @@ type: skill
 function: go-to-market-and-launches
 owner: product-marketing-manager
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, goals-and-kpis, channels-and-tools]
+you_bring: What the plan is for, the start date, the budget, and any research on the target.
+also_for: [go to market, gtm strategy, new segment, new market, new product, enter a market, sell to a new audience, market entry]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Produces a go-to-market plan for one new product, new segment or new market, with a fit decision, route to market, phases, targets and a capacity check.
+judge: ["Why would a buyer in this market choose you over doing nothing?", "Who is the first customer you could name and how would you reach them this month?", "Does sales have the time and a reason to sell this next to what they already sell?", "What result would make you stop and is anyone willing to actually stop?"]
+show_to: your sales lead and your product lead, and ask what would make them pull out of this plan
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -27,7 +31,7 @@ Use this for a new product, a new segment or a new market. Do not use it for one
 - [[context-pack:goals-and-kpis]]: goals, budget, baselines.
 - [[context-pack:channels-and-tools]]: channels, limits, approvers, hard rules.
 
-The marketer supplies: what the plan is for, the start date, the budget, and any research on the target, such as interview notes, call notes or market data with its source.
+The marketer supplies: what the plan is for, the start date, the budget, and any research on the target, such as notes or market data with its source.
 
 ## Procedure
 
@@ -132,4 +136,5 @@ Plan type: <New product, new segment or new market>
 ```
 Use the skill "Write a go-to-market plan". Read the context pack.
 Task: <the new product, segment or market, the start date and the budget>.
+<paste any research here, with its source>
 ```

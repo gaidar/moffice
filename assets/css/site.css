@@ -142,6 +142,22 @@ figcaption { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-soft
 .dg-bar.soft { fill: var(--accent-soft); stroke: var(--accent); }
 .dg-bar.accent { fill: var(--accent); }
 
+/* Example output panel */
+.output { background: var(--panel); border: 1px solid var(--rule-strong); border-left: 4px solid var(--accent); border-radius: 6px; padding: 22px 26px; margin: 20px 0 26px; font-size: 0.95rem; }
+.output p, .output ul { max-width: 68ch; }
+.output p:last-child, .output ul:last-child { margin-bottom: 0; }
+.bring { font-size: 1rem; margin: 14px 0 0; max-width: 70ch; }
+.bring strong { font-family: var(--sans); font-weight: 700; font-size: 0.92rem; }
+.stat .v.t { font-size: 1.15rem; }
+.note { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+
+.judge { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 6px; padding: 18px 24px; margin: 28px 0 0; }
+.judge h2 { font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; }
+.judge p { margin-bottom: 0.6em; font-size: 0.96rem; }
+.judge ul { margin: 0 0 0.7em; padding-left: 1.2em; font-size: 0.96rem; }
+.judge li { margin-bottom: 0.3em; }
+.judge p:last-child { margin-bottom: 0; }
+
 /* Skills filter */
 .filter { display: block; width: 100%; max-width: 420px; margin: 22px 0 0; padding: 9px 12px; font-family: var(--mono); font-size: 0.82rem; color: var(--ink); background: var(--panel); border: 1.5px solid var(--rule-strong); border-radius: 5px; }
 .filter:focus { border-color: var(--accent); outline: none; }

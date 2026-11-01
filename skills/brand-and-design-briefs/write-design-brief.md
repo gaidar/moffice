@@ -4,12 +4,14 @@ type: skill
 function: brand-and-design-briefs
 owner: brand-and-creative-director
 reads: [company, product, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: What you need made, where it will appear, the sizes and file formats, the due date, and the final copy.
+also_for: [brief a designer, freelancer brief, booth design, ad creative, banner sizes, social images, landing page design, need graphics]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a brief with final copy, specifications and dates that a designer can execute without a meeting.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -19,14 +21,14 @@ Use this when you need a designer to make something specific: a booth panel, an 
 
 - [[context-pack:brand-voice]]: visual basics, voice and style details.
 - [[context-pack:messaging]]: the main message and words to avoid.
-- [[context-pack:proof-points]]: which customer names, logos, numbers and quotes may appear in public.
+- [[context-pack:proof-points]]: what may appear in public.
 - [[context-pack:product]]: what the product does and is not, for the images.
 - [[context-pack:personas]]: who will see the piece.
-- [[context-pack:company]]: the designer's available time and the company's public name.
+- [[context-pack:company]]: the designer's time and public name.
 - [[context-pack:goals-and-kpis]]: campaign and event dates this quarter.
 - [[context-pack:channels-and-tools]]: the approver and typical time.
 
-The marketer supplies in the prompt: what is needed, where it will appear, the exact sizes and file formats, the due date, the copy if it already exists, and any files on hand.
+The marketer supplies: what is needed, where it will appear, the exact sizes and file formats, the due date, the copy if it already exists, and any files on hand.
 
 ## Procedure
 
@@ -154,5 +156,6 @@ Designer's time: [designer's estimate needed], against about four days a month.
 
 ```
 Use the skill "Write a design brief". Read the context pack.
-Task: <what they want>.
+Task: <what is needed, where it will appear, sizes, file formats and due date>.
+<paste the copy here>
 ```

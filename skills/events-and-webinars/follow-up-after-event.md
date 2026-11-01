@@ -4,12 +4,14 @@ type: skill
 function: events-and-webinars
 owner: events-and-webinar-manager
 reads: [company, product, icp-and-segments, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: The lead list with consent status, what was promised on site, and how leads route to sellers.
+also_for: [trade show leads, webinar leads, badge scans, event leads, conference follow up, leads after the event, no-shows, hand leads to sales]
 version: 0.1.0
 updated: 2026-11-01
 summary: Sorts event or webinar leads into tiers, drafts follow-up messages and writes the handoff to sales.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -136,5 +138,6 @@ Body: [First name], you asked how to show your leadership team that training cha
 
 ```
 Use the skill "Follow up after an event". Read the context pack.
-Task: sort the leads pasted below from <event> and draft the follow-up and sales handoff.
+Task: <the event and dates, what was promised, and how leads route to sellers>.
+<paste the lead list here>
 ```

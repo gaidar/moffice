@@ -4,12 +4,14 @@ type: skill
 function: events-and-webinars
 owner: events-and-webinar-manager
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: The event name, dates and location, the organizer's attendee information, the quotes, and who can staff it.
+also_for: [trade show, conference booth, should we sponsor, event roi, sponsorship decision, booth planning, in-person event, leads from events]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a trade show or in-person event plan with a decision, targets, budget, booth or session, lead capture and timeline.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -145,5 +147,6 @@ MQL rule: log demo requests on the spot. A scan alone is not an MQL.
 
 ```
 Use the skill "Plan an event". Read the context pack.
-Task: plan our presence at <event> on <dates>, using the organizer information and quotes pasted below.
+Task: <the event, dates, location and who can staff it>.
+<paste attendee information and quotes here>
 ```

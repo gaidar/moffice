@@ -2,12 +2,13 @@
 title: PR and communications manager
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, brand-voice, channels-and-tools]
+bring_it: We have news to announce, or something went wrong and people will ask about it.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Handles announcements, media outreach and difficult moments, with approved quotes and confirmed facts only.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

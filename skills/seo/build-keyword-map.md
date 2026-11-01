@@ -4,12 +4,14 @@ type: skill
 function: seo
 owner: seo-specialist
 reads: [product, icp-and-segments, personas, messaging, competitors, channels-and-tools]
+you_bring: A keyword export with volume, its source and date, and a list of your existing pages.
+also_for: [keyword research, seo plan, seo topics, which keywords, website content plan, organic traffic, what pages do we need, content gaps]
 version: 0.1.0
 updated: 2026-11-01
 summary: Clusters keywords from a pasted export, sets intent and priority, and maps each cluster to one page.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -133,5 +135,6 @@ Rows in: 8. Rows kept: 5. Clusters: 3.
 
 ```
 Use the skill "Build a keyword map". Read the context pack.
-Task: build a keyword map from the export and page list pasted below.
+Task: <the export's source and date>.
+<paste the keyword export and page list here>
 ```

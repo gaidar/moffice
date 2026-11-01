@@ -4,12 +4,14 @@ type: skill
 function: analytics-and-campaign-evaluation
 owner: marketing-analyst
 reads: [goals-and-kpis, channels-and-tools, company]
+you_bring: Who will look at the dashboard, the decision each person makes from it, and the tool you will build it in.
+also_for: [marketing dashboard, kpi dashboard, reporting setup, numbers do not match, what to track, ceo wants a dashboard, pipeline report, metric definitions]
 version: 0.1.0
 updated: 2026-11-01
 summary: Writes a dashboard spec with metrics, definitions, sources and views, which the marketer builds in their own tool.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

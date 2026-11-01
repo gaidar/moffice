@@ -4,12 +4,14 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, personas, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The purpose, who receives it, the send date, the action and the link.
+also_for: [newsletter, email blast, webinar invite, announcement email, email to customers, email to the list, low open rates, demo invite]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces one standalone marketing email or newsletter issue, with subject lines, body, one main action and send notes.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

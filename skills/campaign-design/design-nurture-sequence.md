@@ -4,12 +4,14 @@ type: skill
 function: campaign-design
 owner: demand-generation-manager
 reads: [icp-and-segments, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: Who enters and from which source, what counts as success, and which resources already exist.
+also_for: [drip campaign, email sequence, leads not ready, cold leads, lead nurturing, warm up leads, automated emails, old demo requests]
 version: 0.1.0
 updated: 2026-11-01
 summary: Designs a multi-email nurture with entry and exit rules, one purpose per email and a copy outline for each.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -118,5 +120,5 @@ Status: Draft
 
 ```
 Use the skill "Design a nurture sequence". Read the context pack.
-Task: <what they want>.
+Task: <who enters and from which source, what counts as success, and which resources exist>.
 ```

@@ -4,12 +4,14 @@ type: skill
 function: pr-and-comms
 owner: pr-and-communications-manager
 reads: [company, product, messaging, brand-voice, channels-and-tools]
+you_bring: What is confirmed and by whom, when it started, who is affected, what is being done, who is asking, and the next update time.
+also_for: [outage statement, data breach, crisis communication, bad press, angry customer post, journalist calling, public complaint, incident response]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces the first statement for an incident, with Q&A, an escalation check and a time for the next update.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -18,12 +20,12 @@ Use this in the first hours of an incident, when people are asking and the facts
 ## Inputs
 
 - [[context-pack:company]]: public name, who may speak, press contact.
-- [[context-pack:product]]: what the product does and is not, so the statement does not overclaim.
-- [[context-pack:messaging]]: words to avoid, including any promise the incident now contradicts.
+- [[context-pack:product]]: what the product does and is not.
+- [[context-pack:messaging]]: words to avoid and promises the incident contradicts.
 - [[context-pack:brand-voice]]: tone and things never to say.
 - [[context-pack:channels-and-tools]]: approvers and owned channels.
 
-The marketer supplies in the prompt: what happened as far as confirmed, who confirmed it, when it started, who is affected, what is being done, who is asking, and when the next update can realistically happen.
+The marketer supplies: what happened as far as confirmed, who confirmed it, when it started, who is affected, what is being done, who is asking, and the next update time.
 
 ## Procedure
 
@@ -137,5 +139,5 @@ Update this statement when: the cause or scope is confirmed.
 
 ```
 Use the skill "Draft a holding statement". Read the context pack.
-Task: <what they want>.
+Task: <what is confirmed and by whom, when it started, who is affected, what is being done, who is asking, next update time>.
 ```

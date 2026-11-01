@@ -2,12 +2,13 @@
 title: Partner marketing manager
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: A partner wants to sell or refer us, and we have nothing to give them.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Builds joint marketing with partners and equips them to refer or sell the product accurately.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

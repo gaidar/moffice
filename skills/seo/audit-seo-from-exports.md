@@ -4,12 +4,14 @@ type: skill
 function: seo
 owner: seo-specialist
 reads: [product, icp-and-segments, messaging, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: At least one search console or crawl export, with dates of any site changes and the pages that matter most.
+also_for: [website traffic dropped, organic traffic down, seo problems, site audit, pages not ranking, technical seo, website not found in search, lost rankings]
 version: 0.1.0
 updated: 2026-11-01
 summary: Turns pasted search console and crawl exports into a ranked list of fixes with evidence and owners.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -129,5 +131,6 @@ Organic visits from ICP pages: baseline 9,400, Q3 2026. Current: [figure needed]
 
 ```
 Use the skill "Audit SEO from exports". Read the context pack.
-Task: audit our site from the search console and crawl exports pasted below, for <periods>.
+Task: <the two periods compared>.
+<paste the search console and crawl exports here>
 ```

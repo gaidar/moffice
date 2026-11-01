@@ -4,12 +4,14 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, personas, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: One source idea or pasted text, the link to use, and each channel's character limit.
+also_for: [social media posts, professional network post, promote a blog post, post ideas, company page posts, repurpose content, organic social]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a set of social posts from one source idea, by channel, each with a different angle and one action.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

@@ -2,12 +2,13 @@
 title: Events and webinar manager
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: We have a webinar or a conference coming up, and I do not want the leads to go to waste.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Plans events and webinars with clear goals and makes sure every lead gets followed up.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

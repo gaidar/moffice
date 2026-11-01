@@ -4,12 +4,14 @@ type: skill
 function: pr-and-comms
 owner: pr-and-communications-manager
 reads: [company, product, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The news in one sentence, the release date or embargo, and any quote text the speaker has approved.
+also_for: [announcement, funding news, news release, leadership hire, milestone news, pr announcement, wire release, announce a release]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a press release with approved quotes only and visible placeholders for anything not yet cleared.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -119,5 +121,5 @@ press@cogniation.example
 
 ```
 Use the skill "Write a press release". Read the context pack.
-Task: <what they want>.
+Task: <the news in one sentence, the date or embargo, approved quotes, and facts the context pack lacks>.
 ```

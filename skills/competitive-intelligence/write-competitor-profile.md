@@ -4,12 +4,14 @@ type: skill
 function: competitive-intelligence
 owner: product-marketing-manager
 reads: [competitors, product, icp-and-segments, proof-points, channels-and-tools]
+you_bring: The competitor's name, today's date, and pasted source text with where it came from and the date checked.
+also_for: [competitor research, competitor analysis, what does the rival do, rival pricing, new competitor, update competitor file, rival product changes]
 version: 0.1.0
 updated: 2026-11-01
 summary: Creates or updates a sourced profile of one competitor from what the marketer pastes.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -17,15 +19,13 @@ Use this to create a profile of one competitor, or to update one at the monthly 
 
 ## Inputs
 
-From the context pack:
-
-- [[context-pack:competitors]] – the current entry, if there is one, and its dated facts
+- [[context-pack:competitors]] – the current entry and its dated facts
 - [[context-pack:product]] – features, what it is not, known weak spots
 - [[context-pack:icp-and-segments]] – the target, to judge where the competitor matters
 - [[context-pack:proof-points]] – proof for the answer, with permission status
 - [[context-pack:channels-and-tools]] – hard rules on naming competitors
 
-The marketer supplies in the prompt: the competitor's name, today's date, and pasted source text such as pricing page copy, help center pages, product pages, review site excerpts or call notes. Each paste needs its source and the date it was checked. Work only from what is pasted.
+The marketer supplies: the competitor's name, today's date, and pasted source text such as pricing page copy, help center pages, product pages, review site excerpts or call notes. Each paste needs its source and the date it was checked. Work only from what is pasted.
 
 ## Procedure
 
@@ -152,5 +152,6 @@ Internal. No competitor names in ads. Tom Ferrant approves sales material.
 
 ```
 Use the skill "Write a competitor profile". Read the context pack.
-Task: <what they want>.
+Task: <the competitor's name and today's date>.
+<paste each source here, with its origin and date checked>
 ```

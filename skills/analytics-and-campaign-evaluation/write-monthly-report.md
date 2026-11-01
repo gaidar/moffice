@@ -4,12 +4,16 @@ type: skill
 function: analytics-and-campaign-evaluation
 owner: marketing-analyst
 reads: [goals-and-kpis, channels-and-tools, company]
+you_bring: The month's actual for each KPI, quarter-to-date totals, spend by channel, and who will read the report.
+also_for: [monthly report, board update, ceo update, report to leadership, month end numbers, are we on track, pipeline vs goal, marketing performance]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Reports one closed month against goals-and-kpis.md, with short commentary and the decisions it calls for.
+judge: ["If the CEO reads only the headline will they know what to do differently?", "Is one month enough to call this a trend or is it noise?", "Which number here are you hoping nobody asks about?", "What decision would change if this report were never written?"]
+show_to: your CEO or manager, and ask which decision it helps them make
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -139,5 +143,6 @@ Internal. January 2027: pipeline is the goal furthest behind, at $352,000 agains
 
 ```
 Use the skill "Write the monthly report". Read the context pack.
-Task: <report on which month, with the actuals and spend pasted below>.
+Task: <the month, who will read it, and what moved the numbers>.
+<paste the KPI actuals and spend here>
 ```

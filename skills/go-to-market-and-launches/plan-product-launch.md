@@ -4,12 +4,16 @@ type: skill
 function: go-to-market-and-launches
 owner: product-marketing-manager
 reads: [company, product, personas, messaging, proof-points, goals-and-kpis, channels-and-tools]
+you_bring: What the release does in plain words, who confirmed it, and the planned date.
+also_for: [release in eight weeks, product launch, new feature, launch plan, launch timeline, announce a release, tell sales about the release, launch dates]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Sets the launch tier, timeline, owners and assets for one release, worked back from the launch date and the approval times.
+judge: ["Would a customer notice this release if you told them nothing?", "Does the tier reflect what buyers will care about or what the team is proud of?", "What will sales do differently the week after launch?", "What is the one thing you want a buyer to do because of this launch?"]
+show_to: your product lead, and ask which promise in it the release could fail to keep
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

@@ -4,12 +4,16 @@ type: skill
 function: campaign-design
 owner: demand-generation-manager
 reads: [icp-and-segments, personas, messaging, proof-points, goals-and-kpis, channels-and-tools]
+you_bring: The campaign goal, the time window and the budget.
+also_for: [plan a campaign, need more leads, demand campaign, generate demand, campaign idea, pipeline campaign, campaign plan, more demo requests]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Produces a single-goal campaign brief with audience, offer, channels, assets, timeline and targets.
+judge: ["Why would this audience stop what they are doing for this offer?", "Is the offer something they want or something you want them to download?", "If this works what would a salesperson notice the following month?", "Could you run this same campaign for another segment by changing the name?"]
+show_to: a salesperson who talks to this segment, and ask whether they would send this offer to a prospect
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -124,15 +128,15 @@ Status: Draft
 
 **Assumptions and open questions**
 
-- Assumption: this campaign carries a third of the SQL goal.
+- Assumption: the marketer gave this campaign a third of the SQL goal.
 - Assumption: the guide does not exist yet, and February 8 leaves a week for it.
 - Estimate: 116 MQLs is 30 SQLs divided by the 26% MQL to SQL rate, rounded up.
 - Unknown: how much of the $70,000 quarter budget goes to this campaign?
-- Unknown: should the February 24 webinar and the March 9 to 11 conference join as channels?
+- Unknown: should the illustrative February 24 webinar and the March 9 to 11 conference join as channels?
 
 ## How to run it
 
 ```
 Use the skill "Write a campaign brief". Read the context pack.
-Task: <what they want>.
+Task: <the goal, the time window, the budget, and any offer idea>.
 ```

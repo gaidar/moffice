@@ -2,8 +2,8 @@
 title: FAQ
 type: guide
 version: 0.1.0
-updated: 2026-11-01
-summary: Short answers on cost, vendors, limits, data and what the office does not do.
+updated: 2026-11-02
+summary: Short answers on cost, AI tools, limits, data and what the office does not do.
 ---
 
 ## What it is
@@ -14,21 +14,27 @@ summary: Short answers on cost, vendors, limits, data and what the office does n
 
 **Are there results or benchmarks I can expect?** None are claimed. The project has no customer data, and any time estimate in the guides is labeled as an estimate.
 
+**Why not just ask my AI tool?** You can. Without this, each request starts from nothing, so facts drift, formats change and the model fills gaps with plausible guesses. The office keeps the facts in one place, gives each job written steps and a fixed format, and tells the model to ask rather than guess.
+
+**Who is it for?** One marketer, or a small team, at a sales-led B2B tech company with a CRM, MQLs and SQLs. Product-led motions are not covered.
+
+**What if I have no data yet?** Start anyway. Leave blanks in the context pack, and skills will ask or leave a visible placeholder. Skills that need numbers, such as Allocate the budget, have a route for no history, and label the result a hypothesis.
+
 ## Cost and setup
 
-**What does it cost?** The Marketing Office is free, under the Apache License 2.0, with no hosted service. You pay your vendor for your own subscription. Check the plan and price on your vendor's site.
+**What does it cost?** The Marketing Office is free, under the Apache License 2.0, with no hosted service. You pay for your own subscription to your AI tool. Check the plan and price on its site.
 
-**How long does setup take?** The target is under one working day. That is an estimate from the steps in the guides, not a measured average.
+**How long does setup take?** About two hours to a first draft with your own facts: 10 minutes to try it, about an hour for a first pass of the context pack, about 30 minutes to set up your AI tool and about 15 minutes for your first skill. These are estimates from the steps in the guides, not measured averages.
 
 **Do I need to code or use a terminal?** No. No servers and no API keys either. Copying, pasting, uploading files and following numbered steps cover everything.
 
-**Which vendor should I choose?** The one you already pay for. Skills, agent roles and the context pack are identical across all of them. Only the setup guide differs.
+**Which AI tool should I choose?** The one you already pay for. Skills, agent roles and the context pack are identical across all of them. Only the setup guide differs.
 
-**My vendor's screen does not match the guide.** Vendors change their products often. Each setup guide has a verification date and the help pages it was checked against. Check those pages, or use the guide's plain-chat fallback.
+**My AI tool's screen does not match the guide.** These tools change often. Each setup guide has a verification date and the help pages it was checked against. Check those pages, or use the guide's plain-chat fallback.
 
 ## What it does not do
 
-**Does it connect to my CMS, CRM or email tool?** No. The office has limited connectors to external tools. You paste exports in, and you copy outputs out. To fit your own tools, see [Write your own skill](write-your-own-skill.md).
+**Does it connect to my CMS, CRM or email tool?** No. The office has no connectors to external tools. You paste exports in, and you copy outputs out. To fit your own tools, see [Write your own skill](write-your-own-skill.md).
 
 **Will it publish or send anything?** No. It writes drafts. You publish and send.
 
@@ -36,7 +42,7 @@ summary: Short answers on cost, vendors, limits, data and what the office does n
 
 ## Data and trust
 
-**Where does my context pack live?** In your own files, and in your vendor account once you upload it. The Marketing Office has no server and sees nothing. Read your vendor's terms and your company's policy before you upload anything confidential. You can leave sensitive numbers out of the context pack, and the skills will ask when they need them.
+**Where does my context pack live?** In your own files, and in your AI tool account once you upload it. The Marketing Office has no server and sees nothing. Read your AI tool's terms and your company's policy before you upload anything confidential. You can leave sensitive numbers out of the context pack, and the skills will ask when they need them.
 
 **Can I trust the output?** Treat it as a draft from a capable new hire who has read your files. Skills check drafts against the context pack and list their assumptions, but models still make errors. Run the Quality checklist, and use the marketing reviewer for anything public.
 

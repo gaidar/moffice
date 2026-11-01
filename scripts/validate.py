@@ -99,6 +99,8 @@ GUIDE_FILES = [
     "write-your-own-skill",
     "maintain-and-update",
     "faq",
+    "judge-an-output",
+    "hard-situations",
 ]
 VENDOR_GUIDES = ["setup-claude", "setup-chatgpt-codex", "setup-grok", "setup-google"]
 OFFICE_FILES = ["office-manual", "output-conventions", "glossary", "agent-roster"]
@@ -121,6 +123,8 @@ ROOT_FILES = [
     "scripts/build-bundles.sh",
     "bundles/all-skills.md",
     "bundles/all-agent-roles.md",
+    "bundles/context-pack-templates.md",
+    "bundles/try-it.md",
     ".github/workflows/pages.yml",
 ]
 
@@ -163,7 +167,7 @@ PROJECT_INFRA_ALLOW = {"DEPLOY.md"}
 RETIRED_RE = re.compile(r"\b(?:Ostrel|Quernwell|Marlowtask|Tallowbrook|Birchmoor|Halvane|Cresthollow)\b")
 DOMAIN_RE = re.compile(r"\b(?:technicians?|work orders?|maintenance managers?|plant managers?|production lines?|food and beverage)\b", re.I)
 
-DRAFT_SENTENCE = "you, the marketer, decide"
+DRAFT_SENTENCE = "you decide"
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 H2_RE = re.compile(r"^## +(.+?)[ \t]*$", re.M)
 CTX_RE = re.compile(r"\[\[context-pack:([^\]]*)\]\]")
@@ -274,7 +278,7 @@ def check_reads(rep, rel, fm, body, section_text):
 
 def check_skill(rep, rel, fm, body):
     parts = Path(rel).parts
-    for key in ["function", "owner"]:
+    for key in ["function", "owner", "you_bring", "also_for"]:
         if not fm.get(key):
             rep.error(rel, f"frontmatter missing {key}")
     if fm.get("function") not in FUNCTIONS:
@@ -325,6 +329,8 @@ def check_skill(rep, rel, fm, body):
 
 def check_agent(rep, rel, fm, body):
     check_order(rep, rel, body, AGENT_HEADINGS)
+    if not fm.get("bring_it"):
+        rep.error(rel, "frontmatter missing bring_it")
     secs = dict(sections(body))
     if DRAFT_SENTENCE not in body:
         rep.error(rel, f"must state the draft rule containing: {DRAFT_SENTENCE}")
@@ -524,8 +530,8 @@ def main():
         for agent in AGENTS:
             if len(by_owner[agent]) < 2:
                 rep.error(f"agents/{agent}.md", f"owns {len(by_owner[agent])} skills, needs at least 2")
-        if not 40 <= len(skills) <= 50:
-            rep.error(None, f"skills library has {len(skills)} skills, target is 40-50")
+        if not 40 <= len(skills) <= 60:
+            rep.error(None, f"skills library has {len(skills)} skills, target is 40-60")
     for rel, fm in skills:
         if fm.get("owner") == REVIEWER and not re.search(r"(^|/)(review|evaluate)-", rel):
             rep.error(rel, "marketing reviewer owns review and evaluation skills only")

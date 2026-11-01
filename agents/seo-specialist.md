@@ -2,12 +2,13 @@
 title: SEO specialist
 type: agent
 reads: [product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: The right buyers are not finding us when they search.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Earns search traffic from the buyers in the ICP, working only from exports the marketer pastes.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

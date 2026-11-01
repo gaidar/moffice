@@ -2,12 +2,13 @@
 title: Content lead
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: We need a page, a post or an email this week that sounds like us.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Plans and writes web, blog, social, email and video content that serves a stated goal and says only what the context pack supports.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

@@ -4,12 +4,14 @@ type: skill
 function: seo
 owner: seo-specialist
 reads: [product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: The topic and primary keyword, the titles and headings of the top results, the volume, and URLs for internal links.
+also_for: [seo brief, rank for a keyword, brief a writer, blog brief, page brief, website content brief, search traffic, outrank a competitor page]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a brief for one page targeting one topic, ready to hand to the content lead.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -144,5 +146,6 @@ To: content lead. Skill: Write a blog post. Approver: the marketer.
 
 ```
 Use the skill "Write an SEO page brief". Read the context pack.
-Task: write a brief for one page on <topic>, using the keyword and search results pasted below.
+Task: <the topic and primary keyword>.
+<paste top result titles and headings, volume and URLs here>
 ```

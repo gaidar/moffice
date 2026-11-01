@@ -30,6 +30,27 @@ The validator enforces most of these, and it runs on every push.
 - No testimonials and no claims about results.
 - Every skill and agent role says that it drafts and the marketer decides.
 
+## One term per concept
+
+| Use | Do not use |
+|---|---|
+| Marketing Office | The system, the tool, the platform, the product |
+| Marketer | User, operator, customer |
+| Context pack | Knowledge base, brand book, company profile |
+| Context pack file | Doc, sheet |
+| Skill | Prompt, template, recipe, workflow, tool |
+| Agent role | Agent persona, bot, assistant, character |
+| Charter | Role card, job description |
+| Office manual | System prompt, base prompt, instructions file |
+| Playbook | Runbook, process |
+| Guide | Tutorial, how-to, doc |
+| Output | Deliverable, artifact, or asset as a general word |
+| Draft | Final, version one |
+| Review | Audit (unless the skill says audit), QA |
+| Plain-chat fallback | Basic mode, lite version |
+| Vendor | Provider, platform |
+| Persistent instructions | Memory, settings |
+
 ## Adding or changing a skill
 
 1. Follow the format in [Write your own skill](guides/write-your-own-skill.md). The section headings and their order are fixed.

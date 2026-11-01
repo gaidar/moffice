@@ -4,12 +4,14 @@ type: skill
 function: marketing-ops
 owner: marketing-reviewer
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: The output in full, the skill it came from, and where it will appear.
+also_for: [check my draft, proofread, fact check, is this ok to publish, review copy, check claims, before it goes out, ceo review]
 version: 0.1.0
-updated: 2026-11-01
-summary: Critiques any output against the context pack and its originating skill's checklist, without rewriting it.
+updated: 2026-11-02
+summary: Critiques any output against the context pack and the checklist of the skill it came from, without rewriting it.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -17,8 +19,8 @@ Use this before anything public, or anything with a customer name or a number, i
 
 ## Inputs
 
-- [[context-pack:company]]: which numbers are publishable, internal only or never to be mentioned.
-- [[context-pack:product]]: what the product does, what it is not, prices and roadmap limits.
+- [[context-pack:company]]: which numbers can be used, and where.
+- [[context-pack:product]]: what it does and is not, prices, roadmap limits.
 - [[context-pack:icp-and-segments]]: whether the audience fits.
 - [[context-pack:personas]]: whether the output speaks to the right person.
 - [[context-pack:messaging]]: claims, proof and words to avoid.
@@ -31,24 +33,25 @@ Use this before anything public, or anything with a customer name or a number, i
 The marketer pastes into the chat:
 
 - The output to review, in full.
-- The title of its originating skill, and that skill's quality checklist if it is not in the files available.
+- The title of the skill it came from, and its checklist if not available.
 - Where it will appear: public, one-to-one sales or internal.
 
 ## Procedure
 
 1. Set the audience from the marketer's statement. If none was given, review it as public, the strictest case, and record that as an assumption.
-2. Find the originating skill's quality checklist. If it is not available, ask for it. If the marketer wants the review anyway, write "checklist not run" and do not improvise one from the skill's title.
+2. Find the quality checklist of the skill it came from. If it is not available, ask for it. If the marketer wants the review anyway, write "checklist not run" and do not improvise one.
 3. Go through the output line by line and list each factual claim, name, number, quote, price, date and competitor statement.
 4. Check each item against the context pack and mark it supported, contradicted or not found. Anything not found is a problem unless it is a visible placeholder. If a file needed for a check is blank, write "could not check" and ask. Never invent.
 5. Apply the permission check for the audience. Every customer name, number and quote must have a status in proof-points.md that allows this use. Every company number must have a status in company.md that allows it.
 6. Check the product limits in product.md, the competitor sources in competitors.md, and the hard rules in channels-and-tools.md.
 7. For public copy, check the words to avoid in messaging.md and the rules in brand-voice.md.
-8. Run the originating skill's checklist. Answer each question yes or no, with the line or fact that shows it.
+8. Run the checklist of the skill it came from. Answer each question yes or no, with the line or fact that shows it.
 9. Sort every problem. A blocker is a contradicted or unsupported fact, a permission breach, an unannounced roadmap item, a broken product limit, a breach of a hard rule or an invented placeholder fill. A fix is a word to avoid, a voice problem, a missing template field, a length breach or a failed checklist item that is not already a blocker.
-10. Set the verdict. Any blocker means "Do not use yet". No blockers and at least one fix means "Fix first". Neither means "Ready for your decision". Never call the output approved, since only the marketer changes its status.
-11. List the approvers from channels-and-tools.md that this output needs.
-12. Say what to change in each problem row, in one line. Do not rewrite the output unless the marketer asks.
-13. List every assumption, estimate, inference and unknown in the last section, including anything you could not check.
+10. Set the verdict. Any blocker means "Do not use yet". No blockers and at least one fix means "Fix first". Neither means "Facts and format checked". End every verdict with "Strategy not judged." Never call the output approved, since only the marketer changes its status.
+11. Name the single weakest idea in the draft, the one a senior marketer would push on first. Ask it as a question for the marketer, and say why. It does not change the verdict.
+12. List the approvers from channels-and-tools.md that this output needs.
+13. Say what to change in each problem row, in one line. Do not rewrite the output unless the marketer asks.
+14. List every assumption, estimate, inference and unknown in the last section, including anything you could not check.
 
 ## Output format
 
@@ -56,7 +59,8 @@ The marketer pastes into the chat:
 Status: Draft
 
 ## Verdict
-<Do not use yet, Fix first, or Ready for your decision, with the count of blockers and fixes. Max 30 words.>
+<Do not use yet, Fix first, or Facts and format checked, with the count of blockers and fixes. Then: Strategy not judged. Max 30 words.>
+Weakest idea: <the single weakest idea, and why, as a question for the marketer. Max 30 words.>
 
 ## Blockers
 | Where | Problem | Source | What to change |
@@ -68,7 +72,7 @@ Status: Draft
 
 ## Checklist results
 | Question | Yes or no | Evidence |
-<One row per question in the originating skill's checklist, or "checklist not run".>
+<One row per question, or "checklist not run".>
 
 ## Approvals needed
 <Up to 4 bullets: what needs approval, who approves and typical time.>
@@ -86,7 +90,7 @@ Status: Draft
 - [ ] Was the permission check run for the stated audience?
 - [ ] Does each problem name the context pack file behind it?
 - [ ] Do the verdict and the problem sorting follow the rules?
-- [ ] Was the originating skill's real checklist used, or marked as not run?
+- [ ] Was the real checklist of the skill it came from used, or marked as not run?
 - [ ] Are the approvers named from channels-and-tools.md?
 - [ ] Did the review stay a critique, with no rewrite unless asked?
 
@@ -100,7 +104,9 @@ Draft reviewed: "Unlike Arguvia, CogniATion Coach raises IQ and makes your analy
 
 **Verdict**
 
-Do not use yet. 3 blockers, 1 fix.
+Do not use yet. 3 blockers, 1 fix. Strategy not judged.
+
+Weakest idea: why would a head of learning care that you beat Arguvia, when the ad never mentions showing that training changed how people work?
 
 **Blockers**
 
@@ -125,11 +131,10 @@ Do not use yet. 3 blockers, 1 fix.
 **Approvals needed**
 
 - Ads go to the marketer, same day.
-- Product claims go to Anika Sole, VP product, if this runs as launch copy, 2 days.
 
 **Assumptions and open questions**
 
-- Assumption: the originating skill is [Write ad variations](../paid-demand-gen/write-ad-variations.md). One checklist question is shown, condensed for length.
+- Assumption: the skill it came from is [Write ad variations](../paid-demand-gen/write-ad-variations.md). One checklist question is shown, condensed for length.
 - Inference: "64 customer companies" is publishable, from company.md, as of September 30, 2026.
 - Unknown: What character limits apply?
 
@@ -137,5 +142,6 @@ Do not use yet. 3 blockers, 1 fix.
 
 ```
 Use the skill "Review any output". Read the context pack.
-Task: <review which output, for which audience, with the output and its originating skill named below>.
+Task: <the skill it came from, and where it will appear>.
+<paste the output here, in full>
 ```

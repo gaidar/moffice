@@ -4,12 +4,14 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, personas, messaging, competitors, proof-points, brand-voice, channels-and-tools]
+you_bring: An angle or SEO page brief, plus notes or sources for anything about practice, standards or regulation.
+also_for: [blog article, thought leadership, website traffic, article idea, content for seo, write a post, organic traffic, blog draft]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces one blog post from an angle or SEO page brief, built on material the marketer supplied and proof cleared for public use.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -132,5 +134,6 @@ Everyone finished the course. Can you show that it changed how they work? Test o
 
 ```
 Use the skill "Write a blog post". Read the context pack.
-Task: <the angle or pasted SEO page brief, plus your notes and sources>.
+Task: <the angle, if there is no SEO page brief>.
+<paste the brief, notes and sources here>
 ```

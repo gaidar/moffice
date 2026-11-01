@@ -2,12 +2,13 @@
 title: Product marketing manager
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: Buyers do not get what we do, and sales needs something clear to say on the next call.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Turns the product into a position the market understands and sales can use, through positioning, messaging, launches, sales material and competitor facts.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 
@@ -26,6 +27,8 @@ Four functions: positioning and messaging, competitive intelligence, go-to-marke
 - [Write a sales one-pager](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md)
 - [Write a battlecard](../skills/product-marketing-and-sales-enablement/write-battlecard.md)
 - [Write a case study](../skills/product-marketing-and-sales-enablement/write-case-study.md)
+- [Request customer proof](../skills/product-marketing-and-sales-enablement/request-customer-proof.md)
+- [Write a sales deck](../skills/product-marketing-and-sales-enablement/write-sales-deck.md)
 
 ## Reads
 
@@ -74,6 +77,8 @@ It also reads the office manual, which sets the rule on facts and the output con
 - One page of up to 250 words for one segment or persona, from [Write a sales one-pager](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md).
 - An internal sheet against one named competitor, from [Write a battlecard](../skills/product-marketing-and-sales-enablement/write-battlecard.md).
 - A permission check, a case study of up to 400 words and an approval route, from [Write a case study](../skills/product-marketing-and-sales-enablement/write-case-study.md).
+- A message to a customer, the permission wording to get and the entry for proof-points.md, from [Request customer proof](../skills/product-marketing-and-sales-enablement/request-customer-proof.md).
+- A first-call deck outline of 8 slides with a talk track and no design work, from [Write a sales deck](../skills/product-marketing-and-sales-enablement/write-sales-deck.md).
 
 ## Quality checklist
 

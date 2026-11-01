@@ -4,20 +4,22 @@ type: skill
 function: positioning-and-messaging
 owner: product-marketing-manager
 reads: [company, product, personas, messaging, competitors, proof-points, brand-voice, channels-and-tools]
+you_bring: A settled positioning statement, plus any new proof with its permission status.
+also_for: [key messages, value proposition, what do we say, sales tells a different story, website messaging, message house, elevator pitch, value props]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Turns a positioning statement into pillars, proof per pillar, messages by persona and words to use and avoid.
+judge: ["If a prospect read only the first pillar would they know why to keep reading?", "Would your sales team say these words on a call or rewrite them first?", "Does each persona message answer what that person worries about or just restate the product?", "Which pillar would you drop first if you could only say two things?"]
+show_to: a salesperson who ran a call this week, and ask which message they would never say out loud
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
 Use this once the positioning statement is settled, or when pillars have drifted from what sales says. Do not use it without a statement; run [Write a positioning statement](write-positioning-statement.md) first. For finished page copy, use [Write a web page](../content/write-web-page.md) instead.
 
 ## Inputs
-
-From the context pack:
 
 - [[context-pack:messaging]] – statement, current pillars, words to use and avoid
 - [[context-pack:product]] – features, what it is not, known weak spots
@@ -28,7 +30,7 @@ From the context pack:
 - [[context-pack:brand-voice]] – voice traits and style rules
 - [[context-pack:channels-and-tools]] – hard rules on competitor names
 
-The marketer supplies in the prompt: a new positioning statement, if it differs from messaging.md, and any new proof with its permission status.
+The marketer supplies: a new positioning statement, if it differs from messaging.md, and any new proof with its permission status.
 
 ## Procedure
 
@@ -133,5 +135,5 @@ Current list, unchanged. Proposed: none.
 
 ```
 Use the skill "Build a messaging framework". Read the context pack.
-Task: <what they want>.
+Task: <any new positioning statement, and new proof with permission status>.
 ```

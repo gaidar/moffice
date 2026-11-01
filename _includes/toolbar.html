@@ -6,6 +6,12 @@
 {%- if page.type == "playbook" -%}{%- assign has_pdf = true -%}{%- endif -%}
 {%- if page.type == "guide" and page.path != "guides/faq.md" -%}{%- assign has_pdf = true -%}{%- endif -%}
 <div class="toolbar" role="toolbar" aria-label="Page actions">
+  {%- if page.type == "skill" or page.type == "agent" -%}
+    <button type="button" class="btn primary office-copy-prompt">Copy prompt</button>
+  {%- endif -%}
+  {%- if page.type == "skill" -%}
+    <a class="btn" href="#example-fictional-company">See example</a>
+  {%- endif -%}
   <button type="button" class="btn office-copy" data-raw-url="{{ raw_url }}">Copy text</button>
   <a class="btn" href="{{ blob_url }}">Open on GitHub</a>
   <a class="btn" href="{{ raw_url }}">Raw file</a>

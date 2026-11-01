@@ -1,5 +1,5 @@
 <svg class="dg" viewBox="0 0 980 300" role="img" aria-labelledby="cadence-t cadence-d" xmlns="http://www.w3.org/2000/svg">
-<title id="cadence-t">The operating cadence</title><desc id="cadence-d">After the first week, you run the weekly playbook every week, the monthly playbook in the first week of each month and the quarterly playbook in the last two weeks of each quarter. Launches and campaigns run across them.</desc>
+<title id="cadence-t">The operating routine</title><desc id="cadence-d">After the first week, you run the weekly playbook every week, the monthly playbook in the first week of each month and the quarterly playbook in the last two weeks of each quarter. One major campaign or one launch runs at a time.</desc>
 <defs><marker id="cadence-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs>
 <text class="dg-t" x="16" y="55" text-anchor="start">First week</text>
 <line class="dg-rule" x1="14" y1="70" x2="966" y2="70"/>
@@ -43,8 +43,8 @@
 <rect class="dg-bar accent" x="478.1538461538462" y="132" width="57.23076923076923" height="20" rx="3"/>
 <rect class="dg-bar accent" x="723.0769230769231" y="132" width="57.23076923076923" height="20" rx="3"/>
 <rect class="dg-bar accent" x="845.5384615384615" y="176" width="118.46153846153847" height="20" rx="3"/>
-<rect class="dg-bar soft" x="355.69230769230774" y="220" width="547.0769230769231" height="20" rx="3"/>
-<text class="dg-s" x="629.2307692307693" y="234" text-anchor="middle">8 weeks before to 1 week before, for each launch</text>
-<rect class="dg-bar soft" x="294.46153846153845" y="264" width="485.84615384615387" height="20" rx="3"/>
-<text class="dg-s" x="537.3846153846154" y="278" text-anchor="middle">brief, plan, make, check, run, close, for each campaign</text>
+<rect class="dg-bar soft" x="539.3846153846155" y="220" width="424.61538461538464" height="20" rx="3"/>
+<text class="dg-s" x="751.6923076923078" y="234" text-anchor="middle">or a launch, 8 weeks before to launch day</text>
+<rect class="dg-bar soft" x="233.23076923076923" y="264" width="302.1538461538462" height="20" rx="3"/>
+<text class="dg-s" x="384.3076923076923" y="278" text-anchor="middle">brief, make, check, run, close</text>
 </svg>

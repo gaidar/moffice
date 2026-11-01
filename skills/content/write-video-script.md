@@ -4,12 +4,14 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, personas, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The topic, the video type and length, the footage you have, and who will speak.
+also_for: [product explainer, demo video, customer clip, short video, event promo, how-to clip, what to say on camera]
 version: 0.1.0
 updated: 2026-11-01
 summary: Produces a script for one short video, up to 120 seconds, with time, shot, spoken line and on-screen text in columns.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 

@@ -4,12 +4,16 @@ type: skill
 function: analytics-and-campaign-evaluation
 owner: marketing-analyst
 reads: [goals-and-kpis, icp-and-segments, channels-and-tools]
+you_bring: The campaign brief, its results by channel with the date pulled, and anything that disturbed the numbers.
+also_for: [did the campaign work, campaign results, campaign roi, campaign post-mortem, was it worth the money, pipeline from a campaign, what to do after a campaign]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Compares a finished campaign's results with its targets, says what worked and sets what to do next.
+judge: ["Would these leads have come anyway without the campaign?", "Are you judging the campaign or the timing and the list it went to?", "Would you run it again if the money were your own?", "Did sales notice this campaign and did it change any conversation?"]
+show_to: the salesperson who got the most leads from it, and ask whether those leads were worth the call
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -133,5 +137,6 @@ Too early. Goal of $125,000 pipeline stands at $80,000. Read again January 13, 2
 
 ```
 Use the skill "Evaluate a campaign". Read the context pack.
-Task: <evaluate which campaign, with its brief and results pasted below>.
+Task: <the campaign and its time window>.
+<paste the brief and results by channel here>
 ```

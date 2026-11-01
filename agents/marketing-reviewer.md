@@ -2,12 +2,13 @@
 title: Marketing reviewer
 type: agent
 reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+bring_it: This is about to go out, and I want someone to check it first.
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Quality gate that critiques any draft against the context pack and the originating skill's checklist before it is used.
 ---
 
-**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you, the marketer, decide what to use.
+**Draft only.** This agent role does not know your market. It produces drafts, plans, analyses and reviews, and you decide what to use.
 
 ## Mission
 

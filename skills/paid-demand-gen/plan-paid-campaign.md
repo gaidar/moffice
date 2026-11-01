@@ -4,12 +4,16 @@ type: skill
 function: paid-demand-gen
 owner: paid-media-manager
 reads: [icp-and-segments, personas, messaging, goals-and-kpis, channels-and-tools]
+you_bring: The goal, dates, budget, the campaign brief if there is one, and any past results or keyword figures.
+also_for: [search ads plan, start running ads, ad budget, which audience to target, need more demo requests, paid social, paid campaign, stop rules]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Sets the channel, audience, budget split, tests and stop rules for one paid campaign.
+judge: ["Is this audience looking for a solution right now or will you be interrupting them?", "Is the money enough to reach a result you can read before it runs out?", "If the first test fails what will you have learned for the money?", "Is the page after the click ready for someone who has never heard of you?"]
+show_to: someone who has run paid ads at a similar budget, and ask which test they would drop
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -28,7 +32,7 @@ The marketer supplies in the prompt: the goal, dates, budget, and the campaign b
 ## Procedure
 
 1. Check the gates first. List each limit in channels-and-tools.md as met, not met or unknown. If any is not met or unknown, say in the Gates section that no spend should start until it is met.
-2. Set the target cost per MQL. Use the marketer's number if given. Otherwise work it out as an estimate: quarter budget divided by the SQL goal, multiplied by the MQL to SQL rate. Show the arithmetic. If any input is blank, write [target cost needed] and ask.
+2. Set the target cost per MQL. Use the marketer's number if given. Otherwise work it out as an estimate: paid's own budget divided by the SQLs expected from paid, multiplied by the MQL to SQL rate. Show the arithmetic. If any input is blank, write [target cost needed] and ask.
 3. Choose channels. Use only the current paid channels in channels-and-tools.md, unless the marketer adds one. Exclude any type of ad that file forbids.
 4. Define the audience per channel. For search ads: buying problems and terms from the persona's language, with disqualifier terms as exclusions. Treat volume as unknown unless pasted. For audience-targeted ads: job title from personas.md, industry, company size and region from icp-and-segments.md. Skip segments the priority order limits to other routes.
 5. Split the budget. If channels-and-tools.md shows current spend, keep that ratio, so results can be compared with history. If not, give 70% to the channel that reaches people searching for a solution and 30% to the targeted channel. Hold back 10% of each line for tests.
@@ -91,7 +95,7 @@ Status: Draft
 
 **Gates.** No ad spend without tracking in place: unknown, so confirm before February 15. No display retargeting: met.
 
-**Campaign summary.** Goal: 67 MQLs from professional services firms by March 31, 2027. Dates: February 15 to March 31, 2027. Target cost per MQL: $202.
+**Campaign summary.** Goal: 57 MQLs from professional services firms by March 31, 2027. Dates: February 15 to March 31, 2027. Target cost per MQL: $234.
 
 **Channels and audience**
 
@@ -104,12 +108,12 @@ Status: Draft
 
 | Line | Total | Per month | Test money | MQLs needed |
 |---|---|---|---|---|
-| Search ads | $7,500 | $5,000 | $750 | 37 |
-| Social ads | $6,000 | $4,000 | $600 | 30 |
+| Search ads | $7,500 | $5,000 | $750 | 32 |
+| Social ads | $6,000 | $4,000 | $600 | 25 |
 
 **Tests.** One test only, given the budget: client memo angle against keep-practicing angle. Winner: lower cost per MQL at 5 MQLs each.
 
-**Stop rules.** Line: pause at $606 with no MQL. Campaign: review after two weeks above $404 per MQL.
+**Stop rules.** Line: pause at $702 with no MQL. Campaign: review after two weeks above $468 per MQL.
 
 **Needed before launch.** Ad sets, landing page, tracking links. Search at $7,500 and social at $6,000 in total: Marta Ilves, 3 days.
 
@@ -117,12 +121,13 @@ Status: Draft
 
 - Assumption: all current paid spend moves to this campaign for 1.5 months.
 - Assumption: a line's campaign total counts as one item for the $5,000 limit.
-- Estimate: $202 is $70,000 divided by 90 SQLs, times the 26% MQL to SQL rate. 67 is $13,500 divided by $202, part of the 116 in the campaign brief.
+- Estimate: $234 is paid's $27,000 for the quarter divided by 30 expected SQLs (illustrative), times the 26% MQL to SQL rate. 57 is $13,500 divided by $234, part of the 116 in the campaign brief.
 - Unknown: search volume for these terms. Can you paste an export?
 
 ## How to run it
 
 ```
 Use the skill "Plan a paid campaign". Read the context pack.
-Task: <what they want>.
+Task: <the goal, dates and budget>.
+<paste the brief, past results and keyword or audience figures here>
 ```

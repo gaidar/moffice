@@ -4,12 +4,14 @@ type: skill
 function: go-to-market-and-launches
 owner: marketing-reviewer
 reads: [company, product, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: The launch plan, the full text of each asset, the launch date, and which approvals are in.
+also_for: [are we ready to launch, go or no-go, launch checklist, launch next week, launch review, should we delay, launch risks, final check before launch]
 version: 0.1.0
 updated: 2026-11-01
 summary: Returns a go, no-go or fix-first verdict on a launch plan and its assets, with blockers, fixes and approval status.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -135,5 +137,6 @@ Status: Draft, recommendation only
 
 ```
 Use the skill "Review launch readiness". Read the context pack.
-Task: <review this launch for go or no-go; launch date, plan and assets pasted below>.
+Task: <today's date, the launch date, who confirmed it, and which approvals are in>.
+<paste the launch plan and each asset here>
 ```

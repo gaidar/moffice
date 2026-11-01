@@ -4,12 +4,14 @@ type: skill
 function: partner-and-channel-marketing
 owner: partner-marketing-manager
 reads: [company, product, icp-and-segments, personas, messaging, proof-points, brand-voice, channels-and-tools]
+you_bring: The partner's type and name, whether it refers or sells, who receives referrals, and any commercial terms to include.
+also_for: [reseller materials, referral program, partner enablement, channel partner, partner leads, partners selling it wrong, reseller pitch, agency partner kit]
 version: 0.1.0
 updated: 2026-11-01
 summary: Builds the messages and materials a partner needs to refer or sell the product accurately.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -134,5 +136,5 @@ Status: Draft
 
 ```
 Use the skill "Build a partner kit". Read the context pack.
-Task: <what they want>.
+Task: <the partner's type and name, whether it refers or sells, who receives referrals, and any terms>.
 ```

@@ -4,12 +4,16 @@ type: skill
 function: segmentation-icp-and-personas
 owner: insights-analyst
 reads: [personas, icp-and-segments, messaging, proof-points, product]
+you_bring: The role, the segment if it differs, and any evidence such as interview quotes, call notes or sales comments.
+also_for: [buyer persona, who is the buyer, target audience, decision maker, buying committee, what the buyer cares about, buyer objections, customer profile]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: One buying persona with job, objections and language.
+judge: ["Could you name a real person who fits this and have you spoken to them?", "Does this change what you would write tomorrow or could any marketer have guessed it?", "Would this person describe their problem in these words or are the words yours?", "What does this person need to show their boss before they can say yes?"]
+show_to: a customer in this job or a salesperson who sells to them, and ask what sounds wrong
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -136,5 +140,6 @@ Words to avoid: revolutionary, world-class, brain training, unlock your potentia
 
 ```
 Use the skill "Write a persona". Read the context pack.
-Task: write the persona for <role>, in the <segment> segment, using the notes pasted below.
+Task: <the role, and the segment if it differs>.
+<paste quotes, call notes, findings or sales comments here>
 ```

@@ -4,12 +4,16 @@ type: skill
 function: competitive-intelligence
 owner: product-marketing-manager
 reads: [competitors, icp-and-segments, product, messaging, goals-and-kpis]
+you_bring: A CRM export of closed deals with one row per deal, plus any call notes marked with the deal ID.
+also_for: [why we lose deals, why we win, lost deals, sales says we lose on price, losing to a competitor, closed lost reasons, deal review, win rate dropped]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Finds patterns across won and lost deals from a pasted CRM export and call notes, and tests the context pack against them.
+judge: ["Are these reasons what buyers said or what the salesperson typed into the CRM afterward?", "Would you hear the same reason if you called three of these buyers yourself?", "Is the pattern about your product or about deals you should never have been in?", "Which loss reason could marketing change and which belongs to product or price?"]
+show_to: your sales lead, and ask which pattern they disagree with and why
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -141,5 +145,6 @@ Period: Q3 2026. Closed deals: 24. Won: 9. Lost to a named competitor: 10. No de
 
 ```
 Use the skill "Analyze wins and losses". Read the context pack.
-Task: <what they want>.
+Task: <the period the deals cover>.
+<paste the CRM export and call notes here>
 ```

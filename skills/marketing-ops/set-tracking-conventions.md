@@ -4,12 +4,14 @@ type: skill
 function: marketing-ops
 owner: marketing-operations-manager
 reads: [channels-and-tools, goals-and-kpis, icp-and-segments]
+you_bring: Current UTM values or campaign names if any exist, each platform in use, and any limits on values.
+also_for: [utm, messy utms, campaign naming, link tagging, tracking links, reports do not agree, cannot track leads, source is unknown]
 version: 0.1.0
 updated: 2026-11-01
 summary: Sets UTM and campaign naming rules and a tracking sheet format, so the numbers can be read later.
 ---
 
-**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you, the marketer, decide what to use.
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
 
 ## When to use
 
@@ -138,5 +140,6 @@ No ad spend until the link is tested, per the tracking limit in channels-and-too
 
 ```
 Use the skill "Set tracking conventions". Read the context pack.
-Task: <set conventions for which channels, with current values and platform names pasted below>.
+Task: <which channels, and any limits a tool puts on values>.
+<paste current values and platform names here>
 ```

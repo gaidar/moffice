@@ -8,7 +8,7 @@ Website: <https://gaidar.github.io/moffice/>. See [DEPLOY.md](DEPLOY.md) for the
 
 ## Start
 
-Open [Start here](guides/start-here.md). It takes you through one setup guide, the context pack and your first skill. The target is under one working day. That is an estimate from the steps, not a measured result.
+[Try it in 10 minutes](try.md) with a sample company. Then open [Start here](guides/start-here.md), which takes you through a first pass of the context pack, one setup guide and your first skill. The times are estimates from the steps, not measurements.
 
 ## What is in the repo
 
@@ -18,10 +18,10 @@ Open [Start here](guides/start-here.md). It takes you through one setup guide, t
 | `context-pack/templates/` | 10 blank context pack files |
 | `context-pack/example-cogniation/` | The same 10 files, filled in for a fictional company |
 | `agents/` | 14 agent role charters |
-| `skills/` | 50 skills, in a folder per function |
+| `skills/` | 56 skills, in a folder per function |
 | `playbooks/` | Weekly, monthly, quarterly, first week, launch, campaign lifecycle |
 | `guides/` | Start here, four vendor setup guides, and guides for running the office |
-| `bundles/` | All skills and all charters in one file each, generated, for vendors with a low file limit |
+| `bundles/` | Generated. All skills, all charters and all context pack templates in one file each, plus the sample file for the trial |
 | `scripts/` | Validator, PDF build, bundle build |
 
 Everything is plain markdown, here on GitHub. Playbooks and guides also come as PDFs on the website.

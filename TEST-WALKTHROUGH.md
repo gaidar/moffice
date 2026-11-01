@@ -1,93 +1,60 @@
 # Test walkthrough
 
-Traced on 2026-11-01. It covers the path a new marketer follows from the home page to a first output, using only Start here, one vendor setup guide and the "Fill the context pack" guide.
+Traced on 2026-11-02. It covers the path a new marketer follows from the home page to a first output.
 
 ## What this test is, and is not
 
-- **Done:** reading every step in order as a marketer would, checking that each link resolves, and checking that no step needs a terminal, an API key or a server. A fresh model session also ran the first skill from only the files a marketer would load, with the example pack as context.
+- **Done:** reading every step in order as a marketer would, checking that links and anchors resolve, and checking that no step needs a terminal, an API key or a server. Fresh model sessions followed the trial and two skills, using only the files a marketer would load. A senior marketing review and a junior marketer review went through the site.
 - **Not done:** running these steps in a live vendor account or with a real marketer. Vendor screens were not seen. Vendor steps rest on fetched help pages, and each guide marks what it could not verify.
 
 ## The path
 
 | Step | Page or action | What the marketer does | Terminal, API key or server? |
 |---|---|---|---|
-| 1 | Home page, `index.md` | Reads one paragraph and three steps, then clicks Start here | No |
-| 2 | `guides/start-here.md`, step 1 | Opens the repository on GitHub. No account is needed | No |
-| 3 | Start here, step 2 | Picks one of four setup guides | No |
-| 4 | `guides/setup-claude.md`, steps 1 to 3 | Gets the files with GitHub's Code and Download ZIP buttons, creates a project and pastes the office manual | No |
-| 5 | Setup guide, steps 4 to 6 | Uploads 10 context pack templates, then skills and charters, or the two bundle files | No |
-| 6 | Setup guide, step 7 | Pastes the check prompt and confirms the answer | No |
-| 7 | `guides/fill-the-context-pack.md` | For each of 10 files, uses the interview prompt, saves the answer in a text editor and uploads it | No |
-| 8 | Fill the context pack, check prompt | Confirms that there are no contradictions | No |
-| 9 | `guides/start-here.md`, step 4, and `guides/use-a-skill.md` | Pastes the "Write a sales one-pager" prompt | No |
-| 10 | Start here, step 5 | Reads the output, answers the open questions, runs the Quality checklist | No |
+| 1 | Home page, `index.md` | Reads what you get, sees a sample output, clicks Try it | No |
+| 2 | `try.md` | Copies the sample file, pastes it with one message into any AI chat, compares the result | No |
+| 3 | `guides/start-here.md` | Decides to go on | No |
+| 4 | `guides/fill-the-context-pack.md` | Uploads the combined templates and source documents to one chat, answers blocking questions, saves one file | No |
+| 5 | One setup guide | Creates a project, pastes the office manual, uploads 3 files, runs two check prompts | No |
+| 6 | `guides/use-a-skill.md` | Copies a skill's prompt, gets a draft, answers its questions, asks for a second draft | No |
+| 7 | `playbooks/first-week.md`, `playbooks/weekly.md` | Starts the routine | No |
 
-The other three setup guides follow the same path:
+Each setup guide also has a plain-chat fallback that works with no vendor feature beyond chat and file upload.
 
-| Guide | Persistent feature | Uploads | Notes |
-|---|---|---|---|
-| `setup-chatgpt-codex.md` | ChatGPT project | 12 files, because the verified limits are 25 on Plus and 40 on Pro | Codex note is optional, and no step in it uses a terminal |
-| `setup-grok.md` | Grok project | 74 files, or 12 if rejected | xAI has no Projects help page, so several details are marked Unverified |
-| `setup-google.md` | Gemini notebook | 74 files, or 12 | Gems were avoided because Google is making them read-only on November 17, 2026 |
+## Cold runs
 
-Each guide also has a plain-chat fallback that works with no vendor feature beyond chat and file upload.
+Fresh model sessions received only the files a marketer would load.
 
-## Cold run of the first skill
+| Run | Result |
+|---|---|
+| Write a sales one-pager, CogniATion | Template followed, all limits met, all seven checks passed, no invented customer or number |
+| Write a campaign brief, CogniATion | Six of seven checks passed. It could not name skills with only two loaded. The skill now allows a placeholder there |
+| Try it, following the page | One-pager matched the page, with the same facts and placeholder. Send order was unclear, since fixed |
 
-A fresh model session received only the office manual, the 10 example pack files and the skill file. It ran first on the earlier example company, then again on CogniATion after the examples were rewritten. The prompt on CogniATion:
-
-```
-Use the skill "Write a sales one-pager". Read the context pack.
-Task: one page for professional services firms, aimed at the VP of people, for one-to-one use by sales.
-```
-
-Result: a full one-pager in the template format, within every length limit, passing all seven checklist items, ending with "Assumptions and open questions", with no invented customer or number. It left a placeholder for the one question the pack could not answer. That gap was then filled.
-
-A second skill, "Write a campaign brief", also ran cold. It passed six of seven checks. It could not name the skills for each asset, because only two skills were loaded, which is what a plain-chat session looks like. The skill now allows a placeholder there. It also needed a rule for the campaign's share of the goal, now added as a starting rule.
-
-The runs were on one vendor's model. They say nothing about how the other vendors' models would do. Neither run was repeated after these last fixes.
+The runs were on one vendor's model. They say nothing about how the other vendors' models would do. They were not repeated after the last fixes.
 
 ## Problems found and fixed
 
 | Problem | Fix |
 |---|---|
-| The blank templates hold fictional example lines, which a model could take as facts about the marketer's company | The office manual now says only text after "Answer:" counts |
-| The manual said to ask before drafting, while skills told the model to write placeholders | The manual now says to ask first only if a blank changes the whole output, and otherwise to use a placeholder and ask at the end |
-| The limit of one statistic per output, read literally, banned the company's own proof numbers | The limit now covers outside-world figures only |
-| The approval table made every use of an approved customer quote look like a two-week job | The example pack now separates new customer items from those already approved |
-| The condensed example in a skill differed from its template | The manual now says the template wins |
-| The one-pager template had no line for the company name | Added |
-| The manual pointed to a document not loaded in the tool | Reference removed |
-| The pack had no answer to a buyer's legal and data questions | Added a Data and security field to the product template and example |
-| The internal manager view release left its effect on team-level reports unclear | The example now states its scope |
+| About a day of effort before any useful draft | A 10-minute trial, then a one-hour first pass |
+| 74 uploads, and 10 rounds of chat to fill the pack | One combined pack file, and 3 files to upload |
+| Blank templates could be read as facts | The office manual says only text after "Answer:" counts. Blanks are no longer uploaded |
+| Finding a skill needed the system's vocabulary | A table by situation, keywords behind the filter, and a message when nothing matches |
+| Nothing helped set goals, and the plan stopped without them | Propose quarterly goals, with a CEO script |
+| Review read as approval of the idea | The verdict now says strategy was not judged, and names the weakest idea |
+| Confidential data warning was only in the FAQ | Moved to the upload step |
+| First week and weekly routines assumed too much | A CEO conversation on day 1, conversations across the week, a starter routine |
 
 ## Site checks
 
-Run on the final build. PDF checks apply to playbooks and guides only.
+Run on the local build on 2026-11-02. The live site is offline while the repository is private, so these need repeating at the release, along with Copy text and Raw file, which read from GitHub.
 
 | Check | Result |
 |---|---|
-| Home, Start here, Setup, Context pack, Agents, Skills, Playbooks and FAQ are in the top bar on every page, Contributing in the footer | Pass, browser check |
-| Every skill, agent, playbook and guide page has a toolbar | Pass, 81 of 81 pages, script over the built site |
-| Download PDF appears only on 16 playbook and guide pages | Pass, script over the built site |
-| Internal links, and GitHub links keeping their `.md` ending | Pass, script over the built site |
-| Mobile width, 390 pixels, no horizontal page scroll | Pass, browser check |
-| Skills filter narrows the list and hides empty groups | Pass, browser check |
-
-A browser check found that the `.md` to `.html` link rewrite was also breaking GitHub links. The layout now protects external links.
-
-## Checks on the live site
-
-Run on 2026-11-01 against <https://gaidar.github.io/moffice/>.
-
-| Check | Result |
-|---|---|
-| Home, Start here, Setup, Context pack, Agents, Skills, Playbooks, Guides, FAQ and Contributing return 200 | Pass |
-| Download PDF returns a PDF for a playbook and a guide | Pass |
-| Old zip, skill PDF and old example URLs return 404 | Pass |
-| Bundle files are on GitHub as raw text | Pass |
-| Agent role page shows three controls, guide page shows four | Pass, browser test |
-| Copy text fetches the raw markdown and writes it to the clipboard | Pass, browser test |
-| Copy text falls back to opening the raw file when the fetch fails | Pass, browser test with the fetch forced to fail |
-| Site fonts load, no sidebar, diagrams shown | Pass, browser test |
-| Dark mode | Pass, browser test |
+| Top bar on every page, Contributing, Guides, Office and Glossary in the footer | Pass, browser check |
+| Toolbar on every skill, agent, playbook and guide page | Pass, 89 of 89 pages, script over the built site |
+| Copy prompt on every skill and charter, and it copies the right text | Pass, 70 of 70 pages by script, one tested in the browser |
+| Download PDF only on 18 playbook and guide pages | Pass, script over the built site |
+| Internal links and 227 anchors | Pass, none missing, script over the built site |
+| Skills filter on phrases such as "pipeline down" and "leads are bad", with a message when nothing matches | Pass, browser check |

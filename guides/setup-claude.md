@@ -2,8 +2,8 @@
 title: Set up on Claude
 type: guide
 version: 0.1.0
-updated: 2026-11-01
-summary: Create one Claude project with the office manual, context pack, skills and charters, or run the office in plain chat.
+updated: 2026-11-02
+summary: Create one Claude project with the office manual in its instructions and 3 files in its knowledge, or run the office in plain chat.
 diagram: setup
 diagram_caption: "The steps below cover the top path. The plain-chat fallback covers the bottom one."
 ---
@@ -12,12 +12,15 @@ diagram_caption: "The steps below cover the top path. The plain-chat fallback co
 
 Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Free too, with a limit of five, but says project instructions are for paid plans and limits automatic capacity expansion to paid plans.
 
+These steps were written from Anthropic's help pages on the date below, and have not been run in a live account, so if a screen differs, trust the help page.
+
 ## What you need
 
 - A Claude Pro or Max subscription, signed in at claude.ai in a browser
 - The Marketing Office files, from [the Marketing Office repository](https://github.com/gaidar/moffice) on GitHub. Step 1 shows how to get them.
+- `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
 - A plain text editor, for opening and copying the office manual
-- About 30 to 45 minutes (estimate), not counting filling the context pack
+- About 30 minutes, an estimate, not counting the context pack
 
 ## Steps
 
@@ -29,40 +32,39 @@ Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Fr
 
 3. Open `office/office-manual.md` in a plain text editor and copy all of it. In the project, click "Set project instructions", paste, and click "Save instructions". Anthropic's course calls this panel "Instructions".
 
-   The office manual is about 7,800 characters. Anthropic's help pages state no character limit for these instructions. Unverified – check the vendor help page: [create and manage projects](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
-
    If the text does not fit, paste this short pointer instead, then upload `office-manual.md` with the other files:
 
    ```
    You are the Marketing Office. Before every response, read the file office-manual.md in this project's files and follow it exactly. It sets how skills and agent roles are used, the rule on facts, the assumption labels and the output conventions. Never invent facts about the company. If you cannot find office-manual.md, say so and ask the marketer to upload it.
    ```
 
-4. Test one file before uploading the rest. In the project knowledge area on the right side of the project's main page, click the "+" button and upload `context-pack/templates/company.md`. Anthropic's file help also calls this area "Files".
+   The office manual is about 7,800 characters, and Anthropic's help pages state no character limit for these instructions. Unverified – check the vendor help page: [create and manage projects](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
 
-   Whether .md files are accepted: Unverified – check the vendor help page: [upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude). Anthropic's list names TXT and does not name Markdown.
+4. Upload your context pack first, as a test. In the project knowledge area on the right side of the project's main page, click the "+" button and upload `my-context-pack.md`. Anthropic's file help also calls this area "Files".
 
-   If the file is rejected, change the file's ending from .md to .txt and upload it again. Then use the bundle route in step 6, because it means renaming 12 files instead of 74.
+   If the file is rejected, change the file's ending from .md to .txt and upload it again, and do the same with the files in step 5. Anthropic's list names TXT and does not name Markdown. Unverified – check the vendor help page: [upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude).
 
-5. Upload the other 9 files from `context-pack/templates/` the same way. Selecting several files at once: Unverified – check the vendor help page: [upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude). If your file picker takes only one at a time, upload them one at a time.
+5. Upload `bundles/all-skills.md` and `bundles/all-agent-roles.md` the same way. If your file picker takes only one file at a time, upload them one at a time. Unverified – check the vendor help page: [upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude).
 
-6. Upload the skills and charters. Anthropic sets no fixed file count for a project: each file can be up to 30MB, and all content must fit Claude's context window. On paid plans, Claude switches on [retrieval mode](https://support.claude.com/en/articles/11473015-retrieval-augmented-generation-rag-for-projects) automatically as the project nears that limit, which Anthropic says expands capacity by up to 10x.
+   Anthropic sets no fixed file count for a project: each file can be up to 30MB, and all content must fit Claude's context window. On paid plans, Claude switches on [retrieval mode](https://support.claude.com/en/articles/11473015-retrieval-augmented-generation-rag-for-projects) automatically as the project nears that limit, which Anthropic says expands capacity by up to 10x.
 
-   - **Recommended, 74 files in total:** every file in each `skills/[function]/` folder, plus every file in `agents/`.
-   - **Bundle route, 12 files in total:** `bundles/all-skills.md` and `bundles/all-agent-roles.md`. Use this if individual uploads are too slow or .md files were rejected in step 4.
-
-   Inference from how retrieval mode works: separate files make it easier for Claude to find one skill, so choose them unless you have a reason not to.
-
-7. Start a new chat inside the project and paste this check prompt:
+6. Start a new chat inside the project and paste this check prompt:
 
    ```
-   List the context pack files you can see, and say which ones look blank. Then tell me which skill you would use to write a sales one-pager. Do not invent anything.
+   List the context pack sections you can see, and say which have blanks. Then tell me which skill you would use to write a sales one-pager. Do not invent anything.
    ```
 
-   Expected: it lists the 10 files and names the skill "Write a sales one-pager".
+   Expected: it lists the 10 sections of your context pack, says which have blanks, and names the skill "Write a sales one-pager".
 
-8. If you have not filled the context pack yet, follow [Fill the context pack](fill-the-context-pack.md), then upload the filled files to the project. Removing the blank versions: Unverified – check the vendor help page: [create and manage projects](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
+   Then check that it can use a skill from the combined file, with this second check:
 
-9. Follow [Use a skill](use-a-skill.md) for your first output. Run work inside the project with these prompts:
+   ```
+   Show me the Output format section of the skill "Write a sales one-pager", word for word.
+   ```
+
+   Compare the answer with [the skill's page on this site](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload or paste that skill's own file, `skills/product-marketing-and-sales-enablement/write-sales-one-pager.md`.
+
+7. Follow [Use a skill](use-a-skill.md) for your first output. Run work inside the project with these prompts:
 
    ```
    Use the skill "<title>". Read the context pack. Task: <what they want>.
@@ -72,11 +74,9 @@ Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Fr
    Act as the <role> from the Marketing Office. Follow your charter. Read the context pack. Today's task: <task>.
    ```
 
-Claude also has its own Skills feature. The project path is the supported one, because that feature needs each skill repackaged as a ZIP with a skill.md file and required name and description fields.
-
 ## What success looks like
 
-The project named Marketing Office shows the office manual in its instructions and your files in project knowledge. A new chat inside it answers the check prompt with the 10 context pack files, says which look blank, and names "Write a sales one-pager".
+The project named Marketing Office shows the office manual in its instructions and your 3 files in project knowledge. A new chat inside it answers the check prompt with the 10 context pack sections, says which have blanks, and names "Write a sales one-pager". The second check returns the skill's Output format as it appears on this site.
 
 ## Plain-chat fallback
 
@@ -84,7 +84,7 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 1. Start a new chat at claude.ai, outside any project.
 2. Copy all of `office/office-manual.md` from a plain text editor, paste it as your first message, and send it.
-3. Upload the context pack files you need and the skill file. Click the "+" button in the lower-left corner of the chat box, then "Add files or photos", or drag the files into the chat window. The skill's Inputs section names the context pack files it reads. The limit is 20 files per chat and 500MB per file. If a .md file is rejected, change its ending to .txt, or paste its text into the chat.
+3. Upload `my-context-pack.md` and the skill file. Click the "+" button in the lower-left corner of the chat box, then "Add files or photos", or drag the files into the chat window. The limit is 20 files per chat and 500MB per file. If a .md file is rejected, change its ending to .txt, or paste its text into the chat.
 4. Paste the run prompt, with your skill title and task filled in:
 
    ```
@@ -97,7 +97,7 @@ This works with chat and file upload only. It costs a few minutes at the start o
    Act as the <role> from the Marketing Office. Follow your charter. Read the context pack. Today's task: <task>.
    ```
 
-5. Save each output yourself by copying it into your own file. Keep your filled context pack files in the same folder.
+5. Save each output yourself by copying it into your own file. Keep `my-context-pack.md` in the same folder.
 6. When the chat gets long, ask for a handoff note and save it. Anthropic says that on paid plans with code execution on, Claude summarizes earlier messages automatically, and that longer chats use more of your usage limit. It suggests a new chat when you near that limit or hit a length limit.
 
    ```
@@ -106,14 +106,20 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 7. To begin the next chat, repeat steps 1 to 3, paste the handoff note, then paste the run prompt.
 
+### Optional extras
+
+- **Individual files.** In place of the two bundles, upload every file in each `skills/[function]/` folder and every file in `agents/`. Inference from how retrieval mode works: separate files make it easier for Claude to find one skill, so try this if Claude keeps missing skills.
+- **Claude's own Skills feature.** The project path is the supported one, because that feature needs each skill repackaged as a ZIP with a skill.md file and required name and description fields.
+
 ## Troubleshooting
 
-- **Claude says it cannot find a skill.** Check that the skill's file or `all-skills.md` is in the project, and use the exact title. In plain chat, upload the skill file.
-- **The check prompt lists fewer than 10 files.** Inference: in retrieval mode, Claude pulls only what seems relevant, so it may not list everything. Compare the project's file list with `context-pack/templates/`, upload anything missing, then ask for the missing file by name.
+- **Claude says it cannot find a skill.** Check that `all-skills.md` is in the project, and use the exact title. If the model cannot find a skill in the combined file, upload or paste that skill's own file. In plain chat, upload the skill file.
+- **The check prompt lists fewer than 10 sections.** Inference: in retrieval mode, Claude pulls only what seems relevant, so it may not list everything. Check that `my-context-pack.md` is in the project's file list and holds all 10 sections, then ask for the missing section by name.
 - **Claude ignores the office manual.** Project instructions apply only to chats in that project. Check that the chat was started inside Marketing Office and that the instructions were saved.
-- **Claude invents a fact.** Ask for its source in the context pack. If there is none, add the fact to the right context pack file or tell it to leave a visible placeholder such as `[customer quote needed]`. Check the office manual is loaded, because it holds the rule on facts.
+- **Claude invents a fact.** Ask for its source in the context pack. If there is none, add the fact to the right section of `my-context-pack.md` or tell it to leave a visible placeholder such as `[customer quote needed]`. Check the office manual is loaded, because it holds the rule on facts.
 - **File upload rejected.** Change the ending from .md to .txt. Anthropic's list names TXT, not Markdown. In a project, also check the file is under 30MB.
 - **Instructions too long.** Use the short pointer in step 3 and upload `office-manual.md` as a file.
+- **You updated your context pack.** Upload the new `my-context-pack.md`. If the old one still shows, remove it, so that two versions do not mix. How to remove it: Unverified – check the vendor help page: [create and manage projects](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
 - **Forgot files in a new chat.** In plain chat, upload them now and ask Claude to read them again before it continues. In a project, files stay available across chats, so this should not happen.
 - **You are near your usage limit in a long chat.** Save your outputs and start a new chat. Anthropic says longer chats use more of the limit.
 
@@ -141,4 +147,4 @@ What could not be verified:
 - Step 3: the character limit for project instructions. No page fetched states one for projects at claude.ai/projects.
 - Step 4: whether .md files upload. No page fetched lists Markdown as supported or rejected.
 - Step 5: selecting several files at once.
-- Step 8: how to remove a file from a project.
+- Troubleshooting, "You updated your context pack": how to remove a file from a project.
