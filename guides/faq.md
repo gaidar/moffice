@@ -1,0 +1,57 @@
+---
+title: FAQ
+type: guide
+version: 0.1.0
+updated: 2026-11-01
+summary: Short answers on cost, vendors, limits, data and what the office does not do.
+---
+
+## What it is
+
+**What is the Marketing Office?** A free, open source playbook: a set of skills and agent roles in plain text that you load into your AI tool, plus a company context pack that every skill reads and a weekly, monthly and quarterly cadence.
+
+**Does it replace a marketing team?** It gives one marketer the structure of a department: defined roles, written procedures and fixed output formats. It produces drafts, plans, analyses and reviews, and the marketer decides. It does not know your market, your customers or what will work.
+
+**Are there results or benchmarks I can expect?** None are claimed. The project has no customer data, and any time estimate in the guides is labeled as an estimate.
+
+## Cost and setup
+
+**What does it cost?** The Marketing Office is free, under the Apache License 2.0, with no hosted service. You pay your vendor for your own subscription. Check the plan and price on your vendor's site.
+
+**How long does setup take?** The target is under one working day. That is an estimate from the steps in the guides, not a measured average.
+
+**Do I need to code or use a terminal?** No. No servers and no API keys either. Copying, pasting, uploading files and following numbered steps cover everything.
+
+**Which vendor should I choose?** The one you already pay for. Skills, agent roles and the context pack are identical across all of them. Only the setup guide differs.
+
+**My vendor's screen does not match the guide.** Vendors change their products often. Each setup guide has a verification date and the help pages it was checked against. Check those pages, or use the guide's plain-chat fallback.
+
+## What it does not do
+
+**Does it connect to my CMS, CRM or email tool?** No. The office has limited connectors to external tools. You paste exports in, and you copy outputs out. To fit your own tools, see [Write your own skill](write-your-own-skill.md).
+
+**Will it publish or send anything?** No. It writes drafts. You publish and send.
+
+**Does it browse the web for competitor news or search volumes?** Skills do not assume it can. You paste the data in, or the skill labels it unknown. If your tool can browse, you may ask it to, and you should check the sources it gives.
+
+## Data and trust
+
+**Where does my context pack live?** In your own files, and in your vendor account once you upload it. The Marketing Office has no server and sees nothing. Read your vendor's terms and your company's policy before you upload anything confidential. You can leave sensitive numbers out of the context pack, and the skills will ask when they need them.
+
+**Can I trust the output?** Treat it as a draft from a capable new hire who has read your files. Skills check drafts against the context pack and list their assumptions, but models still make errors. Run the Quality checklist, and use the marketing reviewer for anything public.
+
+**What stops it from making up customers or numbers?** Rules in the office manual and in each skill: use only the context pack, use proof points only with the right permission status, ask when something is blank. These rules lower the risk but do not remove it. Check names, numbers and quotes yourself.
+
+**Are the example companies real?** No. CogniATion, CogniATion Coach, Arguvia, Deliberon and the customers in the examples are invented. Their names were searched on the web before use, and no exact match turned up.
+
+## Using it
+
+**What if no skill fits my job?** Ask anyway. The office manual tells the model to say no skill covers it, name the closest one, do the work under the same rules and label the result as ad hoc.
+
+**Why are all the outputs in the same format?** So that you can compare them over time, hand them from one role to another and check them quickly.
+
+**Can I edit the skills?** Yes. They are plain text, and the license allows it. Keep a copy of your changes for when you take a new version.
+
+**Why do only some pages have a PDF?** PDFs are for procedures people read: playbooks and guides. Skills, charters and the context pack go into your AI tool, so they are text files on GitHub.
+
+**How do I report a mistake?** Use the Report an issue link at the bottom of every page. See [Contributing](../CONTRIBUTING.md) for suggesting changes.

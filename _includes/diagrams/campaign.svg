@@ -1,0 +1,31 @@
+<svg class="dg" viewBox="0 0 980 170" role="img" aria-labelledby="campaign-t campaign-d" xmlns="http://www.w3.org/2000/svg">
+<title id="campaign-t">Campaign lifecycle</title><desc id="campaign-d">A campaign moves from brief to plan, make, check, run and close. The evaluation at the end feeds the next brief.</desc>
+<defs><marker id="campaign-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs>
+<rect class="dg-box " x="12" y="18" width="144" height="78" rx="5"/>
+<text class="dg-t " x="84.0" y="54.5" text-anchor="middle">Brief</text>
+<text class="dg-s " x="84.0" y="70.5" text-anchor="middle">one goal, one audience</text>
+<path class="dg-arrow" d="M156 57 L176 57" marker-end="url(#campaign-a)"/>
+<rect class="dg-box " x="176" y="18" width="144" height="78" rx="5"/>
+<text class="dg-t " x="248.0" y="47.5" text-anchor="middle">Plan</text>
+<text class="dg-s " x="248.0" y="63.5" text-anchor="middle">paid, events</text>
+<text class="dg-s " x="248.0" y="77.5" text-anchor="middle">partners, tracking</text>
+<path class="dg-arrow" d="M320 57 L340 57" marker-end="url(#campaign-a)"/>
+<rect class="dg-box " x="340" y="18" width="144" height="78" rx="5"/>
+<text class="dg-t " x="412.0" y="47.5" text-anchor="middle">Make</text>
+<text class="dg-s " x="412.0" y="63.5" text-anchor="middle">page, ads</text>
+<text class="dg-s " x="412.0" y="77.5" text-anchor="middle">email, nurture</text>
+<path class="dg-arrow" d="M484 57 L504 57" marker-end="url(#campaign-a)"/>
+<rect class="dg-box accent" x="504" y="18" width="144" height="78" rx="5"/>
+<text class="dg-t accent" x="576.0" y="54.5" text-anchor="middle">Check</text>
+<text class="dg-s accent" x="576.0" y="70.5" text-anchor="middle">review and approvers</text>
+<path class="dg-arrow" d="M648 57 L668 57" marker-end="url(#campaign-a)"/>
+<rect class="dg-box " x="668" y="18" width="144" height="78" rx="5"/>
+<text class="dg-t " x="740.0" y="54.5" text-anchor="middle">Run</text>
+<text class="dg-s " x="740.0" y="70.5" text-anchor="middle">you launch and adjust</text>
+<path class="dg-arrow" d="M812 57 L832 57" marker-end="url(#campaign-a)"/>
+<rect class="dg-box " x="832" y="18" width="144" height="78" rx="5"/>
+<text class="dg-t " x="904.0" y="54.5" text-anchor="middle">Close</text>
+<text class="dg-s " x="904.0" y="70.5" text-anchor="middle">evaluate against target</text>
+<path class="dg-arrow dash" d="M904 96 L904 136 L84 136 L84 96" marker-end="url(#campaign-a)"/>
+<text class="dg-s" x="490" y="156" text-anchor="middle">The evaluation feeds the next brief</text>
+</svg>

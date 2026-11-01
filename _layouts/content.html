@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{%- assign eyebrow = "" -%}
+{%- case page.type -%}
+  {%- when "skill" -%}
+    {%- assign fn = site.data.functions | where: "slug", page.function | first -%}
+    {%- capture eyebrow -%}Skill in {{ fn.label }}{%- endcapture -%}
+  {%- when "agent" -%}{%- assign eyebrow = "Agent role" -%}
+  {%- when "playbook" -%}{%- assign eyebrow = "Playbook" -%}
+  {%- when "guide" -%}{%- assign eyebrow = "Guide" -%}
+  {%- when "office" -%}{%- assign eyebrow = "Office document" -%}
+  {%- when "context-template" -%}{%- assign eyebrow = "Context pack template" -%}
+  {%- when "context-example" -%}{%- assign eyebrow = "Context pack example, fictional company" -%}
+{%- endcase -%}
+<header class="page">
+  <div class="wrap">
+    {%- if eyebrow != "" -%}<p class="eyebrow">{{ eyebrow }}</p>{%- endif -%}
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.summary }}</p>
+    {%- if page.type == "skill" -%}
+      {%- assign owner = site.pages | where: "type", "agent" | where_exp: "a", "a.path contains page.owner" | first -%}
+      <p class="meta">Owned by <a href="{{ owner.url | relative_url }}">{{ owner.title }}</a></p>
+    {%- endif -%}
+    {%- unless page.type == "index" -%}{%- include toolbar.html -%}{%- endunless -%}
+  </div>
+</header>
+{%- comment -%}
+Markdown links point at .md files so they work on GitHub. Pages mirror the source
+paths, so swapping the extension makes the same links work on the site.
+{%- endcomment -%}
+{%- comment -%}External links, such as GitHub file links, keep their .md ending.{%- endcomment -%}
+{%- assign chunks = content | split: 'href="https://' -%}
+{%- capture protected -%}
+  {%- for chunk in chunks -%}
+    {%- if forloop.first -%}{{ chunk }}{%- else -%}
+      {%- assign target = chunk | split: '"' | first -%}
+      {%- assign safe = target | replace: '.md', '.MDKEEP' -%}
+      href="https://{{ chunk | replace_first: target, safe }}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign body = protected | replace: '.md"', '.html"' | replace: '.md#', '.html#' | replace: '.MDKEEP', '.md' -%}
+{%- assign ctx_base = "/context-pack/templates/" | relative_url -%}
+{%- for item in site.data.context_pack -%}
+  {%- assign needle = "[[context-pack:" | append: item.file | append: "]]" -%}
+  {%- capture link -%}<a href="{{ ctx_base }}{{ item.file }}.html">{{ item.file }}.md</a>{%- endcapture -%}
+  {%- assign body = body | replace: needle, link -%}
+{%- endfor -%}
+<div class="wrap">
+  {%- if page.diagram -%}
+    <figure class="lead-figure">
+      <div class="scroll">{%- include diagrams/{{ page.diagram }}.svg -%}</div>
+      {%- if page.diagram_caption -%}<figcaption>{{ page.diagram_caption }}</figcaption>{%- endif -%}
+    </figure>
+  {%- endif -%}
+  <article class="doc-body{% if page.type == 'skill' or page.type == 'agent' %} numbered{% endif %}">
+    {{ body }}
+  </article>
+</div>

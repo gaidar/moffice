@@ -1,0 +1,63 @@
+title: Marketing Office
+description: A free, open source playbook of skills and agent roles for one marketer. Plain text. No servers, no API keys, no code.
+url: https://gaidar.github.io
+baseurl: /moffice
+repository: gaidar/moffice
+office_version: 0.1.0
+
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - DEPLOY.md
+  - TEST-WALKTHROUGH.md
+  - ASSUMPTIONS.md
+  - LICENSE
+  - VERSION
+  - Gemfile
+  - Gemfile.lock
+  - dev/
+  - CLAUDE.md
+  - scripts/
+  - vendor/
+  - .venv/
+  - .github/
+  - .bundle/
+  - bundles/
+  - .tools/
+  - .playwright-mcp/
+
+# Layouts by folder. The top bar is in _data/nav.yml.
+defaults:
+  - scope: { path: "skills/" }
+    values: { layout: content }
+  - scope: { path: "agents/" }
+    values: { layout: content }
+  - scope: { path: "playbooks/" }
+    values: { layout: content }
+  - scope: { path: "office/" }
+    values: { layout: content }
+  - scope: { path: "context-pack/" }
+    values: { layout: content }
+  - scope: { path: "guides/" }
+    values: { layout: content }
+  - scope: { path: "setup.md" }
+    values: { layout: content }
+  - scope: { path: "context-pack.md" }
+    values: { layout: content }
+  - scope: { path: "agents.md" }
+    values: { layout: content }
+  - scope: { path: "skills.md" }
+    values: { layout: content }
+  - scope: { path: "playbooks.md" }
+    values: { layout: content }
+  - scope: { path: "guides.md" }
+    values: { layout: content }
+  - scope: { path: "office.md" }
+    values: { layout: content }
+  - scope: { path: "CONTRIBUTING.md" }
+    values: { layout: content }

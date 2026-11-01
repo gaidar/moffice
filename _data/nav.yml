@@ -1,0 +1,8 @@
+- { label: Start here, url: /guides/start-here.html }
+- { label: Setup, url: /setup.html }
+- { label: Context pack, url: /context-pack.html, section: context-pack/ }
+- { label: Agents, url: /agents.html, section: agents/ }
+- { label: Skills, url: /skills.html, section: skills/ }
+- { label: Playbooks, url: /playbooks.html, section: playbooks/ }
+- { label: Guides, url: /guides.html }
+- { label: FAQ, url: /guides/faq.html }

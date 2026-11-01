@@ -1,0 +1,17 @@
+# The 16 functions from the press release. Folder names under skills/ match slug.
+- { slug: positioning-and-messaging, label: Positioning and messaging, owner: product-marketing-manager, owner_label: Product marketing manager }
+- { slug: segmentation-icp-and-personas, label: "Segmentation, ICP and personas", owner: insights-analyst, owner_label: Insights analyst }
+- { slug: competitive-intelligence, label: Competitive intelligence, owner: product-marketing-manager, owner_label: Product marketing manager }
+- { slug: go-to-market-and-launches, label: Go-to-market and launches, owner: product-marketing-manager, owner_label: Product marketing manager }
+- { slug: campaign-design, label: Campaign design, owner: demand-generation-manager, owner_label: Demand generation manager }
+- { slug: content, label: "Content (web, blog, social, email, video scripts)", owner: content-lead, owner_label: Content lead }
+- { slug: seo, label: SEO, owner: seo-specialist, owner_label: SEO specialist }
+- { slug: paid-demand-gen, label: Paid demand gen, owner: paid-media-manager, owner_label: Paid media manager }
+- { slug: events-and-webinars, label: Events and webinars, owner: events-and-webinar-manager, owner_label: Events and webinar manager }
+- { slug: pr-and-comms, label: PR and comms, owner: pr-and-communications-manager, owner_label: PR and communications manager }
+- { slug: product-marketing-and-sales-enablement, label: Product marketing and sales enablement, owner: product-marketing-manager, owner_label: Product marketing manager }
+- { slug: partner-and-channel-marketing, label: Partner and channel marketing, owner: partner-marketing-manager, owner_label: Partner marketing manager }
+- { slug: brand-and-design-briefs, label: Brand and design briefs, owner: brand-and-creative-director, owner_label: Brand and creative director }
+- { slug: analytics-and-campaign-evaluation, label: Analytics and campaign evaluation, owner: marketing-analyst, owner_label: Marketing analyst }
+- { slug: marketing-ops, label: Marketing ops, owner: marketing-operations-manager, owner_label: Marketing operations manager }
+- { slug: budget-and-planning, label: Budget and planning, owner: head-of-marketing, owner_label: Head of marketing }

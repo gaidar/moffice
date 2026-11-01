@@ -1,0 +1,43 @@
+<svg class="dg" viewBox="0 0 980 300" role="img" aria-labelledby="context-t context-d" xmlns="http://www.w3.org/2000/svg">
+<title id="context-t">Filling the context pack</title><desc id="context-d">Fill the files in order, because later files draw on earlier ones: facts, then buyers, then evidence, then what you claim, then plans. Every skill reads the files it names.</desc>
+<defs><marker id="context-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs>
+<rect class="dg-frame" x="14" y="14" width="176" height="170" rx="7"/>
+<text class="dg-l" x="26" y="32">Facts, files 1 and 2</text>
+<rect class="dg-box " x="24" y="44" width="156" height="56" rx="5"/>
+<text class="dg-t " x="102.0" y="76.5" text-anchor="middle">company.md</text>
+<rect class="dg-box " x="24" y="110" width="156" height="56" rx="5"/>
+<text class="dg-t " x="102.0" y="142.5" text-anchor="middle">product.md</text>
+<path class="dg-arrow" d="M190 99 L204 99" marker-end="url(#context-a)"/>
+<rect class="dg-frame" x="204" y="14" width="176" height="170" rx="7"/>
+<text class="dg-l" x="216" y="32">Buyers, files 3 and 4</text>
+<rect class="dg-box " x="214" y="44" width="156" height="56" rx="5"/>
+<text class="dg-t " x="292.0" y="76.5" text-anchor="middle">icp-and-segments.md</text>
+<rect class="dg-box " x="214" y="110" width="156" height="56" rx="5"/>
+<text class="dg-t " x="292.0" y="142.5" text-anchor="middle">personas.md</text>
+<path class="dg-arrow" d="M380 99 L394 99" marker-end="url(#context-a)"/>
+<rect class="dg-frame" x="394" y="14" width="176" height="170" rx="7"/>
+<text class="dg-l" x="406" y="32">Evidence, files 5 and 6</text>
+<rect class="dg-box " x="404" y="44" width="156" height="56" rx="5"/>
+<text class="dg-t " x="482.0" y="76.5" text-anchor="middle">proof-points.md</text>
+<rect class="dg-box " x="404" y="110" width="156" height="56" rx="5"/>
+<text class="dg-t " x="482.0" y="142.5" text-anchor="middle">competitors.md</text>
+<path class="dg-arrow" d="M570 99 L584 99" marker-end="url(#context-a)"/>
+<rect class="dg-frame" x="584" y="14" width="176" height="170" rx="7"/>
+<text class="dg-l" x="596" y="32">Claim, files 7 and 8</text>
+<rect class="dg-box " x="594" y="44" width="156" height="56" rx="5"/>
+<text class="dg-t " x="672.0" y="76.5" text-anchor="middle">messaging.md</text>
+<rect class="dg-box " x="594" y="110" width="156" height="56" rx="5"/>
+<text class="dg-t " x="672.0" y="142.5" text-anchor="middle">brand-voice.md</text>
+<path class="dg-arrow" d="M760 99 L774 99" marker-end="url(#context-a)"/>
+<rect class="dg-frame" x="774" y="14" width="176" height="170" rx="7"/>
+<text class="dg-l" x="786" y="32">Plan, files 9 and 10</text>
+<rect class="dg-box " x="784" y="44" width="156" height="56" rx="5"/>
+<text class="dg-t " x="862.0" y="76.5" text-anchor="middle">goals-and-kpis.md</text>
+<rect class="dg-box " x="784" y="110" width="156" height="56" rx="5"/>
+<text class="dg-t " x="862.0" y="142.5" text-anchor="middle">channels-and-tools.md</text>
+<line class="dg-arrow" x1="490" y1="184" x2="490" y2="206"/>
+<rect class="dg-box soft" x="250" y="206" width="480" height="44" rx="5"/>
+<text class="dg-t soft" x="490.0" y="232.5" text-anchor="middle">Every skill names the files it reads, and asks when one is blank</text>
+<path class="dg-arrow" d="M490 250 L490 272" marker-end="url(#context-a)"/>
+<text class="dg-s" x="490" y="288" text-anchor="middle">Output stays consistent across channels and months</text>
+</svg>

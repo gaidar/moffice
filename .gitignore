@@ -1,0 +1,15 @@
+dev/
+CLAUDE.md
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
+.bundle/
+.venv/
+.tools/
+pdf/
+.DS_Store
+__pycache__/
+*.pyc
+.playwright-mcp/

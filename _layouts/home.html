@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{%- assign skills = site.pages | where: "type", "skill" | size -%}
+{%- assign agents = site.pages | where: "type", "agent" | size -%}
+{%- assign templates = site.pages | where: "type", "context-template" | size -%}
+<header class="page">
+  <div class="wrap">
+    <p class="eyebrow">Free and open source, for Claude, ChatGPT/Codex, Grok and Google Gemini</p>
+    <h1>{{ page.heading }}</h1>
+    <p class="lede">{{ page.summary }}</p>
+    <div class="cta-row">
+      <a class="btn primary" href="{{ '/guides/start-here.html' | relative_url }}">Start here</a>
+      <a class="btn" href="{{ '/skills.html' | relative_url }}">See the skills</a>
+      <a class="btn" href="https://github.com/{{ site.repository }}">Open on GitHub</a>
+    </div>
+    <div class="statrow">
+      <div class="stat"><div class="v">{{ skills }}</div><div class="k">Skills</div></div>
+      <div class="stat"><div class="v">{{ agents }}</div><div class="k">Agent roles</div></div>
+      <div class="stat"><div class="v">{{ templates }}</div><div class="k">Context pack files</div></div>
+      <div class="stat"><div class="v">{{ site.data.functions | size }}</div><div class="k">Marketing functions</div></div>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+  <article class="doc-body">
+    {{ content }}
+  </article>
+</div>

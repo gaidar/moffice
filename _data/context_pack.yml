@@ -1,0 +1,10 @@
+- { file: company, summary: "Facts, stage and the numbers you are allowed to publish" }
+- { file: product, summary: "What it does, how it is priced, what it is not" }
+- { file: icp-and-segments, summary: "Who you sell to and how you split them" }
+- { file: personas, summary: "The people in the buying decision" }
+- { file: messaging, summary: "Positioning statement, pillars, proof per pillar, words to avoid" }
+- { file: competitors, summary: "Who you lose to and how to answer them" }
+- { file: proof-points, summary: "Customers, numbers and quotes, each with permission status" }
+- { file: brand-voice, summary: "How you sound and what you never say" }
+- { file: goals-and-kpis, summary: "Quarter goals, pipeline targets, definitions" }
+- { file: channels-and-tools, summary: "Owned channels, tool stack, who approves what" }

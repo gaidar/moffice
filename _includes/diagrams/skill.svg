@@ -1,0 +1,38 @@
+<svg class="dg" viewBox="0 0 980 122" role="img" aria-labelledby="skill-t skill-d" xmlns="http://www.w3.org/2000/svg">
+<title id="skill-t">The seven sections of every skill</title><desc id="skill-d">Every skill has the same seven sections in the same order: when to use, inputs, procedure, output format, quality checklist, example, how to run it.</desc>
+<defs><marker id="skill-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs>
+<rect class="dg-box " x="14" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t " x="76.0" y="72.5" text-anchor="middle">When to use</text>
+<text class="dg-s " x="76.0" y="88.5" text-anchor="middle">and when not to</text>
+<text class="dg-n" x="76.0" y="28" text-anchor="middle">1</text>
+<path class="dg-arrow" d="M138 75 L152 75" marker-end="url(#skill-a)"/>
+<rect class="dg-box " x="152" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t " x="214.0" y="72.5" text-anchor="middle">Inputs</text>
+<text class="dg-s " x="214.0" y="88.5" text-anchor="middle">context pack files</text>
+<text class="dg-n" x="214.0" y="28" text-anchor="middle">2</text>
+<path class="dg-arrow" d="M276 75 L290 75" marker-end="url(#skill-a)"/>
+<rect class="dg-box soft" x="290" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t soft" x="352.0" y="72.5" text-anchor="middle">Procedure</text>
+<text class="dg-s soft" x="352.0" y="88.5" text-anchor="middle">numbered steps</text>
+<text class="dg-n" x="352.0" y="28" text-anchor="middle">3</text>
+<path class="dg-arrow" d="M414 75 L428 75" marker-end="url(#skill-a)"/>
+<rect class="dg-box soft" x="428" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t soft" x="490.0" y="72.5" text-anchor="middle">Output format</text>
+<text class="dg-s soft" x="490.0" y="88.5" text-anchor="middle">exact template</text>
+<text class="dg-n" x="490.0" y="28" text-anchor="middle">4</text>
+<path class="dg-arrow" d="M552 75 L566 75" marker-end="url(#skill-a)"/>
+<rect class="dg-box " x="566" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t " x="628.0" y="72.5" text-anchor="middle">Quality checklist</text>
+<text class="dg-s " x="628.0" y="88.5" text-anchor="middle">yes or no checks</text>
+<text class="dg-n" x="628.0" y="28" text-anchor="middle">5</text>
+<path class="dg-arrow" d="M690 75 L704 75" marker-end="url(#skill-a)"/>
+<rect class="dg-box " x="704" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t " x="766.0" y="72.5" text-anchor="middle">Example</text>
+<text class="dg-s " x="766.0" y="88.5" text-anchor="middle">a fictional company</text>
+<text class="dg-n" x="766.0" y="28" text-anchor="middle">6</text>
+<path class="dg-arrow" d="M828 75 L842 75" marker-end="url(#skill-a)"/>
+<rect class="dg-box " x="842" y="40" width="124" height="70" rx="5"/>
+<text class="dg-t " x="904.0" y="72.5" text-anchor="middle">How to run it</text>
+<text class="dg-s " x="904.0" y="88.5" text-anchor="middle">the prompt to paste</text>
+<text class="dg-n" x="904.0" y="28" text-anchor="middle">7</text>
+</svg>
