@@ -4,12 +4,12 @@ Every assumption made during the v0.1.0 build, one line each. Nobody was availab
 
 ## Owner corrections received during the build
 
-These five corrections override the requirements document where they conflict.
+These corrections override the requirements document where they conflict.
 
-- No zip is provided. Guides send the marketer to GitHub, using GitHub's own Code and Download ZIP buttons to get many files at once. `scripts/build-zip.sh` is gone.
-- `bundles/all-skills.md` and `bundles/all-agent-roles.md` are now committed files, because ChatGPT's project limit needs them and the zip no longer carries them. `scripts/build-bundles.sh` generates them, and the workflow fails if they are stale.
-- PDFs exist only for playbooks and guides, except the FAQ. "Standard operating procedures for people to read" was read as those documents, now 18. Skills, charters, the context pack and office documents have no PDF, and link to their text files on GitHub.
-- "Avoid duplication with PDFs" was read as: PDFs drop from 105 to 18, and all are generated from the same markdown as the web page, so nothing is maintained twice. HTML pages for skills and charters stay, because they cost no upkeep and the original spec asks for them. Removing them is a small change if the owner prefers GitHub only.
+- No zip is provided. Setup guides link the files directly, and each link saves the file from GitHub. GitHub's own Code and Download ZIP buttons appear only in the optional route for individual files. `scripts/build-zip.sh` is gone.
+- `bundles/all-skills.md` and `bundles/roles-and-playbooks.md` are now committed files, because ChatGPT's project limit needs them and the zip no longer carries them. `scripts/build-bundles.sh` generates them, and the workflow fails if they are stale.
+- PDFs exist only for playbooks and guides, except the FAQ. "Standard operating procedures for people to read" was read as those documents, now 19. Skills, charters, the context pack and office documents have no PDF, and link to their text files on GitHub.
+- "Avoid duplication with PDFs" was read as: PDFs drop from 105 to 19, and all are generated from the same markdown as the web page, so nothing is maintained twice. HTML pages for skills and charters stay, because they cost no upkeep and the original spec asks for them. Removing them is a small change if the owner prefers GitHub only.
 - The site design follows marketingoffice.net: its palette, Archivo, Source Serif 4 and IBM Plex Mono fonts, a top bar, full-length pages and SVG diagrams. just-the-docs is removed, which also removes its site search. The Skills page has a filter instead.
 - Diagrams live in `_includes/diagrams/` and are named in a page's frontmatter, so they do not appear in the raw markdown or the PDFs.
 - Fonts load from Google Fonts, as on the reference site, with system fallbacks. This replaces the spec's system or Aptos font stack.
@@ -17,17 +17,23 @@ These five corrections override the requirements document where they conflict.
 
 ## Reviews during the build
 
-A CMO review and a new marketer review were run and acted on. The reviews themselves are in `dev/reviews/`, which is not committed.
+A CMO review, a new marketer review and two rounds of a from-zero CMO review were run and acted on. The reviews themselves are in `dev/reviews/`, which is not committed.
 
 - Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60. The owner accepted 56 on 2026-11-02.
 - The default setup is 3 files rather than 74. One combined context pack replaces 10 separate files, and the office manual accepts this. The 10 templates remain as the source.
 - Setup stays in the top bar and the function table stays on the home page, because the Definition of done and the website spec name them, though the CMO wanted both cut.
 - "Unverified" labels stay in the vendor guides, though the CMO wanted them moved. Nothing was tested on paid accounts, and the spec requires them.
-- PDFs now cover 18 documents, because the two new guides are procedures people read.
+- PDFs now cover 19 documents, because the two new guides and the new playbook are procedures people read.
 - Worked examples were produced by following the skills by hand with the sample context pack, and are labeled where figures are illustrative. They were not run in a live vendor account.
 - A new skill's goal options use a 15% growth starting rule when there is no history. It is labeled a starting rule, not a benchmark. The owner accepted it on 2026-11-02.
 - The worked examples use two illustrative webinars: February 24, 2027 in Plan a webinar and March 4, 2027 in Use a skill. The owner chose to keep both on 2026-11-02.
 - "How to judge this" questions are the reviewers' and writers' judgment, not sourced from research.
+- `playbooks/from-zero.md` was added as a seventh playbook, not as new skills, so the skill count stays at 56. Its order, time splits, the skip list and its thresholds are the reviewer's judgment, labeled as starting rules, and have not been run at a real company.
+- Plain requests were added to the office manual. The exact prompt form stays in every skill and charter, as the spec requires.
+- The agent role charters and the playbooks now share one bundle, `bundles/roles-and-playbooks.md`, because the manual sends the model to the playbooks and no uploaded file held them.
+- Owner role columns were removed from playbook tables, because the person running them is one person. Each skill page still names its owner.
+- Skill pages fold Inputs, Procedure and Output format in the browser, using script. The markdown, the section order and Copy text do not change, and with no script nothing is folded.
+- Examples left the top bar and stays in the footer, linked from Home and Try it. Setup and Agents stay in the top bar.
 
 ## Spec gaps and conflicts
 
@@ -44,7 +50,7 @@ A CMO review and a new marketer review were run and acted on. The reviews themse
 ## Structure
 
 - Jekyll collections need folders named with a leading underscore, which conflicts with the required `skills/`, `agents/` paths and with the toolbar and PDF paths. Used plain Jekyll pages with path-based defaults. Each markdown file is still both the source and the page.
-- Section index pages sit at the repo root (`skills.md`, `agents.md`, `playbooks.md`, `guides.md`, `office.md`, `context-pack.md`, `setup.md`).
+- Section index pages sit at the repo root (`skills.md`, `agent-roles.md`, `playbooks.md`, `guides.md`, `office.md`, `context-pack.md`, `setup.md`). The agents index is not named `agents.md`, because on a case-insensitive disk coding tools load that file as `AGENTS.md`. Its URL stays `/agents.html`.
 - Added frontmatter types beyond the spec's list: `context-example` for the filled pack, `index` for section pages, `contributing` for `CONTRIBUTING.md`.
 - `ASSUMPTIONS.md` is at the repo root, as the Operating rules and Deliver sections ask, though the layout does not list it.
 - `CONTRIBUTING.md` has frontmatter so that it renders on the site. GitHub shows that frontmatter as a small table at the top of the file.
@@ -65,8 +71,8 @@ A CMO review and a new marketer review were run and acted on. The reviews themse
 ## Fictional company
 
 - Company: CogniATion, named by the owner, 38 employees, Austin, Texas. Product: CogniATion Coach, a specialized AI chatbot that questions employees about work problems and scores their reasoning. It is sold to learning and development teams. Segments: professional services firms, software companies, financial services firms.
-- Competitors: Arguvia and Deliberon. Customers: Brightmere Advisory, Corvane Software, Haldane Ridge Capital.
-- Web searches on 2026-11-01 found no exact match for CogniATion, Arguvia, Deliberon, Brightmere Advisory, Corvane Software or Haldane Ridge Capital. Similar real names exist (Cognition AI, ArguAI, Cogni), none of them exact. CogniATion is close to Cognition AI, a real company. The owner chose the name, so it was kept. Searches cannot prove a name is unused.
+- Competitors: Arguvia and Elenchly. Customers: Brightmere Advisory, Corvane Software, Haldane Ridge Capital.
+- Web searches on 2026-11-01 found no exact match for CogniATion, Arguvia, Brightmere Advisory, Corvane Software or Haldane Ridge Capital. A review on 2026-11-02 found that the first competitor name, Deliberon, belongs to a real Windows AI app, so it became Elenchly, which had no exact match in a search that day. Similar real names exist (Cognition AI, ArguAI, Cogni), none of them exact. CogniATion is close to Cognition AI, a real company. The owner chose the name, so it was kept. Searches cannot prove a name is unused.
 - Austin, Texas is a real place, used only as the fictional company's location.
 - People at CogniATion and its customers are invented names.
 - The first example company, Ostrel Systems, was replaced in full. The validator rejects its names.

@@ -115,7 +115,7 @@ Plan type: <New product, new segment or new market>
 
 **Proof by pillar:** It asks: Lena Marsh quote, public, professional services, so a gap. Practice: 72% weekly completion, all customers, public. Reasoning improves: Brightmere Advisory result, same gap.
 
-**Route to market:** Sales-led. Phase 1 channels: email list, webinar, learning and development conference. Expect Deliberon (completion data and quiz scores, per three prospects, 2026).
+**Route to market:** Sales-led. Phase 1 channels: email list, webinar, learning and development conference. Expect Elenchly (completion data and quiz scores, per three prospects, 2026).
 
 **Phases:** Prepare, by January 15, 2027: close the proof gap, draft security review answers; exit test is one approved customer. First test: through March 31. Expand: [date needed].
 

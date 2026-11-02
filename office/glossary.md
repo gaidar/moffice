@@ -13,7 +13,7 @@ summary: What the words in the office mean.
 | Marketing Office | This project: the skills, agent roles, context pack, playbooks and guides together |
 | Marketer | The one person running the office |
 | Context pack | The 10 files with the facts about the marketer's company |
-| Context pack file | One of the 10 files |
+| Context pack file | One of the 10 files. A name such as goals-and-kpis.md means that section of `my-context-pack.md` if you keep them combined |
 | Skill | A written procedure with a fixed output format |
 | Agent role | One of the 14 job descriptions |
 | Charter | The document that defines one agent role |
@@ -70,5 +70,7 @@ These are working definitions. If goals-and-kpis.md defines a term differently, 
 | Estimate | A number worked out or approximated, with the method shown |
 | Inference | A conclusion drawn from inputs, with the inputs named |
 | Unknown | Something needed and not available |
+| Hypothesis | A claim resting on thin evidence, to test before relying on it |
+| Founder belief | What a founder told you, with no customer, document or number behind it yet. Treated as an assumption |
 | Unverified | An outside fact from memory, not checked against a source |
 | Starting rule | A threshold this office picked as a default. It is not an industry fact, and the marketer can change it |

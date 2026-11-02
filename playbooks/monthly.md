@@ -12,14 +12,14 @@ Attribution and the SEO audit run in [the quarterly playbook](quarterly.md), bec
 
 ## Steps
 
-| Step | Skill or action | Owner role | Input you bring | Time (estimate) |
-|---|---|---|---|---|
-| 1 | [Write the monthly report](../skills/analytics-and-campaign-evaluation/write-monthly-report.md) | Marketing analyst | Month's numbers from your tools | 45 minutes |
-| 2 | [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md), only where the report shows pipeline behind target | Marketing analyst | Report from step 1, CRM numbers | 30 minutes |
-| 3 | [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md), for each campaign that ended | Marketing analyst | Campaign brief and results | 30 minutes each |
-| 4 | [Plan a content calendar](../skills/content/plan-content-calendar.md) for the next month | Content lead | Monthly report, quarterly plan | 30 minutes |
-| 5 | Check the context pack, following [Maintain and update](../guides/maintain-and-update.md) | You | Your context pack | 30 minutes |
-| 6 | [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md), using the monthly report | Head of marketing | Report from step 1 | 15 minutes |
+| Step | Skill or action | Input you bring | Time (estimate) |
+|---|---|---|---|
+| 1 | [Write the monthly report](../skills/analytics-and-campaign-evaluation/write-monthly-report.md) | Month's numbers from your tools | 45 minutes |
+| 2 | [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md), only where the report shows pipeline behind target | Report from step 1, CRM numbers | 30 minutes |
+| 3 | [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md), for each campaign that ended | Campaign brief and results | 30 minutes each |
+| 4 | [Plan a content calendar](../skills/content/plan-content-calendar.md) for the next month | Monthly report, quarterly plan | 30 minutes |
+| 5 | Check the context pack, following [Maintain and update](../guides/maintain-and-update.md) | Your context pack | 30 minutes |
+| 6 | [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md), using the monthly report | Report from step 1 | 15 minutes |
 
 One person runs one launch or one major campaign at a time. If the month's report or calendar puts two in the same weeks, move one.
 

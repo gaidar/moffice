@@ -5,7 +5,7 @@ function: budget-and-planning
 owner: head-of-marketing
 reads: [goals-and-kpis, company, icp-and-segments, channels-and-tools, product]
 you_bring: Last quarter's results, the days you can spend on this plan, and any hard dates not in the context pack.
-also_for: [quarterly plan, marketing plan, next quarter, what to focus on, plan for the ceo, goals for the quarter, hit the pipeline goal, one person team]
+also_for: [quarterly plan, marketing plan, 90-day plan, stop doing, what to stop, next quarter, what to focus on, plan for the ceo, goals for the quarter, hit the pipeline goal, one person team]
 version: 0.1.0
 updated: 2026-11-02
 summary: Goals, bets, calendar, owners and a capacity check for one quarter.
@@ -32,16 +32,17 @@ The marketer pastes into the chat:
 - Last quarter's results against goals, if available.
 - Days the marketer can spend on this plan in the quarter, after time off and fixed work.
 - Hard dates and commitments not in the context pack.
+- Everything now running.
 
 ## Procedure
 
 1. Copy the quarter, company goal and marketing goals word for word from goals-and-kpis.md. If the marketing goals are blank, stop and point to [Propose quarterly goals](propose-quarterly-goals.md). Do not write goals for the marketer.
 2. Work out each gap. Show goal, baseline and difference. Where goals chain, work backward and show the math, such as SQL goal divided by MQL to SQL rate. Label each result as an estimate. If a baseline is blank, write [baseline needed] and mark the gap unknown.
-3. Write 3 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea that serves no goal goes to "Not doing".
+3. Write 3 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea or running work that serves no goal goes to "Not doing".
 4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps. Do not use outside benchmarks.
 5. Build the calendar. Place hard dates first, then count back from each one, using the approval times in channels-and-tools.md. Add the first draft date for each item needing approval.
-6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Anyone outside marketing is marked "needs to agree".
-7. Run the capacity check. Estimate days per bet from its pieces, add a row for running existing channels, and compare the total with the marketer's available days. Do the same for any freelance time in company.md. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
+6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Mark anyone outside marketing "needs to agree".
+7. Run the capacity check. Estimate days per bet from its pieces, add a row for running existing channels, and compare the total with the marketer's available days. Include freelance time. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
 8. Check the money. If the estimated cost of the bets exceeds the budget, say by how much and cut the lowest ranked bet.
 9. Write up to 3 risks, each with its signal and response.
 10. Check the draft against the context pack: goals word for word, limits and hard rules respected, nothing planned that the product cannot do, internal-only items marked.

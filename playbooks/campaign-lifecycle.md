@@ -14,12 +14,12 @@ Start with the minimum campaign, and use the full sequence only for a major camp
 
 Use this for one segment and one offer, with no paid, event or partner. It takes about 3 hours before launch, a rough estimate.
 
-| Step | Skill or action | Owner role | Time (estimate) |
-|---|---|---|---|
-| 1 | Confirm the lead handoff with sales, then [Write a campaign brief](../skills/campaign-design/write-campaign-brief.md) | You, demand generation manager | 45 minutes |
-| 2 | [Write a web page](../skills/content/write-web-page.md) for the landing page | Content lead | 45 minutes |
-| 3 | [Write a marketing email](../skills/content/write-marketing-email.md) to your list | Content lead | 30 minutes |
-| 4 | [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md) for the leads it brings in | Demand generation manager | 30 minutes |
+| Step | Skill or action | Time (estimate) |
+|---|---|---|
+| 1 | Confirm the lead handoff with sales, then [Write a campaign brief](../skills/campaign-design/write-campaign-brief.md) | 45 minutes |
+| 2 | [Write a web page](../skills/content/write-web-page.md) for the landing page | 45 minutes |
+| 3 | [Write a marketing email](../skills/content/write-marketing-email.md) to your list | 30 minutes |
+| 4 | [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md) for the leads it brings in | 30 minutes |
 
 Run [Review any output](../skills/marketing-ops/review-any-output.md) on the page and the email before they go out, and use one campaign name from your tracking conventions. Allow about 10 minutes for each. When the window ends, run [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) (marketing analyst, about 30 minutes).
 
@@ -27,27 +27,27 @@ Run [Review any output](../skills/marketing-ops/review-any-output.md) on the pag
 
 A major campaign takes about 7 to 9 hours before launch, spread over about three weeks to leave room for approvers, then about 20 minutes a week while it runs. Time estimates are rough, and steps marked "if" count only when they apply.
 
-| Stage | Step | Skill or action | Owner role | Time (estimate) |
-|---|---|---|---|---|
-| Brief | 1 | Confirm the lead handoff with sales: who takes these leads, how fast, and what they count as qualified. If no rules exist, run [Define the lead handoff](../skills/marketing-ops/define-lead-handoff.md) first | You, marketing operations manager | 15 minutes |
-| Brief | 2 | [Write a campaign brief](../skills/campaign-design/write-campaign-brief.md), with one goal, one audience and one time window | Demand generation manager | 30 minutes |
-| Brief | 3 | [Review any output](../skills/marketing-ops/review-any-output.md) on the brief | Marketing reviewer | 15 minutes |
-| Plan | 4 | [Plan a paid campaign](../skills/paid-demand-gen/plan-paid-campaign.md), if the brief uses paid | Paid media manager | 30 minutes |
-| Plan | 5 | [Plan a webinar](../skills/events-and-webinars/plan-webinar.md) or [Plan an event](../skills/events-and-webinars/plan-event.md), if the brief uses one | Events and webinar manager | 30 minutes |
-| Plan | 6 | [Plan co-marketing with a partner](../skills/partner-and-channel-marketing/plan-co-marketing.md), if a partner is involved | Partner marketing manager | 30 minutes |
-| Plan | 7 | [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md): name the campaign and build its links | Marketing operations manager | 15 minutes |
-| Make | 8 | [Write a design brief](../skills/brand-and-design-briefs/write-design-brief.md) for anything visual | Brand and creative director | 20 minutes |
-| Make | 9 | [Write a web page](../skills/content/write-web-page.md) for the landing page | Content lead | 45 minutes |
-| Make | 10 | [Write ad variations](../skills/paid-demand-gen/write-ad-variations.md), [Write a marketing email](../skills/content/write-marketing-email.md), [Write social posts](../skills/content/write-social-posts.md) as the brief calls for | Paid media manager, content lead | 30 minutes each |
-| Make | 11 | [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md) for leads ready for sales | Demand generation manager | 30 minutes |
-| Make | 12 | [Design a nurture sequence](../skills/campaign-design/design-nurture-sequence.md) for leads not ready for sales | Demand generation manager | 30 minutes |
-| Check | 13 | [Review any output](../skills/marketing-ops/review-any-output.md) on every public output. Send to approvers in channels-and-tools.md | Marketing reviewer, you | 10 minutes per item, plus approver time |
-| Run | 14 | Launch in your own tools and test every link. The office cannot do this for you. Tell sales it is live | You | 1 hour |
-| Run | 15 | [Adjust paid campaigns](../skills/paid-demand-gen/adjust-paid-campaigns.md) weekly, if paid is running | Paid media manager | 20 minutes a week |
-| Run | 16 | Mid-window read: halfway through, compare MQLs, SQLs and spend with half of each target, and ask sales about the leads. This is a check, not a verdict. If the goal metric is behind, run [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) | You, marketing analyst | 30 minutes |
-| Close | 17 | [Follow up after an event](../skills/events-and-webinars/follow-up-after-event.md), if there was one | Events and webinar manager | 30 minutes |
-| Close | 18 | [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) when the window ends and leads have had time to mature | Marketing analyst | 30 minutes |
-| Close | 19 | Add results to proof-points.md if they are usable and permitted. Use the evaluation in the next brief | You | 15 minutes |
+| Stage | Step | Skill or action | Time (estimate) |
+|---|---|---|---|
+| Brief | 1 | Confirm the lead handoff with sales: who takes these leads, how fast, and what they count as qualified. If no rules exist, run [Define the lead handoff](../skills/marketing-ops/define-lead-handoff.md) first | 15 minutes |
+| Brief | 2 | [Write a campaign brief](../skills/campaign-design/write-campaign-brief.md), with one goal, one audience and one time window | 30 minutes |
+| Brief | 3 | [Review any output](../skills/marketing-ops/review-any-output.md) on the brief | 15 minutes |
+| Plan | 4 | [Plan a paid campaign](../skills/paid-demand-gen/plan-paid-campaign.md), if the brief uses paid | 30 minutes |
+| Plan | 5 | [Plan a webinar](../skills/events-and-webinars/plan-webinar.md) or [Plan an event](../skills/events-and-webinars/plan-event.md), if the brief uses one | 30 minutes |
+| Plan | 6 | [Plan co-marketing with a partner](../skills/partner-and-channel-marketing/plan-co-marketing.md), if a partner is involved | 30 minutes |
+| Plan | 7 | [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md): name the campaign and build its links | 15 minutes |
+| Make | 8 | [Write a design brief](../skills/brand-and-design-briefs/write-design-brief.md) for anything visual | 20 minutes |
+| Make | 9 | [Write a web page](../skills/content/write-web-page.md) for the landing page | 45 minutes |
+| Make | 10 | [Write ad variations](../skills/paid-demand-gen/write-ad-variations.md), [Write a marketing email](../skills/content/write-marketing-email.md), [Write social posts](../skills/content/write-social-posts.md) as the brief calls for | 30 minutes each |
+| Make | 11 | [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md) for leads ready for sales | 30 minutes |
+| Make | 12 | [Design a nurture sequence](../skills/campaign-design/design-nurture-sequence.md) for leads not ready for sales | 30 minutes |
+| Check | 13 | [Review any output](../skills/marketing-ops/review-any-output.md) on every public output. Send to approvers in channels-and-tools.md | 10 minutes per item, plus approver time |
+| Run | 14 | Launch in your own tools and test every link. The office cannot do this for you. Tell sales it is live | 1 hour |
+| Run | 15 | [Adjust paid campaigns](../skills/paid-demand-gen/adjust-paid-campaigns.md) weekly, if paid is running | 20 minutes a week |
+| Run | 16 | Mid-window read: halfway through, compare MQLs, SQLs and spend with half of each target, and ask sales about the leads. This is a check, not a verdict. If the goal metric is behind, run [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) | 30 minutes |
+| Close | 17 | [Follow up after an event](../skills/events-and-webinars/follow-up-after-event.md), if there was one | 30 minutes |
+| Close | 18 | [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) when the window ends and leads have had time to mature | 30 minutes |
+| Close | 19 | Add results to proof-points.md if they are usable and permitted. Use the evaluation in the next brief | 15 minutes |
 
 ## Exit check
 
@@ -109,13 +109,13 @@ The 22% Brightmere result stays on the page, because 90 characters cannot hold w
 
 ### Check: the review catch
 
-Suppose the marketer writes a variation B by hand, borrowing a line from the positioning statement: "Unlike Deliberon, it is practice, not a course." This draft is deliberately wrong. [Review any output](../skills/marketing-ops/review-any-output.md) returns:
+Suppose the marketer writes a variation B by hand, borrowing a line from the positioning statement: "Unlike Elenchly, it is practice, not a course." This draft is deliberately wrong. [Review any output](../skills/marketing-ops/review-any-output.md) returns:
 
 > **Verdict.** Do not use yet. 1 blocker, 0 fixes. Strategy not judged.
 
 | Where | Problem | Source | What to change |
 |---|---|---|---|
-| "Unlike Deliberon" | Competitor name in an ad | channels-and-tools.md, hard rules | Remove the name |
+| "Unlike Elenchly" | Competitor name in an ad | channels-and-tools.md, hard rules | Remove the name |
 
 The positioning statement may name a rival. An ad may not.
 

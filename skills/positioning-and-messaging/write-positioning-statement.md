@@ -104,12 +104,12 @@ Evidence: Hypothesis. The lead value rests on a measured result, and no customer
 
 | Category | Compared with | Lead value wins? |
 |---|---|---|
-| Critical thinking training software | Deliberon | Yes |
-| Course library | Deliberon | No, buyers expect courses |
+| Critical thinking training software | Elenchly | Yes |
+| Course library | Elenchly | No, buyers expect courses |
 
 **Positioning statement**
 
-For heads of learning at professional services firms who worry that junior staff accept AI answers without checking them, CogniATion Coach is critical thinking training software that shows whether people's reasoning improves, because it scores reasoning against a five-point rubric and reports progress by team. Unlike Deliberon, it is practice, not a course. Unlike Arguvia, it uses the customer's own scenarios and reports to the learning leader.
+For heads of learning at professional services firms who worry that junior staff accept AI answers without checking them, CogniATion Coach is critical thinking training software that shows whether people's reasoning improves, because it scores reasoning against a five-point rubric and reports progress by team. Unlike Elenchly, it is practice, not a course. Unlike Arguvia, it uses the customer's own scenarios and reports to the learning leader.
 
 **One-sentence description**
 
@@ -119,7 +119,7 @@ CogniATion Coach makes people practice reasoning and shows learning leaders what
 
 | Value | Beats | Proof and permission | Score |
 |---|---|---|---|
-| See reasoning improve | Deliberon, Arguvia | Brightmere 22% result: Public | 3 |
+| See reasoning improve | Elenchly, Arguvia | Brightmere 22% result: Public | 3 |
 | Asks, does not answer | Status quo | Lena Marsh quote: Public | 2 |
 
 Why this value leads: the champion is measured on proof that training changed behavior, and this scores highest.
@@ -128,7 +128,7 @@ Who this gives up: software and financial services, and buyers wanting one cours
 
 **What would break it**
 
-- Deliberon adds reports on reasoning, removing the difference.
+- Elenchly adds reports on reasoning, removing the difference.
 - Brightmere withdraws approval, leaving no Public reasoning result.
 
 **Change from the current statement**
@@ -138,7 +138,7 @@ Narrowed to professional services. Leads with visible progress, not practice.
 **Assumptions and open questions**
 
 - Assumption: professional services is the target, as first in the priority order.
-- Unknown: Do Deliberon's reports show more than completion data and quiz scores?
+- Unknown: Do Elenchly's reports show more than completion data and quiz scores?
 
 ## How to run it
 

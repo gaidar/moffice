@@ -12,11 +12,11 @@ summary: See a real draft before you commit any time. Use a sample company, with
 
    <div class="toolbar">
      <button type="button" class="btn primary office-copy" data-raw-url="https://raw.githubusercontent.com/gaidar/moffice/main/bundles/try-it.md">Copy the sample file</button>
-     <a class="btn" href="https://raw.githubusercontent.com/gaidar/moffice/main/bundles/try-it.md">Open it as text</a>
+     <a class="btn office-download" href="https://raw.githubusercontent.com/gaidar/moffice/main/bundles/try-it.md">Download it</a>
      <span class="toolbar-status" role="status" aria-live="polite"></span>
    </div>
 
-2. Start a new chat in your AI tool. Paste the file and the message below together, in one message. If the file is too long to paste, save it as a text file, upload it and send the message with it:
+2. Start a new chat in your AI tool. Paste the file and the message below together, in one message. If it is too long to paste, download it, upload it and send the message with it:
 
    ```
    Follow the office manual in the file I gave you. Use the skill "Write a sales one-pager". Read the context pack.
@@ -50,4 +50,4 @@ Follow the office manual in the file I gave you. Write a short email inviting th
 
 It should say that no skill covers this, name the closest one, write the email anyway and label it "No skill, ad hoc output".
 
-Then see [more worked examples]({{ '/examples.html' | relative_url }}), or use it for your own company. Next come a first pass of the context pack, setup, your first skill and the cadence, and [Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through them.
+Then see [more worked examples]({{ '/examples.html' | relative_url }}), or use it for your own company. [Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through the rest. Once your project is set up, you can drop the formula and ask in plain words.

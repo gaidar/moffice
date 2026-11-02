@@ -6,19 +6,18 @@ type: index
 version: 0.1.0
 updated: 2026-11-02
 summary: With the AI subscription you already pay for. Give it your company's facts once, then ask for a one-pager, a campaign brief or this week's priorities. Each comes back as a draft in a set format, built to use only your facts, with every gap listed as a question. You decide what to use.
-scope_note: Written for sales-led B2B companies with a CRM, MQLs and SQLs. Product-led motions are not covered.
+scope_note: Written for sales-led B2B companies. A spreadsheet counts as a CRM, and if a founder still sells, with few or no customers, there is a route for that. Product-led motions are not covered.
 ---
 
 ## What you get
 
-You paste a two-line prompt:
+You ask in plain words:
 
 ```
-Use the skill "Write a sales one-pager". Read the context pack.
-Task: one page for professional services firms, aimed at the VP of people, for one-to-one use by sales.
+Write a sales one-pager for professional services firms, aimed at the VP of people, for one-to-one use by sales.
 ```
 
-You get this back, for a fictional company called CogniATion:
+The office finds the skill, tells you which one it used and reads your facts. You get this back, shown here for a fictional company called CogniATion:
 
 <div class="output" markdown="1">
 {% capture sample %}{% include sample-one-pager.md %}{% endcapture %}{{ sample }}
@@ -29,26 +28,16 @@ Three things to notice. The numbers come from your context pack, with their perm
 ## How to begin
 
 1. **Try it.** Use a sample company in any AI chat. [10 minutes]({{ '/try.html' | relative_url }}).
-2. **Make a first pass of the context pack.** Give the office your company's facts in [one file]({{ '/guides/fill-the-context-pack.html' | relative_url }}). About an hour. Blanks are fine.
-3. **Set up your AI tool.** About 30 minutes. Pick one:
-   - [Claude]({{ '/guides/setup-claude.html' | relative_url }})
-   - [ChatGPT and Codex]({{ '/guides/setup-chatgpt-codex.html' | relative_url }})
-   - [Grok]({{ '/guides/setup-grok.html' | relative_url }})
-   - [Google Gemini]({{ '/guides/setup-google.html' | relative_url }})
-4. **Run your first skill.** Use your own facts, following [Use a skill]({{ '/guides/use-a-skill.html' | relative_url }}). About 15 minutes.
-5. **Start the cadence.** Run [the first week playbook]({{ '/playbooks/first-week.html' | relative_url }}), then [the weekly playbook]({{ '/playbooks/weekly.html' | relative_url }}).
+2. **Give it your facts.** [One file]({{ '/guides/fill-the-context-pack.html' | relative_url }}), from your documents or from a conversation with the founders. Blanks are fine.
+3. **Set up your AI tool**, then ask for your first draft: [Claude]({{ '/guides/setup-claude.html' | relative_url }}), [ChatGPT and Codex]({{ '/guides/setup-chatgpt-codex.html' | relative_url }}), [Grok]({{ '/guides/setup-grok.html' | relative_url }}) or [Google Gemini]({{ '/guides/setup-google.html' | relative_url }}).
 
-[Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through all five. These times are estimates.
+[Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through it. After that, it depends on where the company is:
 
-## What "set up" looks like when you are done
-
-You can tell your CEO that all of this exists:
-
-- A project in your AI tool, holding the office manual, your context pack and the skills.
-- Company facts in one file, with every customer item marked for permission.
-- Goals for the quarter, agreed with your CEO, and a plan with a budget.
-- Agreed lead rules with sales, and tracking in place.
-- One output through draft, review and approval, and a weekly routine you run.
+| Where you are | What to run |
+|---|---|
+| A sales team exists, and you are new here | [First week]({{ '/playbooks/first-week.html' | relative_url }}) |
+| A founder still sells, with few or no customers | [Starting from zero]({{ '/playbooks/from-zero.html' | relative_url }}), the first 90 days, with what to skip |
+| The office is running | [Weekly]({{ '/playbooks/weekly.html' | relative_url }}) |
 
 ## How the office works
 
@@ -56,7 +45,7 @@ You can tell your CEO that all of this exists:
 
 ## Why not just ask your AI tool?
 
-You can. Without this, each request starts from nothing. Facts drift, formats change, and the model fills gaps with plausible guesses. Here the facts sit in one place, each job has written steps and a fixed format, and the rule is to ask rather than guess. Models can still make errors, so read what comes back.
+You can. But each request then starts from nothing, so facts drift and the model fills gaps with plausible guesses. Here the facts sit in one place, each job has written steps and a fixed format, and the rule is to ask rather than guess. Models can still make errors, so read what comes back.
 
 ## The operating routine
 
@@ -73,4 +62,4 @@ You can. Without this, each request starts from nothing. Facts drift, formats ch
 
 ## Everything is plain text
 
-Copy it, or get it from [GitHub](https://github.com/{{ site.repository }}). Every page has buttons to copy the text, open the file on GitHub or see the raw file. Playbooks and guides, the procedures you read yourself, also come as PDFs.
+Copy it, download it or get it from [GitHub](https://github.com/{{ site.repository }}). Playbooks and guides, the procedures you read yourself, also come as PDFs.

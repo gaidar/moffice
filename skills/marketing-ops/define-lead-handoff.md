@@ -38,14 +38,14 @@ The marketer pastes into the chat:
 ## Procedure
 
 1. If sales says the leads are bad, start here, before defining anything. Get the last 30 rejected MQLs with reasons (a starting rule), or ask sales for one reason per lead. Sort and count by the reasons in step 7. Say what the largest group points to: not ICP, the fit rules; not ready, nurture; no contact, follow-up; wrong person, contact data. To raise it without a fight, see [Three hard situations](../../guides/hard-situations.md#sales-says-the-leads-are-bad).
-2. Write the lifecycle stages in this order: Lead, MQL, SQL, Won or lost, plus two side stages, Recycled and Disqualified. Each gets an entry rule, an owner and an exit rule. Copy the MQL and SQL definitions from goals-and-kpis.md word for word. Propose rules for the other stages and label them assumptions.
+2. Write the lifecycle stages in this order: Lead, MQL, SQL, Won or lost, plus two side stages, Recycled and Disqualified. Each gets an entry rule, an owner and an exit rule. Copy the MQL and SQL definitions from goals-and-kpis.md word for word. If blank, and for other stages, propose a rule and label it an assumption. With no sales team, the person who sells is sales.
 3. Turn the disqualifiers in icp-and-segments.md into Disqualified rules.
 4. Write the routing rules, one row per trigger, in priority order. A lead asking to talk to sales comes first, and every other MQL trigger follows. Every row names exactly one owning role. Apply territory or ownership rules only if the marketer supplied them. Otherwise write [territory rule needed].
 5. Set a response time for each routing row, using the marketer's figure. If none was given, write [response time to agree with sales].
 6. Set what happens when the time is missed: reassign if a second person holds that role, otherwise tell that person's manager, or write [escalation owner needed].
 7. Write the rejection rule. Sales may reject an MQL only with one of these reasons: not ICP, wrong person, no contact after the agreed attempts, duplicate, not ready. "Not ICP" and "duplicate" move the lead to Disqualified. "Not ready" and "no contact" move it to Recycled. "Wrong person" goes back to marketing.
 8. Run the capacity check. Weekly volume today is the MQL baseline divided by the weeks in that period. Weekly volume needed is the SQL goal divided by the MQL to SQL rate, then divided by the weeks in the quarter. Show the division and label both as estimates. Flag any shortfall against the marketer's capacity figure, or record capacity as unknown.
-9. List the CRM fields the rules need: stage, stage date, owner, rejection reason and first response date. The marketer sets these up.
+9. List the fields the rules need: stage, stage date, owner, rejection reason, first response date. A spreadsheet can hold them.
 10. Check the draft against the context pack: definitions are word for word, the sales roles exist in company.md, and the fit rules match icp-and-segments.md. Leave a visible placeholder for any blank field and ask in the last section.
 11. List every assumption, estimate, inference and unknown in the last section, including anything sales has not agreed to.
 

@@ -24,6 +24,14 @@ layout: default
       <p class="meta">Owned by <a href="{{ owner.url | relative_url }}">{{ owner.title }}</a></p>
     {%- endif -%}
     {%- if page.type == "agent" and page.bring_it -%}<p class="bring"><strong>Bring it:</strong> {{ page.bring_it }}</p>{%- endif -%}
+    {%- if page.type == "skill" or page.type == "agent" -%}
+      {%- comment -%}The prompt from the page's last section, shown up front so the reader can see what Copy prompt copies.{%- endcomment -%}
+      {%- assign marker = 'id="how-to-run-it"' -%}
+      {%- if page.type == "agent" -%}{%- assign marker = 'id="how-to-invoke"' -%}{%- endif -%}
+      {%- assign prompt = content | split: marker | last | split: "<code>" | slice: 1 | first | split: "</code>" | first -%}
+      {%- if prompt -%}<pre class="prompt-preview"><code>{{ prompt | strip }}</code></pre>{%- endif -%}
+      {%- if page.type == "skill" -%}<p class="note">Or say what you need in plain words, once your project is set up.</p>{%- endif -%}
+    {%- endif -%}
     {%- unless page.type == "index" -%}{%- include toolbar.html -%}{%- endunless -%}
   </div>
 </header>
@@ -31,18 +39,29 @@ layout: default
 Markdown links point at .md files so they work on GitHub. Pages mirror the source
 paths, so swapping the extension makes the same links work on the site.
 {%- endcomment -%}
-{%- comment -%}External URLs in any attribute, such as GitHub file links and data-raw-url, keep their .md ending.{%- endcomment -%}
-{%- assign chunks = content | split: '="https://' -%}
-{%- capture protected -%}
+{%- comment -%}
+Only relative targets of generated links change. External URLs and prompt text keep their .md ending:
+a code block escapes its angle brackets, so it can never contain the marker split on here.
+{%- endcomment -%}
+{%- assign link_marker = '<a href="' -%}
+{%- assign chunks = content | split: link_marker -%}
+{%- capture rewritten -%}
   {%- for chunk in chunks -%}
     {%- if forloop.first -%}{{ chunk }}{%- else -%}
       {%- assign target = chunk | split: '"' | first -%}
-      {%- assign safe = target | replace: '.md', '.MDKEEP' -%}
-      ="https://{{ chunk | replace_first: target, safe }}
+      {%- if target contains '://' or target contains 'mailto:' -%}
+        {{ link_marker }}{{ chunk }}
+      {%- else -%}
+        {%- assign site_target = target | append: '"' | replace: '.md"', '.html"' | replace: '.md#', '.html#' | remove: '"' -%}
+        {{ link_marker }}{{ chunk | replace_first: target, site_target }}
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 {%- endcapture -%}
-{%- assign body = protected | replace: '.md"', '.html"' | replace: '.md#', '.html#' | replace: '.MDKEEP', '.md' -%}
+{%- comment -%}The checklist boxes are decoration: disabled, with the question as plain text beside them.{%- endcomment -%}
+{%- assign checkbox = 'class="task-list-item-checkbox" disabled="disabled"' -%}
+{%- assign hidden_checkbox = checkbox | append: ' aria-hidden="true"' -%}
+{%- assign body = rewritten | replace: checkbox, hidden_checkbox -%}
 {%- assign ctx_base = "/context-pack/templates/" | relative_url -%}
 {%- for item in site.data.context_pack -%}
   {%- assign needle = "[[context-pack:" | append: item.file | append: "]]" -%}
@@ -64,7 +83,7 @@ paths, so swapping the extension makes the same links work on the site.
       {%- if page.show_to -%}<p><strong>Show it to:</strong> {{ page.show_to }}</p>{%- endif -%}
     </aside>
   {%- endif -%}
-  <article class="doc-body{% if page.type == 'skill' or page.type == 'agent' %} numbered{% endif %}">
+  <article class="doc-body{% if page.type == 'skill' or page.type == 'agent' %} numbered{% endif %}{% if page.type == 'skill' %} is-skill{% endif %}">
     {{ body }}
   </article>
 </div>

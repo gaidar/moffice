@@ -34,6 +34,7 @@
     <div class="wrap">
       <div class="foot-links">
         {%- for item in site.data.nav -%}<a href="{{ item.url | relative_url }}">{{ item.label }}</a>{%- endfor -%}
+        <a href="{{ '/examples.html' | relative_url }}">Examples</a>
         <a href="{{ '/office/glossary.html' | relative_url }}">Glossary</a>
         <a href="{{ '/guides.html' | relative_url }}">Guides</a>
         <a href="{{ '/office.html' | relative_url }}">Office</a>

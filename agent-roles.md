@@ -1,5 +1,6 @@
 ---
 title: Agents
+permalink: /agents.html
 type: index
 version: 0.1.0
 updated: 2026-11-02

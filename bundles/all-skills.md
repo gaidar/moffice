@@ -725,7 +725,7 @@ type: skill
 function: brand-and-design-briefs
 owner: brand-and-creative-director
 reads: [company, personas, messaging, proof-points, brand-voice]
-you_bring: At least five writing samples the company has published or would publish, each marked with its channel and date.
+you_bring: At least five writing samples, each marked with its channel and date, or with none, three lines the founders would publish and three they never would.
 also_for: [tone of voice, style guide, we all sound different, copy sounds generic, how should we sound, writing guidelines, ai sounds robotic]
 version: 0.1.0
 updated: 2026-11-01
@@ -746,11 +746,11 @@ Use this when brand-voice.md is blank, or when the company's writing has changed
 - [[context-pack:messaging]]: words to use and avoid.
 - [[context-pack:proof-points]]: which quotes belong to customers, not the company.
 
-The marketer supplies: at least five writing samples the company has published or would publish, ideally from more than one channel, each marked with its channel and date. Add any lines the company would never publish, and any visual rules.
+The marketer supplies: at least five samples the company has published or would publish, each marked with its channel and date, plus any lines it would never publish and any visual rules.
 
 ## Procedure
 
-1. Sort the samples. Remove customer quotes, including any in proof-points.md, as well as legal text and anything written by another company. Mark each remaining sample with its channel. If fewer than five remain, ask for more. If the marketer wants a draft anyway, mark every trait "low evidence".
+1. Sort the samples. Remove customer quotes, including any in proof-points.md, legal text and other companies' writing. Mark each remaining sample with its channel. If fewer than five remain, ask for more. If the marketer wants a draft anyway, mark every trait "low evidence". With no samples, ask the founders to write three lines they would publish and three they never would, and work from those, low evidence.
 2. Find what repeats. For each sample, note sentence length, point of view, use of jargon, use of numbers, how headlines are written, and what the writing does with the reader. Keep only a pattern seen in at least three samples. Five samples and three repeats are starting rules the marketer can change.
 3. Choose three traits. Each trait must be one adjective plus what it means in practice, must come from a pattern in step 2, and must rule something out. Reject any trait that nearly every company would claim, such as "professional" or "friendly".
 4. Attach evidence. For each trait, quote one short line from a sample. If you cannot quote one, drop the trait.
@@ -764,7 +764,7 @@ The marketer supplies: at least five writing samples the company has published o
 12. Check the draft against the context pack: the voice must not contradict messaging.md, and no customer's words may be used as the company's.
 13. List everything you assumed, and each low-evidence rule, in the last section.
 
-This skill saves nothing. The marketer copies the file section into brand-voice.md after deciding what to keep.
+The marketer copies the file section into brand-voice.md.
 
 ## Output format
 
@@ -1473,7 +1473,7 @@ function: budget-and-planning
 owner: head-of-marketing
 reads: [goals-and-kpis, company, icp-and-segments, channels-and-tools, product]
 you_bring: Last quarter's results, the days you can spend on this plan, and any hard dates not in the context pack.
-also_for: [quarterly plan, marketing plan, next quarter, what to focus on, plan for the ceo, goals for the quarter, hit the pipeline goal, one person team]
+also_for: [quarterly plan, marketing plan, 90-day plan, stop doing, what to stop, next quarter, what to focus on, plan for the ceo, goals for the quarter, hit the pipeline goal, one person team]
 version: 0.1.0
 updated: 2026-11-02
 summary: Goals, bets, calendar, owners and a capacity check for one quarter.
@@ -1500,16 +1500,17 @@ The marketer pastes into the chat:
 - Last quarter's results against goals, if available.
 - Days the marketer can spend on this plan in the quarter, after time off and fixed work.
 - Hard dates and commitments not in the context pack.
+- Everything now running.
 
 ## Procedure
 
 1. Copy the quarter, company goal and marketing goals word for word from goals-and-kpis.md. If the marketing goals are blank, stop and point to [Propose quarterly goals](propose-quarterly-goals.md). Do not write goals for the marketer.
 2. Work out each gap. Show goal, baseline and difference. Where goals chain, work backward and show the math, such as SQL goal divided by MQL to SQL rate. Label each result as an estimate. If a baseline is blank, write [baseline needed] and mark the gap unknown.
-3. Write 3 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea that serves no goal goes to "Not doing".
+3. Write 3 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea or running work that serves no goal goes to "Not doing".
 4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps. Do not use outside benchmarks.
 5. Build the calendar. Place hard dates first, then count back from each one, using the approval times in channels-and-tools.md. Add the first draft date for each item needing approval.
-6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Anyone outside marketing is marked "needs to agree".
-7. Run the capacity check. Estimate days per bet from its pieces, add a row for running existing channels, and compare the total with the marketer's available days. Do the same for any freelance time in company.md. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
+6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Mark anyone outside marketing "needs to agree".
+7. Run the capacity check. Estimate days per bet from its pieces, add a row for running existing channels, and compare the total with the marketer's available days. Include freelance time. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
 8. Check the money. If the estimated cost of the bets exceeds the budget, say by how much and cut the lowest ranked bet.
 9. Write up to 3 risks, each with its signal and response.
 10. Check the draft against the context pack: goals word for word, limits and hard rules respected, nothing planned that the product cannot do, internal-only items marked.
@@ -2120,7 +2121,7 @@ Status: Draft
 
 **Bottom line**
 
-In this invented deal set, most losses went to Arguvia on price at software companies, or to Deliberon from buyers wanting a course library. Screen for that disqualifier earlier.
+In this invented deal set, most losses went to Arguvia on price at software companies, or to Elenchly from buyers wanting a course library. Screen for that disqualifier earlier.
 
 **Data summary**
 
@@ -2139,7 +2140,7 @@ Period: Q3 2026. Closed deals: 24. Won: 9. Lost to a named competitor: 10. No de
 **Patterns**
 
 1. 4 of 6 losses to Arguvia were software company deals citing price (D3, D7, D12, D19).
-2. 3 of 4 losses to Deliberon wanted a course library, an ICP disqualifier (D5, D14, D21).
+2. 3 of 4 losses to Elenchly wanted a course library, an ICP disqualifier (D5, D14, D21).
 
 **Observations**
 
@@ -2150,7 +2151,7 @@ Period: Q3 2026. Closed deals: 24. Won: 9. Lost to a named competitor: 10. No de
 
 | Item | Result | Evidence |
 |---|---|---|
-| Deliberon "Where they win" | Holds | Pattern 2 |
+| Elenchly "Where they win" | Holds | Pattern 2 |
 | Pillar 3 | No data | No deal mentions team reports |
 
 **Recommended actions**
@@ -2281,7 +2282,7 @@ Mode: Update
 
 **Name and category**
 
-Deliberon: established course library on critical thinking and decision making.
+Elenchly: established course library on critical thinking and decision making.
 
 **Where they win**
 
@@ -2322,7 +2323,7 @@ Internal. No competitor names in ads. Tom Ferrant approves sales material.
 **Assumptions and open questions**
 
 - Assumption: no new source pasted, so all facts come from competitors.md.
-- Unknown: Do Deliberon's reports show how people work after a course?
+- Unknown: Do Elenchly's reports show how people work after a course?
 
 ## How to run it
 
@@ -4098,7 +4099,7 @@ Plan type: <New product, new segment or new market>
 
 **Proof by pillar:** It asks: Lena Marsh quote, public, professional services, so a gap. Practice: 72% weekly completion, all customers, public. Reasoning improves: Brightmere Advisory result, same gap.
 
-**Route to market:** Sales-led. Phase 1 channels: email list, webinar, learning and development conference. Expect Deliberon (completion data and quiz scores, per three prospects, 2026).
+**Route to market:** Sales-led. Phase 1 channels: email list, webinar, learning and development conference. Expect Elenchly (completion data and quiz scores, per three prospects, 2026).
 
 **Phases:** Prepare, by January 15, 2027: close the proof gap, draft security review answers; exit test is one approved customer. First test: through March 31. Expand: [date needed].
 
@@ -4131,7 +4132,7 @@ type: skill
 function: marketing-ops
 owner: marketing-operations-manager
 reads: [channels-and-tools, goals-and-kpis, company]
-you_bring: Each tool's annual cost, renewal date, seats paid for and used, and when it was last used.
+you_bring: Each tool's annual cost, renewal date, seats paid for and used, and when it was last used. With no tools yet, your budget.
 also_for: [too many tools, tool costs, software renewals, martech audit, cut software spend, what tools do we need, unused seats, crm renewal]
 version: 0.1.0
 updated: 2026-11-01
@@ -4142,7 +4143,7 @@ summary: Gives each marketing tool a keep, fix or cut decision, using costs and 
 
 ## When to use
 
-Use this before a renewal, during budget planning, or when you suspect you are paying for tools nobody opens. Do not use it to split program money across channels, which belongs to [Allocate the budget](../budget-and-planning/allocate-budget.md), or to fix tagging and naming, which belongs to [Set tracking conventions](set-tracking-conventions.md).
+Use this before a renewal, during budget planning, or when you suspect you are paying for tools nobody opens. With no tools yet, use it to list which jobs need one. Do not use it to split program money across channels, which belongs to [Allocate the budget](../budget-and-planning/allocate-budget.md), or to fix tagging and naming, which belongs to [Set tracking conventions](set-tracking-conventions.md).
 
 ## Inputs
 
@@ -4159,14 +4160,14 @@ The marketer pastes into the chat, for each tool:
 
 ## Procedure
 
-1. List every tool from channels-and-tools.md and every tool the marketer adds. If the two lists differ, include both and flag the difference. If a tool's cost is missing, write [cost needed] and leave it out of the money totals.
+1. List every tool from channels-and-tools.md and every tool the marketer adds, flagging any difference. With no tools, go to step 8. If a tool's cost is missing, write [cost needed] and leave it out of the money totals.
 2. For each tool, write what depends on it: any KPI it reports, any definition that needs its data and any hard rule that needs it. Write "nothing" if nothing does.
 3. Give each tool one decision by applying these rules in order, and stop at the first that fits. Something depends on it and the marketer reports a problem: Fix. Something depends on it and no problem is reported: Keep. Nothing depends on it, and another listed tool does the same job or it has gone unused for 90 days: Cut. Nothing depends on it and it is in use: Keep, and review at renewal.
 4. Change a Keep to Fix when paid seats or the plan tier exceed actual usage. The fix is to drop seats or tier at renewal.
 5. If usage or last-used information is missing for a tool, do not decide. Write "no decision" and ask for it in the last section. The 90-day cutoff is a starting rule the marketer can change, not a benchmark.
 6. For each Cut and Fix, write the steps: what to do, what breaks or moves, who else must agree and the last date to act, which is the renewal date minus the notice period. Anyone with access to the tool in channels-and-tools.md must be told. Do not name replacement products or describe a vendor's features.
 7. Calculate the money: total annual cost, savings from cuts and savings from fixes. Savings start at renewal, so show first-year savings only for the months left after that date. Compare with the budget only if the marketer confirmed the cost comes from it, and show the division.
-8. List gaps: any KPI with no tool to report it, and any job with no tool. State the gap only. Do not recommend a purchase.
+8. List gaps: any KPI with no tool to report it, and any job with no tool. State the gap only. Do not recommend a purchase. With no tools yet, mark each job "spreadsheet for now" or "needs a tool", with must-haves, a price ceiling and the date needed, naming no product.
 9. Check the draft against the context pack: no Cut removes a tool that a KPI, definition or hard rule needs, and anything above the budget approval limit in channels-and-tools.md names that approver. If a needed field is blank, leave a visible placeholder and ask in the last section. Never invent.
 10. List every assumption, estimate, inference and unknown in the last section, including each cost you did not receive.
 
@@ -4190,7 +4191,7 @@ Status: Draft
 <Total annual cost, annual savings, first-year savings. Max 40 words.>
 
 ## Gaps
-<Up to 3 bullets, max 20 words each, or "None".>
+<Up to 3 bullets, max 20 words each, or "None". No limit with no tools yet.>
 
 ## Assumptions and open questions
 - Assumption: <what you took as true, and why>
@@ -4302,14 +4303,14 @@ The marketer pastes into the chat:
 ## Procedure
 
 1. If sales says the leads are bad, start here, before defining anything. Get the last 30 rejected MQLs with reasons (a starting rule), or ask sales for one reason per lead. Sort and count by the reasons in step 7. Say what the largest group points to: not ICP, the fit rules; not ready, nurture; no contact, follow-up; wrong person, contact data. To raise it without a fight, see [Three hard situations](../../guides/hard-situations.md#sales-says-the-leads-are-bad).
-2. Write the lifecycle stages in this order: Lead, MQL, SQL, Won or lost, plus two side stages, Recycled and Disqualified. Each gets an entry rule, an owner and an exit rule. Copy the MQL and SQL definitions from goals-and-kpis.md word for word. Propose rules for the other stages and label them assumptions.
+2. Write the lifecycle stages in this order: Lead, MQL, SQL, Won or lost, plus two side stages, Recycled and Disqualified. Each gets an entry rule, an owner and an exit rule. Copy the MQL and SQL definitions from goals-and-kpis.md word for word. If blank, and for other stages, propose a rule and label it an assumption. With no sales team, the person who sells is sales.
 3. Turn the disqualifiers in icp-and-segments.md into Disqualified rules.
 4. Write the routing rules, one row per trigger, in priority order. A lead asking to talk to sales comes first, and every other MQL trigger follows. Every row names exactly one owning role. Apply territory or ownership rules only if the marketer supplied them. Otherwise write [territory rule needed].
 5. Set a response time for each routing row, using the marketer's figure. If none was given, write [response time to agree with sales].
 6. Set what happens when the time is missed: reassign if a second person holds that role, otherwise tell that person's manager, or write [escalation owner needed].
 7. Write the rejection rule. Sales may reject an MQL only with one of these reasons: not ICP, wrong person, no contact after the agreed attempts, duplicate, not ready. "Not ICP" and "duplicate" move the lead to Disqualified. "Not ready" and "no contact" move it to Recycled. "Wrong person" goes back to marketing.
 8. Run the capacity check. Weekly volume today is the MQL baseline divided by the weeks in that period. Weekly volume needed is the SQL goal divided by the MQL to SQL rate, then divided by the weeks in the quarter. Show the division and label both as estimates. Flag any shortfall against the marketer's capacity figure, or record capacity as unknown.
-9. List the CRM fields the rules need: stage, stage date, owner, rejection reason and first response date. The marketer sets these up.
+9. List the fields the rules need: stage, stage date, owner, rejection reason, first response date. A spreadsheet can hold them.
 10. Check the draft against the context pack: definitions are word for word, the sales roles exist in company.md, and the fit rules match icp-and-segments.md. Leave a visible placeholder for any blank field and ask in the last section.
 11. List every assumption, estimate, inference and unknown in the last section, including anything sales has not agreed to.
 
@@ -4929,7 +4930,7 @@ Status: Draft
 
 **Gates.** No ad spend without tracking in place: unknown, so confirm before February 15. No display retargeting: met.
 
-**Campaign summary.** Goal: 57 MQLs from professional services firms by March 31, 2027. Dates: February 15 to March 31, 2027. Target cost per MQL: $234.
+**Campaign summary.** Goal: 58 MQLs from professional services firms by March 31, 2027. Dates: February 15 to March 31, 2027. Target cost per MQL: $234.
 
 **Channels and audience**
 
@@ -4943,7 +4944,7 @@ Status: Draft
 | Line | Total | Per month | Test money | MQLs needed |
 |---|---|---|---|---|
 | Search ads | $7,500 | $5,000 | $750 | 32 |
-| Social ads | $6,000 | $4,000 | $600 | 25 |
+| Social ads | $6,000 | $4,000 | $600 | 26 |
 
 **Tests.** One test only, given the budget: client memo angle against keep-practicing angle. Winner: lower cost per MQL at 5 MQLs each.
 
@@ -4955,7 +4956,7 @@ Status: Draft
 
 - Assumption: all current paid spend moves to this campaign for 1.5 months.
 - Assumption: a line's campaign total counts as one item for the $5,000 limit.
-- Estimate: $234 is paid's $27,000 for the quarter divided by 30 expected SQLs (illustrative), times the 26% MQL to SQL rate. 57 is $13,500 divided by $234, part of the 116 in the campaign brief.
+- Estimate: $234 is paid's $27,000 for the quarter divided by 30 expected SQLs (illustrative), times the 26% MQL to SQL rate. 58 is $13,500 divided by $234, rounded, part of the 116 in the campaign brief.
 - Unknown: search volume for these terms. Can you paste an export?
 
 ## How to run it
@@ -5498,7 +5499,7 @@ Pillar 1: It asks, it does not answer. Why it differs: beats the status quo only
 
 Pillar 2: People keep practicing. Why it differs: beats the status quo only, where earlier tools went unused. Proof: 72% of assigned learners practiced at least weekly, Q3 2026, proof-points.md, Public. Public use: Ready.
 
-Pillar 3: You can see reasoning improve. Why it differs: three prospects described Deliberon's reports as completion data and quiz scores (calls, 2026). Proof: Brightmere Advisory's 22% rise in client memo reasoning scores, proof-points.md, Public. Public use: Ready.
+Pillar 3: You can see reasoning improve. Why it differs: three prospects described Elenchly's reports as completion data and quiz scores (calls, 2026). Proof: Brightmere Advisory's 22% rise in client memo reasoning scores, proof-points.md, Public. Public use: Ready.
 
 **Messages by persona**
 
@@ -5763,12 +5764,12 @@ Evidence: Hypothesis. The lead value rests on a measured result, and no customer
 
 | Category | Compared with | Lead value wins? |
 |---|---|---|
-| Critical thinking training software | Deliberon | Yes |
-| Course library | Deliberon | No, buyers expect courses |
+| Critical thinking training software | Elenchly | Yes |
+| Course library | Elenchly | No, buyers expect courses |
 
 **Positioning statement**
 
-For heads of learning at professional services firms who worry that junior staff accept AI answers without checking them, CogniATion Coach is critical thinking training software that shows whether people's reasoning improves, because it scores reasoning against a five-point rubric and reports progress by team. Unlike Deliberon, it is practice, not a course. Unlike Arguvia, it uses the customer's own scenarios and reports to the learning leader.
+For heads of learning at professional services firms who worry that junior staff accept AI answers without checking them, CogniATion Coach is critical thinking training software that shows whether people's reasoning improves, because it scores reasoning against a five-point rubric and reports progress by team. Unlike Elenchly, it is practice, not a course. Unlike Arguvia, it uses the customer's own scenarios and reports to the learning leader.
 
 **One-sentence description**
 
@@ -5778,7 +5779,7 @@ CogniATion Coach makes people practice reasoning and shows learning leaders what
 
 | Value | Beats | Proof and permission | Score |
 |---|---|---|---|
-| See reasoning improve | Deliberon, Arguvia | Brightmere 22% result: Public | 3 |
+| See reasoning improve | Elenchly, Arguvia | Brightmere 22% result: Public | 3 |
 | Asks, does not answer | Status quo | Lena Marsh quote: Public | 2 |
 
 Why this value leads: the champion is measured on proof that training changed behavior, and this scores highest.
@@ -5787,7 +5788,7 @@ Who this gives up: software and financial services, and buyers wanting one cours
 
 **What would break it**
 
-- Deliberon adds reports on reasoning, removing the difference.
+- Elenchly adds reports on reasoning, removing the difference.
 - Brightmere withdraws approval, leaving no Public reasoning result.
 
 **Change from the current statement**
@@ -5797,7 +5798,7 @@ Narrowed to professional services. Leads with visible progress, not practice.
 **Assumptions and open questions**
 
 - Assumption: professional services is the target, as first in the priority order.
-- Unknown: Do Deliberon's reports show more than completion data and quiz scores?
+- Unknown: Do Elenchly's reports show more than completion data and quiz scores?
 
 ## How to run it
 
@@ -7126,7 +7127,7 @@ type: skill
 function: segmentation-icp-and-personas
 owner: insights-analyst
 reads: [icp-and-segments, product, company, goals-and-kpis]
-you_bring: A customer export with one row per customer, lost deals with reasons, and notes on why customers succeeded or left.
+you_bring: A customer export with one row per customer, lost deals with reasons, notes on why customers succeeded or left, and any research findings.
 also_for: [ideal customer, who to target, wrong leads, junk leads, bad fit customers, who to disqualify, target accounts, customers who churn]
 version: 0.1.0
 updated: 2026-11-02
@@ -7152,19 +7153,19 @@ The marketer pastes into the chat:
 
 - A customer export with one row per customer: industry, employees, sites, team size, region, contract value, days to close, start date, and whether the customer is active or churned.
 - A list of lost deals with the reason, if available.
-- Any notes on why a customer succeeded or left.
+- Any notes on why a customer succeeded or left, and any findings from Synthesize customer research.
 
 ## Procedure
 
-1. Read the inputs and count the customer rows. With 20 or more rows, mark criteria as "Data". With fewer than 20 rows or no export, proceed from the context pack and mark every criterion "Hypothesis". Say which applies on the first line of the output.
-2. Sort the customers into two groups. "Good outcome" means active for at least 12 months with no known dispute over value. "Poor outcome" means churned, or active under 12 months with a known problem. Leave out customers too new to judge, and report how many you left out.
-3. Compare the groups on each attribute: industry, size, team size, region, what they used before and any other column. Keep an attribute as a fit criterion only if at least 60% of the good-outcome group shares the value, and the share in the poor-outcome group is at least 20 points lower. These cutoffs, and the 20 rows and 12 months above, are starting rules the marketer can change, not benchmarks.
+1. Read the inputs and count the customer rows. With 20 or more rows, mark criteria as "Data". With fewer than 20 rows or no export, work from pasted findings first, then the context pack, flag where they disagree and follow the findings. Mark every criterion "Hypothesis". Say which applies on the first line of the output.
+2. Sort the customers into two groups. "Good outcome" means active for at least 12 months with no known dispute over value. "Poor outcome" means churned, or active under 12 months with a known problem. Leave out customers too new to judge, and report how many.
+3. Compare the groups on each attribute, including what they used before. Keep an attribute as a fit criterion only if at least 60% of the good-outcome group shares the value, and the share in the poor-outcome group is at least 20 points lower. These cutoffs, and the 20 rows and 12 months above, are starting rules the marketer can change, not benchmarks.
 4. State each criterion as a test someone can apply from public information or one sales call, such as "at least 100 people to train". Reject criteria that require judgment, such as "innovative culture".
 5. Write the disqualifiers from three sources: any item under "What it is not" in product.md that a buyer needs, any known weak spot that caused a churn or a loss, and any attribute shared by most of the poor-outcome group. Give the reason for each.
 6. List the buying triggers from icp-and-segments.md, plus any trigger appearing in at least 3 customer notes.
 7. Write the scoring rule. Tier A meets every criterion and has a trigger. Tier B meets every criterion with no trigger. Tier C misses exactly one criterion. Out misses two or more, or has any disqualifier.
 8. Check the draft against the context pack: compare each criterion with icp-and-segments.md, flag every change, and say whether the MQL definition in goals-and-kpis.md still works. Where a needed field is blank, write a placeholder such as [region needed] and ask in the last section.
-9. List everything you assumed, estimated, inferred or could not find in the last section, including any customers you excluded and why.
+9. List everything you assumed, estimated, inferred or could not find in the last section, including customers excluded.
 
 ## Output format
 
@@ -7177,7 +7178,7 @@ Evidence basis: <"Data" with row count and number excluded, or "Hypothesis", one
 
 ## Fit criteria
 | Criterion | Test | Evidence | Basis |
-<3 to 6 rows; Basis is Data or Hypothesis; Evidence is a count from the export or a named context pack file>
+<3 to 6 rows; Basis is Data or Hypothesis; Evidence is a count from the export, a count of sources or a named context pack file>
 
 ## Disqualifiers
 - <disqualifier and reason, up to 25 words each, 2 to 6 items>
@@ -7250,7 +7251,7 @@ Evidence basis: <"Data" with row count and number excluded, or "Hypothesis", one
 
 ```
 Use the skill "Define the ICP". Read the context pack.
-Task: <why customers succeeded or left, if known>.
+Task: <why customers succeeded or left, if known, plus any research findings>.
 <paste the customer export and lost deals here>
 ```
 
@@ -7424,7 +7425,7 @@ summary: Writes the questions, recruiting list and invitation for customer or lo
 
 ## When to use
 
-Use this before you talk to customers or to buyers from lost deals, when you have a question and no notes yet. Do not use it once you have notes; use [Synthesize customer research](synthesize-customer-research.md) instead. For patterns in a CRM export of won and lost deals, use [Analyze wins and losses](../competitive-intelligence/analyze-win-loss.md).
+Use this before you talk to customers, prospects or buyers from lost deals, when you have a question and no notes yet. Do not use it once you have notes; use [Synthesize customer research](synthesize-customer-research.md) instead. For patterns in a CRM export of won and lost deals, use [Analyze wins and losses](../competitive-intelligence/analyze-win-loss.md).
 
 ## Inputs
 
@@ -7435,7 +7436,7 @@ Use this before you talk to customers or to buyers from lost deals, when you hav
 - [[context-pack:proof-points]]: permission status of customers and quotes.
 - [[context-pack:channels-and-tools]]: hard rules.
 
-The marketer supplies the research question, the kind of conversation (customer, lost deal or both) and minutes per conversation. Optional: a list with only name, title, company, segment, outcome, date and account owner.
+The marketer supplies the research question, the kind of conversation (customer, prospect or lost deal) and minutes per conversation. Optional: a list with only name, title, company, segment, outcome, date and account owner.
 
 ## Procedure
 

@@ -98,7 +98,7 @@ Status: Draft
 
 **Bottom line**
 
-In this invented deal set, most losses went to Arguvia on price at software companies, or to Deliberon from buyers wanting a course library. Screen for that disqualifier earlier.
+In this invented deal set, most losses went to Arguvia on price at software companies, or to Elenchly from buyers wanting a course library. Screen for that disqualifier earlier.
 
 **Data summary**
 
@@ -117,7 +117,7 @@ Period: Q3 2026. Closed deals: 24. Won: 9. Lost to a named competitor: 10. No de
 **Patterns**
 
 1. 4 of 6 losses to Arguvia were software company deals citing price (D3, D7, D12, D19).
-2. 3 of 4 losses to Deliberon wanted a course library, an ICP disqualifier (D5, D14, D21).
+2. 3 of 4 losses to Elenchly wanted a course library, an ICP disqualifier (D5, D14, D21).
 
 **Observations**
 
@@ -128,7 +128,7 @@ Period: Q3 2026. Closed deals: 24. Won: 9. Lost to a named competitor: 10. No de
 
 | Item | Result | Evidence |
 |---|---|---|
-| Deliberon "Where they win" | Holds | Pattern 2 |
+| Elenchly "Where they win" | Holds | Pattern 2 |
 | Pillar 3 | No data | No deal mentions team reports |
 
 **Recommended actions**

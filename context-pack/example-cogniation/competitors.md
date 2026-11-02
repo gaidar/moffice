@@ -40,7 +40,7 @@ Fine for one person practicing. Ask how they would show leadership that it worke
 
 **Name and category**
 
-Deliberon: established course library on critical thinking and decision making
+Elenchly: established course library on critical thinking and decision making
 
 **Where they win**
 

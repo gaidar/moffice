@@ -105,7 +105,7 @@ Mode: Update
 
 **Name and category**
 
-Deliberon: established course library on critical thinking and decision making.
+Elenchly: established course library on critical thinking and decision making.
 
 **Where they win**
 
@@ -146,7 +146,7 @@ Internal. No competitor names in ads. Tom Ferrant approves sales material.
 **Assumptions and open questions**
 
 - Assumption: no new source pasted, so all facts come from competitors.md.
-- Unknown: Do Deliberon's reports show how people work after a course?
+- Unknown: Do Elenchly's reports show how people work after a course?
 
 ## How to run it
 

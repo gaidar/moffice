@@ -8,7 +8,7 @@ summary: Turn a job you do repeatedly into a skill with a fixed procedure and ou
 
 ## Who it is for
 
-A marketer who keeps repeating the same job in chat, or who needs output shaped for their own tools. The Marketing Office has limited connectors to external tools, so this is how you fit the office to your CMS, CRM or email setup.
+A marketer who keeps repeating the same job in chat, or who needs output shaped for their own tools. The Marketing Office ships no connectors to external tools, so this is how you fit the office to your CMS, CRM or email setup.
 
 ## What you need
 
@@ -28,7 +28,7 @@ A marketer who keeps repeating the same job in chat, or who needs output shaped 
    ```
 
 3. Check the draft with this test: could a model produce the output from this skill alone, plus a filled context pack? If not, rewrite the vague steps.
-4. Fill in the fields at the top. `owner` is the file name of one agent role from [the agent roles](../agents.md). `reads` lists the context pack files the skill uses. `you_bring` says what the marketer must have ready, and shows at the top of the skill page. `also_for` lists the words someone might search for when they need this skill, and feeds the filter in the skills library.
+4. Fill in the fields at the top. `owner` is the file name of one agent role from [the agent roster](../office/agent-roster.md). `reads` lists the context pack files the skill uses. `you_bring` says what the marketer must have ready, and shows at the top of the skill page. `also_for` lists the words someone might search for when they need this skill, and feeds the filter in the skills library.
 5. Test it twice on real tasks. Change the procedure every time you have to correct the output for the same reason.
 6. Run [Review any output](../skills/marketing-ops/review-any-output.md) on the skill's first real output.
 7. Upload the file to your project next to `all-skills.md`, or paste it into the chat. `my-context-pack.md` stays as it is. If you want to share the skill, see [Contributing](../CONTRIBUTING.md).

@@ -3,19 +3,19 @@ title: Weekly
 type: playbook
 version: 0.1.0
 updated: 2026-11-02
-summary: A two-hour starter for your first four weeks, then the full routine, with sales at a time they can do, publishing midweek, a block for CEO requests, a total time estimate and a rule for what to drop.
+summary: A two-hour starter for until your reports, plan and calendar exist, then the full routine, with sales at a time they can do, publishing midweek, a block for CEO requests, a total time estimate and a rule for what to drop.
 ---
 
-New to this? Run the two-hour starter below for your first four weeks, then move to the full routine. Pace, lag and baseline are explained in [the glossary](../office/glossary.md).
+New to this? Run the two-hour starter until your reports, plan and calendar exist, then move to the full routine. Pace, lag and baseline are explained in [the glossary](../office/glossary.md).
 
-## Your first four weeks
+## The starter routine
 
-This takes about two hours a week (estimate), on top of your priorities. It does not assume a quarterly plan, a content calendar or CRM reports. In week 1, follow [the first week playbook](first-week.md) day by day, and start this in week 2.
+This takes about two hours a week (estimate), on top of your priorities. It does not assume a quarterly plan, a content calendar or CRM reports. Start it in week 2 of [First week](first-week.md), or in week 5 of [Starting from zero](from-zero.md), where the person who sells stands in for sales.
 
 | When | What to do | Time (estimate) |
 |---|---|---|
 | Monday | Get the numbers you can, by hand or from whoever has them: pipeline, leads, paid spend. Write "none yet" for the rest. A blank is fine, and a guess is not | 30 minutes |
-| Monday | [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md), pasting in those numbers, what is due from [the first week playbook](first-week.md#weeks-2-to-4), new requests and what sales last said. With no plan, it ranks by dates | 15 minutes |
+| Monday | [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md), pasting in those numbers, what is due from your playbook, new requests and what sales last said. With no plan, it ranks by dates | 15 minutes |
 | A time in the week the sales lead can do | Talk to sales for 30 minutes: which leads were good, which were not, what objections came up, which rivals appeared | 30 minutes |
 | Tuesday to Thursday | Work on the top priority, then the others if days allow | The days in your priorities table, not counted in the two hours |
 | Tuesday to Thursday | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number, then send it to its approver, and publish what comes back approved | 30 minutes |
@@ -29,47 +29,30 @@ Move to the full routine one piece at a time, as each thing comes to exist:
 - **Content calendar:** add step 9.
 - **Paid already running:** add step 4 now.
 
-If week 5 arrives and one of these is still missing, stay on the starter for that part. You have not fallen behind.
+Stay on the starter for anything still missing, for as long as it takes. You have not fallen behind.
 
 ## The full routine
 
 The full routine takes about one working day a week, 6 to 9 hours, spread across the days below, plus 2 hours held for CEO requests and other interruptions. That leaves up to four days for your priorities. Time estimates are rough, and assume the context pack is filled in and your reports exist.
 
-## Monday: decide
-
-| Step | Skill or action | Owner role | Time (estimate) |
+| Day | Step | Skill or action | Time (estimate) |
 |---|---|---|---|
-| 1 | Pull last week's numbers from your tools: pipeline, leads, paid spend, top pages | You | 20 minutes, once the reports exist |
-| 2 | Talk to sales for 30 minutes, at a time in the week the sales lead can do: which leads were good, which were not, what objections came up, which rivals appeared. If that is not Monday, use what they said last time, and adjust the priorities if this week's talk changes them | You, with the sales lead | 30 minutes |
-| 3 | [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md), pasting in the numbers, this quarter's plan and what sales said | Head of marketing | 15 minutes |
-| 4 | [Adjust paid campaigns](../skills/paid-demand-gen/adjust-paid-campaigns.md), if you run paid, pasting in a performance export | Paid media manager | 20 minutes |
-| 5 | [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md), only where pipeline is rated Behind | Marketing analyst | 30 minutes |
+| Monday | 1 | Pull last week's numbers from your tools: pipeline, leads, paid spend, top pages | 20 minutes, once the reports exist |
+| Monday | 2 | Talk to sales, at a time in the week the sales lead can do: which leads were good, which were not, what objections came up, which rivals appeared. If that is not Monday, use what they said last time | 30 minutes |
+| Monday | 3 | [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md), pasting in the numbers, this quarter's plan and what sales said | 15 minutes |
+| Monday | 4 | [Adjust paid campaigns](../skills/paid-demand-gen/adjust-paid-campaigns.md), if you run paid, pasting in a performance export | 20 minutes |
+| Monday | 5 | [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md), only where pipeline is rated Behind | 30 minutes |
+| Tuesday or Wednesday | 6 | Publish, send and hand over what was approved last week. The office cannot do this for you | 1 hour |
+| Tuesday or Wednesday | 7 | Talk to one customer, every two weeks, using your guide from [Write an interview guide](../skills/segmentation-icp-and-personas/write-interview-guide.md). Keep the notes for [Synthesize customer research](../skills/segmentation-icp-and-personas/synthesize-customer-research.md) in [the quarterly playbook](quarterly.md) | 45 minutes, with notes, every two weeks |
+| Tuesday to Thursday | 8 | Run the priority work for the week, using the skill it calls for | The days in your priorities table |
+| Tuesday to Thursday | 9 | Make next week's items from the calendar you made with [Plan a content calendar](../skills/content/plan-content-calendar.md): [Write a blog post](../skills/content/write-blog-post.md), [Write social posts](../skills/content/write-social-posts.md), [Write a marketing email](../skills/content/write-marketing-email.md) | 2 to 4 hours |
+| Tuesday to Thursday | 10 | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number | 10 minutes per item |
+| Tuesday to Thursday | 11 | Send items to the approvers listed in channels-and-tools.md, so they are back before next Tuesday | 15 minutes |
+| Tuesday to Thursday | 12 | CEO requests and other interruptions, inside the block you hold for them | 2 hours, at a fixed time |
+| Friday | 13 | Note what changed: new proof points, a competitor move, a sales objection. Update the context pack if it is a fact | 15 minutes |
+| Friday | 14 | Check that approvals are back for next week's publishing | 15 minutes |
 
 **Step 1's 20 minutes is only true once the reports exist.** Until then, pulling numbers by hand takes longer. Build the reports once: run [Specify a dashboard](../skills/analytics-and-campaign-evaluation/specify-dashboard.md), then save one report in your CRM and other tools for each number in step 1, with the date range set to last week. Allow half a day to a day (estimate), with whoever runs your CRM, and treat it as a priority for that week. After that, you only open them.
-
-## Tuesday or Wednesday: publish
-
-| Step | Skill or action | Owner role | Time (estimate) |
-|---|---|---|---|
-| 6 | Publish, send and hand over what was approved last week. The office cannot do this for you | You | 1 hour |
-| 7 | Talk to one customer, every two weeks, using your guide from [Write an interview guide](../skills/segmentation-icp-and-personas/write-interview-guide.md). Keep the notes for [Synthesize customer research](../skills/segmentation-icp-and-personas/synthesize-customer-research.md) in [the quarterly playbook](quarterly.md) | You | 45 minutes, with notes, every two weeks |
-
-## Tuesday to Thursday: make
-
-| Step | Skill or action | Owner role | Time (estimate) |
-|---|---|---|---|
-| 8 | Run the priority work for the week, using the skill it calls for | The role that owns it | The days in your priorities table |
-| 9 | Make next week's items from the calendar you made with [Plan a content calendar](../skills/content/plan-content-calendar.md): [Write a blog post](../skills/content/write-blog-post.md), [Write social posts](../skills/content/write-social-posts.md), [Write a marketing email](../skills/content/write-marketing-email.md) | Content lead | 2 to 4 hours |
-| 10 | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number | Marketing reviewer | 10 minutes per item |
-| 11 | Send items to the approvers listed in channels-and-tools.md, so they are back before next Tuesday | You | 15 minutes |
-| 12 | CEO requests and other interruptions, inside the block you hold for them | You | 2 hours, at a fixed time |
-
-## Friday: close
-
-| Step | Skill or action | Owner role | Time (estimate) |
-|---|---|---|---|
-| 13 | Note what changed: new proof points, a competitor move, a sales objection. Update the context pack if it is a fact | You | 15 minutes |
-| 14 | Check that approvals are back for next week's publishing | You | 15 minutes |
 
 ## Total time and what to drop
 
@@ -104,7 +87,7 @@ Do not drop the 30 minutes with sales, the review and approver steps, or the top
 
 ## If you only have two hours
 
-Run [the starter routine](#your-first-four-weeks) for this week, whatever week you are in. Skip the rest and say so in next week's input.
+Run [the starter routine](#the-starter-routine) for this week, whatever week you are in. Skip the rest and say so in next week's input.
 
 ## Worked example: a week at CogniATion
 

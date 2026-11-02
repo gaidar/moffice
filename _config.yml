@@ -53,7 +53,7 @@ defaults:
     values: { layout: content }
   - scope: { path: "context-pack.md" }
     values: { layout: content }
-  - scope: { path: "agents.md" }
+  - scope: { path: "agent-roles.md" }
     values: { layout: content }
   - scope: { path: "skills.md" }
     values: { layout: content }

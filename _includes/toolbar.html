@@ -12,12 +12,12 @@
   {%- if page.type == "skill" -%}
     <a class="btn" href="#example-fictional-company">See example</a>
   {%- endif -%}
-  <button type="button" class="btn office-copy" data-raw-url="{{ raw_url }}">Copy text</button>
-  <a class="btn" href="{{ blob_url }}">Open on GitHub</a>
-  <a class="btn" href="{{ raw_url }}">Raw file</a>
+  <button type="button" class="btn quiet office-copy" data-raw-url="{{ raw_url }}">Copy text</button>
+  <a class="btn quiet" href="{{ blob_url }}">Open on GitHub</a>
+  <a class="btn quiet" href="{{ raw_url }}">Raw file</a>
   {%- if has_pdf -%}
     {%- assign pdf_path = "/pdf/" | append: page.path | replace: ".md", ".pdf" | relative_url -%}
-    <a class="btn" href="{{ pdf_path }}" download>Download PDF</a>
+    <a class="btn quiet" href="{{ pdf_path }}" download>Download PDF</a>
   {%- endif -%}
   <span class="toolbar-status" role="status" aria-live="polite"></span>
 </div>

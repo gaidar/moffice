@@ -5,7 +5,7 @@ version: 0.1.0
 updated: 2026-11-01
 summary: The facts about your company, in one file you keep up to date. Every skill reads it, so output stays consistent across channels and months.
 diagram: context
-diagram_caption: "Fill the files left to right. Blanks are fine: skills ask for what is missing."
+diagram_caption: "The first pass drafts them all at once. Blanks are fine: skills ask for what is missing."
 ---
 
 See [Fill the context pack](guides/fill-the-context-pack.md) for the one-hour first pass. It uses [all 10 templates in one file](https://github.com/gaidar/moffice/blob/main/bundles/context-pack-templates.md).

@@ -34,7 +34,7 @@ Use this title and these four labels. Skip a label that has no items. If no labe
 | Fact about the company in the context pack | Use it as written |
 | Fact about the company not in the context pack | Ask first if it changes the whole output. Otherwise, leave a placeholder in square brackets and ask in the last section |
 | Customer name, quote or result | Use only if proof-points.md shows the right permission status for that use |
-| Company number | Use only if company.md marks it publishable |
+| Company number | Use anywhere only if company.md marks it publishable. Any other number stays in internal output. Never use a number company.md says never to mention |
 | Competitor claim | Use only if competitors.md has it with a source and date. Otherwise label it unknown |
 | Outside fact the marketer gave you | Use it and name the source they gave |
 | Outside fact from your memory | Label it unverified, or leave it out |

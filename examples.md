@@ -12,7 +12,6 @@ summary: See what the office produces, and how the pieces connect. All use Cogni
 |---|---|
 | What one output looks like, and how gaps show | [A sales one-pager]({{ '/try.html' | relative_url }}) |
 | What filling the context pack buys you | [Thin pack versus full pack]({{ '/guides/start-here.html' | relative_url }}#worked-example-what-a-fuller-pack-buys) |
-| How facts get into the pack, with sources and permissions | [Filling it in]({{ '/guides/fill-the-context-pack.html' | relative_url }}#worked-example-filling-it-in) |
 | How a first draft becomes a usable one | [Draft, answers, review]({{ '/guides/use-a-skill.html' | relative_url }}#worked-example-draft-answers-review) |
 | What an agent role adds over a single skill | [A role plans a campaign]({{ '/guides/invoke-an-agent.html' | relative_url }}#worked-example-a-role-plans-a-campaign) |
 | What one week looks like | [A week at CogniATion]({{ '/playbooks/weekly.html' | relative_url }}#worked-example-a-week-at-cogniation) |
@@ -21,7 +20,7 @@ summary: See what the office produces, and how the pieces connect. All use Cogni
 | Checking whether the leads really are bad, and agreeing it with sales | [Sales says the leads are bad]({{ '/guides/hard-situations.html' | relative_url }}#sales-says-the-leads-are-bad) |
 | Telling the CEO bad pipeline news | [The CEO asks why pipeline is down]({{ '/guides/hard-situations.html' | relative_url }}#the-ceo-asks-why-pipeline-is-down) |
 | A plausible draft that is wrong, and how to catch it | [Judge an output]({{ '/guides/judge-an-output.html' | relative_url }}#worked-example-a-plausible-draft-that-is-wrong) |
-| A messy first pass, with contradictions and little proof | [A messy first pass]({{ '/guides/fill-the-context-pack.html' | relative_url }}#worked-example-a-messy-first-pass) |
+| How facts get into the pack: a messy first pass, with sources, permissions and little proof | [A messy first pass]({{ '/guides/fill-the-context-pack.html' | relative_url }}#worked-example-a-messy-first-pass) |
 
 ## Reference examples
 

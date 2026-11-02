@@ -4,7 +4,7 @@ type: skill
 function: marketing-ops
 owner: marketing-operations-manager
 reads: [channels-and-tools, goals-and-kpis, company]
-you_bring: Each tool's annual cost, renewal date, seats paid for and used, and when it was last used.
+you_bring: Each tool's annual cost, renewal date, seats paid for and used, and when it was last used. With no tools yet, your budget.
 also_for: [too many tools, tool costs, software renewals, martech audit, cut software spend, what tools do we need, unused seats, crm renewal]
 version: 0.1.0
 updated: 2026-11-01
@@ -15,7 +15,7 @@ summary: Gives each marketing tool a keep, fix or cut decision, using costs and 
 
 ## When to use
 
-Use this before a renewal, during budget planning, or when you suspect you are paying for tools nobody opens. Do not use it to split program money across channels, which belongs to [Allocate the budget](../budget-and-planning/allocate-budget.md), or to fix tagging and naming, which belongs to [Set tracking conventions](set-tracking-conventions.md).
+Use this before a renewal, during budget planning, or when you suspect you are paying for tools nobody opens. With no tools yet, use it to list which jobs need one. Do not use it to split program money across channels, which belongs to [Allocate the budget](../budget-and-planning/allocate-budget.md), or to fix tagging and naming, which belongs to [Set tracking conventions](set-tracking-conventions.md).
 
 ## Inputs
 
@@ -32,14 +32,14 @@ The marketer pastes into the chat, for each tool:
 
 ## Procedure
 
-1. List every tool from channels-and-tools.md and every tool the marketer adds. If the two lists differ, include both and flag the difference. If a tool's cost is missing, write [cost needed] and leave it out of the money totals.
+1. List every tool from channels-and-tools.md and every tool the marketer adds, flagging any difference. With no tools, go to step 8. If a tool's cost is missing, write [cost needed] and leave it out of the money totals.
 2. For each tool, write what depends on it: any KPI it reports, any definition that needs its data and any hard rule that needs it. Write "nothing" if nothing does.
 3. Give each tool one decision by applying these rules in order, and stop at the first that fits. Something depends on it and the marketer reports a problem: Fix. Something depends on it and no problem is reported: Keep. Nothing depends on it, and another listed tool does the same job or it has gone unused for 90 days: Cut. Nothing depends on it and it is in use: Keep, and review at renewal.
 4. Change a Keep to Fix when paid seats or the plan tier exceed actual usage. The fix is to drop seats or tier at renewal.
 5. If usage or last-used information is missing for a tool, do not decide. Write "no decision" and ask for it in the last section. The 90-day cutoff is a starting rule the marketer can change, not a benchmark.
 6. For each Cut and Fix, write the steps: what to do, what breaks or moves, who else must agree and the last date to act, which is the renewal date minus the notice period. Anyone with access to the tool in channels-and-tools.md must be told. Do not name replacement products or describe a vendor's features.
 7. Calculate the money: total annual cost, savings from cuts and savings from fixes. Savings start at renewal, so show first-year savings only for the months left after that date. Compare with the budget only if the marketer confirmed the cost comes from it, and show the division.
-8. List gaps: any KPI with no tool to report it, and any job with no tool. State the gap only. Do not recommend a purchase.
+8. List gaps: any KPI with no tool to report it, and any job with no tool. State the gap only. Do not recommend a purchase. With no tools yet, mark each job "spreadsheet for now" or "needs a tool", with must-haves, a price ceiling and the date needed, naming no product.
 9. Check the draft against the context pack: no Cut removes a tool that a KPI, definition or hard rule needs, and anything above the budget approval limit in channels-and-tools.md names that approver. If a needed field is blank, leave a visible placeholder and ask in the last section. Never invent.
 10. List every assumption, estimate, inference and unknown in the last section, including each cost you did not receive.
 
@@ -63,7 +63,7 @@ Status: Draft
 <Total annual cost, annual savings, first-year savings. Max 40 words.>
 
 ## Gaps
-<Up to 3 bullets, max 20 words each, or "None".>
+<Up to 3 bullets, max 20 words each, or "None". No limit with no tools yet.>
 
 ## Assumptions and open questions
 - Assumption: <what you took as true, and why>

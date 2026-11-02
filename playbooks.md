@@ -8,7 +8,7 @@ diagram: cadence
 diagram_caption: "A sample 13-week quarter. Bars show when each playbook runs."
 ---
 
-{% assign order = "first-week,weekly,monthly,quarterly,campaign-lifecycle,launch" | split: "," -%}
+{% assign order = "from-zero,first-week,weekly,monthly,quarterly,campaign-lifecycle,launch" | split: "," -%}
 {% assign playbooks = site.pages | where: "type", "playbook" -%}
 | Playbook | What it covers |
 |---|---|

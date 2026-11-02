@@ -406,7 +406,7 @@ Answer:
 
 Guidance: The name and how buyers see them.
 
-Example: Deliberon: established course library on critical thinking and decision making
+Example: Elenchly: established course library on critical thinking and decision making
 
 Answer:
 

@@ -16,7 +16,7 @@ Do not fill with guesses – leave blank and the skills will ask.
 
 **Positioning statement**
 
-For learning leaders at knowledge-work companies whose staff now lean on general AI assistants, CogniATion Coach is critical thinking training software that makes people practice reasoning on real work problems, because the chatbot asks questions and declines to give the answer. Unlike Deliberon, it is practice, not a course. Unlike Arguvia, it reports progress to the learning leader and uses the customer's own scenarios.
+For learning leaders at knowledge-work companies whose staff now lean on general AI assistants, CogniATion Coach is critical thinking training software that makes people practice reasoning on real work problems, because the chatbot asks questions and declines to give the answer. Unlike Elenchly, it is practice, not a course. Unlike Arguvia, it reports progress to the learning leader and uses the customer's own scenarios.
 
 **One-sentence description**
 

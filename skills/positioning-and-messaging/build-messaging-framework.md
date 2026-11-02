@@ -108,7 +108,7 @@ Pillar 1: It asks, it does not answer. Why it differs: beats the status quo only
 
 Pillar 2: People keep practicing. Why it differs: beats the status quo only, where earlier tools went unused. Proof: 72% of assigned learners practiced at least weekly, Q3 2026, proof-points.md, Public. Public use: Ready.
 
-Pillar 3: You can see reasoning improve. Why it differs: three prospects described Deliberon's reports as completion data and quiz scores (calls, 2026). Proof: Brightmere Advisory's 22% rise in client memo reasoning scores, proof-points.md, Public. Public use: Ready.
+Pillar 3: You can see reasoning improve. Why it differs: three prospects described Elenchly's reports as completion data and quiz scores (calls, 2026). Proof: Brightmere Advisory's 22% rise in client memo reasoning scores, proof-points.md, Public. Public use: Ready.
 
 **Messages by persona**
 

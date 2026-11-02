@@ -15,7 +15,7 @@ summary: Writes the questions, recruiting list and invitation for customer or lo
 
 ## When to use
 
-Use this before you talk to customers or to buyers from lost deals, when you have a question and no notes yet. Do not use it once you have notes; use [Synthesize customer research](synthesize-customer-research.md) instead. For patterns in a CRM export of won and lost deals, use [Analyze wins and losses](../competitive-intelligence/analyze-win-loss.md).
+Use this before you talk to customers, prospects or buyers from lost deals, when you have a question and no notes yet. Do not use it once you have notes; use [Synthesize customer research](synthesize-customer-research.md) instead. For patterns in a CRM export of won and lost deals, use [Analyze wins and losses](../competitive-intelligence/analyze-win-loss.md).
 
 ## Inputs
 
@@ -26,7 +26,7 @@ Use this before you talk to customers or to buyers from lost deals, when you hav
 - [[context-pack:proof-points]]: permission status of customers and quotes.
 - [[context-pack:channels-and-tools]]: hard rules.
 
-The marketer supplies the research question, the kind of conversation (customer, lost deal or both) and minutes per conversation. Optional: a list with only name, title, company, segment, outcome, date and account owner.
+The marketer supplies the research question, the kind of conversation (customer, prospect or lost deal) and minutes per conversation. Optional: a list with only name, title, company, segment, outcome, date and account owner.
 
 ## Procedure
 

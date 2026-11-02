@@ -17,78 +17,68 @@ These steps were written from OpenAI's help pages on the date below, and have no
 ## What you need
 
 - A ChatGPT Plus or Pro subscription and a browser.
-- The Marketing Office files, from [the Marketing Office repository](https://github.com/gaidar/moffice) on GitHub. Step 1 shows how to get them.
+- The two office files. Step 1 links them.
 - `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
 - Time: about 30 minutes, an estimate, not counting the context pack.
 
 ## Steps
 
-1. Get the files from GitHub. Open [the Marketing Office repository](https://github.com/gaidar/moffice), click **Code** above the list of files, then click **Download ZIP**, which is [GitHub's own download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives). Double-click the downloaded file to open it. You now have a folder of plain-text files.
+1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
 
-2. In ChatGPT, select **New project** in the sidebar. Name it `Marketing Office`, then pick an icon and color. If you are offered project-only memory, choose it, because it keeps memories saved from your other work out of this project. You can change this later under **Project settings**, in **Memory**. See [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt).
+2. In ChatGPT, select **New project** in the sidebar and name it `Marketing Office`. If you are offered project-only memory, choose it, because it keeps memories from your other work out of this project. See [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt).
 
-3. Open `office/office-manual.md` in a text editor and copy all of it. In the project, open the more options menu (•••), select **Project settings**, paste the text as the project instructions, and save. Then reopen the settings and check that the last line, which starts "When the marketer asks", is still there.
+3. Open [the office manual](../office/office-manual.md) and click **Copy text** at the top of the page. In the project, open the more options menu (•••), select **Project settings**, paste the text as the project instructions and save. Reopen the settings and check that the last line, which starts "When the marketer asks", is still there. If it was cut off, see Notes.
 
-   The manual is about 7,800 characters. If it gets cut off, go to step 4. The limit for project instructions: Unverified – check the vendor help page: [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt). Do not use your account-wide custom instructions for this, because [they stop at 5,000 characters](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions) on Plus and Pro.
+4. Upload these 3 files to the project's sources: `my-context-pack.md`, `all-skills.md` and `roles-and-playbooks.md`. If a file is rejected, rename it to end in `.txt`. Unverified – check the vendor help page: [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq).
 
-4. If the manual does not fit or gets cut off, replace it with this short pointer, and upload `office/office-manual.md` as a file in step 5.
-
-   ```
-   You are the Marketing Office. Before answering any request, read the project file office-manual.md and follow it exactly. It sets the rule on facts, the assumption labels, the output format, and how to run skills and agent roles. The file my-context-pack.md is your only source of facts about the company. Find skills in all-skills.md and agent role charters in all-agent-roles.md. If you cannot read office-manual.md, say so and stop. Do not improvise a version of it.
-   ```
-
-5. Upload these 3 files to the project's sources:
-   - `my-context-pack.md`
-   - `bundles/all-skills.md`
-   - `bundles/all-agent-roles.md`
-
-   Use the bundles on both plans. The individual files do not fit under the limit of 25 on Plus or 40 on Pro, and 3 files do, or 4 with the manual. OpenAI's project page says only 10 files can be uploaded at the same time, so one batch is enough.
-
-   If a file is rejected, rename it so it ends in `.txt` instead of `.md`, since OpenAI's upload article lists TXT. Unverified – check the vendor help page: [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq).
-
-6. Start a new chat inside the project and paste this check prompt.
+5. Start a new chat inside the project and paste this check:
 
    ```
-   List the context pack sections you can see, and say which have blanks. Then tell me which skill you would use to write a sales one-pager. Do not invent anything.
+   List the context pack sections you can see, and say which have blanks. Then name the skill you would use to write a sales one-pager, and show its Output format section word for word. Do not invent anything.
    ```
 
-   Expected answer: it lists the 10 sections of your context pack, says which have blanks, and names the skill "Write a sales one-pager".
+   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Raw file** on the same page.
 
-   Then check that it can use a skill from the combined file, with this second check:
+6. Ask for your first draft, in plain words, in a new chat in the project. It tells you which skill it used. [Use a skill](use-a-skill.md) covers the rest.
 
    ```
-   Show me the Output format section of the skill "Write a sales one-pager", word for word.
+   Write a sales one-pager for our most important segment, aimed at the person who signs, for one-to-one use by sales.
    ```
 
-   Compare the answer with [the skill's page on this site](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload or paste that skill's own file, `skills/product-marketing-and-sales-enablement/write-sales-one-pager.md`.
-
-7. Go to [Use a skill](use-a-skill.md). All your work runs from these two prompts, typed as plain messages in a chat inside the project.
+   If it picks the wrong skill or ignores your facts, use the exact form, which always works:
 
    ```
    Use the skill "<title>". Read the context pack. Task: <what they want>.
    ```
 
-   ```
-   Act as the <role> from the Marketing Office. Follow your charter. Read the context pack. Today's task: <task>.
-   ```
+### Notes
+
+- **If the instructions are cut off**, paste this pointer instead, and upload `office-manual.md` as a file. The manual is about 8,800 characters. The limit for project instructions: Unverified – check the vendor help page: [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt). Do not use your account-wide custom instructions for this, because [they stop at 5,000 characters](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions) on Plus and Pro.
+
+  ```
+  You are the Marketing Office. Before answering any request, read the project file office-manual.md and follow it exactly. It sets the rule on facts, the assumption labels, the output format, and how to run skills and agent roles. The file my-context-pack.md is your only source of facts about the company. Find skills in all-skills.md, and agent role charters and playbooks in roles-and-playbooks.md. If you cannot read office-manual.md, say so and stop. Do not improvise a version of it.
+  ```
+
+- **Why combined files.** The individual files do not fit under the limit of 25 on Plus or 40 on Pro, and 3 files do, or 4 with the manual. OpenAI's project page says only 10 files can be uploaded at the same time, so one batch is enough.
+- **Memory.** You can change the memory choice later under **Project settings**, in **Memory**.
 
 ## What success looks like
 
-The sidebar shows a project called Marketing Office, with the office manual or the pointer in its instructions and your 3 files in its sources. A new chat in that project answers the check prompt by listing brand-voice, channels-and-tools, company, competitors, goals-and-kpis, icp-and-segments, messaging, personas, product and proof-points, says which have blanks, and names the skill "Write a sales one-pager". It adds no company facts of its own. The second check returns the skill's Output format as it appears on this site.
+The sidebar shows a project called Marketing Office, with the office manual or the pointer in its instructions and your 3 files in its sources. A new chat in that project answers the check by listing brand-voice, channels-and-tools, company, competitors, goals-and-kpis, icp-and-segments, messaging, personas, product and proof-points, says which have blanks, and names the skill "Write a sales one-pager", with its Output format as it appears on this site. It adds no company facts of its own.
 
 ## Plain-chat fallback
 
-Use this if you do not want a project, or a project gives you trouble. It needs only chat and file upload, and it costs a few minutes at the start of each chat. Get the files from GitHub first, as in step 1 above.
+Use this if you do not want a project, or a project gives you trouble. It needs only chat and file upload, and it costs a few minutes at the start of each chat.
 
 1. Start a new chat in ChatGPT, outside any project.
 
-2. Open `office/office-manual.md` in a text editor, copy all of it, and paste it as your first message. If the message is too long to send, upload the file instead and write this.
+2. Copy [the office manual](../office/office-manual.md) with **Copy text**, and paste it as your first message. If the message is too long to send, upload the file instead and write this.
 
    ```
    Read this file and follow it for this whole chat.
    ```
 
-3. Upload `my-context-pack.md` and the skill file from `skills/[function]/`. For an agent role, upload its charter from `agents/`.
+3. Upload `my-context-pack.md` and the skill file, which you get with **Raw file** on the skill's page. For an agent role, do the same from its charter page.
 
 4. Paste the run prompt, filling in the details.
 
@@ -112,18 +102,18 @@ Use this if you do not want a project, or a project gives you trouble. It needs 
 
 ### Optional extras
 
-- **Codex.** Most marketers can skip Codex: OpenAI describes it as the option for [software development and technical work](https://learn.chatgpt.com/docs/use-chatgpt), and it is a separate view in the [ChatGPT desktop app](https://learn.chatgpt.com/docs/quickstart), included with Plus and Pro. It can read and change files in a folder you open, so keep a clean copy if you point it at the Marketing Office folder, where it could read all the individual files without the bundles (inference, not tested; Unverified – check the vendor help page: [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex)).
-- **ChatGPT Work.** If you want a finished file such as a deck or a report, OpenAI points to ChatGPT Work for [reviewable results](https://learn.chatgpt.com/docs/use-chatgpt), and you can start it from inside your project so it uses the project's context. Work and Codex [share the same usage limits](https://learn.chatgpt.com/docs/pricing), so check your usage before a large task.
+- **Codex.** Most marketers can skip Codex: OpenAI describes it as the option for [software development and technical work](https://learn.chatgpt.com/docs/use-chatgpt), and it is a separate view in the [ChatGPT desktop app](https://learn.chatgpt.com/docs/quickstart), included with Plus and Pro.
+- **ChatGPT Work.** If you want a finished file such as a deck or a report, OpenAI points to ChatGPT Work for [reviewable results](https://learn.chatgpt.com/docs/use-chatgpt). OpenAI's [Projects page](https://help.openai.com/en/articles/10169521-projects-in-chatgpt) says Work is not available in a project that uses project-only memory. To use Work, make a second project with default memory, give it the same instructions and files, and start Work from inside it. Default memory can draw on your other work, so check facts against your context pack. Work and Codex [share the same usage limits](https://learn.chatgpt.com/docs/pricing), so check your usage before a large task.
 - **ChatGPT's own Skills feature.** The project path is the supported one: OpenAI's help article lists [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) for Business, Enterprise, Healthcare and Edu users, not Plus or Pro, and [each skill must be a folder](https://learn.chatgpt.com/docs/build-skills) with its own `SKILL.md` file, so the Marketing Office files would need repackaging.
 
 ## Troubleshooting
 
-- **The model says it cannot find a skill.** Check that `all-skills.md` is in the project's sources and that the chat is inside the project. Use the skill's exact title. If the model cannot find a skill in the combined file, upload or paste that skill's own file from `skills/[function]/`.
+- **The model picks the wrong skill or cannot find one.** Check that `all-skills.md` is in the project's sources and that the chat is inside the project. Use the skill's exact title. If the model cannot find a skill in the combined file, upload or paste that skill's own file from `skills/[function]/`.
 - **The model talks about ChatGPT's own Skills feature or asks you to install something.** Tell it that the skill is a section of the project file `all-skills.md`. You do not need an @ mention.
 - **The model invents a fact.** Ask which context pack section states it. If none does, add the real fact to that section of `my-context-pack.md` and upload it again, or tell the model to use a visible placeholder.
 - **A file upload is rejected.** If it is the file type, rename the file so it ends in `.txt` instead of `.md`, since OpenAI's upload article lists TXT. If you are over the file limit, delete files until you are at 25 on Plus or 40 on Pro. OpenAI also lists a rate limit of 80 files every 3 hours, so wait and retry if you hit it.
-- **The instructions are too long or get cut off.** Use the pointer in step 4 and upload the manual as a file.
-- **The check prompt lists fewer than 10 sections.** Check that `my-context-pack.md` holds all 10 and upload it again. Project files stay across the project's chats, so also check that you are not in a chat outside the project.
+- **The instructions are too long or get cut off.** Use the pointer in Notes and upload the manual as a file.
+- **The check lists fewer than 10 sections.** Check that `my-context-pack.md` holds all 10 and upload it again. Project files stay across the project's chats, so also check that you are not in a chat outside the project.
 - **You forgot files in a new chat.** In a project, start the chat inside the project and the files come with it. In the plain-chat fallback, upload them again.
 - **You updated your context pack.** In the project's sources list, delete the old `my-context-pack.md`, upload the new one, and start a new chat.
 - **You do not see the project-only memory option.** Skip it. OpenAI says availability depends on your plan.
@@ -148,16 +138,16 @@ Fetched directly. The developers.openai.com pages for these topics redirect to l
 
 Read only as excerpts in search results, because direct fetches of help.openai.com and openai.com returned an access error.
 
-- [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt): plan availability, 25 and 40 file limits, 10 uploads at a time, **New project**, **Project settings**, **Memory**, deleting from the sources list.
+- [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt): plan availability, 25 and 40 file limits, 10 uploads at a time, **New project**, **Project settings**, **Memory**, deleting from the sources list, Work unavailable with project-only memory (checked 2026-11-02).
 - [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq): per-project limits, TXT listed, 80 files every 3 hours.
 - [ChatGPT custom instructions](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions): 5,000 characters on Plus and Pro, for account-wide instructions only.
 - [Data analysis with ChatGPT](https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt): `.md` named for data analysis.
 - [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt): eligible plans.
-- [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex): Codex is separate, for technical work, desktop only, included with Plus and Pro, Work from a project.
+- [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex): Codex is separate, for technical work, included with Plus and Pro, Work from a project.
+- [Using Codex Cloud](https://help.openai.com/en/articles/20001545-using-codex-cloud): the Codex view is in the desktop app, and cloud tasks can run from the web and mobile (checked 2026-11-02).
 
 What could not be verified:
 
-- Step 3: the character limit for project instructions. No page found states one.
-- Step 5: whether project uploads accept `.md` files, and the name of the upload button.
-- Optional extras, Codex: reading all the individual files from the folder is an inference and was not tested. OpenAI's pages also conflict on where Codex runs: the help article says it is not selectable on the web or mobile, while the pricing page lists Codex on the web and iOS for Plus.
-- Steps 2, 3 and 5, and Troubleshooting, "You updated your context pack": every help.openai.com detail comes from search excerpts, not a full page read. One older version of the upload FAQ gives Plus 20 files per project. The 4 files in this guide fit either way.
+- Notes: the character limit for project instructions. No page found states one.
+- Step 4: whether project uploads accept `.md` files, and the name of the upload button.
+- Steps 2, 3 and 4, and Troubleshooting, "You updated your context pack": every help.openai.com detail comes from search excerpts, not a full page read. One older version of the upload FAQ gives Plus 20 files per project. The 4 files in this guide fit either way.

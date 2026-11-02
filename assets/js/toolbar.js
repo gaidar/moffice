@@ -6,6 +6,26 @@
     if (status) status.textContent = message;
   }
 
+  // A browser can block the pop-up, so the page always shows a real link to the raw file as well.
+  function offerRawLink(element, before, url, after) {
+    var status = element.parentNode.querySelector(".toolbar-status");
+    if (!status) {
+      status = document.createElement("span");
+      status.className = "toolbar-status";
+      status.setAttribute("role", "status");
+      element.insertAdjacentElement("afterend", status);
+      element.insertAdjacentText("afterend", " ");
+    }
+    var link = document.createElement("a");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "open the raw file";
+    status.textContent = "";
+    status.append(before + " ", link, " " + after);
+    window.open(url, "_blank", "noopener");
+  }
+
   async function copyRaw(button) {
     var url = button.getAttribute("data-raw-url");
     setStatus(button, "Copying...");
@@ -26,8 +46,7 @@
       }
       setStatus(button, "Copied.");
     } catch (error) {
-      setStatus(button, "Could not copy. Opening the raw file, copy it from there.");
-      window.open(url, "_blank", "noopener");
+      offerRawLink(button, "Could not copy, so", url, "and copy it from there.");
     }
   }
 
@@ -35,6 +54,49 @@
     var button = event.target.closest && event.target.closest(".office-copy");
     if (button) copyRaw(button);
   });
+
+  // Links to a raw file on GitHub save the file under its own name in one click.
+  // GitHub stays the only copy. If the fetch fails, the link opens the raw file as usual.
+  document.querySelectorAll('a.office-download, .doc-body a[href^="https://raw.githubusercontent.com/"]').forEach(function (link) {
+    if (link.closest(".toolbar") && !link.classList.contains("office-download")) return;
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var url = link.href;
+      fetch(url).then(function (response) {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        return response.blob();
+      }).then(function (blob) {
+        var save = document.createElement("a");
+        save.href = URL.createObjectURL(new Blob([blob], { type: "text/plain" }));
+        save.download = url.split("/").pop();
+        document.body.appendChild(save);
+        save.click();
+        save.remove();
+        setTimeout(function () { URL.revokeObjectURL(save.href); }, 1000);
+      }).catch(function () {
+        offerRawLink(link, "Could not download, so", url, "and save it from there.");
+      });
+    });
+  });
+
+  // On skill pages, fold the sections written for the model. The source and Copy text keep them.
+  var inputs = document.querySelector(".doc-body.is-skill > #inputs");
+  var checklist = document.querySelector(".doc-body.is-skill > #quality-checklist");
+  if (inputs && checklist) {
+    var fold = document.createElement("details");
+    fold.className = "for-model";
+    var label = document.createElement("summary");
+    label.textContent = "What the model follows: inputs, procedure and output format";
+    fold.appendChild(label);
+    inputs.parentNode.insertBefore(fold, inputs);
+    while (fold.nextSibling && fold.nextSibling !== checklist) fold.appendChild(fold.nextSibling);
+    var hash = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+    if (hash && fold.contains(hash)) fold.open = true;
+    // Folded content does not count toward CSS counters, so number the headings directly.
+    document.querySelectorAll(".doc-body.is-skill h2").forEach(function (heading, index) {
+      heading.style.counterSet = "sec " + (index + 1);
+    });
+  }
 
   // Copy prompt: the first code block under "How to run it" or "How to invoke".
   var promptButton = document.querySelector(".office-copy-prompt");
@@ -67,10 +129,10 @@
     pre.insertBefore(button, pre.firstChild);
   });
 
-  // Filter on the skills page.
+  // One filter on the skills page, over the situations and the full list.
   var filter = document.querySelector(".filter");
   if (filter) {
-    var rows = document.querySelectorAll(".doc-body tr[data-skill]");
+    var rows = document.querySelectorAll(".skill-group tbody tr");
     filter.addEventListener("input", function () {
       // Match on any word of three letters or more, so "pipeline down" and "leads are bad" still find something.
       var words = filter.value.toLowerCase().split(/\s+/).filter(function (w) {
@@ -80,8 +142,10 @@
       function haystack(row) {
         return (row.textContent + " " + (row.getAttribute("data-keywords") || "")).toLowerCase();
       }
+      // Match from the start of a word, so "new" finds "new company" and not "renewal".
       function has(row, w) {
-        return haystack(row).indexOf(w.replace(/s$/, "")) !== -1;
+        var stem = w.replace(/s$/, "").replace(/[^a-z0-9-]/g, "");
+        return stem !== "" && new RegExp("(^|[^a-z0-9])" + stem).test(haystack(row));
       }
       // Rows that match every word come first. Only if there are none, show rows that match any word.
       var strict = Array.prototype.some.call(rows, function (row) {
@@ -95,7 +159,7 @@
         if (hit) shown += 1;
       });
       document.querySelectorAll(".skill-group").forEach(function (group) {
-        group.hidden = !group.querySelector("tr[data-skill]:not([hidden])");
+        group.hidden = !group.querySelector("tbody tr:not([hidden])");
       });
       var empty = document.querySelector(".filter-empty");
       if (empty) empty.hidden = shown !== 0;

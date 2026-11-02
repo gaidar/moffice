@@ -4,7 +4,7 @@ type: skill
 function: brand-and-design-briefs
 owner: brand-and-creative-director
 reads: [company, personas, messaging, proof-points, brand-voice]
-you_bring: At least five writing samples the company has published or would publish, each marked with its channel and date.
+you_bring: At least five writing samples, each marked with its channel and date, or with none, three lines the founders would publish and three they never would.
 also_for: [tone of voice, style guide, we all sound different, copy sounds generic, how should we sound, writing guidelines, ai sounds robotic]
 version: 0.1.0
 updated: 2026-11-01
@@ -25,11 +25,11 @@ Use this when brand-voice.md is blank, or when the company's writing has changed
 - [[context-pack:messaging]]: words to use and avoid.
 - [[context-pack:proof-points]]: which quotes belong to customers, not the company.
 
-The marketer supplies: at least five writing samples the company has published or would publish, ideally from more than one channel, each marked with its channel and date. Add any lines the company would never publish, and any visual rules.
+The marketer supplies: at least five samples the company has published or would publish, each marked with its channel and date, plus any lines it would never publish and any visual rules.
 
 ## Procedure
 
-1. Sort the samples. Remove customer quotes, including any in proof-points.md, as well as legal text and anything written by another company. Mark each remaining sample with its channel. If fewer than five remain, ask for more. If the marketer wants a draft anyway, mark every trait "low evidence".
+1. Sort the samples. Remove customer quotes, including any in proof-points.md, legal text and other companies' writing. Mark each remaining sample with its channel. If fewer than five remain, ask for more. If the marketer wants a draft anyway, mark every trait "low evidence". With no samples, ask the founders to write three lines they would publish and three they never would, and work from those, low evidence.
 2. Find what repeats. For each sample, note sentence length, point of view, use of jargon, use of numbers, how headlines are written, and what the writing does with the reader. Keep only a pattern seen in at least three samples. Five samples and three repeats are starting rules the marketer can change.
 3. Choose three traits. Each trait must be one adjective plus what it means in practice, must come from a pattern in step 2, and must rule something out. Reject any trait that nearly every company would claim, such as "professional" or "friendly".
 4. Attach evidence. For each trait, quote one short line from a sample. If you cannot quote one, drop the trait.
@@ -43,7 +43,7 @@ The marketer supplies: at least five writing samples the company has published o
 12. Check the draft against the context pack: the voice must not contradict messaging.md, and no customer's words may be used as the company's.
 13. List everything you assumed, and each low-evidence rule, in the last section.
 
-This skill saves nothing. The marketer copies the file section into brand-voice.md after deciding what to keep.
+The marketer copies the file section into brand-voice.md.
 
 ## Output format
 

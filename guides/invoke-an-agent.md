@@ -27,7 +27,7 @@ Use a skill when you know exactly which output you want. Use an agent role when 
    Act as the head of marketing from the Marketing Office. Follow your charter. Read the context pack. Which agent role should handle this? [describe the job]
    ```
 
-   If you already know, pick the role from [the agent roles](../agents.md). Open its charter and read the Owns section and the Decides versus escalates section.
+   If you already know, pick the role from [the agent roster](../office/agent-roster.md). Open its charter and read the Owns section and the Decides versus escalates section.
 2. Start a new chat in your project. If you use the plain-chat fallback, paste the office manual and upload the charter, the skills it will need and `my-context-pack.md`.
 3. Click **Copy prompt** at the top of the charter page, paste it and write your task:
 

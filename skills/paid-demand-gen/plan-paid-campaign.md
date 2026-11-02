@@ -95,7 +95,7 @@ Status: Draft
 
 **Gates.** No ad spend without tracking in place: unknown, so confirm before February 15. No display retargeting: met.
 
-**Campaign summary.** Goal: 57 MQLs from professional services firms by March 31, 2027. Dates: February 15 to March 31, 2027. Target cost per MQL: $234.
+**Campaign summary.** Goal: 58 MQLs from professional services firms by March 31, 2027. Dates: February 15 to March 31, 2027. Target cost per MQL: $234.
 
 **Channels and audience**
 
@@ -109,7 +109,7 @@ Status: Draft
 | Line | Total | Per month | Test money | MQLs needed |
 |---|---|---|---|---|
 | Search ads | $7,500 | $5,000 | $750 | 32 |
-| Social ads | $6,000 | $4,000 | $600 | 25 |
+| Social ads | $6,000 | $4,000 | $600 | 26 |
 
 **Tests.** One test only, given the budget: client memo angle against keep-practicing angle. Winner: lower cost per MQL at 5 MQLs each.
 
@@ -121,7 +121,7 @@ Status: Draft
 
 - Assumption: all current paid spend moves to this campaign for 1.5 months.
 - Assumption: a line's campaign total counts as one item for the $5,000 limit.
-- Estimate: $234 is paid's $27,000 for the quarter divided by 30 expected SQLs (illustrative), times the 26% MQL to SQL rate. 57 is $13,500 divided by $234, part of the 116 in the campaign brief.
+- Estimate: $234 is paid's $27,000 for the quarter divided by 30 expected SQLs (illustrative), times the 26% MQL to SQL rate. 58 is $13,500 divided by $234, rounded, part of the 116 in the campaign brief.
 - Unknown: search volume for these terms. Can you paste an export?
 
 ## How to run it

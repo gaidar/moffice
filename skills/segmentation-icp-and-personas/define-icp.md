@@ -4,7 +4,7 @@ type: skill
 function: segmentation-icp-and-personas
 owner: insights-analyst
 reads: [icp-and-segments, product, company, goals-and-kpis]
-you_bring: A customer export with one row per customer, lost deals with reasons, and notes on why customers succeeded or left.
+you_bring: A customer export with one row per customer, lost deals with reasons, notes on why customers succeeded or left, and any research findings.
 also_for: [ideal customer, who to target, wrong leads, junk leads, bad fit customers, who to disqualify, target accounts, customers who churn]
 version: 0.1.0
 updated: 2026-11-02
@@ -30,19 +30,19 @@ The marketer pastes into the chat:
 
 - A customer export with one row per customer: industry, employees, sites, team size, region, contract value, days to close, start date, and whether the customer is active or churned.
 - A list of lost deals with the reason, if available.
-- Any notes on why a customer succeeded or left.
+- Any notes on why a customer succeeded or left, and any findings from Synthesize customer research.
 
 ## Procedure
 
-1. Read the inputs and count the customer rows. With 20 or more rows, mark criteria as "Data". With fewer than 20 rows or no export, proceed from the context pack and mark every criterion "Hypothesis". Say which applies on the first line of the output.
-2. Sort the customers into two groups. "Good outcome" means active for at least 12 months with no known dispute over value. "Poor outcome" means churned, or active under 12 months with a known problem. Leave out customers too new to judge, and report how many you left out.
-3. Compare the groups on each attribute: industry, size, team size, region, what they used before and any other column. Keep an attribute as a fit criterion only if at least 60% of the good-outcome group shares the value, and the share in the poor-outcome group is at least 20 points lower. These cutoffs, and the 20 rows and 12 months above, are starting rules the marketer can change, not benchmarks.
+1. Read the inputs and count the customer rows. With 20 or more rows, mark criteria as "Data". With fewer than 20 rows or no export, work from pasted findings first, then the context pack, flag where they disagree and follow the findings. Mark every criterion "Hypothesis". Say which applies on the first line of the output.
+2. Sort the customers into two groups. "Good outcome" means active for at least 12 months with no known dispute over value. "Poor outcome" means churned, or active under 12 months with a known problem. Leave out customers too new to judge, and report how many.
+3. Compare the groups on each attribute, including what they used before. Keep an attribute as a fit criterion only if at least 60% of the good-outcome group shares the value, and the share in the poor-outcome group is at least 20 points lower. These cutoffs, and the 20 rows and 12 months above, are starting rules the marketer can change, not benchmarks.
 4. State each criterion as a test someone can apply from public information or one sales call, such as "at least 100 people to train". Reject criteria that require judgment, such as "innovative culture".
 5. Write the disqualifiers from three sources: any item under "What it is not" in product.md that a buyer needs, any known weak spot that caused a churn or a loss, and any attribute shared by most of the poor-outcome group. Give the reason for each.
 6. List the buying triggers from icp-and-segments.md, plus any trigger appearing in at least 3 customer notes.
 7. Write the scoring rule. Tier A meets every criterion and has a trigger. Tier B meets every criterion with no trigger. Tier C misses exactly one criterion. Out misses two or more, or has any disqualifier.
 8. Check the draft against the context pack: compare each criterion with icp-and-segments.md, flag every change, and say whether the MQL definition in goals-and-kpis.md still works. Where a needed field is blank, write a placeholder such as [region needed] and ask in the last section.
-9. List everything you assumed, estimated, inferred or could not find in the last section, including any customers you excluded and why.
+9. List everything you assumed, estimated, inferred or could not find in the last section, including customers excluded.
 
 ## Output format
 
@@ -55,7 +55,7 @@ Evidence basis: <"Data" with row count and number excluded, or "Hypothesis", one
 
 ## Fit criteria
 | Criterion | Test | Evidence | Basis |
-<3 to 6 rows; Basis is Data or Hypothesis; Evidence is a count from the export or a named context pack file>
+<3 to 6 rows; Basis is Data or Hypothesis; Evidence is a count from the export, a count of sources or a named context pack file>
 
 ## Disqualifiers
 - <disqualifier and reason, up to 25 words each, 2 to 6 items>
@@ -128,6 +128,6 @@ Evidence basis: <"Data" with row count and number excluded, or "Hypothesis", one
 
 ```
 Use the skill "Define the ICP". Read the context pack.
-Task: <why customers succeeded or left, if known>.
+Task: <why customers succeeded or left, if known, plus any research findings>.
 <paste the customer export and lost deals here>
 ```

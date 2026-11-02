@@ -30,6 +30,8 @@ body {
 .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* Links inside running text cannot rely on color alone. Top bar, buttons and footer keep their own styles. */
+.doc-body p a:not(.btn), .doc-body li a:not(.btn), .doc-body td a, .lede a, figcaption a { text-decoration: underline; text-underline-offset: 0.15em; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 12px; z-index: 60; background: var(--panel); padding: 6px 12px; }
@@ -67,6 +69,14 @@ header.page h1 { font-size: clamp(2rem, 4.8vw, 3.2rem); font-weight: 800; letter
 .btn:hover { background: var(--accent-soft); text-decoration: none; }
 .btn.primary { background: var(--accent); color: var(--on-accent); }
 .btn.primary:hover { opacity: 0.92; background: var(--accent); }
+.btn.quiet { border-color: var(--rule-strong); color: var(--ink-soft); font-size: 0.72rem; padding: 6px 11px; }
+.btn.quiet:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
+.prompt-preview { margin: 18px 0 0; max-width: 78ch; }
+header.page .note { margin: 10px 0 0; }
+.for-model { margin: 34px 0 0; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); padding: 0 22px; }
+.for-model > summary { cursor: pointer; font-family: var(--mono); font-size: 0.82rem; color: var(--accent); padding: 14px 0; }
+.for-model[open] { padding-bottom: 22px; }
+.for-model > h2:first-of-type { border-top: 0; margin-top: 8px; padding-top: 8px; }
 .toolbar-status { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-soft); }
 .statrow {
   display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 1px;
@@ -168,4 +178,4 @@ footer.site p { max-width: none; margin: 0 0 6px; }
 footer.site a { color: var(--ink-soft); text-decoration: underline; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 14px; }
 .foot-links a { text-decoration: none; }
-@media print { nav.site, .toolbar, .code-copy, footer.site { display: none; } }
+@media print { nav.site, .toolbar, .code-copy, footer.site, .prompt-preview { display: none; } }

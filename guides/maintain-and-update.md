@@ -29,6 +29,39 @@ A marketer running the office for more than a month. Outdated facts in the conte
 2. Fix what matters in `my-context-pack.md`. Put a date on each fact you change.
 3. Upload the changed file to your project, then delete the old copy. Two versions of the same file produce mixed answers.
 
+### Improve one section
+
+When a skill keeps asking about the same section, improve that section. If you do several, work in this order, because later ones draw on earlier ones:
+
+| Order | Section | Who usually knows it |
+|---|---|---|
+| 1 | [company.md](../context-pack/templates/company.md) | You, the CEO |
+| 2 | [product.md](../context-pack/templates/product.md) | You, product lead |
+| 3 | [icp-and-segments.md](../context-pack/templates/icp-and-segments.md) | You, sales |
+| 4 | [personas.md](../context-pack/templates/personas.md) | You, sales |
+| 5 | [proof-points.md](../context-pack/templates/proof-points.md) | You, customer success |
+| 6 | [competitors.md](../context-pack/templates/competitors.md) | You, sales |
+| 7 | [messaging.md](../context-pack/templates/messaging.md) | You |
+| 8 | [brand-voice.md](../context-pack/templates/brand-voice.md) | You |
+| 9 | [goals-and-kpis.md](../context-pack/templates/goals-and-kpis.md) | You, CEO, sales |
+| 10 | [channels-and-tools.md](../context-pack/templates/channels-and-tools.md) | You |
+
+1. Start a new chat. Upload `my-context-pack.md`, `context-pack-templates.md` and any source documents for that topic, stripped as in the [fast first pass](fill-the-context-pack.md#fast-first-pass).
+2. Paste this prompt, changing the section name:
+
+   ```
+   We are improving the company.md section of my-context-pack.md for the Marketing Office, using the matching template in context-pack-templates.md.
+   Rules: use only facts from my documents and my answers. Never guess. If you do not know a field, ask me.
+   Step 1: fill in every blank field you can from my documents, and name the source of each answer.
+   Step 2: ask me about the remaining fields, a few at a time.
+   Step 3: when I say "done", give me the whole section as plain markdown in one block, with its heading, every field name and every "Answer:" line. Leave a field blank if I did not answer it.
+   ```
+
+3. Answer the questions, then say `done`.
+4. Paste the block over that section in `my-context-pack.md` and save it. Upload the new file to your project and delete the old copy.
+
+If you prefer separate files, save each section under its own file name. Skills read them the same way.
+
 ### Quarterly: the goals
 
 4. Update the goals-and-kpis section as part of [the quarterly playbook](../playbooks/quarterly.md).
@@ -37,7 +70,7 @@ A marketer running the office for more than a month. Outdated facts in the conte
 ### When the Marketing Office has a new version
 
 6. Check [the changelog](https://github.com/gaidar/moffice/blob/main/CHANGELOG.md).
-7. Get the new files from [GitHub](https://github.com/gaidar/moffice). Replace `all-skills.md`, `all-agent-roles.md` and the office manual in your project, or the individual files if you use those. Do not replace `my-context-pack.md`.
+7. Get the new files from [GitHub](https://github.com/gaidar/moffice). Replace `all-skills.md`, `roles-and-playbooks.md` and the office manual in your project, or the individual files if you use those. Do not replace `my-context-pack.md`.
 8. If you edited a skill, compare it with the new one before you replace it, or keep yours under a different title.
 
 ### When your AI tool changes something
