@@ -2,7 +2,7 @@
 title: Goals and KPIs
 type: context-template
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Quarter goals, pipeline targets and the definitions everyone uses.
 ---
 
@@ -69,6 +69,14 @@ Answer:
 Guidance: What counts, and when.
 
 Example: Value of opportunities accepted by sales, created this quarter, with marketing as first or last touch
+
+Answer:
+
+**Stage timing**
+
+Guidance: How long leads take to move between stages, from your CRM if you can. Give the long end. The full sales cycle goes in icp-and-segments.
+
+Example: MQL to SQL: usually within 14 days, up to 30. SQL to pipeline: same day, because pipeline opens when sales accepts
 
 Answer:
 

@@ -20,7 +20,7 @@ This takes about two hours a week (estimate), on top of your priorities. It does
 | Tuesday to Thursday | Work on the top priority, then the others if days allow | The days in your priorities table, not counted in the two hours |
 | Tuesday to Thursday | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number, then send it to its approver, and publish what comes back approved | 30 minutes |
 | Tuesday to Thursday | CEO requests and other interruptions, inside the block you hold for them. See the [interruption rule](#total-time-and-what-to-drop) | 2 hours held, not counted in the two hours |
-| Friday | Note what changed: new proof points, a competitor move, a sales objection. Update the context pack if it is a fact | 15 minutes |
+| Friday | Note what changed: new proof points, a competitor move, a sales objection. If it is a fact, run [Update the context pack](../skills/marketing-ops/update-context-pack.md) | 15 minutes |
 
 Move to the full routine one piece at a time, as each thing comes to exist:
 
@@ -33,7 +33,7 @@ Stay on the starter for anything still missing, for as long as it takes. You hav
 
 ## The full routine
 
-The full routine takes about one working day a week, 6 to 9 hours, spread across the days below, plus 2 hours held for CEO requests and other interruptions. That leaves up to four days for your priorities. Time estimates are rough, and assume the context pack is filled in and your reports exist.
+The full routine takes about one working day a week, 6 to 9 hours, spread across the days below, plus 2 hours held for CEO requests and other interruptions. That leaves 3.5 to 4 days for your priorities in a 40-hour week, before time off, fixed meetings and delivery you have already committed to. Time estimates are rough, and assume the context pack is filled in and your reports exist.
 
 | Day | Step | Skill or action | Time (estimate) |
 |---|---|---|---|
@@ -49,10 +49,28 @@ The full routine takes about one working day a week, 6 to 9 hours, spread across
 | Tuesday to Thursday | 10 | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number | 10 minutes per item |
 | Tuesday to Thursday | 11 | Send items to the approvers listed in channels-and-tools.md, so they are back before next Tuesday | 15 minutes |
 | Tuesday to Thursday | 12 | CEO requests and other interruptions, inside the block you hold for them | 2 hours, at a fixed time |
-| Friday | 13 | Note what changed: new proof points, a competitor move, a sales objection. Update the context pack if it is a fact | 15 minutes |
+| Friday | 13 | Note what changed: new proof points, a competitor move, a sales objection. If it is a fact, run [Update the context pack](../skills/marketing-ops/update-context-pack.md). If you keep [a workboard](../office/my-workboard.md), say `Close my session` and save what comes back | 15 minutes |
 | Friday | 14 | Check that approvals are back for next week's publishing | 15 minutes |
 
 **Step 1's 20 minutes is only true once the reports exist.** Until then, pulling numbers by hand takes longer. Build the reports once: run [Specify a dashboard](../skills/analytics-and-campaign-evaluation/specify-dashboard.md), then save one report in your CRM and other tools for each number in step 1, with the date range set to last week. Allow half a day to a day (estimate), with whoever runs your CRM, and treat it as a priority for that week. After that, you only open them.
+
+## Run Monday in one chat
+
+Paste this into a new chat in your project, on either routine. Fill in what you have and write "none yet" for the rest.
+
+```
+Act as the head of marketing from the Marketing Office. Follow your charter. Read the context pack. Today's task: run my Monday review from the weekly playbook, in this chat.
+Week of: <date>. Days available, counted as in the capacity rule: <number>.
+Numbers, last week and to date: <pipeline, MQLs, SQLs, demo requests, paid spend>.
+MQLs older than 14 days, and how many became SQLs: <numbers, if you have them>.
+Due within two weeks: <items>. Slipped: <items>. New requests: <items>.
+What sales last said: <notes>.
+Paid export: <paste it, or "no paid">.
+Workboard: <paste it, or "none">.
+Set weekly priorities first. Adjust paid campaigns only if I pasted an export. Diagnose a pipeline gap only if pipeline is rated Behind. Show the working view. Pause only for decisions on outcome, spending or approval. Spend nothing and mark nothing approved.
+```
+
+**You get:** up to three priorities, a do-not-do list, the paid decisions and the pipeline check where they apply, in a short working view. Say `Show the full record` for each skill's full output. **Done means:** you have accepted or changed the priorities, and made any paid changes yourself in the ad tool.
 
 ## Total time and what to drop
 
@@ -65,7 +83,20 @@ The full routine takes about one working day a week, 6 to 9 hours, spread across
 | **Routine total** | **About 6 to 9 hours, roughly one working day** |
 | CEO requests and other interruptions | 2 hours |
 
-**Capacity rule.** Subtract the routine and the 2 hours from your working days, and give the rest to [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md) as days available. In a normal week that is up to four. When the week is over, drop in this order until it fits:
+**Capacity rule.** Use one calculation in every plan and calendar:
+
+```
+Working days
+minus time off and fixed meetings
+minus the routine
+minus the interruption block
+minus delivery you have already committed to
+= days available for new work
+```
+
+One day is 8 hours. Give the result to [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md) as days available. In a normal week with no time off, no fixed meetings beyond the routine and nothing already committed, that is 3.5 to 4. The routine is already out of that number, so do not count it again. Count each asset once, whether it sits in a campaign plan, the content calendar or a launch plan. Keep contractor days separate, and do not count waiting for approval as work. If you do not know the days or the effort, the answer is Not assessed, not "fits". A week with monthly or quarterly work names what that work replaces.
+
+When the week is over, drop in this order until it fits:
 
 1. Social posts for next week.
 2. The blog post for next week.
@@ -74,9 +105,9 @@ The full routine takes about one working day a week, 6 to 9 hours, spread across
 
 Do not drop the 30 minutes with sales, the review and approver steps, or the top priority. A customer conversation can move by one week, and not two in a row.
 
-**Interruption rule.** Hold 2 hours a week, at a fixed time, for CEO requests and other interruptions. That number is a starting rule, not a benchmark. A request goes in this block, not in a priority slot. When requests go over the block, drop from the list above, in the same order, and tell the person asking what moves before you start: "I can have this by Thursday. It moves the search ads review to next week. Is that the right trade?" Only the CEO can move your top priority, and they do it by answering that question. If you go over three weeks in a row, show the CEO the list, and agree a bigger block or fewer priorities.
+**Interruption rule.** Hold 2 hours a week, at a fixed time, for CEO requests and other interruptions. That number is a starting rule, not a benchmark. Once you have four weeks of actual numbers, use their average instead. A request goes in this block, not in a priority slot. When requests go over the block, drop from the list above, in the same order, and tell the person asking what moves before you start: "I can have this by Thursday. It moves the search ads review to next week. Is that the right trade?" Only the CEO can move your top priority, and they do it by answering that question. If you go over three weeks in a row, show the CEO the list, and agree a bigger block or fewer priorities.
 
-**One person runs one launch or one major campaign at a time.** If two fall in the same weeks, move one, or shrink one to the small sequence in [the launch playbook](launch.md) or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md).
+**One person runs one launch or one major campaign at a time.** If two fall in the same weeks, move one, or shrink one to the small sequence in [the launch playbook](launch.md) or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md). A small second campaign still takes days, so the combined work must also fit the capacity rule.
 
 ## Exit check
 
@@ -112,13 +143,13 @@ Days available: 4.
 
 The draft comes back with this pace check. Pipeline pace is ($1.2 million minus $270,000) divided by 10 weeks left, an estimate.
 
-| KPI | Last week | To date | Pace needed | Rating |
-|---|---|---|---|---|
-| New qualified pipeline | $70,000 | $270,000 | $93,000 | Behind |
-| MQLs | 24 | 72 | 20 | Ahead |
-| Website demo requests | 4 | 16 | About 4.5 | Close |
+| KPI | Last week | To date | Target pace | Against target | Baseline pace | Against baseline |
+|---|---|---|---|---|---|---|
+| New qualified pipeline | $70,000 | $270,000 | $93,000 | Behind | $69,000 | Above |
+| MQLs | 24 | 72 | About 27 | Close | 20 | Above |
+| Website demo requests | 4 | 16 | No target | No target | About 4.5 | Level |
 
-Ask "Ahead against what?" The pipeline row measures against this quarter's goal. MQLs have no goal in the pack, so their pace of 20 comes from the baseline, 260 in Q3 2026 divided by 13 weeks. Ahead means more than a usual Q3 week. It does not mean enough.
+The two comparisons answer different questions. Pipeline is behind what this quarter's goal needs, though above a usual Q3 week. MQLs have no goal of their own in the pack, so their target pace works back from the 90 SQL goal and the 26% rate, about 27 a week. Their baseline pace is 260 in Q3 2026 divided by 13 weeks. So 24 beats a usual week and still falls short. Demo requests have no goal to work back from, so they show No target.
 
 And these three priorities:
 
@@ -128,7 +159,7 @@ And these three priorities:
 | 2 | Find out why pipeline is behind | Search ads export reviewed, likely cause named | The marketer | $1.2 million pipeline | 1 |
 | 3 | Send conference budget for approval | Request with Marta Ilves, CEO, who needs 3 days | The marketer | Pipeline, SQLs | 0.5 |
 
-**Feeds the next step:** one Behind week earns a check rather than a fix, so priority 2 starts with a [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) run. The days add up to 4, the most the capacity rule allows.
+**Feeds the next step:** one Behind week earns a check rather than a fix, so priority 2 starts with a [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) run. The days add up to 4, the top of what the capacity rule allows.
 
 ### Monday: the paid decisions
 
@@ -158,7 +189,7 @@ So both readings are true: 24 MQLs beats Q3's usual 20, and falls short of the 2
 
 ### Tuesday: publish and make
 
-Last week's approved items go out on Tuesday. From Tuesday to Thursday, priority 1 runs through [Write a web page](../skills/content/write-web-page.md) and [Write a marketing email](../skills/content/write-marketing-email.md), then [Review any output](../skills/marketing-ops/review-any-output.md). The brief gets pasted into each of those chats. Priority 3 goes to Marta Ilves on Tuesday, leaving her 3 days, so it is done. No customer conversation is due this week.
+Last week's approved items go out on Tuesday. From Tuesday to Thursday, priority 1 runs through [Write a web page](../skills/content/write-web-page.md) and [Write a marketing email](../skills/content/write-marketing-email.md), then [Review any output](../skills/marketing-ops/review-any-output.md). They run in one chat, so each one reads the brief. Priority 3 goes to Marta Ilves on Tuesday, leaving her 3 days, so it is done. No customer conversation is due this week.
 
 ### Wednesday: the CEO request pushes out a priority
 

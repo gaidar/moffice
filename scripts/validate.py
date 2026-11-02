@@ -105,7 +105,7 @@ GUIDE_FILES = [
     "hard-situations",
 ]
 VENDOR_GUIDES = ["setup-claude", "setup-chatgpt-codex", "setup-grok", "setup-google"]
-OFFICE_FILES = ["office-manual", "output-conventions", "glossary", "agent-roster"]
+OFFICE_FILES = ["office-manual", "output-conventions", "glossary", "agent-roster", "my-workboard"]
 TYPES = ["skill", "agent", "playbook", "guide", "office", "context-template", "context-example", "index"]
 CONTENT_DIRS = ["skills", "agents", "playbooks", "guides", "context-pack", "office"]
 ROOT_FILES = [
@@ -120,6 +120,7 @@ ROOT_FILES = [
     "_config.yml",
     "Gemfile",
     "index.md",
+    "run-my-week.md",
     "assets/js/toolbar.js",
     "scripts/build-pdf.sh",
     "scripts/build-bundles.sh",
@@ -177,6 +178,8 @@ H2_RE = re.compile(r"^## +(.+?)[ \t]*$", re.M)
 CTX_RE = re.compile(r"\[\[context-pack:([^\]]*)\]\]")
 LINK_RE = re.compile(r"(?<!\!)\[[^\]\n]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# Download links are pinned to the release, so they match the site that links them.
+RAW_REF_RE = re.compile(r"raw\.githubusercontent\.com/gaidar/moffice/([^/\s)\"']+)/")
 
 
 class Report:
@@ -509,6 +512,9 @@ def main():
     for path, rel in sorted(iter_markdown()):
         text = path.read_text(encoding="utf-8")
         scan_text(rep, rel, text)
+        for ref in RAW_REF_RE.findall(text):
+            if version and ref != f"v{version}":
+                rep.error(rel, f"download link points at {ref}, must be v{version}")
         fm, body = parse_frontmatter(text)
         top = rel.split("/", 1)[0]
         in_content = top in CONTENT_DIRS

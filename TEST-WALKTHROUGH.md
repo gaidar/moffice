@@ -65,3 +65,18 @@ Run on the local build on 2026-11-02. The live site is offline while the reposit
 | One Skills filter over situations and the full list, on phrases such as "new company", "90-day plan" and "leads are bad", with a message when nothing matches | Pass, browser check |
 | Model instructions folded on skill pages, opened by a link to a section inside, with section numbers kept | Pass, one page in the browser |
 | Download links in setup guides save each file under its own name | Save path passed against a simulated GitHub response. Failure path passed for real, by opening the raw file. Repeat at the release |
+
+## Second review round, 2026-11-02
+
+These ran on the changed text with one Anthropic model and the fictional sample pack. They were not run in a live vendor account or with real marketers. Time savings were not measured.
+
+| Check | How it ran | Result |
+|---|---|---|
+| Missed deadline, no promised date, zero MQLs, zero SQLs, pipeline with no SQLs, under 30 MQLs | Fresh model following the skills, run twice, with fixes between | First run found that zero leads could end in "no action" on a $600,000 gap, and that stage timing could change a verdict. Both fixed. Second run returned the expected limited answers, and its three remaining wording gaps were then fixed without a third run |
+| Ad-tool conversions with no target | Fresh model following the skill | Rules 1 and 6 only, no spend moved |
+| Weekly target and baseline, unknown days, unknown content hours | Fresh model following the skills | Both comparisons shown, and capacity read Not assessed |
+| Resume from a workboard and job record, then close | Fresh model with only the manual and the pack | Named the right job, draft and next action, did not claim to see the drafts and kept a new customer out of the job record. Date and job choice were then added to the prompts |
+| Minimum campaign working view and publishing handoff | Run by hand by the author of these instructions, after three subagent runs failed on connection errors | 1,364 words, on one page. It found that the handoff repeated the final copy and fell after the last section, both fixed. This was not a cold run, and it is not comparable with the earlier 6,500-word model test. Repeat it cold |
+| Filter phrases, top bar, phone width | Browser on the local build | "Resume my campaign", "I have two hours", "Prepare a CEO update" and "Turn this into a sales PDF" each find their row. The partial match and empty messages show. No sideways page scroll at 390 pixels |
+
+Pinned download links could not be tested, because the tag does not exist and the repository is private. Test them at the release.

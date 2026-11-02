@@ -14,10 +14,11 @@ A marketer with a personal SuperGrok plan, or Premium on The X Subscription, whi
 
 If you do not see Projects on your plan, use the plain-chat fallback. No xAI page states which plans include Projects. Unverified – check the vendor help page: [Grok FAQ](https://docs.x.ai/grok/faq).
 
-These steps were written from xAI's FAQ and release notes on the date below, and have not been run in a live account, so if a screen differs, trust xAI's pages.
+**Last checked against documentation:** 2026-11-01. **Last tested in a live account:** not yet. If a screen differs, trust xAI's pages.
 
 ## What you need
 
+- A decision on your data settings. xAI's FAQ says that on grok.com you go to Settings, then Data, then "Improve the Model", and that opting out applies to new conversations: [Consumer FAQs](https://x.ai/legal/faq). The page may be older than the current screen. Do this before you upload company facts, and never upload what the context pack guide tells you to strip.
 - A paid Grok plan, as above.
 - A computer with a standard Chrome or Chromium browser. xAI recommends this for grok.com.
 - The two office files. Step 1 links them.
@@ -28,13 +29,13 @@ These steps were written from xAI's FAQ and release notes on the date below, and
 
 xAI publishes no help page for Projects. Steps 3 to 5 rest on its [release notes](https://grok.com/release-notes), which confirm the features but rarely name the buttons.
 
-1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
+1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
 
 2. On a computer, open grok.com in Chrome or Chromium and sign in. Projects can be missing on other web addresses.
 
 3. Go to [grok.com/project](https://grok.com/project) and create a project named `Marketing Office`. The name of the create button is not given, so look for the one that starts a project. Unverified – check the vendor help page: [Grok FAQ](https://docs.x.ai/grok/faq).
 
-4. Open [the office manual](../office/office-manual.md) and click **Copy text** at the top of the page. Open the project's config tab, which holds instructions and automations on the project canvas. Paste into the instructions and save. If the save is rejected or the text is cut off, see Notes.
+4. Open [the office manual](../office/office-manual.md) and click **Copy full text** at the top of the page. Open the project's config tab, which holds instructions and automations on the project canvas. Paste into the instructions and save. If the save is rejected or the text is cut off, see Notes.
 
 5. Upload these 3 files to the project: `my-context-pack.md`, `all-skills.md` and `roles-and-playbooks.md`. Check that they appear in the project's file tree. If the upload is rejected, see Troubleshooting. Unverified – check the vendor help page: [Grok FAQ](https://docs.x.ai/grok/faq).
 
@@ -44,7 +45,7 @@ xAI publishes no help page for Projects. Steps 3 to 5 rest on its [release notes
    List the context pack sections you can see, and say which have blanks. Then name the skill you would use to write a sales one-pager, and show its Output format section word for word. Do not invent anything.
    ```
 
-   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Raw file** on the same page. If it fails, go to Troubleshooting.
+   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Download file** on the same page. If it fails, go to Troubleshooting.
 
 7. Ask for your first draft, in plain words, in a new chat in the project. It tells you which skill it used. [Use a skill](use-a-skill.md) covers the rest.
 
@@ -52,7 +53,7 @@ xAI publishes no help page for Projects. Steps 3 to 5 rest on its [release notes
    Write a sales one-pager for our most important segment, aimed at the person who signs, for one-to-one use by sales.
    ```
 
-   If it picks the wrong skill or ignores your facts, use the exact form, which always works:
+   If it picks the wrong skill or ignores your facts, use the exact form:
 
    ```
    Use the skill "<title>". Read the context pack. Task: <what they want>.
@@ -82,9 +83,9 @@ This works with only chat and file upload. It costs a few minutes at the start o
 
 1. Start a new chat at grok.com, outside any project.
 
-2. Copy [the office manual](../office/office-manual.md) with **Copy text** and paste it into the message box. Do not send yet.
+2. Copy [the office manual](../office/office-manual.md) with **Copy full text** and paste it into the message box. Do not send yet.
 
-3. Click the + icon next to the message input, or drag and drop on the web, and attach `my-context-pack.md` and the skill file, which you get with **Raw file** on the skill's page. For an agent role, attach its charter in place of the skill file. xAI's limits are about 100 files at once on the web and 20 on Android.
+3. Click the + icon next to the message input, or drag and drop on the web, and attach `my-context-pack.md` and the skill file, which you get with **Download file** on the skill's page. For an agent role, attach its charter in place of the skill file. xAI's limits are about 100 files at once on the web and 20 on Android.
 
 4. Below the office manual in the same message, paste one of these and send:
 
@@ -98,13 +99,13 @@ This works with only chat and file upload. It costs a few minutes at the start o
 
 5. Save every output you want to keep in your own files. Keep your own copy rather than relying on the chat.
 
-6. When the chat gets long, or Grok starts dropping the template or forgetting rules, send this and save the reply:
+6. When the chat gets long, or Grok starts dropping the template or forgetting rules, send this and save the reply in [your workboard](../office/my-workboard.md):
 
    ```
-   Summarize this chat for handoff to a new chat: what was decided, which outputs are finished, what is still open, and which files you used. Do not invent anything.
+   Close my session
    ```
 
-7. To begin the next chat, repeat steps 1 to 3, attach any saved outputs you still need, paste the saved summary below the office manual, and then paste the run prompt.
+7. To begin the next chat, repeat steps 1 to 3, attach any saved outputs you still need, paste your workboard below the office manual, and then write `Start my session`.
 
 ### Optional extras
 
@@ -127,7 +128,7 @@ This works with only chat and file upload. It costs a few minutes at the start o
 
 ## Verification
 
-Verified on 2026-11-01 against vendor documentation.
+Verified on 2026-11-01 against vendor documentation. Not yet tested in a live account. The data settings note was checked on 2026-11-02 from search excerpts of the linked page.
 
 - [Downloading source code archives](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives): GitHub's Code and Download ZIP steps
 - [docs.x.ai/grok/faq](https://docs.x.ai/grok/faq): file counts, 150 MB per file, Markdown support, the + icon, upload error fixes, grok.com for Projects, weekly usage limit

@@ -14,10 +14,11 @@ A marketer with a personal Google Account on Google AI Plus, Google AI Pro or Go
 
 On a Workspace or Education account, notebooks depend on your admin, who must turn on both Gemini and Gemini Notebook. On a personal account, Google's April 2026 announcement excludes anyone under 18. If either stops you, use the plain-chat fallback.
 
-These steps were written from Google's help pages on the date below, and have not been run in a live account, so if a screen differs, trust the help page.
+**Last checked against documentation:** 2026-11-01. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
 
 ## What you need
 
+- A decision on your data settings. Google says that turning off Keep Activity stops future chats being used to improve its AI, unless you send feedback, and that it still uses chats to respond and to protect its users, including with human reviewers. The setting is under Settings & help, then Activity: [Gemini Apps Privacy Hub](https://support.google.com/gemini/answer/13594961?hl=en). Do this before you upload company facts, and never upload what the context pack guide tells you to strip.
 - A computer with a browser, signed in at [gemini.google.com](https://gemini.google.com).
 - The two office files. Step 1 links them.
 - `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
@@ -26,7 +27,7 @@ These steps were written from Google's help pages on the date below, and have no
 
 ## Steps
 
-1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
+1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
 
 2. Go to [gemini.google.com](https://gemini.google.com). At the top, click Open sidebar. Under "Notebooks," click New notebook, and name it "Marketing Office". If notebooks do not appear, see Notes.
 
@@ -36,7 +37,7 @@ These steps were written from Google's help pages on the date below, and have no
    This notebook holds the Marketing Office. I am adding its files now. Wait for my next message.
    ```
 
-4. Open [the office manual](../office/office-manual.md) and click **Copy text** at the top of the page. In Gemini, click Open sidebar, then under "Notebooks," All notebooks, then Marketing Office. At the top, click More, then Notebook settings. Paste and click Save. If it does not fit, see Notes.
+4. Open [the office manual](../office/office-manual.md) and click **Copy full text** at the top of the page. In Gemini, click Open sidebar, then under "Notebooks," All notebooks, then Marketing Office. At the top, click More, then Notebook settings. Paste and click Save. If it does not fit, see Notes.
 
 5. Click Add sources and add these 3 files: my-context-pack.md, all-skills.md and roles-and-playbooks.md. If you cannot select several at once, add them one at a time. Unverified – check the vendor help page ([add sources](https://support.google.com/gemininotebook/answer/16215270?hl=en&co=GENIE.Platform%3DDesktop)).
 
@@ -46,7 +47,7 @@ These steps were written from Google's help pages on the date below, and have no
    List the context pack sections you can see, and say which have blanks. Then name the skill you would use to write a sales one-pager, and show its Output format section word for word. Do not invent anything.
    ```
 
-   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Raw file** on the same page.
+   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Download file** on the same page.
 
 7. Ask for your first draft, in plain words, in a new chat in the project. It tells you which skill it used. [Use a skill](use-a-skill.md) covers the rest.
 
@@ -54,7 +55,7 @@ These steps were written from Google's help pages on the date below, and have no
    Write a sales one-pager for our most important segment, aimed at the person who signs, for one-to-one use by sales.
    ```
 
-   If it picks the wrong skill or ignores your facts, use the exact form, which always works:
+   If it picks the wrong skill or ignores your facts, use the exact form:
 
    ```
    Use the skill "<title>". Read the context pack. Task: <what they want>.
@@ -81,13 +82,13 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 1. Go to [gemini.google.com](https://gemini.google.com) and start a new chat.
 
-2. Copy [the office manual](../office/office-manual.md) with **Copy text**, and paste it as your first message. Add this line at the end, then send:
+2. Copy [the office manual](../office/office-manual.md) with **Copy full text**, and paste it as your first message. Add this line at the end, then send:
 
    ```
    These are your rules for this chat. Reply only with "Ready".
    ```
 
-3. In the text box, click Add files, then Upload Files. Add my-context-pack.md and the skill file, which you get with **Raw file** on the skill's page. For an agent role, add its charter instead.
+3. In the text box, click Add files, then Upload Files. Add my-context-pack.md and the skill file, which you get with **Download file** on the skill's page. For an agent role, add its charter instead.
 
    Google allows up to 10 files in the same prompt, subject to availability. If you need more, send the rest in a second message. That second message is an inference from the per-prompt limit, not a documented method.
 
@@ -105,13 +106,13 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 5. Save every output you keep in your own files. Do not rely on finding it in the chat later.
 
-6. When the chat gets long, or Gemini starts to miss details or forget earlier decisions, send this and save the reply:
+6. When the chat gets long, or Gemini starts to miss details or forget earlier decisions, send this and save the reply in [your workboard](../office/my-workboard.md):
 
    ```
-   Write a handoff note for my next chat: the task, the decisions made, the facts I gave you, the open questions and the current draft. Do not invent anything.
+   Close my session
    ```
 
-7. To begin the next chat, repeat steps 1 to 3. Then paste your saved handoff note and continue with the run prompt.
+7. To begin the next chat, repeat steps 1 to 3. Then paste your workboard and write `Start my session`.
 
 ### Optional extras
 
@@ -133,7 +134,7 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 ## Verification
 
-Verified on 2026-11-01 against vendor documentation.
+Verified on 2026-11-01 against vendor documentation. Not yet tested in a live account. The data settings note was checked on 2026-11-02 from search excerpts of the linked page.
 
 - [Downloading source code archives](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives): GitHub's Code and Download ZIP steps
 - [Notebooks in Gemini Apps](https://support.google.com/gemini/answer/16972047?hl=en&co=GENIE.Platform%3DDesktop): notebook creation, instructions path, Keep Activity, connection step, rollout, web search in chats

@@ -28,7 +28,7 @@ Use this before any multi-channel campaign with one goal, one audience and one t
 - [[context-pack:goals-and-kpis]]: goals, budget, baselines, metric definitions.
 - [[context-pack:channels-and-tools]]: owned and paid channels, limits, approvers, typical approval times.
 
-The marketer supplies in the prompt: the campaign goal, time window and budget. Optional: an offer idea, available capacity, past campaign results.
+The marketer supplies in the prompt: the campaign goal, time window and budget. Optional: an offer idea, days available, and the result and lesson of the last similar campaign.
 
 ## Procedure
 
@@ -38,11 +38,12 @@ The marketer supplies in the prompt: the campaign goal, time window and budget. 
 4. Choose one pillar from messaging.md as the lead message: the first with Public proof that fits the segment's reason to buy (a starting rule). Attach proof from proof-points.md with its status. Use only Public proof in anything the public sees. If a proof item appears in messaging.md but not in proof-points.md, do not treat it as cleared, and ask about it in the last section.
 5. Choose channels from channels-and-tools.md only, unless the marketer adds one. Rank them by where the persona gets information. Give each one job: reach, conversion or follow-up. Drop any channel that breaks a limit in that file, and say why.
 6. List the assets each channel needs and the skill that produces each one, or [skill title needed] if it is not in your files. If capacity was given and the list exceeds it, cut the lowest-ranked channel first.
-7. Set targets using the metric definitions in goals-and-kpis.md. Work each one back from the quarter's goal and show the arithmetic as an estimate. With no share given, use the segment's share of customers (a starting rule). If no baseline exists, write [baseline needed].
+7. Set targets using the metric definitions in goals-and-kpis.md. Work each one back from the quarter's goal and show the arithmetic as an estimate. With no share given, use the segment's share of customers (a starting rule). If no baseline exists, write [baseline needed]. Give each target a read date: the date promised, or the window's end plus that stage's timing in goals-and-kpis.md.
 8. Build the timeline backward from the start date. Subtract each approver's typical time from channels-and-tools.md, then the production time. If production time is unknown, write [production time needed].
 9. If the budget is blank, write [budget needed]. Flag any line that crosses an approval limit in channels-and-tools.md.
-10. Check the draft against the context pack: segment, words to avoid, proof status, internal-only numbers, channel limits, approvers. Fix what contradicts it.
-11. List everything assumed, estimated, inferred or unknown in the last section, using those labels.
+10. Write the decision check from the office manual. State which lesson this brief applies.
+11. Check the draft against the context pack: segment, words to avoid, proof status, internal-only numbers, channel limits, approvers. Fix what contradicts it.
+12. List everything assumed, estimated, inferred or unknown in the last section.
 
 ## Output format
 
@@ -53,6 +54,7 @@ Status: Draft
 Name: <short name>
 Goal: <one goal, with number and date>
 Window: <start date to end date>
+Lesson applied: <from which campaign, or "None yet">
 
 ## Audience
 Segment: <one>
@@ -78,16 +80,16 @@ Proof: <item, permission status>
 | Date | Milestone | Approver, if any |
 
 ## Targets
-| Metric | Baseline | Target | How worked out |
+| Metric | Baseline | Target | Read on | How worked out |
 
 ## Budget
 <Total, by line, and any approval needed>
 
+## Decision check
+<five lines, as the office manual sets out>
+
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -98,19 +100,18 @@ Proof: <item, permission status>
 - [ ] Does each channel appear in channels-and-tools.md and respect its limits?
 - [ ] Does each asset name a skill or a placeholder, an owner and a due date?
 - [ ] Do the dates leave room for each approver's typical time?
-- [ ] Is the budget the marketer's number or a visible placeholder?
 
 ## Example (fictional company)
 
 Status: Draft
 
-**Campaign summary.** Name: Defend the memo. Goal: 30 SQLs by March 31, 2027. Window: February 15 to March 31, 2027.
+**Campaign summary.** Name: Defend the memo. Goal: 30 SQLs by March 31, 2027. Window: February 15 to March 31, 2027. Lesson applied: None yet.
 
-**Audience.** Segment: professional services firms. Primary persona: head of learning and development, after a company-wide AI assistant rollout or a client complaint about poor reasoning. Secondary persona: managing partner. Excluded: fewer than 100 learners, wants a course library, wants scores on individuals for performance reviews.
+**Audience.** Segment: professional services firms. Primary persona: head of learning and development, after a company-wide AI assistant rollout or a client complaint about poor reasoning. Secondary persona: managing partner. Excluded: fewer than 100 learners, wants a course library.
 
 **Offer.** A guide to checking the reasoning in client memos, then a demo of CogniATion Coach.
 
-**Message.** Lead pillar: you can see reasoning improve. Line: show that training changed how people reason, not only that they finished it. Proof: Brightmere Advisory's 22% result on client memo reasoning, Public.
+**Message.** Lead pillar: you can see reasoning improve. Line: show that training changed how people reason. Proof: Brightmere Advisory's 22% result on client memo reasoning, Public.
 
 | Channel | Job | Why this one |
 |---|---|---|
@@ -122,17 +123,17 @@ Status: Draft
 
 **Timeline.** February 15: campaign live, the date in goals-and-kpis.md.
 
-**Targets.** SQLs: baseline [needed]. Target 30, a third of the 90 goal. MQLs: baseline 260 for all campaigns. Target 116.
+**Targets.** SQLs: baseline [needed]. Target 30, a third of the 90 goal, read March 31. MQLs: baseline 260 for all campaigns. Target 116, read March 31.
 
 **Budget.** [budget needed]. Any line over $5,000 goes to Marta Ilves, 3 days.
+
+**Decision check.** Constraint: too few relevant buyers. Why this: no campaign reaches this segment yet. Evidence: [needed]; under 58 MQLs at mid-window would disprove it. Test: page and email first. Displaces: a third blog post.
 
 **Assumptions and open questions**
 
 - Assumption: the marketer gave this campaign a third of the SQL goal.
-- Assumption: the guide does not exist yet, and February 8 leaves a week for it.
 - Estimate: 116 MQLs is 30 SQLs divided by the 26% MQL to SQL rate, rounded up.
 - Unknown: how much of the $70,000 quarter budget goes to this campaign?
-- Unknown: should the illustrative February 24 webinar and the March 9 to 11 conference join as channels?
 
 ## How to run it
 

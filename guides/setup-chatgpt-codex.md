@@ -12,10 +12,11 @@ diagram_caption: "The steps below cover the top path. The plain-chat fallback co
 
 A marketer with a personal ChatGPT Plus or Pro subscription. Both plans include projects: Plus allows 25 files per project, Pro allows 40.
 
-These steps were written from OpenAI's help pages on the date below, and have not been run in a live account, so if a screen differs, trust the help page.
+**Last checked against documentation:** 2026-11-01. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
 
 ## What you need
 
+- A decision on your data settings. OpenAI says data sharing is on by default in personal Free, Plus and Pro workspaces. To turn it off, go to Settings, then Data controls: [Data controls in ChatGPT](https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt). Do this before you upload company facts, and never upload what the context pack guide tells you to strip.
 - A ChatGPT Plus or Pro subscription and a browser.
 - The two office files. Step 1 links them.
 - `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
@@ -23,11 +24,11 @@ These steps were written from OpenAI's help pages on the date below, and have no
 
 ## Steps
 
-1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
+1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
 
 2. In ChatGPT, select **New project** in the sidebar and name it `Marketing Office`. If you are offered project-only memory, choose it, because it keeps memories from your other work out of this project. See [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt).
 
-3. Open [the office manual](../office/office-manual.md) and click **Copy text** at the top of the page. In the project, open the more options menu (•••), select **Project settings**, paste the text as the project instructions and save. Reopen the settings and check that the last line, which starts "When the marketer asks", is still there. If it was cut off, see Notes.
+3. Open [the office manual](../office/office-manual.md) and click **Copy full text** at the top of the page. In the project, open the more options menu (•••), select **Project settings**, paste the text as the project instructions and save. Reopen the settings and check that the last line, which starts "When the marketer asks", is still there. If it was cut off, see Notes.
 
 4. Upload these 3 files to the project's sources: `my-context-pack.md`, `all-skills.md` and `roles-and-playbooks.md`. If a file is rejected, rename it to end in `.txt`. Unverified – check the vendor help page: [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq).
 
@@ -37,7 +38,7 @@ These steps were written from OpenAI's help pages on the date below, and have no
    List the context pack sections you can see, and say which have blanks. Then name the skill you would use to write a sales one-pager, and show its Output format section word for word. Do not invent anything.
    ```
 
-   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Raw file** on the same page.
+   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Download file** on the same page.
 
 6. Ask for your first draft, in plain words, in a new chat in the project. It tells you which skill it used. [Use a skill](use-a-skill.md) covers the rest.
 
@@ -45,7 +46,7 @@ These steps were written from OpenAI's help pages on the date below, and have no
    Write a sales one-pager for our most important segment, aimed at the person who signs, for one-to-one use by sales.
    ```
 
-   If it picks the wrong skill or ignores your facts, use the exact form, which always works:
+   If it picks the wrong skill or ignores your facts, use the exact form:
 
    ```
    Use the skill "<title>". Read the context pack. Task: <what they want>.
@@ -72,13 +73,13 @@ Use this if you do not want a project, or a project gives you trouble. It needs 
 
 1. Start a new chat in ChatGPT, outside any project.
 
-2. Copy [the office manual](../office/office-manual.md) with **Copy text**, and paste it as your first message. If the message is too long to send, upload the file instead and write this.
+2. Copy [the office manual](../office/office-manual.md) with **Copy full text**, and paste it as your first message. If the message is too long to send, upload the file instead and write this.
 
    ```
    Read this file and follow it for this whole chat.
    ```
 
-3. Upload `my-context-pack.md` and the skill file, which you get with **Raw file** on the skill's page. For an agent role, do the same from its charter page.
+3. Upload `my-context-pack.md` and the skill file, which you get with **Download file** on the skill's page. For an agent role, do the same from its charter page.
 
 4. Paste the run prompt, filling in the details.
 
@@ -92,13 +93,13 @@ Use this if you do not want a project, or a project gives you trouble. It needs 
 
 5. Save every output yourself, in your own files. Do not rely on finding it in the chat later.
 
-6. When the chat gets long, or the answers start to ignore the manual or the output format, stop and paste this, then save the reply.
+6. When the chat gets long, or the answers start to ignore the manual or the output format, stop and paste this. Save the reply in [your workboard](../office/my-workboard.md).
 
    ```
-   Write a handoff note for a new chat: decisions made, facts I confirmed, open questions, and the current state of each draft. Do not invent anything.
+   Close my session
    ```
 
-7. To begin the next chat, repeat steps 1 to 3, paste the handoff note, and continue.
+7. To begin the next chat, repeat steps 1 to 3, paste your workboard, then write `Start my session`.
 
 ### Optional extras
 
@@ -120,7 +121,7 @@ Use this if you do not want a project, or a project gives you trouble. It needs 
 
 ## Verification
 
-Verified on 2026-11-01 against vendor documentation.
+Verified on 2026-11-01 against vendor documentation. Not yet tested in a live account. The data settings note was checked on 2026-11-02 from search excerpts of the linked page.
 
 - [Downloading source code archives](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives): GitHub's Code and Download ZIP steps
 Fetched directly. The developers.openai.com pages for these topics redirect to learn.chatgpt.com.

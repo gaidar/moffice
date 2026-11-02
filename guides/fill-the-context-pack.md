@@ -3,7 +3,7 @@ title: Fill the context pack
 type: guide
 version: 0.1.0
 updated: 2026-11-02
-summary: Turn your notes and old documents, or a conversation with the founders, into one file, my-context-pack.md, that every skill reads, in about an hour of plain chat.
+summary: Turn your notes and old documents, or a conversation with the founders, into one file, my-context-pack.md, that every skill reads, in about an hour of plain chat, or start with a 15-minute version.
 diagram: context
 diagram_caption: "The order the sections follow. The first pass drafts them all at once."
 ---
@@ -14,7 +14,7 @@ A marketer ready to give the office its facts. The office knows nothing about yo
 
 ## What you need
 
-- The 10 templates in one file. Open [context-pack-templates.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/context-pack-templates.md) and save the page to your computer under that name, or copy all of it into a plain text file.
+- The 10 templates in one file. Open [context-pack-templates.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/context-pack-templates.md) and save the page to your computer under that name, or copy all of it into a plain text file.
 - Whatever you already have: pitch deck, website copy, price list, customer stories, list of quotes, goals for the quarter, a list of who approves what. With none of these, use [No documents yet](#no-documents-yet).
 - Any AI chat that takes file uploads.
 - A plain text editor. One comes with your computer.
@@ -23,6 +23,32 @@ A marketer ready to give the office its facts. The office knows nothing about yo
 To see what a filled pack looks like, read [the fictional example](../context-pack/example-cogniation/company.md).
 
 ## Steps
+
+### Quick start in 15 minutes
+
+Use this when you want a draft for your own company today, about 15 minutes by estimate. It asks about the job you need done first, plus five facts, so your first drafts will have many placeholders in square brackets. Do the fast first pass below when you can. Upload only `context-pack-templates.md`, and paste this:
+
+```
+We are filling in a quick version of the context pack for the Marketing Office. The file context-pack-templates.md holds all 10 templates.
+
+Rules:
+- Use only my answers. Never guess, and never fill a field with something plausible.
+- "Guidance:" and "Example:" lines describe a fictional company. They are never facts.
+- Mark any answer about buyers, the market, competitors or results "(founder belief)", unless I name a customer, a document or a number that backs it up. Then name that source.
+- A blank field is fine. Leave it empty. Do not spread one answer across fields it does not state.
+- A customer, number or quote has the permission status I give it, and "none" if I give none.
+
+Step 1: ask me these six questions, all together:
+1. What job do I need done first: which output, for which audience, with what outcome, by when, and how much time do I have?
+2. What is the company called, and what does it sell?
+3. What does the product do, and what does it not do?
+4. Who buys it: which kind of company, and the job title of the person who signs?
+5. What one competitor or alternative do buyers compare you with, and how do you know?
+6. What one customer, number or quote can you point to, and what is its permission status: public, sales only, internal only, pending or none?
+Step 2: when I have replied, return one combined file in one block, named my-context-pack.md. Give each of the 10 templates its own section, headed with its file name, such as "# company.md", in this order: company, product, icp-and-segments, personas, proof-points, competitors, messaging, brand-voice, goals-and-kpis, channels-and-tools. Keep only every heading, every field name and every "Answer:" line, and delete everything else from the templates. Leave my answer to question 1 out of the file, because it is about this task and not the company. Below the block, list the fields left blank, then give one readiness line for that job: "Can draft", "Needs one answer" with the question, or "Cannot evaluate without results".
+```
+
+Save the file as in step 4 below, then go on to [Start here](start-here.md), step 2.
 
 ### Fast first pass
 
@@ -61,7 +87,7 @@ Do not invent anything to fill a field. Blanks are fine: skills ask about them l
    Read my-context-pack.md. Each section is one file of my context pack. List each of the 10 sections, and for each one give the blank fields that would block a skill from running. Then list any contradictions between sections. Then list every customer, number and quote with its permission status. Do not fix anything, only report. Do not invent anything.
    ```
 
-7. Fix what it finds in your file and save it. Then go on to [Start here](start-here.md), step 3.
+7. Fix what it finds in your file and save it. Then go on to [Start here](start-here.md), step 2.
 
 ### No documents yet
 

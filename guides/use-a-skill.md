@@ -27,7 +27,7 @@ A marketer who has set up a tool and has a first pass of the context pack, even 
    Write an email inviting heads of learning at professional services firms to our March webinar on checking AI answers.
    ```
 
-3. Check the first line. It names the skill it chose. If that is wrong, say which one you want, using its exact title from [the skills library](../skills.md). This form always works, and each skill page has a **Copy prompt** button for it:
+3. Check the first line. It names the skill it chose. If that is wrong, say which one you want, using its exact title from [the skills library](../skills.md). Each skill page has a **Copy prompt** button for this form:
 
    ```
    Use the skill "Write a marketing email". Read the context pack.
@@ -42,12 +42,14 @@ A marketer who has set up a tool and has a first pass of the context pack, even 
    ```
 
 6. Run the skill's Quality checklist yourself. Any "no" means fix it, or ask for a fix.
-7. For anything public, or anything that uses a customer name or number, run a review in a new chat. Say where it will appear and which skill it came from:
+7. For anything public, or anything that uses a customer name or number, run a review in the same chat. Say where it will appear and which skill it came from, and ask for the corrections with it:
 
    ```
    Use the skill "Review any output". Read the context pack.
-   Task: review this draft for public use. It came from the skill "Write a marketing email". [paste the draft]
+   Task: review the draft above for public use. It came from the skill "Write a marketing email". Then correct what you find and show the corrected draft. Mark nothing approved.
    ```
+
+   A review is not approval, and the draft stays a draft until you decide. For a colder read of something that matters, paste the draft into a new chat, which has not seen how it was made.
 
 8. Save what you keep. Name it the way [the output conventions](../office/output-conventions.md) describe.
 
@@ -94,6 +96,7 @@ The output follows the template on the skill's page, section by section. Facts m
 - **It chose the wrong skill.** Say which one you want, with its exact title.
 - **The model says it has no such skill.** Check the title spelling against the page. If the model cannot find the skill in the combined file, upload or paste that skill's own file.
 - **The output is too long.** Say: "Keep to the length limits in the Output format section."
+- **You need it in another form.** Say: "Give me only the final copy, as HTML." Or ask for a CSV, or for clean text with the labels removed. Keep the last section until you have read it, and check any brackets before you use the copy.
 - **It asks too many questions.** Say: "Draft now and leave placeholders in square brackets for anything you are missing."
 - **It used a customer you cannot name.** Fix the permission status in `my-context-pack.md` and upload it again.
 - **No skill fits.** Describe the job anyway. The office manual tells the model how to handle it and how to label the result. If you do the job often, see [Write your own skill](write-your-own-skill.md).

@@ -84,7 +84,7 @@ Two to three days a week of this, around whatever else the company needs from yo
 
 ## What to skip, and until when
 
-There are 56 skills, and these 90 days use 23 of them. Leave the others alone, including the ones below, until the reason stops being true. You are not behind.
+There are 57 skills, and these 90 days use 23 of them. Leave the others alone, including the ones below, until the reason stops being true. You are not behind.
 
 | Skip | Until |
 |---|---|

@@ -12,10 +12,11 @@ diagram_caption: "The steps below cover the top path. The plain-chat fallback co
 
 Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Free too, with a limit of five, but says project instructions are for paid plans and limits automatic capacity expansion to paid plans.
 
-These steps were written from Anthropic's help pages on the date below, and have not been run in a live account, so if a screen differs, trust the help page.
+**Last checked against documentation:** 2026-11-01. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
 
 ## What you need
 
+- A decision on your data settings. On consumer plans, whether your chats help improve Claude is a privacy setting you control. Check it before you upload company facts: [who can view your chats](https://support.claude.com/en/articles/8325621-i-would-like-to-input-sensitive-data-into-my-chats-with-claude-who-can-view-my-conversations). Never upload what the context pack guide tells you to strip.
 - A Claude Pro or Max subscription, signed in at claude.ai in a browser
 - The two office files. Step 1 links them.
 - `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
@@ -23,11 +24,11 @@ These steps were written from Anthropic's help pages on the date below, and have
 
 ## Steps
 
-1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/main/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
+1. Download the two office files. Click each one, and it saves as a text file: [all-skills.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/all-skills.md) and [roles-and-playbooks.md](https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/roles-and-playbooks.md). If a link opens the text instead, save that page under the same name. Keep them with `my-context-pack.md`.
 
 2. Go to claude.ai/projects, click **+ New Project** in the upper right corner and name it `Marketing Office`. See [Anthropic's project steps](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
 
-3. Open [the office manual](../office/office-manual.md) and click **Copy text** at the top of the page. In the project, click **Set project instructions**, paste and click **Save instructions**. If it does not fit, see Notes.
+3. Open [the office manual](../office/office-manual.md) and click **Copy full text** at the top of the page. In the project, click **Set project instructions**, paste and click **Save instructions**. If it does not fit, see Notes.
 
 4. In the project knowledge area on the right, click the **+** button and upload `my-context-pack.md`. If it is rejected, change the file's ending from .md to .txt and upload it again.
 
@@ -39,7 +40,7 @@ These steps were written from Anthropic's help pages on the date below, and have
    List the context pack sections you can see, and say which have blanks. Then name the skill you would use to write a sales one-pager, and show its Output format section word for word. Do not invent anything.
    ```
 
-   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Raw file** on the same page.
+   Expected: it lists the 10 sections of your context pack, says which have blanks, and names "Write a sales one-pager". Compare its Output format with [the skill's page](../skills/product-marketing-and-sales-enablement/write-sales-one-pager.md). If it does not match, upload that skill's own file, using **Download file** on the same page.
 
 7. Ask for your first draft, in plain words, in a new chat in the project. It tells you which skill it used. [Use a skill](use-a-skill.md) covers the rest.
 
@@ -47,7 +48,7 @@ These steps were written from Anthropic's help pages on the date below, and have
    Write a sales one-pager for our most important segment, aimed at the person who signs, for one-to-one use by sales.
    ```
 
-   If it picks the wrong skill or ignores your facts, use the exact form, which always works:
+   If it picks the wrong skill or ignores your facts, use the exact form:
 
    ```
    Use the skill "<title>". Read the context pack. Task: <what they want>.
@@ -74,8 +75,8 @@ The project named Marketing Office shows the office manual in its instructions a
 This works with chat and file upload only. It costs a few minutes at the start of each chat, because nothing carries over for you.
 
 1. Start a new chat at claude.ai, outside any project.
-2. Copy [the office manual](../office/office-manual.md) with **Copy text**, paste it as your first message, and send it.
-3. Upload `my-context-pack.md` and the skill file, which you get with **Raw file** on the skill's page. Click the "+" button in the lower-left corner of the chat box, then "Add files or photos", or drag the files into the chat window. The limit is 20 files per chat and 500MB per file. If a .md file is rejected, change its ending to .txt, or paste its text into the chat.
+2. Copy [the office manual](../office/office-manual.md) with **Copy full text**, paste it as your first message, and send it.
+3. Upload `my-context-pack.md` and the skill file, which you get with **Download file** on the skill's page. Click the "+" button in the lower-left corner of the chat box, then "Add files or photos", or drag the files into the chat window. The limit is 20 files per chat and 500MB per file. If a .md file is rejected, change its ending to .txt, or paste its text into the chat.
 4. Paste the run prompt, with your skill title and task filled in:
 
    ```
@@ -89,13 +90,13 @@ This works with chat and file upload only. It costs a few minutes at the start o
    ```
 
 5. Save each output yourself by copying it into your own file. Keep `my-context-pack.md` in the same folder.
-6. When the chat gets long, ask for a handoff note and save it. Anthropic says that on paid plans with code execution on, Claude summarizes earlier messages automatically, and that longer chats use more of your usage limit. It suggests a new chat when you near that limit or hit a length limit.
+6. When the chat gets long, close the session and save what comes back in [your workboard](../office/my-workboard.md). Anthropic says that on paid plans with code execution on, Claude summarizes earlier messages automatically, and that longer chats use more of your usage limit. It suggests a new chat when you near that limit or hit a length limit.
 
    ```
-   Write a handoff note for a new chat: decisions made, outputs finished, open questions and the next step. Do not invent anything.
+   Close my session
    ```
 
-7. To begin the next chat, repeat steps 1 to 3, paste the handoff note, then paste the run prompt.
+7. To begin the next chat, repeat steps 1 to 3, paste your workboard, then write `Start my session`.
 
 ### Optional extras
 
@@ -116,7 +117,7 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 ## Verification
 
-Verified on 2026-11-01 against vendor documentation.
+Verified on 2026-11-01 against vendor documentation. Not yet tested in a live account. The data settings note was checked on 2026-11-02 from search excerpts of the linked page.
 
 - [Downloading source code archives](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives): GitHub's Code and Download ZIP steps
 - [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects): plans, five-project Free limit, paid retrieval mode

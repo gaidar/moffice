@@ -23,17 +23,28 @@ def main():
         for match in RELATIVE_MD_LINK.finditer(page.read_text(encoding="utf-8")):
             errors.append(f"{page.relative_to(site)}: link still points at a .md file: {match.group(0)}")
 
-    # Link rewriting once changed this file name inside two prompts people copy.
+    # Link rewriting once changed this file name inside the prompts people copy.
     guide = site / "guides" / "fill-the-context-pack.html"
     if guide.exists():
         text = guide.read_text(encoding="utf-8")
         found = len(re.findall(r'(?:"|&quot;)# company\.md(?:"|&quot;)', text))
-        if found != 2:
-            errors.append(f'{guide.relative_to(site)}: expected 2 prompts naming "# company.md", found {found}')
+        if found != 3:
+            errors.append(f'{guide.relative_to(site)}: expected 3 prompts naming "# company.md", found {found}')
 
-    # The top bar links here, and the source file must not be named agents.md.
+    # The footer links here, and the source file must not be named agents.md.
     if not (site / "agents.html").exists():
         errors.append("agents.html: missing")
+    if not (site / "run-my-week.html").exists():
+        errors.append("run-my-week.html: missing")
+
+    # These left the top bar, so the footer must keep them one click away on every page.
+    home = site / "index.html"
+    if home.exists():
+        text = home.read_text(encoding="utf-8")
+        footer = text[text.rfind('<footer class="site">'):]
+        for target in ("playbooks.html", "setup.html", "context-pack.html", "agents.html"):
+            if f'{target}"' not in footer:
+                errors.append(f"index.html: footer has no link to {target}")
 
     for line in errors:
         print(f"ERROR {line}")

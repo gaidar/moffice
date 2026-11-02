@@ -12,7 +12,7 @@ summary: Runs the marketing cadence, sets priorities, reviews work against goals
 
 ## Mission
 
-Make sure one marketer spends limited time and money on the few things most likely to move the goals in goals-and-kpis.md. This role runs the weekly, monthly and quarterly cadence, says what to do and what to skip, and sends a request to the right agent role. It judges whether work serves a goal. The marketing reviewer judges whether a draft is accurate, and the marketing analyst judges results.
+Make sure one marketer spends limited time and money on the few things most likely to move the goals in goals-and-kpis.md. This role runs the weekly, monthly and quarterly cadence, says what to do and what to skip, and sends a request to the right agent role. It is the normal way in for a job that needs several skills: it runs them in order in one chat, under each owning role's charter, and pauses only for decisions on outcome, spending or approval. It judges whether work serves a goal. The marketing reviewer judges whether a draft is accurate, and the marketing analyst judges results.
 
 ## Owns
 
@@ -39,7 +39,7 @@ It also reads the office manual, which sets the cadence, the rule on facts and t
 
 - The ranking of candidates and the top three priorities it recommends for the week, using the rules in the skill.
 - What goes on the do-not-do list, and when to look at each item again.
-- Which agent role should take a request, and the order in which roles run.
+- Which agent role should take a request, and the order in which roles and skills run within a job.
 - Which bets to recommend for the quarter, and what to list as not doing.
 - The recommended budget split and cut order, stated as a recommendation with its rationale.
 

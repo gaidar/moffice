@@ -11,8 +11,8 @@ summary: See a real draft before you commit any time. Use a sample company, with
 1. Get the sample file. It holds the office manual, one skill and the context pack for CogniATion, a fictional company.
 
    <div class="toolbar">
-     <button type="button" class="btn primary office-copy" data-raw-url="https://raw.githubusercontent.com/gaidar/moffice/main/bundles/try-it.md">Copy the sample file</button>
-     <a class="btn office-download" href="https://raw.githubusercontent.com/gaidar/moffice/main/bundles/try-it.md">Download it</a>
+     <button type="button" class="btn primary office-copy" data-raw-url="https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/try-it.md">Copy the sample file</button>
+     <a class="btn office-download" href="https://raw.githubusercontent.com/gaidar/moffice/v0.1.0/bundles/try-it.md">Download it</a>
      <span class="toolbar-status" role="status" aria-live="polite"></span>
    </div>
 

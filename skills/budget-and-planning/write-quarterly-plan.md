@@ -30,23 +30,24 @@ Use this skill once a quarter to turn goals into a small set of bets, with dates
 The marketer pastes into the chat:
 
 - Last quarter's results against goals, if available.
-- Days the marketer can spend on this plan in the quarter, after time off and fixed work.
+- Days in the quarter after time off and fixed meetings.
 - Hard dates and commitments not in the context pack.
 - Everything now running.
 
 ## Procedure
 
-1. Copy the quarter, company goal and marketing goals word for word from goals-and-kpis.md. If the marketing goals are blank, stop and point to [Propose quarterly goals](propose-quarterly-goals.md). Do not write goals for the marketer.
+1. Copy the quarter, company goal and marketing goals word for word from goals-and-kpis.md. If the marketing goals are blank, stop and point to [Propose quarterly goals](propose-quarterly-goals.md).
 2. Work out each gap. Show goal, baseline and difference. Where goals chain, work backward and show the math, such as SQL goal divided by MQL to SQL rate. Label each result as an estimate. If a baseline is blank, write [baseline needed] and mark the gap unknown.
-3. Write 3 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea or running work that serves no goal goes to "Not doing".
-4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps. Do not use outside benchmarks.
+3. Write 1 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea or running work that serves no goal goes to "Not doing".
+4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps.
 5. Build the calendar. Place hard dates first, then count back from each one, using the approval times in channels-and-tools.md. Add the first draft date for each item needing approval.
 6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Mark anyone outside marketing "needs to agree".
-7. Run the capacity check. Estimate days per bet from its pieces, add a row for running existing channels, and compare the total with the marketer's available days. Include freelance time. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
+7. Run the capacity check, as the office manual counts it. Estimate days per bet from its pieces, add rows for routine and for the interruption block, and compare the total with the marketer's days. Keep freelance days separate. If effort or days are unknown, write Not assessed. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
 8. Check the money. If the estimated cost of the bets exceeds the budget, say by how much and cut the lowest ranked bet.
-9. Write up to 3 risks, each with its signal and response.
-10. Check the draft against the context pack: goals word for word, limits and hard rules respected, nothing planned that the product cannot do, internal-only items marked.
-11. List everything you assumed or estimated in the last section, including every day count.
+9. Write the decision check from the office manual for the top bet.
+10. Write up to 3 risks, each with its signal and response.
+11. Check the draft against the context pack: goals word for word, limits and hard rules respected, nothing planned that the product cannot do, internal-only items marked.
+12. List everything you assumed or estimated in the last section, including every day count.
 
 ## Output format
 
@@ -61,7 +62,7 @@ Company goal: <word for word, one line>
 
 ## Bets
 | Rank | Bet | Goal served | Segment | Window | Owner | Expected effect |
-<3 to 5 rows; bet up to 12 words; effect is an estimate with its reasoning>
+<1 to 5 rows; bet up to 12 words; effect is an estimate with its reasoning>
 
 ## Calendar
 | Date | Item | Bet | Owner | Approver and lead time |
@@ -69,20 +70,20 @@ Company goal: <word for word, one line>
 
 ## Capacity check
 | Work | Marketer days and reasoning | Freelance days |
-<one row per bet, existing channels, total, available>
-Result: <fits, or what was cut, up to 30 words>
+<one row per bet, routine, interruption block, total, available>
+Result: <fits, Not assessed, or what was cut>
 
 ## Not doing
 - <item and reason, up to 20 words each, 2 to 6 items>
+
+## Decision check
+<five lines for the top bet, as the office manual sets out>
 
 ## Risks
 - <risk, signal, response, up to 30 words each, up to 3 items>
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -91,7 +92,7 @@ Result: <fits, or what was cut, up to 30 words>
 - [ ] Does every goal have a bet, and does every bet serve a goal?
 - [ ] Does each calendar date allow for the approval time of its approver?
 - [ ] Does each item have one owner named in the context pack, or the marketer?
-- [ ] Does the capacity check fit, after cuts, with existing channel work counted?
+- [ ] Does the capacity check fit, after cuts, with routine and interruptions counted?
 - [ ] Are all derived numbers labeled as estimates, with the math shown?
 - [ ] Are internal-only items marked?
 
@@ -109,27 +110,29 @@ Result: <fits, or what was cut, up to 30 words>
 |---|---|---|---|
 | Create $1.2 million in new qualified pipeline by March 31, 2027 | $900,000 | $300,000 | Q3 2026 baseline |
 | Produce 90 sales-qualified leads by March 31, 2027 | About 68 | About 22 | Estimate: 260 MQLs x 26% |
-| Publish the campaign for professional services firms by February 15, 2027 | None | None | Dated |
 
 **Bets**
 
 | Rank | Bet | Goal served | Segment | Window | Owner | Expected effect |
 |---|---|---|---|---|---|---|
-| 1 | Professional services campaign | Campaign | Professional services | February 15 | Marketer | Estimate: 40 of the campaign's 116 MQLs are new, a third above 20 a week, 6 weeks |
+| 1 | Professional services campaign | Campaign | Professional services | February 15 | Marketer | Estimate: 40 of its 116 MQLs are new |
 | 2 | Regional conference | SQLs | Professional services | March 9–11 | Marketer | Estimate: 30 MQLs, 10 demo requests a day, 3 days |
 | 3 | Manager view release (internal only) | Pipeline | All | February | Marketer | Estimate: 15 MQLs, helps calls more than leads |
 
 **Calendar:** January 29 first drafts, February 15 live, March 9–11 conference.
 
-**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10 (3 on site). Release 15. Channels 20 (1.5 days a week). Total 65, 60 available (13 weeks, 5 off). Result: bet 3 shrinks by 5.
+**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10 (3 on site). Release 15. Routine 13 (1 day a week). Interruptions 3 (2 hours a week). Total 61, 60 available (13 weeks, 5 off). Result: bet 3 shrinks by 1.
 
 **Not doing:** outbound for software companies.
+
+**Decision check (bet 1):** Constraint: too few relevant buyers. Why this: nothing reaches this segment. Evidence: [needed]. Test: minimum campaign first. Displaces: release scope.
 
 **Risks:** Campaign slips. Signal: no draft by January 29. Response: drop bet 3.
 
 **Assumptions and open questions**
 
-- Estimate: 90 SQLs / 26% = 346 MQLs, 86 above 260. The bets total 85, no margin.- Assumption: effects and day counts are illustrative.
+- Estimate: 90 SQLs / 26% = 346 MQLs, 86 above 260. The bets total 85, no margin.
+- Assumption: effects and day counts are illustrative.
 
 ## How to run it
 

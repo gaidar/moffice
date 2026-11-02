@@ -10,7 +10,7 @@ title: Diagnose a pipeline gap
 type: skill
 function: analytics-and-campaign-evaluation
 owner: marketing-analyst
-reads: [goals-and-kpis, icp-and-segments, company, channels-and-tools]
+reads: [goals-and-kpis, icp-and-segments, company]
 you_bring: Your pipeline target, or last quarter's numbers if you have none, plus MQLs, SQLs and pipeline value so far from your CRM.
 also_for: [pipeline is behind, pipeline is down, ceo asks why pipeline is down, no pipeline target, why is pipeline low, missing our pipeline target, pipeline shortfall, not enough leads, leads not converting, deal size dropped]
 version: 0.1.0
@@ -24,39 +24,36 @@ show_to: your sales lead, before the CEO, and ask whether the driver matches wha
 
 ## When to use
 
-Use this when pipeline is behind target, or down on last quarter, and you need to know where the gap sits. It shows where the gap is, not why. Do not use it to judge one finished campaign; use [Evaluate a campaign](evaluate-campaign.md) instead.
+Use this when pipeline is behind target, or down on last quarter. Do not use it to judge one finished campaign; use [Evaluate a campaign](evaluate-campaign.md) instead.
 
 ## Inputs
 
 - [[context-pack:goals-and-kpis]]: target, SQL goal, definitions, baselines.
 - [[context-pack:icp-and-segments]]: segment priority.
 - [[context-pack:company]]: which numbers are internal only.
-- [[context-pack:channels-and-tools]]: which tool holds any missing number.
 
-The marketer pastes the read date, then MQLs, SQLs and pipeline value for the period so far, as goals-and-kpis.md defines them. With no target, also last quarter's three numbers. Optional: numbers by segment, MQLs older than 14 days, rejection reasons.
+The marketer pastes the read date, then MQLs, SQLs and pipeline value for the period so far, as goals-and-kpis.md defines them. With no target, also last quarter's three numbers. Optional: how SQLs were counted, numbers by segment, MQLs older than 14 days, rejection reasons.
 
 ## Procedure
 
-1. Stop and ask if MQLs, SQLs or pipeline value are missing. Do not fill them from baselines.
-2. Set the target line. With no target, use last quarter as the line and say so: its MQLs, conversion, deal size and pipeline become the targets. Otherwise, target deal size is the pipeline target divided by the SQL goal, or the average in the pipeline definition, or [deal size needed]. Target conversion is the marketer's rate, or else the baseline MQL to SQL rate. Target MQLs is the pipeline target divided by target conversion and target deal size.
-3. For a read before the period ends, scale target MQLs by days elapsed over days in the period (a starting rule). Use the marketer's phasing if given, and name any planned campaign this ignores.
-4. Work out the actuals. Conversion is SQLs divided by MQLs. Deal size is pipeline value divided by SQLs, at the value pipeline is counted, not contract value.
-5. Split the gap in this order, so the parts add up, and show the arithmetic:
+1. Stop and ask if MQLs, SQLs or pipeline value are missing. If periods or stage names do not match, a lead ID repeats, or pipeline shows with zero SQLs, stop and say what to fix. If everything is zero, stop and ask whether the export is right.
+2. Set the target line. With no target, use last quarter as the line and say so: its MQLs, conversion, deal size and pipeline become the targets. Otherwise, target deal size is the pipeline target divided by the SQL goal, or the average in the pipeline definition, or [deal size needed]. Target conversion is the marketer's rate, or else the baseline MQL to SQL rate. Target MQLs is the pipeline target divided by target conversion and target deal size. A zero or blank target stops the split: ask.
+3. For a read before the period ends, scale target MQLs by days elapsed over days in the period (a starting rule). Use the marketer's phasing if given.
+4. Work out the actuals. Conversion is SQLs divided by MQLs. Deal size is pipeline value divided by SQLs, at the value pipeline is counted, not contract value. With zero MQLs, conversion is "not defined". With zero SQLs, conversion is 0% and deal size is "not defined". A not-defined part's effect is $0. Name how SQLs were counted, and call conversion provisional if they come from older MQLs.
+5. Split the gap in this order, and show the arithmetic:
    - Volume: (actual MQLs minus target MQLs) x target conversion x target deal size.
    - Conversion: actual MQLs x (actual conversion minus target conversion) x target deal size.
    - Deal size: actual MQLs x actual conversion x (actual deal size minus target deal size).
-6. Mark each part Gap or Ahead, then test it. Recompute conversion on MQLs older than 14 days (a starting rule), since recent ones may have had no first call. If that meets target, mark conversion Lag. If the older count is missing, ask, and call the read provisional. Under 30 MQLs or 10 SQLs (a starting rule), mark the part Too few to call.
-7. Name the main driver: the largest part still marked Gap. If it is under 60% of the sum of the negative effects (a starting rule), name the top two and call it Mixed. If nothing is marked Gap, recommend no action.
+6. Mark each part Gap or Ahead, then test it. Recompute conversion on MQLs older than 14 days (a starting rule, or the MQL to SQL time in goals-and-kpis.md). If that meets target, mark conversion Lag. If the older count is missing, call the read provisional. Under 30 MQLs or 10 SQLs (a starting rule), mark conversion and deal size Too few to call, and read volume anyway. Zero SQLs from 30 or more MQLs is a conversion Gap.
+7. Name the main driver: the largest part still marked Gap. If it is under 60% of the sum of the negative effects (a starting rule) and another part is Gap, name both, call it Mixed and start with the larger. If nothing is marked Gap, recommend no action.
 8. If segment numbers are pasted, name the segment holding most of the driver.
 9. Name who to ask why, and one skill to run first:
    - Volume: ask sales which sources dried up. Run [Read attribution](read-attribution.md), then [Write a campaign brief](../campaign-design/write-campaign-brief.md), or [Allocate the budget](../budget-and-planning/allocate-budget.md) if money is the limit.
    - Conversion: ask the head of sales for the last 30 rejected MQLs with reasons. Run [Define the lead handoff](../marketing-ops/define-lead-handoff.md), or [Define the ICP](../segmentation-icp-and-personas/define-icp.md) if they are the wrong companies, or [Write a lead follow-up](../campaign-design/write-lead-follow-up.md) if they wait for first contact.
-   - Deal size: ask account executives what changed in recent deals. Run [Analyze wins and losses](../competitive-intelligence/analyze-win-loss.md), or [Build a market segmentation](../segmentation-icp-and-personas/build-market-segmentation.md) if the segment mix moved.
-   - Numbers in doubt: [Set tracking conventions](../marketing-ops/set-tracking-conventions.md).
-10. Say that the split shows where the gap is, not why. Any cause is an Inference or an Unknown until the person in step 9 answers. See [Three hard situations](../../guides/hard-situations.md#the-ceo-asks-why-pipeline-is-down).
-11. Write what to tell the CEO, in two or three plain sentences: the gap, where it is, and what you are checking by when. Offer no unchecked cause.
-12. Check the draft against the context pack: definitions, baselines and internal-only numbers.
-13. List everything assumed or unknown in the last section.
+   - Deal size: ask account executives what changed in recent deals. Run [Analyze wins and losses](../competitive-intelligence/analyze-win-loss.md).
+10. Any cause is an Inference or an Unknown until the person in step 9 answers.
+11. Write what to tell the CEO, in two or three plain sentences: the gap, where it is, and what you are checking by when.
+12. Check the draft against the context pack: definitions, baselines and internal-only numbers. List everything assumed or unknown in the last section.
 
 ## Output format
 
@@ -70,6 +67,7 @@ What to tell the CEO: <two or three plain sentences>
 ## The numbers
 | Measure | Target to date | Actual | Difference |
 <rows: MQLs, conversion, SQLs, deal size, pipeline>
+SQLs counted by: <stage date, MQL date or Unknown>
 
 ## The split
 | Part | Effect | Share of shortfall | Arithmetic | Read |
@@ -81,7 +79,7 @@ By segment: <where the driver sits, or "Not pasted">
 ## Find out why, then run next
 This split shows where the gap is, not why.
 Ask: <who, and what to ask>
-First: <skill title>, because <reason, up to 20 words>
+First: <skill title>, because <reason>
 
 ## Assumptions and open questions
 - <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
@@ -91,7 +89,7 @@ First: <skill title>, because <reason, up to 20 words>
 
 - [ ] Do the three effects add up exactly to the pipeline difference?
 - [ ] Is every actual a number the marketer pasted, used as goals-and-kpis.md defines it?
-- [ ] Are lag and small samples marked before a driver is named?
+- [ ] Are zero counts, lag and small samples marked before a driver is named?
 - [ ] Is every cause written as an Inference or an Unknown?
 - [ ] Does the output name one skill to run first, and why?
 
@@ -105,7 +103,7 @@ First: <skill title>, because <reason, up to 20 words>
 
 **Answer:** $180,000 behind to date, mainly conversion. Define the lead handoff first.
 
-**What to tell the CEO:** We are $180,000 behind at the halfway point, mostly because fewer MQLs are becoming SQLs. That shows where, not why. I am asking Tom Ferrant for the rejected MQLs and will report back this week.
+**What to tell the CEO:** We are $180,000 behind at the halfway point, mostly because fewer MQLs become SQLs. I am asking Tom Ferrant why, and will report back this week.
 
 **The numbers:** MQLs 150 against 173. Conversion 20% against 26%. SQLs 30 against 45. Deal size $14,000 against $13,333. Pipeline $420,000 against $600,000.
 
@@ -121,14 +119,13 @@ Lag check: 30 SQLs from 130 older MQLs is 23%, still under 26%.
 
 **Find out why, then run next**
 
-Ask: Tom Ferrant, head of sales, for the rejected MQLs and reasons.
+Ask: Tom Ferrant for the rejected MQLs and reasons.
 
-First: [Define the lead handoff](../marketing-ops/define-lead-handoff.md), because conversion misses target after the lag check.
+First: [Define the lead handoff](../marketing-ops/define-lead-handoff.md), because conversion misses target.
 
 **Assumptions and open questions**
 
-- Assumption: all actuals are invented. Target conversion is the 26% baseline, on a straight line that ignores the February 15 campaign.
-- Estimate: $13,333 is $1.2 million divided by 90 SQLs.
+- Assumption: all actuals are invented. Target conversion is the 26% baseline.
 
 ## How to run it
 
@@ -159,11 +156,11 @@ show_to: the salesperson who got the most leads from it, and ask whether those l
 
 ## When to use
 
-Use this after a campaign's time window has closed and you have its numbers. Do not use it for weekly spend decisions on a live paid campaign, which belong to [Adjust paid campaigns](../paid-demand-gen/adjust-paid-campaigns.md), or for credit across all channels, which belongs to [Read attribution](read-attribution.md).
+Use this after a campaign's time window has closed and you have its numbers, and again on any later read date. Do not use it for weekly spend decisions on a live paid campaign, which belong to [Adjust paid campaigns](../paid-demand-gen/adjust-paid-campaigns.md), or for credit across all channels, which belongs to [Read attribution](read-attribution.md).
 
 ## Inputs
 
-- [[context-pack:goals-and-kpis]]: MQL, SQL and pipeline definitions, plus KPI baselines for comparison.
+- [[context-pack:goals-and-kpis]]: MQL, SQL and pipeline definitions, stage timing, plus KPI baselines for comparison.
 - [[context-pack:icp-and-segments]]: ICP criteria for judging lead quality, and the typical sales cycle.
 - [[context-pack:channels-and-tools]]: channels used, paid limits and hard rules.
 
@@ -171,19 +168,20 @@ The marketer pastes into the chat:
 
 - The campaign brief, or its goal, audience, time window, targets and budget.
 - Results by channel: spend, leads, MQLs, SQLs and pipeline, with the date pulled.
-- Anything that disturbed the results, such as a tracking gap or a changed offer.
+- Anything that disturbed the results, such as a tracking gap.
 
 ## Procedure
 
-1. If the targets or the results are missing, ask for them before drafting. If only part is missing, mark that row "no data". Never reconstruct a target from the results.
+1. If the targets or the results are missing, ask for them before drafting. If only part is missing, mark that row "no data". Never reconstruct a target from the results. Check the numbers: one period, stage definitions as in goals-and-kpis.md, no repeated lead ID, totals that add up. If not, say what to fix, and mark those rows "no data". Ask for a missing pull date.
 2. Fill the results table with one row per target in the brief. Difference is actual minus target, as a number and a percentage.
-3. Set each row's status. Use "hit" at or above target and "missed" below it. Use "no data" when the number was not supplied. Use "too early" for SQL, pipeline or won deals when fewer days have passed since the campaign ended than the long end of the typical sales cycle and the number is still below target.
-4. Set the verdict from the campaign's one goal metric. "Hit" means the goal metric was hit. "Missed" means it was missed. "Too early" means its status is too early, and the verdict then names the date to read it again: the end date plus the long end of the sales cycle.
-5. Calculate cost per MQL for each channel with spend. Show the division. Compare a rate with a baseline only if both use the same definition.
-6. Write what worked and what did not. Each bullet needs a number from the table. Under 20 leads in a channel, write "too few to read" and draw no conclusion. That cutoff is a starting rule the marketer can change, not a benchmark. Say "coincided with" rather than "caused" unless the marketer supplied a control group.
-7. Write next actions. Each one starts with keep, change or stop. Stop a channel only when it missed its target, is not too early and has enough leads to read. Name an owner from the marketer's input, or write [owner needed].
-8. Check the draft against the context pack: terms match the definitions in goals-and-kpis.md, the proposed actions respect the limits in channels-and-tools.md, and lead quality uses the ICP criteria. If a needed field is blank, leave a visible placeholder such as [MQL definition needed] and ask in the last section. Never invent.
-9. List every assumption, estimate, inference and unknown in the last section, including any row with no data and the date the numbers were pulled.
+3. Set each row's read date: the date the brief promised. If it promised none, use the end date for leads and MQLs, the end date plus the long end of the stage timing in goals-and-kpis.md for SQLs and pipeline, or the end date plus the long end of the sales cycle for won deals. If the timing is blank, write [stage timing needed] and ask.
+4. Set each row's status. Before its read date, use "too early". On or after it, use "hit" at or above target and "missed" below it, with the number at that date. Use "no data" when the number was not supplied. Leads keep maturing after a deadline, so give a missed SQL, pipeline or won-deal row a later read: the end date plus that same time. Report the later result on its own line. It never changes the status.
+5. Set the verdict from the status of the campaign's one goal metric, and name its read date if too early or its later read if missed.
+6. Calculate cost per MQL for each channel with spend. Show the division. Compare a rate with a baseline only if both use the same definition.
+7. Write what worked and what did not. Each bullet needs a number from the table. Under 20 leads in a channel (a starting rule), write "too few to read" and draw no conclusion. Say "coincided with" rather than "caused" unless the marketer supplied a control group.
+8. Write next actions. Each one starts with keep, change or stop. Stop a channel only when it missed its target, its later read has passed and it has enough leads to read. Name an owner from the marketer's input, or write [owner needed].
+9. Check the draft against the context pack: terms match goals-and-kpis.md, actions respect the limits in channels-and-tools.md, and lead quality uses the ICP criteria. If a needed field is blank, leave a visible placeholder and ask in the last section.
+10. List every assumption, estimate, inference and unknown in the last section, including any row with no data and the date the numbers were pulled.
 
 ## Output format
 
@@ -191,11 +189,12 @@ The marketer pastes into the chat:
 Status: Draft
 
 ## Verdict
-<Hit, missed or too early, then the goal metric's number. If too early, the date to read it again. Max 40 words.>
+<Hit, missed or too early, then the goal metric's number. Name its read date if too early, its later read if missed. Max 40 words.>
 
 ## Results against targets
-| Metric | Target | Actual | Difference | Status |
+| Metric | Target | Read date | Actual | Difference | Status |
 <One row per target. Status is hit, missed, too early or no data.>
+Later read: <metric, date, and the matured result with its pull date once that date has passed, or "None">
 
 ## Cost by channel
 | Channel | Spend | Leads | MQLs | Cost per MQL |
@@ -212,39 +211,36 @@ Status: Draft
 <Up to 5 rows.>
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
 
 - [ ] Does the verdict rest on the campaign's one goal metric?
 - [ ] Does every target in the brief have a row, with status set by the rule?
-- [ ] Are recent SQL and pipeline numbers marked too early rather than missed?
-- [ ] Does every worked or did-not-work bullet carry a number from the table?
+- [ ] Is each row read on its own date, with a missed deadline called missed and maturing leads given a later read?
 - [ ] Do MQL, SQL and pipeline match the definitions in goals-and-kpis.md?
-- [ ] Is causation claimed only where a control group exists?
 - [ ] Does every next action have an owner or a visible placeholder?
 
 ## Example (fictional company)
 
 Status: Draft
 
-Assumption: this CogniATion webinar on analyst reasoning and all its results are illustrative, as if pasted by the marketer on November 1, 2026.
+Assumption: this CogniATion webinar and all its results are illustrative, as if pasted on November 1, 2026, against a brief promising its targets by October 31.
 
 **Verdict**
 
-Too early. Goal of $125,000 pipeline stands at $80,000. Read again January 13, 2027.
+Missed at October 31: pipeline $80,000 against $125,000. Later read November 14, for leads still qualifying.
 
 **Results against targets**
 
-| Metric | Target | Actual | Difference | Status |
-|---|---|---|---|---|
-| MQLs | 40 | 46 | +6, +15% | Hit |
-| SQLs | 10 | 6 | -4, -40% | Too early |
-| Pipeline | $125,000 | $80,000 | -$45,000, -36% | Too early |
+| Metric | Target | Read date | Actual | Difference | Status |
+|---|---|---|---|---|---|
+| MQLs | 40 | Oct 31 | 46 | +6, +15% | Hit |
+| SQLs | 10 | Oct 31 | 6 | -4, -40% | Missed |
+| Pipeline | $125,000 | Oct 31 | $80,000 | -$45,000, -36% | Missed |
+
+Later read: SQLs and pipeline, November 14.
 
 **Cost by channel**
 
@@ -258,21 +254,20 @@ Too early. Goal of $125,000 pipeline stands at $80,000. Read again January 13, 2
 
 **What did not work**
 
-- 6 SQLs from 46 MQLs is 13% so far, against the 26% baseline, with the sales cycle still open.
+- 6 SQLs from 46 MQLs is 13% so far, against the 26% baseline, with 13 days of qualifying left.
 
 **Next actions**
 
 | Action | Keep, change or stop | Owner | By when |
 |---|---|---|---|
 | Keep the analyst reasoning topic for the next webinar | Keep | Marketer | January 2027 |
-| Read pipeline again | Keep | Marketer | January 13, 2027 |
+| Read SQLs and pipeline again | Keep | Marketer | November 14, 2026 |
 
 **Assumptions and open questions**
 
 - Assumption: the campaign ended October 15, 2026.
-- Estimate: $4,500 / 46 = $98. Reread date is the end date plus 90 days.
-- Inference: too early, from 17 days elapsed against the 45 to 90 day sales cycle.
-- Unknown: How many of the 42 leads short of MQL missed the ICP, such as having fewer than 100 learners?
+- Estimate: $4,500 / 46 = $98. Later read is the end date plus the 30-day MQL to SQL time.
+- Unknown: How many of the 42 leads short of MQL missed the ICP?
 - Unknown: How many of the 46 MQLs has sales called so far?
 
 ## How to run it
@@ -1084,7 +1079,7 @@ The marketer pastes:
 1. Set the total. Take the budget from goals-and-kpis.md or the prompt. If it is blank, ask for it and stop. If the marketer has not said what the budget covers, assume program spend only, and record that.
 2. Place committed lines first. A line is committed if a contract or deposit exists, or if it is existing paid spend carried at its current rate for the period. Mark committed spend that could still be stopped as "Stoppable".
 3. Remove anything barred. Apply the limits and hard rules in channels-and-tools.md. Any ad line needing tracking that is not in place gets the note "no spend until tracking is live", and its money stays in the reserve.
-4. Set aside a reserve of 10% of the total. This and the 10% and 40% caps in step 6 are starting rules the marketer can change, not benchmarks.
+4. Set aside a reserve of 10% of the total. This and the 10% and 40% caps in step 6 are starting rules, not benchmarks.
 5. Rate the remaining candidate lines. "Dated" means a goal or event in goals-and-kpis.md depends on it. "Proven" means pasted results show pipeline from it. "Untested" means neither.
 6. Fund in this order: Dated lines, then Proven lines from highest pipeline per dollar, then Untested lines, capped together at 10% of the total. Cap any line at 40% of the total. Flag a signed contract above that. Break ties toward the higher segment in the priority order. Do not use outside benchmarks to rank channels.
 
@@ -1094,8 +1089,9 @@ The marketer pastes:
 8. Check the arithmetic. Lines plus reserve must equal the total exactly, and shares must add up to 100%. If an amount is left, add it to the reserve. If you are over, cut in the cut order.
 9. Write the cut order. Cut the reserve first, then Untested and Hypothesis lines, then Proven lines, then Stoppable lines, then Dated lines, then Committed lines. Within a group, cut the lowest pipeline per dollar first, or the smallest line if there are no results. Say what each cut gives up, and show what happens at 10% and 25% less budget.
 10. Flag approvals: the approver and lead time for each line above the threshold in channels-and-tools.md.
-11. Check the draft against the context pack: total matches the budget, hard rules respected, every dated commitment funded or flagged as unfunded.
-12. List everything you assumed or estimated in the last section, including every holding amount.
+11. Write the decision check from the office manual for the largest line you could still move.
+12. Check the draft against the context pack: total matches the budget, hard rules respected, every dated commitment funded or flagged as unfunded.
+13. List everything you assumed or estimated in the last section, including every holding amount.
 
 ## Output format
 
@@ -1119,11 +1115,11 @@ Total: <amount> | Covers: <what the budget includes, up to 20 words>
 ## Not funded
 - <item and reason, up to 20 words each, or "None">
 
+## Decision check
+<five lines, as the office manual sets out>
+
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -1131,8 +1127,6 @@ Total: <amount> | Covers: <what the budget includes, up to 20 words>
 - [ ] Do the lines and the reserve add up to the exact total?
 - [ ] Does every line have a rating and a rationale tied to a goal, pasted results or, for Hypothesis, personas.md?
 - [ ] Is every line at or under 40% of the total, or flagged?
-- [ ] Are holding amounts labeled as estimates, with the method shown?
-- [ ] Does every line respect the limits and hard rules in the context pack?
 - [ ] Is every dated commitment funded, or flagged as unfunded?
 - [ ] Does the cut plan add up at both 10% and 25% less?
 - [ ] Is each line above the approval threshold flagged with its approver?
@@ -1165,6 +1159,8 @@ Total: <amount> | Covers: <what the budget includes, up to 20 words>
 **Approvals needed:** All lines over $5,000: Marta Ilves, CEO, 3 days.
 
 **Not funded:** Display retargeting, barred by limits.
+
+**Decision check (campaign line):** Constraint: too few relevant buyers. Why this: a dated goal depends on it. Evidence: [past results needed]. Test: minimum campaign first. Displaces: social ads.
 
 **Assumptions and open questions**
 
@@ -1335,10 +1331,10 @@ type: skill
 function: budget-and-planning
 owner: head-of-marketing
 reads: [goals-and-kpis, channels-and-tools, company]
-you_bring: Last week's numbers, what is due in the next two weeks, what slipped, and the days you have this week.
+you_bring: Last week's numbers, what is due in the next two weeks, what slipped, and the days you have this week, counted as in the Weekly playbook.
 also_for: [what should i do this week, too much to do, weekly plan, what to drop, overloaded, pipeline behind, monday planning, to do list]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Top three priorities and a do-not-do list from last week's numbers and plan.
 ---
 
@@ -1346,7 +1342,7 @@ summary: Top three priorities and a do-not-do list from last week's numbers and 
 
 ## When to use
 
-Use this skill at the start of each week to pick up to three priorities and a do-not-do list, from last week's numbers and the plan. Do not use it to set the quarter's direction; use [Write a quarterly plan](write-quarterly-plan.md) instead. For the month's numbers and commentary, use [Write the monthly report](../analytics-and-campaign-evaluation/write-monthly-report.md).
+Use this skill at the start of each week to pick up to three priorities and a do-not-do list, from last week's numbers and the plan. Do not use it to set the quarter's direction; use [Write a quarterly plan](write-quarterly-plan.md) instead.
 
 ## Inputs
 
@@ -1359,19 +1355,19 @@ The marketer pastes into the chat:
 - Last week's numbers and the total to date for each weekly KPI.
 - The quarterly plan, or the items due in the next two weeks.
 - What slipped last week, and any new requests.
-- Days available this week.
+- Days available this week, as the office manual counts capacity.
 
 ## Procedure
 
-1. Check the inputs. If no numbers were pasted, write [number needed] in each row, base the priorities on dates alone and ask in the last section.
-2. Work out the pace for each KPI that has a goal: goal minus total to date, divided by weeks left. For a KPI with no goal, use its baseline divided by the weeks in the baseline period. Show the math and label each result as an estimate.
-3. Rate each KPI by last week's number against its pace. "Ahead" is 100% or more, "Close" is 80% to 99%, "Behind" is under 80%. These cutoffs and the 14-day window in step 5 are starting rules the marketer can change, not benchmarks.
+1. Check the inputs. If no numbers were pasted, write [number needed] in each row, base the priorities on dates alone and ask in the last section. If periods or definitions do not match, say what to fix.
+2. Work out each KPI's target pace: goal minus total to date, divided by weeks left. With no goal, derive it if a goal works back to the KPI, such as MQLs from an SQL goal and the conversion rate. Otherwise write "No target". Baseline pace is the baseline divided by the weeks in its period. Show the math and label each result as an estimate.
+3. Rate last week's number against each pace separately. Against target: "Ahead" is 100% or more, "Close" is 80% to 99%, "Behind" is under 80%, or "No target". Against baseline: "Above", "Level" or "Below" on the same cutoffs. These cutoffs and the 14-day window in step 5 are starting rules, not benchmarks.
 4. Do not call a trend from one week. A KPI that is Behind for one week gets a check, such as "find out why". Behind for two weeks or more gets a fix.
 5. List candidates: plan items due within 14 days, items whose approval lead time means they must start this week, the fix or check for each Behind KPI, slipped items and new requests.
 6. Rank the candidates. Hard deadlines within 14 days come first, counting approval time from channels-and-tools.md. Next come fixes for a Behind KPI tied to a marketing goal. Next come items slipped twice, which must either be done this week or dropped. New requests that serve no goal do not qualify.
 7. Pick up to three priorities. For each one, write what done looks like by Friday, the owner and the goal served. Use only the marketer or people named in the context pack as owners.
-8. Run the capacity check. Estimate days for each priority and add days for routine work the marketer names. If the total exceeds days available, drop the third priority, then the second. Never add a fourth.
-9. Write the do-not-do list: 3 to 5 specific things the marketer might be tempted to do, each with the reason and when to look at it again. Include candidates that lost out in step 6. Add anything barred by limits or hard rules only if someone actually asked for it or the plan implies it.
+8. Run the capacity check. Estimate days for each priority. If days available are unknown, write "Not assessed". If the total exceeds days available, drop the third priority, then the second. Never add a fourth.
+9. Write the do-not-do list: 3 to 5 things the marketer might be tempted to do, each with the reason and when to look at it again. Include candidates that lost out in step 6. Add anything barred by limits or hard rules only if someone asked for it or the plan implies it.
 10. Write up to 2 decisions for the marketer, each with your recommendation.
 11. Check the draft against the context pack: goals and definitions match goals-and-kpis.md, approval times are respected, no hard rule is broken.
 12. List everything you assumed or estimated in the last section, including each pace calculation.
@@ -1390,20 +1386,17 @@ Week of: <date>
 - <item, reason, when to revisit, up to 25 words each, 3 to 5 items>
 
 ## Numbers against pace
-| KPI | Last week | To date | Pace needed | Rating |
-<one row per weekly KPI; rating is Ahead, Close or Behind>
+| KPI | Last week | To date | Target pace | Against target | Baseline pace | Against baseline |
+<one row per weekly KPI>
 
 ## Capacity
-Days needed: <number> | Days available: <number> | Result: <fits, or what was dropped, up to 20 words>
+Days needed: <number> | Days available: <number> | Result: <fits, Not assessed, or what was dropped, up to 20 words>
 
 ## Decisions for the marketer
 - <decision and recommendation, up to 30 words each, up to 2 items, or "None">
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -1434,26 +1427,26 @@ Days needed: <number> | Days available: <number> | Result: <fits, or what was dr
 
 - Outbound to software companies: inbound only. Revisit next quarter.
 - A third blog post this month: the campaign comes first. Revisit in February.
-- Manager view in campaign copy: internal only. Revisit once cleared for public mention.
+- Manager view in campaign copy: internal only. Revisit once cleared.
 
 **Numbers against pace**
 
-| KPI | Last week | To date | Pace needed | Rating |
-|---|---|---|---|---|
-| New qualified pipeline | $70,000 | $270,000 | $93,000 | Behind |
-| MQLs | 24 | 72 | 20 | Ahead |
-| Website demo requests | 4 | 16 | About 4.5 | Close |
+| KPI | Last week | To date | Target pace | Against target | Baseline pace | Against baseline |
+|---|---|---|---|---|---|---|
+| New qualified pipeline | $70,000 | $270,000 | $93,000 | Behind | $69,000 | Above |
+| MQLs | 24 | 72 | About 27 | Close | 20 | Above |
+| Demo requests | 4 | 16 | No target | No target | About 4.5 | Level |
 
 **Capacity**
 
-Days needed: 4 | Days available: 4 | Result: fits
+Days needed 4, available 4: fits.
 
 **Decisions for the marketer:** None.
 
 **Assumptions and open questions**
 
-- Assumption: this week's numbers, days and 10 weeks left are invented for this example, and the conference spend is over the $5,000 approval line.
-- Estimate: pipeline pace is ($1.2 million minus $270,000) divided by 10 weeks. MQL pace is 260 divided by 13 weeks. Demo pace is 58 divided by 13 weeks.
+- Assumption: numbers, days and the 10 weeks left are invented, and the conference is over the $5,000 approval line.
+- Estimate: pipeline target pace is ($1.2 million minus $270,000) over 10 weeks. MQL target pace is (90 SQLs / 26% minus 72) over 10 weeks. Baseline paces are Q3 over 13 weeks.
 
 ## How to run it
 
@@ -1498,23 +1491,24 @@ Use this skill once a quarter to turn goals into a small set of bets, with dates
 The marketer pastes into the chat:
 
 - Last quarter's results against goals, if available.
-- Days the marketer can spend on this plan in the quarter, after time off and fixed work.
+- Days in the quarter after time off and fixed meetings.
 - Hard dates and commitments not in the context pack.
 - Everything now running.
 
 ## Procedure
 
-1. Copy the quarter, company goal and marketing goals word for word from goals-and-kpis.md. If the marketing goals are blank, stop and point to [Propose quarterly goals](propose-quarterly-goals.md). Do not write goals for the marketer.
+1. Copy the quarter, company goal and marketing goals word for word from goals-and-kpis.md. If the marketing goals are blank, stop and point to [Propose quarterly goals](propose-quarterly-goals.md).
 2. Work out each gap. Show goal, baseline and difference. Where goals chain, work backward and show the math, such as SQL goal divided by MQL to SQL rate. Label each result as an estimate. If a baseline is blank, write [baseline needed] and mark the gap unknown.
-3. Write 3 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea or running work that serves no goal goes to "Not doing".
-4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps. Do not use outside benchmarks.
+3. Write 1 to 5 bets. A bet is one coordinated effort with one goal, one segment and one window. Any goal with a date in goals-and-kpis.md becomes a bet automatically. Every goal needs at least one bet, and any idea or running work that serves no goal goes to "Not doing".
+4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps.
 5. Build the calendar. Place hard dates first, then count back from each one, using the approval times in channels-and-tools.md. Add the first draft date for each item needing approval.
 6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Mark anyone outside marketing "needs to agree".
-7. Run the capacity check. Estimate days per bet from its pieces, add a row for running existing channels, and compare the total with the marketer's available days. Include freelance time. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
+7. Run the capacity check, as the office manual counts it. Estimate days per bet from its pieces, add rows for routine and for the interruption block, and compare the total with the marketer's days. Keep freelance days separate. If effort or days are unknown, write Not assessed. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
 8. Check the money. If the estimated cost of the bets exceeds the budget, say by how much and cut the lowest ranked bet.
-9. Write up to 3 risks, each with its signal and response.
-10. Check the draft against the context pack: goals word for word, limits and hard rules respected, nothing planned that the product cannot do, internal-only items marked.
-11. List everything you assumed or estimated in the last section, including every day count.
+9. Write the decision check from the office manual for the top bet.
+10. Write up to 3 risks, each with its signal and response.
+11. Check the draft against the context pack: goals word for word, limits and hard rules respected, nothing planned that the product cannot do, internal-only items marked.
+12. List everything you assumed or estimated in the last section, including every day count.
 
 ## Output format
 
@@ -1529,7 +1523,7 @@ Company goal: <word for word, one line>
 
 ## Bets
 | Rank | Bet | Goal served | Segment | Window | Owner | Expected effect |
-<3 to 5 rows; bet up to 12 words; effect is an estimate with its reasoning>
+<1 to 5 rows; bet up to 12 words; effect is an estimate with its reasoning>
 
 ## Calendar
 | Date | Item | Bet | Owner | Approver and lead time |
@@ -1537,20 +1531,20 @@ Company goal: <word for word, one line>
 
 ## Capacity check
 | Work | Marketer days and reasoning | Freelance days |
-<one row per bet, existing channels, total, available>
-Result: <fits, or what was cut, up to 30 words>
+<one row per bet, routine, interruption block, total, available>
+Result: <fits, Not assessed, or what was cut>
 
 ## Not doing
 - <item and reason, up to 20 words each, 2 to 6 items>
+
+## Decision check
+<five lines for the top bet, as the office manual sets out>
 
 ## Risks
 - <risk, signal, response, up to 30 words each, up to 3 items>
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -1559,7 +1553,7 @@ Result: <fits, or what was cut, up to 30 words>
 - [ ] Does every goal have a bet, and does every bet serve a goal?
 - [ ] Does each calendar date allow for the approval time of its approver?
 - [ ] Does each item have one owner named in the context pack, or the marketer?
-- [ ] Does the capacity check fit, after cuts, with existing channel work counted?
+- [ ] Does the capacity check fit, after cuts, with routine and interruptions counted?
 - [ ] Are all derived numbers labeled as estimates, with the math shown?
 - [ ] Are internal-only items marked?
 
@@ -1577,27 +1571,29 @@ Result: <fits, or what was cut, up to 30 words>
 |---|---|---|---|
 | Create $1.2 million in new qualified pipeline by March 31, 2027 | $900,000 | $300,000 | Q3 2026 baseline |
 | Produce 90 sales-qualified leads by March 31, 2027 | About 68 | About 22 | Estimate: 260 MQLs x 26% |
-| Publish the campaign for professional services firms by February 15, 2027 | None | None | Dated |
 
 **Bets**
 
 | Rank | Bet | Goal served | Segment | Window | Owner | Expected effect |
 |---|---|---|---|---|---|---|
-| 1 | Professional services campaign | Campaign | Professional services | February 15 | Marketer | Estimate: 40 of the campaign's 116 MQLs are new, a third above 20 a week, 6 weeks |
+| 1 | Professional services campaign | Campaign | Professional services | February 15 | Marketer | Estimate: 40 of its 116 MQLs are new |
 | 2 | Regional conference | SQLs | Professional services | March 9–11 | Marketer | Estimate: 30 MQLs, 10 demo requests a day, 3 days |
 | 3 | Manager view release (internal only) | Pipeline | All | February | Marketer | Estimate: 15 MQLs, helps calls more than leads |
 
 **Calendar:** January 29 first drafts, February 15 live, March 9–11 conference.
 
-**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10 (3 on site). Release 15. Channels 20 (1.5 days a week). Total 65, 60 available (13 weeks, 5 off). Result: bet 3 shrinks by 5.
+**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10 (3 on site). Release 15. Routine 13 (1 day a week). Interruptions 3 (2 hours a week). Total 61, 60 available (13 weeks, 5 off). Result: bet 3 shrinks by 1.
 
 **Not doing:** outbound for software companies.
+
+**Decision check (bet 1):** Constraint: too few relevant buyers. Why this: nothing reaches this segment. Evidence: [needed]. Test: minimum campaign first. Displaces: release scope.
 
 **Risks:** Campaign slips. Signal: no draft by January 29. Response: drop bet 3.
 
 **Assumptions and open questions**
 
-- Estimate: 90 SQLs / 26% = 346 MQLs, 86 above 260. The bets total 85, no margin.- Assumption: effects and day counts are illustrative.
+- Estimate: 90 SQLs / 26% = 346 MQLs, 86 above 260. The bets total 85, no margin.
+- Assumption: effects and day counts are illustrative.
 
 ## How to run it
 
@@ -1768,7 +1764,7 @@ Use this before any multi-channel campaign with one goal, one audience and one t
 - [[context-pack:goals-and-kpis]]: goals, budget, baselines, metric definitions.
 - [[context-pack:channels-and-tools]]: owned and paid channels, limits, approvers, typical approval times.
 
-The marketer supplies in the prompt: the campaign goal, time window and budget. Optional: an offer idea, available capacity, past campaign results.
+The marketer supplies in the prompt: the campaign goal, time window and budget. Optional: an offer idea, days available, and the result and lesson of the last similar campaign.
 
 ## Procedure
 
@@ -1778,11 +1774,12 @@ The marketer supplies in the prompt: the campaign goal, time window and budget. 
 4. Choose one pillar from messaging.md as the lead message: the first with Public proof that fits the segment's reason to buy (a starting rule). Attach proof from proof-points.md with its status. Use only Public proof in anything the public sees. If a proof item appears in messaging.md but not in proof-points.md, do not treat it as cleared, and ask about it in the last section.
 5. Choose channels from channels-and-tools.md only, unless the marketer adds one. Rank them by where the persona gets information. Give each one job: reach, conversion or follow-up. Drop any channel that breaks a limit in that file, and say why.
 6. List the assets each channel needs and the skill that produces each one, or [skill title needed] if it is not in your files. If capacity was given and the list exceeds it, cut the lowest-ranked channel first.
-7. Set targets using the metric definitions in goals-and-kpis.md. Work each one back from the quarter's goal and show the arithmetic as an estimate. With no share given, use the segment's share of customers (a starting rule). If no baseline exists, write [baseline needed].
+7. Set targets using the metric definitions in goals-and-kpis.md. Work each one back from the quarter's goal and show the arithmetic as an estimate. With no share given, use the segment's share of customers (a starting rule). If no baseline exists, write [baseline needed]. Give each target a read date: the date promised, or the window's end plus that stage's timing in goals-and-kpis.md.
 8. Build the timeline backward from the start date. Subtract each approver's typical time from channels-and-tools.md, then the production time. If production time is unknown, write [production time needed].
 9. If the budget is blank, write [budget needed]. Flag any line that crosses an approval limit in channels-and-tools.md.
-10. Check the draft against the context pack: segment, words to avoid, proof status, internal-only numbers, channel limits, approvers. Fix what contradicts it.
-11. List everything assumed, estimated, inferred or unknown in the last section, using those labels.
+10. Write the decision check from the office manual. State which lesson this brief applies.
+11. Check the draft against the context pack: segment, words to avoid, proof status, internal-only numbers, channel limits, approvers. Fix what contradicts it.
+12. List everything assumed, estimated, inferred or unknown in the last section.
 
 ## Output format
 
@@ -1793,6 +1790,7 @@ Status: Draft
 Name: <short name>
 Goal: <one goal, with number and date>
 Window: <start date to end date>
+Lesson applied: <from which campaign, or "None yet">
 
 ## Audience
 Segment: <one>
@@ -1818,16 +1816,16 @@ Proof: <item, permission status>
 | Date | Milestone | Approver, if any |
 
 ## Targets
-| Metric | Baseline | Target | How worked out |
+| Metric | Baseline | Target | Read on | How worked out |
 
 ## Budget
 <Total, by line, and any approval needed>
 
+## Decision check
+<five lines, as the office manual sets out>
+
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -1838,19 +1836,18 @@ Proof: <item, permission status>
 - [ ] Does each channel appear in channels-and-tools.md and respect its limits?
 - [ ] Does each asset name a skill or a placeholder, an owner and a due date?
 - [ ] Do the dates leave room for each approver's typical time?
-- [ ] Is the budget the marketer's number or a visible placeholder?
 
 ## Example (fictional company)
 
 Status: Draft
 
-**Campaign summary.** Name: Defend the memo. Goal: 30 SQLs by March 31, 2027. Window: February 15 to March 31, 2027.
+**Campaign summary.** Name: Defend the memo. Goal: 30 SQLs by March 31, 2027. Window: February 15 to March 31, 2027. Lesson applied: None yet.
 
-**Audience.** Segment: professional services firms. Primary persona: head of learning and development, after a company-wide AI assistant rollout or a client complaint about poor reasoning. Secondary persona: managing partner. Excluded: fewer than 100 learners, wants a course library, wants scores on individuals for performance reviews.
+**Audience.** Segment: professional services firms. Primary persona: head of learning and development, after a company-wide AI assistant rollout or a client complaint about poor reasoning. Secondary persona: managing partner. Excluded: fewer than 100 learners, wants a course library.
 
 **Offer.** A guide to checking the reasoning in client memos, then a demo of CogniATion Coach.
 
-**Message.** Lead pillar: you can see reasoning improve. Line: show that training changed how people reason, not only that they finished it. Proof: Brightmere Advisory's 22% result on client memo reasoning, Public.
+**Message.** Lead pillar: you can see reasoning improve. Line: show that training changed how people reason. Proof: Brightmere Advisory's 22% result on client memo reasoning, Public.
 
 | Channel | Job | Why this one |
 |---|---|---|
@@ -1862,17 +1859,17 @@ Status: Draft
 
 **Timeline.** February 15: campaign live, the date in goals-and-kpis.md.
 
-**Targets.** SQLs: baseline [needed]. Target 30, a third of the 90 goal. MQLs: baseline 260 for all campaigns. Target 116.
+**Targets.** SQLs: baseline [needed]. Target 30, a third of the 90 goal, read March 31. MQLs: baseline 260 for all campaigns. Target 116, read March 31.
 
 **Budget.** [budget needed]. Any line over $5,000 goes to Marta Ilves, 3 days.
+
+**Decision check.** Constraint: too few relevant buyers. Why this: no campaign reaches this segment yet. Evidence: [needed]; under 58 MQLs at mid-window would disprove it. Test: page and email first. Displaces: a third blog post.
 
 **Assumptions and open questions**
 
 - Assumption: the marketer gave this campaign a third of the SQL goal.
-- Assumption: the guide does not exist yet, and February 8 leaves a week for it.
 - Estimate: 116 MQLs is 30 SQLs divided by the 26% MQL to SQL rate, rounded up.
 - Unknown: how much of the $70,000 quarter budget goes to this campaign?
-- Unknown: should the illustrative February 24 webinar and the March 9 to 11 conference join as channels?
 
 ## How to run it
 
@@ -2342,10 +2339,10 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, icp-and-segments, messaging, proof-points, goals-and-kpis, channels-and-tools]
-you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, and hours per item if you know them.
+you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, hours per item and the hours you have for content.
 also_for: [content plan, editorial calendar, what to publish, blog schedule, social schedule, posting schedule, content ideas, content for demand]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Produces a dated content calendar for a set period, with every item tied to a goal or campaign and checked against capacity and approval times.
 ---
 
@@ -2365,19 +2362,19 @@ Use this to turn goals and campaigns into a dated list of what gets published, w
 - [[context-pack:proof-points]]: which customers and numbers may appear in public.
 - [[context-pack:product]]: what may and may not be said about the roadmap.
 
-The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, hours per item.
+The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, hours per item and hours available, as the office manual counts capacity.
 
 ## Procedure
 
 1. Set the period from the request. If none is given, ask. Treat Monday to Friday as working days unless told otherwise.
 2. List the fixed dates: deadlines from goals-and-kpis.md, dated priorities, and anything the marketer supplied. Give each goal in the period a one-letter tag (A, B).
-3. Count the slots. For each channel in channels-and-tools.md, multiply its stated cadence by the length of the period. Do not add slots beyond the cadence unless the marketer asks. If a channel has no stated cadence, write [cadence needed], leave that channel out of the calendar and ask in the last section.
-4. Fill the slots in this order. First, items tied to a fixed date, published at least two working days before a hard deadline. Second, items supporting a campaign in the four weeks before its date. Third, remaining slots, rotated through the segments in priority order, with the top segment getting the most. The two-day and four-week windows are starting rules the marketer can change.
+3. Count the slots. For each channel in channels-and-tools.md, multiply its stated cadence by the length of the period, rounding up. That count is a ceiling, not a quota. Do not add slots beyond the cadence unless the marketer asks. If a channel has no stated cadence, write [cadence needed], leave that channel out of the calendar, except for fixed-date items, and ask in the last section.
+4. Fill the slots in this order. First, items tied to a fixed date, published at least two working days before a hard deadline. Second, items supporting a campaign in the four weeks before its date. Third, remaining slots that can serve a goal, rotated through the segments in priority order, with the top segment getting the most. Leave the rest empty. The two-day and four-week windows are starting rules the marketer can change.
 5. Give every item a goal tag. An item that serves no goal goes under "Cut or held", not on the calendar.
 6. Name the skill that produces each item. If no skill fits, write "no skill".
 7. Set the draft due date: publish date, minus the approver's typical time, minus one working day. A same-day approver counts as zero. Item types with no listed approver get [approver needed], and the draft due date is worked out as if the approver were same-day.
 8. Move to "Cut or held" any item that depends on a roadmap item not cleared in product.md, an internal-only fact, or a proof point with status pending, sales only, internal only or none. Give held items no public date.
-9. Run the capacity check. Count items per week and items needing design work, and compare them with the team in company.md. If the marketer gave hours per item, show the sum as an Estimate. If not, write [hours per item needed] and do not guess. If the load exceeds capacity, remove items from the bottom of the order in step 4 and list them under "Cut or held".
+9. Run the capacity check. Count items per week and items needing design work. Count an item already in a campaign or launch plan once. If the marketer gave hours per item and hours available, show both as Estimates. If not, write [hours per item needed] or [hours available needed], give the verdict "Not assessed" and do not guess. If the load exceeds the hours, remove items from the bottom of the order in step 4 and list them under "Cut or held".
 10. Check the draft against the context pack: every date, cadence, approver and title. Remove words to avoid, and fix anything that contradicts a file.
 11. List everything assumed, including publishing days you chose, under "Assumptions and open questions". If a needed context pack field is blank, leave a placeholder in square brackets and ask in the last section. Never invent.
 
@@ -2398,18 +2395,15 @@ Fixed dates: <dated items, up to 8, or "None">
 
 ## Capacity check
 Items per week: <count by week>
-Marketer: <hours estimate with method, or [hours per item needed]>
+Marketer: <hours needed and available with method, or the placeholder>
 Design: <items needing design against available days>
-Verdict: <fits, tight or over, in one sentence>
+Verdict: <fits, tight, over or Not assessed, in one sentence>
 
 ## Cut or held
 <each item with its reason in up to 15 words, or "None">
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -2419,7 +2413,7 @@ Verdict: <fits, tight or over, in one sentence>
 - [ ] Are hard deadlines met at least two working days early?
 - [ ] Is every draft due date worked out from the approver's typical time?
 - [ ] Are roadmap items and unapproved proof points off the calendar?
-- [ ] Does the capacity check give a verdict without made-up hours?
+- [ ] Is the verdict Not assessed whenever hours are unknown, with none made up?
 
 ## Example (fictional company)
 
@@ -2444,7 +2438,7 @@ Verdict: <fits, tight or over, in one sentence>
 
 **Capacity check**
 
-Items per week: six. Marketer: [hours per item needed]. Design: one page against about four designer days a month. Verdict: tight for one marketer.
+Items per week: six. Marketer: [hours per item needed]. Design: one page against about four designer days a month. Verdict: Not assessed until the hours are known.
 
 **Cut or held**
 
@@ -3708,7 +3702,7 @@ show_to: your product lead, and ask which promise in it the release could fail t
 
 ## When to use
 
-Use this for one release with a known scope and a planned date. Do not use it to enter a new segment or market or to bring a new product to market for the first time; use [Write a go-to-market plan](write-gtm-plan.md) instead. To check a finished plan and its assets before launch day, use [Review launch readiness](review-launch-readiness.md).
+Use this for one release with a known scope and a planned date. Do not use it to enter a new segment or market or to bring a new product to market for the first time; use [Write a go-to-market plan](write-gtm-plan.md) instead.
 
 ## Inputs
 
@@ -3724,7 +3718,7 @@ The marketer supplies: what the release does in plain words, who confirmed it, t
 
 ## Procedure
 
-1. Write down what ships, in at most 40 words, from the marketer's description only. If the scope is blank, ask before drafting. If the date or another field is blank, use a placeholder such as [launch date needed], count days back from launch day and ask in the last section. Never fill a gap with something plausible.
+1. Write down what ships, in at most 40 words, from the marketer's description only. If the scope is blank, ask before drafting. If the date or another field is blank, use a placeholder such as [launch date needed], count days back from launch day and ask in the last section.
 2. Set the launch tier with these rules, and stop at the first that fits:
    - Tier 1: the release changes who can buy, changes the price, adds a new product, or makes a new claim under a messaging pillar.
    - Tier 2: the release gives current customers or one persona a new capability, or fixes a known weak spot in product.md.
@@ -3737,11 +3731,12 @@ The marketer supplies: what the release does in plain words, who confirmed it, t
    - Tier 3: a mention in the next newsletter, and a release note as a "No skill, ad hoc output".
 6. Map proof to each message, using only items whose permission fits the channel. If no proof exists for this release, write a placeholder such as [customer quote needed]. Do not stretch older proof to cover it.
 7. Build the timeline backward from launch day, counting L minus working days: launch and after-launch tasks, sales briefed and sales material delivered before anything public, approvals using the typical times in channels-and-tools.md, then production and scope freeze. Plan no public mention before launch day unless product.md clears that roadmap item.
-8. Run the capacity check against company.md and the other dated priorities in goals-and-kpis.md. If it does not fit, cut or move assets from the end of the tier's list. Never shorten an approver's typical time. List every cut.
+8. Run the capacity check, as the office manual counts it, against company.md and the other dated priorities in goals-and-kpis.md. If effort or days are unknown, write Not assessed. If it does not fit, cut or move assets from the end of the tier's list. Never shorten an approver's typical time. List every cut.
 9. Set one or two launch measures from goals-and-kpis.md, with baselines and a date to read them. Leave targets without a basis as placeholders.
 10. Write what happens if the release slips: which assets hold, and who tells sales.
-11. Check the draft against the context pack: product limits, words to avoid, permission status, hard rules, roadmap rules. Fix anything that contradicts it.
-12. List everything assumed, estimated, inferred or unknown in the last section. Schedule [Review launch readiness](review-launch-readiness.md) on the timeline before the first public date.
+11. Write the decision check from the office manual.
+12. Check the draft against the context pack: product limits, words to avoid, permission status, hard rules, roadmap rules. Fix anything that contradicts it.
+13. List everything assumed, estimated, inferred or unknown in the last section. Schedule [Review launch readiness](review-launch-readiness.md) on the timeline before the first public date.
 
 ## Output format
 
@@ -3770,11 +3765,11 @@ What would change the tier: <one sentence>
 ## If the release slips
 <Max 40 words>
 
+## Decision check
+<five lines, as the office manual sets out>
+
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -3785,7 +3780,6 @@ What would change the tier: <one sentence>
 - [ ] Do the timeline dates allow each approver's typical time?
 - [ ] Is sales briefed before anything goes public?
 - [ ] Does the plan fit the team's capacity, with cuts listed?
-- [ ] Is a readiness review on the timeline?
 
 ## Example (fictional company)
 
@@ -3820,6 +3814,8 @@ What would change the tier: <one sentence>
 **Launch measures:** Website demo requests, baseline 58 in Q3 2026. Target: [needed]. Read on L+30.
 
 **If the release slips:** Hold public assets. Marketer tells Tom Ferrant.
+
+**Decision check:** Constraint: too little proof. Why this: managers can see progress. Evidence: [needed]. Test: tier 2, not tier 1. Displaces: social posts, after launch.
 
 **Assumptions and open questions**
 
@@ -4445,14 +4441,15 @@ The marketer pastes into the chat:
 - The output to review, in full.
 - The title of the skill it came from, and its checklist if not available.
 - Where it will appear: public, one-to-one sales or internal.
+- Any task evidence behind the draft: exports, notes, answers.
 
 ## Procedure
 
-1. Set the audience from the marketer's statement. If none was given, review it as public, the strictest case, and record that as an assumption.
+1. Set the audience from the marketer's statement. If none was given, review it as public and record that as an assumption.
 2. Find the quality checklist of the skill it came from. If it is not available, ask for it. If the marketer wants the review anyway, write "checklist not run" and do not improvise one.
 3. Go through the output line by line and list each factual claim, name, number, quote, price, date and competitor statement.
-4. Check each item against the context pack and mark it supported, contradicted or not found. Anything not found is a problem unless it is a visible placeholder. If a file needed for a check is blank, write "could not check" and ask. Never invent.
-5. Apply the permission check for the audience. Every customer name, number and quote must have a status in proof-points.md that allows this use. Every company number must have a status in company.md that allows it.
+4. Check each item against the context pack and any task evidence, and mark it supported, contradicted or not found. Show any conflict between the two. Anything not found is a problem unless it is a visible placeholder. If a file needed for a check is blank, write "could not check" and ask. Never invent.
+5. Apply the permission check for the audience. Task evidence grants no permission. Every customer name, number and quote must have a status in proof-points.md that allows this use. Every company number must have a status in company.md that allows it.
 6. Check the product limits in product.md, the competitor sources in competitors.md, and the hard rules in channels-and-tools.md.
 7. For public copy, check the words to avoid in messaging.md and the rules in brand-voice.md.
 8. Run the checklist of the skill it came from. Answer each question yes or no, with the line or fact that shows it.
@@ -4461,7 +4458,7 @@ The marketer pastes into the chat:
 11. Name the single weakest idea in the draft, the one a senior marketer would push on first. Ask it as a question for the marketer, and say why. It does not change the verdict.
 12. List the approvers from channels-and-tools.md that this output needs.
 13. Say what to change in each problem row, in one line. Do not rewrite the output unless the marketer asks.
-14. List every assumption, estimate, inference and unknown in the last section, including anything you could not check.
+14. List every assumption, estimate, inference and unknown in the last section.
 
 ## Output format
 
@@ -4496,7 +4493,7 @@ Weakest idea: <the single weakest idea, and why, as a question for the marketer.
 
 ## Quality checklist
 
-- [ ] Was every claim, name, number and quote checked, not just the obvious ones?
+- [ ] Was every claim, name, number and quote checked?
 - [ ] Was the permission check run for the stated audience?
 - [ ] Does each problem name the context pack file behind it?
 - [ ] Do the verdict and the problem sorting follow the rules?
@@ -4544,7 +4541,7 @@ Weakest idea: why would a head of learning care that you beat Arguvia, when the 
 
 **Assumptions and open questions**
 
-- Assumption: the skill it came from is [Write ad variations](../paid-demand-gen/write-ad-variations.md). One checklist question is shown, condensed for length.
+- Assumption: the skill it came from is [Write ad variations](../paid-demand-gen/write-ad-variations.md).
 - Inference: "64 customer companies" is publishable, from company.md, as of September 30, 2026.
 - Unknown: What character limits apply?
 
@@ -4706,6 +4703,143 @@ Task: <which channels, and any limits a tool puts on values>.
 ```
 
 
+===== FILE: skills/marketing-ops/update-context-pack.md =====
+
+---
+title: Update the context pack
+type: skill
+function: marketing-ops
+owner: marketing-operations-manager
+reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
+you_bring: Your notes, such as a sales call, a customer email or a price change, with the date and who said it.
+also_for: [update my context pack, a fact changed, new proof point, new objection, add this to the pack, record this, keep the pack current, customer said yes, price changed]
+version: 0.1.0
+updated: 2026-11-02
+summary: Turns pasted notes into the exact changes to make in your context pack, showing only what changes and never marking anything approved on its own.
+---
+
+**Draft only.** The model does not know your market. It produces a draft, plan, analysis or review, and you decide what to use.
+
+## When to use
+
+Use this when a note, call or email changes a fact your skills rely on. Do not use it to fill a blank pack from scratch; use [Fill the context pack](../../guides/fill-the-context-pack.md) instead. To find what has gone stale without new notes, run the monthly check in [Maintain and update](../../guides/maintain-and-update.md).
+
+## Inputs
+
+- [[context-pack:company]]: company facts, and which numbers may be used where.
+- [[context-pack:product]]: what it does and is not, prices, roadmap limits.
+- [[context-pack:icp-and-segments]]: segments, fit and disqualifiers.
+- [[context-pack:personas]]: buyers, their problems and objections.
+- [[context-pack:messaging]]: claims, pillars and words to avoid.
+- [[context-pack:competitors]]: competitor facts, with sources and dates.
+- [[context-pack:proof-points]]: customers, numbers and quotes, with permission status.
+- [[context-pack:brand-voice]]: voice rules.
+- [[context-pack:goals-and-kpis]]: goals, baselines and definitions.
+- [[context-pack:channels-and-tools]]: channels, tools, limits and approvers.
+
+The marketer pastes into the chat:
+
+- The notes, with the date and who said each thing.
+- Any permission a customer or the CEO has given, in their words if possible.
+
+## Procedure
+
+1. Read the notes and list each separate fact they state. If a note has no date or no source, write [date needed] or [source needed] for it and ask in the last section.
+2. Sort each fact. A company fact goes on in step 3. A task, deadline or decision goes under "Not added", with the workboard named as its place. An opinion from one person stays an opinion: record it with its source, or mark it "(founder belief)" if a founder said it about buyers, the market, competitors or results.
+3. Find the section and field each fact belongs in, using the templates' field names. If no field fits, put it under "Not added" and say why.
+4. Compare the fact with the current answer in that field. Mark it new, changed or the same. Drop anything that is the same.
+5. A newer fact from the person who owns it, such as a price from whoever approves pricing, is a change. Name that person as the source. For any other contradiction, do not choose. Put both under "Conflicts to settle", with a question and your recommendation.
+6. Set permission only from what the notes say. A customer's written yes, with its date, can move an item to the status they agreed to. A verbal yes is "pending" until it is in writing. No word on permission means "none". Being pleased, being quoted in sales notes, or appearing in an export is not permission.
+7. Do not change a goal, target, MQL or SQL definition, or budget. Put each one under "Conflicts to settle" as a decision for the marketer, since these belong to the marketer and whoever approves them.
+8. Write each change as it should read in the file: section, field name, and the full new "Answer:" line, with its source and date. Keep the rest of the answer word for word. Do not reword what you are not changing.
+9. Do not return the whole context pack. A retyped pack can change facts without anyone noticing, so return only the changed fields.
+10. Name which skills read each changed section, up to 3, so the marketer knows what to run again.
+11. Check every change against the context pack once more: no new claim beyond the notes, no permission raised without a source, no field name altered.
+12. List every assumption, estimate, inference and unknown in the last section.
+
+## Output format
+
+```
+Status: Draft
+Notes from: <dates and sources, up to 20 words>
+
+## Changes to make
+| Section | Field | Now | Change to | Source and date | New or changed |
+<one row per field. "Now" up to 15 words; write "Blank" if empty>
+
+## Paste these lines
+<For each change: the section name, the field name and the full new "Answer:" line, in a code block.>
+Paste these into my-context-pack.md, save it, upload the new file and delete the old copy. This chat changes no file.
+
+## Conflicts to settle
+| Field | The pack says | The notes say | Question and recommendation |
+<one row per conflict or reserved decision, or "None". Question and recommendation up to 25 words.>
+
+## Not added
+- <item, reason, and where it belongs instead, up to 20 words each, or "None">
+
+## Skills to run again
+- <changed section: up to 3 skill titles, or "None">
+
+## Assumptions and open questions
+- Assumption: <what you took as true, and why>
+- Estimate: <the number, and how you worked it out>
+- Inference: <what you concluded, and from which inputs>
+- Unknown: <what you need from the marketer, as a question>
+```
+
+## Quality checklist
+
+- [ ] Does every change name its source and date?
+- [ ] Were only changed fields returned, with no retyped pack?
+- [ ] Is every permission status backed by what the notes say?
+- [ ] Are contradictions and reserved decisions left for the marketer?
+- [ ] Is one person's opinion recorded as an opinion, not a fact?
+- [ ] Do the field names match the templates exactly?
+
+## Example (fictional company)
+
+Status: Draft
+
+Notes from: Tom Ferrant, January 29, 2027; Haldane Ridge Capital email, February 2, 2027.
+
+Assumption: the notes below are invented for this example. Tom Ferrant said a managing partner asked about individual scores. He also thinks the price is too high. Haldane Ridge Capital's head of learning wrote that the firm's name may be used in sales material.
+
+**Changes to make**
+
+| Section | Field | Now | Change to | Source and date | New or changed |
+|---|---|---|---|---|---|
+| personas.md | Persona 3, objections | "Why not just tell people to check the AI's work?" | Add "Can I see how each associate scored?" | Tom Ferrant, January 29, 2027 | New |
+| proof-points.md | Customer 3, permission | Pending, requested October 2026 | Sales only | Haldane Ridge Capital email, February 2, 2027 | Changed |
+
+**Paste these lines**
+
+```
+personas.md, Persona 3, Objections
+Answer: "Why not just tell people to check the AI's work?"; "Can I see how each associate scored?" (Tom Ferrant, first call, January 29, 2027)
+```
+
+**Conflicts to settle:** None.
+
+**Not added**
+
+- Price is too high: one opinion. Keep the note, and watch for it in win-loss.
+
+**Skills to run again:** personas.md: Write a web page.
+
+**Assumptions and open questions**
+
+- Unknown: does Haldane Ridge Capital's yes cover a quote or a result as well as the name?
+
+## How to run it
+
+```
+Use the skill "Update the context pack". Read the context pack.
+Task: update it from these notes.
+<paste your notes here, with the date and who said each thing>
+```
+
+
 ===== FILE: skills/paid-demand-gen/adjust-paid-campaigns.md =====
 
 ---
@@ -4717,7 +4851,7 @@ reads: [messaging, goals-and-kpis, channels-and-tools]
 you_bring: An ad export for the four weeks ending seven days ago and for the last seven days, paid's budget and expected SQLs, and the paid plan's stop rules.
 also_for: [ads not working, cost per lead too high, should i pause this ad, paid search results, weekly ad review, wasting ad budget, cut ad spend, junk leads from ads]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Turns a pasted performance export into weekly keep, cut or change decisions for each campaign line.
 ---
 
@@ -4737,11 +4871,11 @@ The marketer supplies: a performance export with spend and conversions per line,
 
 ## Procedure
 
-1. Check the export: both date ranges, spend, conversions, and totals that match the lines. If a column is missing, ask for it. Judge lines on the rolling four weeks, leaving out the last seven days because leads take time to qualify. Use the last seven days only for rule 1 and pace.
+1. Check the export: both date ranges, spend, conversions, no repeated lines, and totals that match the lines. If something is missing or wrong, say what to export again. Judge lines on the rolling four weeks, leaving out the last seven days, or the MQL to SQL time in goals-and-kpis.md when judging on SQLs. Use the last seven days only for rule 1 and pace.
 2. Get the target cost. Use the target from the paid plan. If there is none, estimate: paid's own budget divided by the SQLs expected from paid is the cost per SQL, and that times the MQL to SQL rate is the cost per MQL. Show the arithmetic. If expected SQLs are unknown, write [expected SQLs needed] and apply only rules 1 and 6.
-3. Choose the conversion to judge. Use SQLs per line if the marketer pasted them, against the cost per SQL. Otherwise use MQLs, as goals-and-kpis.md defines them. If only ad-tool conversions are available, use those, labeled lower confidence.
+3. Choose the conversion to judge. Use SQLs per line if pasted, against the cost per SQL. Otherwise use MQLs, as goals-and-kpis.md defines them. Ad-tool conversions are not MQLs: judge them only against a plan target for that event, or with evidence of how many become MQLs. Without either, write [target for this conversion needed], apply only rules 1 and 6, and report tracking and spend.
 4. Compute for each line: spend, conversions and cost per conversion. Use only the marketer's numbers.
-5. Decide for each line, using the first rule below that matches. If the paid plan has its own stop rules, its numbers replace these multiples. These numbers and time windows are starting rules the marketer can change, not benchmarks.
+5. Decide for each line, using the first rule below that matches. If the paid plan has its own stop rules, its numbers replace these multiples. These numbers and windows are starting rules, not benchmarks.
 
    | Rule | Condition | Decision |
    |---|---|---|
@@ -4752,18 +4886,18 @@ The marketer supplies: a performance export with spend and conversions per line,
    | 5 | Cost per conversion at or below the target | Keep |
    | 6 | Anything else | Keep: watch next week |
 
-6. For each change, name one thing: audience, search terms, ad copy, destination page or bid. Pick the likely cause from the export. If the export cannot show it, pick ad copy and label that as an assumption. Do not change a line changed in the last two weeks unless rule 3 applies.
+6. For each change, name one thing: audience, search terms, ad copy, destination page, bid, or tracking under rule 1. Pick the likely cause from the export. If the export cannot show it, propose the cheapest to test, and label that an assumption. Do not change a line changed in the last two weeks unless rule 3 applies.
 7. Move cut money to the Keep line with the lowest cost per conversion, up to its plan limit. Otherwise report it as unspent. Keep totals within the monthly budget in channels-and-tools.md, and flag anything needing approval.
 8. Compare spend to date with the monthly budget per channel and say whether it is on pace, over or under.
 9. Write the steps the marketer takes in the ad tool, in order. Say nothing as if it were already done.
-10. Check the decisions against the context pack: limits, forbidden ad types, words to avoid, budget, approval thresholds. Fix what contradicts it.
+10. Check the decisions against the context pack: limits, forbidden ad types, words to avoid, budget, approval thresholds.
 11. List everything assumed, estimated, inferred or unknown in the last section, using those labels.
 
 ## Output format
 
 ```
 Status: Draft
-Window judged: <dates> | Judged on: <SQLs, MQLs or ad-tool conversions>
+Window judged: <dates, and the gap left out> | Judged on: <SQLs, MQLs or ad-tool conversions>
 
 ## Decisions this week
 | Line | Spend | Conversions | Cost per conversion | Decision | Rule | Reason, up to 15 words |
@@ -4777,10 +4911,7 @@ Pace: <channel, spend to date, monthly budget, on pace or over or under>
 Approval needed: <approver, or "None">
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -4788,7 +4919,7 @@ Approval needed: <approver, or "None">
 - [ ] Does every line in the export have exactly one decision and the rule behind it?
 - [ ] Were lines judged on the rolling four weeks, and on SQLs when pasted?
 - [ ] Do all the numbers trace back to the pasted export or show their arithmetic?
-- [ ] Is the target cost from the paid plan, or labeled as an estimate?
+- [ ] Is the target cost from the paid plan or a labeled estimate, for the same conversion judged?
 - [ ] Is each change limited to one thing per line?
 - [ ] Do lines with too little data stay at Keep instead of being judged?
 - [ ] Do the totals stay inside the monthly budget, with approvals flagged?
@@ -4814,13 +4945,12 @@ Window judged: December 21 to January 17, leaving out January 18 to 24. Judged o
 | Social, heads of learning | Audience | Limit to professional services firms | Cost per MQL under $351 |
 | Search, general terms | Pause | Pause the line | No further spend |
 
-**Budget.** Moved: about $205 a week from general terms to critical thinking terms. Pace, last seven days: search at $1,150 against $5,000 a month, on pace. Social at $900 against $4,000 a month, on pace. Approval needed: None.
+**Budget.** Moved: about $205 a week from general terms to critical thinking terms. Pace, last seven days: search $1,150 of $5,000 a month, social $900 of $4,000, both on pace. Approval needed: None.
 
 **Assumptions and open questions**
 
 - Assumption: the export figures and the 30 SQLs expected from paid are invented. No SQLs were pasted, so conversions are MQLs.
 - Estimate: $234 is paid's $27,000 for the quarter divided by 30 SQLs, times the 26% MQL to SQL rate. $702 is three times that, $351 is 1.5 times.
-- Unknown: can you paste SQLs per line from the CRM?
 
 ## How to run it
 

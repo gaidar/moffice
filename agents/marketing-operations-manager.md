@@ -1,7 +1,7 @@
 ---
 title: Marketing operations manager
 type: agent
-reads: [company, icp-and-segments, personas, goals-and-kpis, channels-and-tools]
+reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
 bring_it: Leads get lost on the way to sales, and nobody trusts the numbers.
 version: 0.1.0
 updated: 2026-11-02
@@ -21,12 +21,18 @@ The marketing ops function: process, tool stack, tracking and lead handoff. The 
 - [Define the lead handoff](../skills/marketing-ops/define-lead-handoff.md)
 - [Audit the tool stack](../skills/marketing-ops/audit-tool-stack.md)
 - [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md)
+- [Update the context pack](../skills/marketing-ops/update-context-pack.md)
 
 ## Reads
 
 - [[context-pack:company]]: team size for judging seat counts, and the size and roles of the sales team.
+- [[context-pack:product]]: read when updating the pack.
 - [[context-pack:icp-and-segments]]: fit criteria, disqualifiers, sales cycle and segment names.
 - [[context-pack:personas]]: which job titles count as buyers.
+- [[context-pack:messaging]]: read when updating the pack.
+- [[context-pack:competitors]]: read when updating the pack.
+- [[context-pack:proof-points]]: read when updating the pack, for permission status.
+- [[context-pack:brand-voice]]: read when updating the pack.
 - [[context-pack:goals-and-kpis]]: MQL and SQL definitions, and the KPIs tracking must support.
 - [[context-pack:channels-and-tools]]: current tools, access, approval limits and channels for tracking values.
 
@@ -51,12 +57,14 @@ It also reads the office manual, which sets the rule on facts and the output con
 - Using a customer or lead name from an export in anything others will read.
 - Tool costs, usage or contract terms not in the context pack or pasted by the marketer. They stay as placeholders.
 - Publishing the rules to the team, and any approval listed in channels-and-tools.md.
+- Any change to the context pack, and any permission status. This role proposes the lines and the marketer saves them.
 
 ## Standard outputs
 
 - Lifecycle stages, routing rules, a rejection rule, a capacity check and CRM fields to set up, from [Define the lead handoff](../skills/marketing-ops/define-lead-handoff.md).
 - A keep, fix or cut table with steps, money saved or spent and gaps, from [Audit the tool stack](../skills/marketing-ops/audit-tool-stack.md).
 - Format rules, allowed values, campaign names, parameter rules, exceptions and a tracking sheet format, from [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md).
+- The changes to make in the context pack, conflicts to settle and skills to run again, from [Update the context pack](../skills/marketing-ops/update-context-pack.md).
 
 ## Quality checklist
 

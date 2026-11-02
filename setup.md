@@ -17,4 +17,4 @@ diagram_caption: "Every guide covers both paths. Use the project path if your pl
 {% endif -%}
 {%- endfor %}
 
-Try the [10-minute version](try.md) first if you have not. Each guide also lists the vendor help pages it was checked against, with the date, and marks anything it could not verify.
+Try the [10-minute version](try.md) first if you want to see a result before you set anything up. Each guide also lists the vendor help pages it was checked against, with the date, and marks anything it could not verify.

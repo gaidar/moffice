@@ -17,7 +17,7 @@ show_to: your product lead, and ask which promise in it the release could fail t
 
 ## When to use
 
-Use this for one release with a known scope and a planned date. Do not use it to enter a new segment or market or to bring a new product to market for the first time; use [Write a go-to-market plan](write-gtm-plan.md) instead. To check a finished plan and its assets before launch day, use [Review launch readiness](review-launch-readiness.md).
+Use this for one release with a known scope and a planned date. Do not use it to enter a new segment or market or to bring a new product to market for the first time; use [Write a go-to-market plan](write-gtm-plan.md) instead.
 
 ## Inputs
 
@@ -33,7 +33,7 @@ The marketer supplies: what the release does in plain words, who confirmed it, t
 
 ## Procedure
 
-1. Write down what ships, in at most 40 words, from the marketer's description only. If the scope is blank, ask before drafting. If the date or another field is blank, use a placeholder such as [launch date needed], count days back from launch day and ask in the last section. Never fill a gap with something plausible.
+1. Write down what ships, in at most 40 words, from the marketer's description only. If the scope is blank, ask before drafting. If the date or another field is blank, use a placeholder such as [launch date needed], count days back from launch day and ask in the last section.
 2. Set the launch tier with these rules, and stop at the first that fits:
    - Tier 1: the release changes who can buy, changes the price, adds a new product, or makes a new claim under a messaging pillar.
    - Tier 2: the release gives current customers or one persona a new capability, or fixes a known weak spot in product.md.
@@ -46,11 +46,12 @@ The marketer supplies: what the release does in plain words, who confirmed it, t
    - Tier 3: a mention in the next newsletter, and a release note as a "No skill, ad hoc output".
 6. Map proof to each message, using only items whose permission fits the channel. If no proof exists for this release, write a placeholder such as [customer quote needed]. Do not stretch older proof to cover it.
 7. Build the timeline backward from launch day, counting L minus working days: launch and after-launch tasks, sales briefed and sales material delivered before anything public, approvals using the typical times in channels-and-tools.md, then production and scope freeze. Plan no public mention before launch day unless product.md clears that roadmap item.
-8. Run the capacity check against company.md and the other dated priorities in goals-and-kpis.md. If it does not fit, cut or move assets from the end of the tier's list. Never shorten an approver's typical time. List every cut.
+8. Run the capacity check, as the office manual counts it, against company.md and the other dated priorities in goals-and-kpis.md. If effort or days are unknown, write Not assessed. If it does not fit, cut or move assets from the end of the tier's list. Never shorten an approver's typical time. List every cut.
 9. Set one or two launch measures from goals-and-kpis.md, with baselines and a date to read them. Leave targets without a basis as placeholders.
 10. Write what happens if the release slips: which assets hold, and who tells sales.
-11. Check the draft against the context pack: product limits, words to avoid, permission status, hard rules, roadmap rules. Fix anything that contradicts it.
-12. List everything assumed, estimated, inferred or unknown in the last section. Schedule [Review launch readiness](review-launch-readiness.md) on the timeline before the first public date.
+11. Write the decision check from the office manual.
+12. Check the draft against the context pack: product limits, words to avoid, permission status, hard rules, roadmap rules. Fix anything that contradicts it.
+13. List everything assumed, estimated, inferred or unknown in the last section. Schedule [Review launch readiness](review-launch-readiness.md) on the timeline before the first public date.
 
 ## Output format
 
@@ -79,11 +80,11 @@ What would change the tier: <one sentence>
 ## If the release slips
 <Max 40 words>
 
+## Decision check
+<five lines, as the office manual sets out>
+
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -94,7 +95,6 @@ What would change the tier: <one sentence>
 - [ ] Do the timeline dates allow each approver's typical time?
 - [ ] Is sales briefed before anything goes public?
 - [ ] Does the plan fit the team's capacity, with cuts listed?
-- [ ] Is a readiness review on the timeline?
 
 ## Example (fictional company)
 
@@ -129,6 +129,8 @@ What would change the tier: <one sentence>
 **Launch measures:** Website demo requests, baseline 58 in Q3 2026. Target: [needed]. Read on L+30.
 
 **If the release slips:** Hold public assets. Marketer tells Tom Ferrant.
+
+**Decision check:** Constraint: too little proof. Why this: managers can see progress. Evidence: [needed]. Test: tier 2, not tier 1. Displaces: social posts, after launch.
 
 **Assumptions and open questions**
 

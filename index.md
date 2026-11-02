@@ -1,12 +1,12 @@
 ---
 layout: home
 title: Home
-heading: Run a tech company's marketing alone
+heading: Run B2B marketing alone with the AI you already pay for
 type: index
 version: 0.1.0
 updated: 2026-11-02
-summary: With the AI subscription you already pay for. Give it your company's facts once, then ask for a one-pager, a campaign brief or this week's priorities. Each comes back as a draft in a set format, built to use only your facts, with every gap listed as a question. You decide what to use.
-scope_note: Written for sales-led B2B companies. A spreadsheet counts as a CRM, and if a founder still sells, with few or no customers, there is a route for that. Product-led motions are not covered.
+summary: A free library of written marketing procedures and company-fact templates. Load them into your AI tool, start with the job you need to finish, and ask for a one-pager, a campaign brief or this week's priorities. You provide the facts, make the decisions and publish through your own tools.
+scope_note: Built for sales-led B2B tech companies. It covers getting and converting new business, with sales support. Retention, expansion, pricing and product-led growth are outside the current library. A spreadsheet counts as a CRM, and if a founder still sells, with few or no customers, there is a route for that.
 ---
 
 ## What you get
@@ -27,19 +27,21 @@ Three things to notice. The numbers come from your context pack, with their perm
 
 ## How to begin
 
-1. **Try it.** Use a sample company in any AI chat. [10 minutes]({{ '/try.html' | relative_url }}).
-2. **Give it your facts.** [One file]({{ '/guides/fill-the-context-pack.html' | relative_url }}), from your documents or from a conversation with the founders. Blanks are fine.
-3. **Set up your AI tool**, then ask for your first draft: [Claude]({{ '/guides/setup-claude.html' | relative_url }}), [ChatGPT and Codex]({{ '/guides/setup-chatgpt-codex.html' | relative_url }}), [Grok]({{ '/guides/setup-grok.html' | relative_url }}) or [Google Gemini]({{ '/guides/setup-google.html' | relative_url }}).
+1. **Name the job you need to finish.** A sales asset, a campaign or this week's priorities.
+2. **Give it the facts that job needs.** [One file]({{ '/guides/fill-the-context-pack.html' | relative_url }}), from your answers, your documents or a conversation with the founders. Blanks are fine.
+3. **Set up your AI tool**, then ask for it: [Claude]({{ '/guides/setup-claude.html' | relative_url }}), [ChatGPT and Codex]({{ '/guides/setup-chatgpt-codex.html' | relative_url }}), [Grok]({{ '/guides/setup-grok.html' | relative_url }}) or [Google Gemini]({{ '/guides/setup-google.html' | relative_url }}).
 
-[Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through it. After that, it depends on where the company is:
+Want to see a result first? [Try a sample company]({{ '/try.html' | relative_url }}) in 10 minutes. [Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through it. After that, it depends on where the company is:
 
 | Where you are | What to run |
 |---|---|
 | A sales team exists, and you are new here | [First week]({{ '/playbooks/first-week.html' | relative_url }}) |
 | A founder still sells, with few or no customers | [Starting from zero]({{ '/playbooks/from-zero.html' | relative_url }}), the first 90 days, with what to skip |
-| The office is running | [Weekly]({{ '/playbooks/weekly.html' | relative_url }}) |
+| The office is running | [Run my week]({{ '/run-my-week.html' | relative_url }}) |
 
 ## How the office works
+
+Choose a job, provide the facts it needs, draft and review, publish in your own tools, then record the result and the next action.
 
 <figure><div class="scroll">{% include diagrams/office.svg %}</div><figcaption>Every output is a draft with its assumptions listed. Nothing goes out until you decide.</figcaption></figure>
 

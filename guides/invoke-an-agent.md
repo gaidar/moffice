@@ -35,19 +35,22 @@ Use a skill when you know exactly which output you want. Use an agent role when 
    Act as the demand generation manager from the Marketing Office. Follow your charter. Read the context pack. Today's task: we need 30 more sales-qualified leads from professional services firms this quarter. Propose a campaign.
    ```
 
-4. Read which skills it plans to run. If it plans something you do not want, say so before it starts.
+4. Read which skills it names. It starts straight away, so if it plans something you do not want, stop it and say so.
 5. Answer the questions that come back to you. Each one should come with a recommendation, or say what the role needs from you before it can make one.
-6. To hand off to another role, start a new chat and paste the output in:
+6. When a job crosses roles, stay in this chat. The role says who owns the next part, runs it under that charter and comes back. To steer it yourself:
 
    ```
-   Act as the content lead from the Marketing Office. Follow your charter. Read the context pack. Today's task: write the assets listed in this campaign brief. [paste the brief]
+   Act as the content lead from the Marketing Office. Follow your charter. Read the context pack. Today's task: write the assets listed in the campaign brief above.
    ```
 
-7. Before anything goes public, get a review:
+   Start a new chat only when this one gets long. Say `Close my session`, save what comes back in [your workboard](../office/my-workboard.md), then start the new chat with your workboard and `Start my session`.
+7. Before anything goes public, get a review in the same chat. A review is not approval, and the draft stays a draft until you decide:
 
    ```
-   Act as the marketing reviewer from the Marketing Office. Follow your charter. Read the context pack. Today's task: review this draft against the skill it came from, "Write a campaign brief". [paste the draft]
+   Act as the marketing reviewer from the Marketing Office. Follow your charter. Read the context pack. Today's task: review the draft above against the skill it came from, "Write a campaign brief". Then correct what you find and show the corrected draft. Mark nothing approved.
    ```
+
+   For a colder read of something that matters, paste the draft into a new chat. That chat has not seen how the draft was made.
 
 8. To start your week with no specific task in mind:
 
@@ -83,11 +86,11 @@ A skill would have returned a brief. The role chose the skills, named the handof
 
 ## What success looks like
 
-The role stays in its lane, names the skills it uses, returns outputs in each skill's format, and brings decisions back to you with a recommendation, or with the question it must answer first. When a task belongs to another role, it says which one.
+The role stays in its lane, names the skills it uses, returns outputs in each skill's format, or a short working view when a job runs several skills, and brings decisions back to you with a recommendation, or with the question it must answer first. When part of a task belongs to another role, it says which one and runs that part in the same chat.
 
 ## Troubleshooting
 
-- **The role does work that belongs to another role.** Say: "Check your charter's Owns section. Which role owns this?"
+- **The role does another role's work without saying so.** Say: "Which charter are you running this part under?"
 - **It makes a decision you wanted to make.** Point to the charter's Decides versus escalates section, and tell it to bring the decision back as a question.
-- **It forgets the role in a long chat.** Paste the invoke prompt again, or start a new chat and paste the latest output.
+- **It forgets the role in a long chat.** Paste the invoke prompt again, or say `Close my session` and resume in a new chat with `Start my session`.
 - **It says it has no charter.** Upload the charter file from the `agents/` folder, or paste its text from [GitHub](https://github.com/gaidar/moffice/tree/main/agents).

@@ -1,8 +1,5 @@
-- { label: Try it, url: /try.html }
 - { label: Start here, url: /guides/start-here.html }
-- { label: Setup, url: /setup.html }
-- { label: Context pack, url: /context-pack.html, section: context-pack/ }
-- { label: Skills, url: /skills.html, section: skills/ }
-- { label: Agents, url: /agents.html, section: agents/ }
-- { label: Playbooks, url: /playbooks.html, section: playbooks/ }
+- { label: Try it, url: /try.html }
+- { label: Find a task, url: /skills.html, section: skills/ }
+- { label: Run my week, url: /run-my-week.html, section: playbooks/ }
 - { label: FAQ, url: /guides/faq.html }

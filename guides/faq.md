@@ -42,6 +42,8 @@ summary: Short answers on cost, AI tools, limits, data and what the office does 
 
 **Will it publish or send anything?** No. It writes drafts. You publish and send.
 
+**Does it cover retention, expansion or pricing?** No. It covers getting and converting new business, so no skill sets a price or runs a renewal or upsell program. If you ask anyway, it says no skill covers the job and labels the result as ad hoc.
+
 **Does it browse the web for competitor news or search volumes?** Skills do not assume it can. You paste the data in, or the skill labels it unknown. If your tool can browse, you may ask it to, and you should check the sources it gives.
 
 ## Data and trust
@@ -50,7 +52,7 @@ summary: Short answers on cost, AI tools, limits, data and what the office does 
 
 **Can I trust the output?** Treat it as a draft from a capable new hire who has read your files. Skills check drafts against the context pack and list their assumptions, but models still make errors. Run the Quality checklist, and use the marketing reviewer for anything public.
 
-**What stops it from making up customers or numbers?** Rules in the office manual and in each skill: use only the context pack, use proof points only with the right permission status, ask when something is blank. These rules lower the risk but do not remove it. Check names, numbers and quotes yourself.
+**What stops it from making up customers or numbers?** Rules in the office manual and in each skill: use only the context pack and what you supply, use proof points only with the right permission status, ask when something is blank. These rules lower the risk but do not remove it. Check names, numbers and quotes yourself.
 
 **Are the example companies real?** No. CogniATion, CogniATion Coach, Arguvia, Elenchly and the customers in the examples are invented. Their names were searched on the web, and no exact match turned up, though a search cannot prove a name is unused.
 

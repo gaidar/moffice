@@ -1,5 +1,5 @@
 {%- assign repo = site.repository -%}
-{%- assign raw_url = "https://raw.githubusercontent.com/" | append: repo | append: "/main/" | append: page.path -%}
+{%- assign raw_url = "https://raw.githubusercontent.com/" | append: repo | append: "/v" | append: site.office_version | append: "/" | append: page.path -%}
 {%- assign blob_url = "https://github.com/" | append: repo | append: "/blob/main/" | append: page.path -%}
 {%- comment -%}PDFs exist only for the procedures people read: playbooks and guides, except the FAQ.{%- endcomment -%}
 {%- assign has_pdf = false -%}
@@ -12,9 +12,9 @@
   {%- if page.type == "skill" -%}
     <a class="btn" href="#example-fictional-company">See example</a>
   {%- endif -%}
-  <button type="button" class="btn quiet office-copy" data-raw-url="{{ raw_url }}">Copy text</button>
+  <button type="button" class="btn quiet office-copy" data-raw-url="{{ raw_url }}">Copy full text</button>
   <a class="btn quiet" href="{{ blob_url }}">Open on GitHub</a>
-  <a class="btn quiet" href="{{ raw_url }}">Raw file</a>
+  <a class="btn quiet office-download" href="{{ raw_url }}">Download file</a>
   {%- if has_pdf -%}
     {%- assign pdf_path = "/pdf/" | append: page.path | replace: ".md", ".pdf" | relative_url -%}
     <a class="btn quiet" href="{{ pdf_path }}" download>Download PDF</a>

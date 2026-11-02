@@ -38,7 +38,7 @@ The marketer pastes:
 1. Set the total. Take the budget from goals-and-kpis.md or the prompt. If it is blank, ask for it and stop. If the marketer has not said what the budget covers, assume program spend only, and record that.
 2. Place committed lines first. A line is committed if a contract or deposit exists, or if it is existing paid spend carried at its current rate for the period. Mark committed spend that could still be stopped as "Stoppable".
 3. Remove anything barred. Apply the limits and hard rules in channels-and-tools.md. Any ad line needing tracking that is not in place gets the note "no spend until tracking is live", and its money stays in the reserve.
-4. Set aside a reserve of 10% of the total. This and the 10% and 40% caps in step 6 are starting rules the marketer can change, not benchmarks.
+4. Set aside a reserve of 10% of the total. This and the 10% and 40% caps in step 6 are starting rules, not benchmarks.
 5. Rate the remaining candidate lines. "Dated" means a goal or event in goals-and-kpis.md depends on it. "Proven" means pasted results show pipeline from it. "Untested" means neither.
 6. Fund in this order: Dated lines, then Proven lines from highest pipeline per dollar, then Untested lines, capped together at 10% of the total. Cap any line at 40% of the total. Flag a signed contract above that. Break ties toward the higher segment in the priority order. Do not use outside benchmarks to rank channels.
 
@@ -48,8 +48,9 @@ The marketer pastes:
 8. Check the arithmetic. Lines plus reserve must equal the total exactly, and shares must add up to 100%. If an amount is left, add it to the reserve. If you are over, cut in the cut order.
 9. Write the cut order. Cut the reserve first, then Untested and Hypothesis lines, then Proven lines, then Stoppable lines, then Dated lines, then Committed lines. Within a group, cut the lowest pipeline per dollar first, or the smallest line if there are no results. Say what each cut gives up, and show what happens at 10% and 25% less budget.
 10. Flag approvals: the approver and lead time for each line above the threshold in channels-and-tools.md.
-11. Check the draft against the context pack: total matches the budget, hard rules respected, every dated commitment funded or flagged as unfunded.
-12. List everything you assumed or estimated in the last section, including every holding amount.
+11. Write the decision check from the office manual for the largest line you could still move.
+12. Check the draft against the context pack: total matches the budget, hard rules respected, every dated commitment funded or flagged as unfunded.
+13. List everything you assumed or estimated in the last section, including every holding amount.
 
 ## Output format
 
@@ -73,11 +74,11 @@ Total: <amount> | Covers: <what the budget includes, up to 20 words>
 ## Not funded
 - <item and reason, up to 20 words each, or "None">
 
+## Decision check
+<five lines, as the office manual sets out>
+
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -85,8 +86,6 @@ Total: <amount> | Covers: <what the budget includes, up to 20 words>
 - [ ] Do the lines and the reserve add up to the exact total?
 - [ ] Does every line have a rating and a rationale tied to a goal, pasted results or, for Hypothesis, personas.md?
 - [ ] Is every line at or under 40% of the total, or flagged?
-- [ ] Are holding amounts labeled as estimates, with the method shown?
-- [ ] Does every line respect the limits and hard rules in the context pack?
 - [ ] Is every dated commitment funded, or flagged as unfunded?
 - [ ] Does the cut plan add up at both 10% and 25% less?
 - [ ] Is each line above the approval threshold flagged with its approver?
@@ -119,6 +118,8 @@ Total: <amount> | Covers: <what the budget includes, up to 20 words>
 **Approvals needed:** All lines over $5,000: Marta Ilves, CEO, 3 days.
 
 **Not funded:** Display retargeting, barred by limits.
+
+**Decision check (campaign line):** Constraint: too few relevant buyers. Why this: a dated goal depends on it. Evidence: [past results needed]. Test: minimum campaign first. Displaces: social ads.
 
 **Assumptions and open questions**
 

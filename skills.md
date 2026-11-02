@@ -1,5 +1,5 @@
 ---
-title: Skills
+title: Find a task
 type: index
 version: 0.1.0
 updated: 2026-11-02
@@ -8,6 +8,7 @@ summary: Start from what you need to do. Each skill is a written procedure with 
 
 <input class="filter" type="search" placeholder="What do you need? For example new company, pipeline or website" aria-label="Filter skills and situations">
 <p class="filter-empty" hidden>Nothing matches. Try one word, such as leads or pipeline, or just describe the job to your AI tool.</p>
+<p class="filter-empty filter-partial" hidden>No row matches every word, so these match only some of them. Check that the row fits your job.</p>
 
 Once your project is set up, you do not have to find anything here. Say what you need, and the office picks the skill and tells you which one.
 
@@ -68,6 +69,7 @@ Once your project is set up, you do not have to find anything here. Say what you
 | We have a webinar or an event coming up | [Plan a webinar](skills/events-and-webinars/plan-webinar.md) | [Plan an event](skills/events-and-webinars/plan-event.md) |
 | We have news to announce | [Write a press release](skills/pr-and-comms/write-press-release.md) | [Write a media pitch](skills/pr-and-comms/write-media-pitch.md) |
 | A release is coming | [Launch playbook](playbooks/launch.md) | |
+| Turn this into a sales PDF, slides or another designed file | The office writes the words, not the file: [Write a design brief](skills/brand-and-design-briefs/write-design-brief.md) | [Write a sales deck](skills/product-marketing-and-sales-enablement/write-sales-deck.md) for an outline |
 | A partner wants to do something together | [Plan co-marketing with a partner](skills/partner-and-channel-marketing/plan-co-marketing.md) | [Build a partner kit](skills/partner-and-channel-marketing/build-partner-kit.md) |
 | Something went wrong in public | [Draft a holding statement](skills/pr-and-comms/draft-holding-statement.md) |  |
 
@@ -80,13 +82,16 @@ Once your project is set up, you do not have to find anything here. Say what you
 | What is happening | Start with | Then |
 |---|---|---|
 | I do not know what to do this week | [Set weekly priorities](skills/budget-and-planning/set-weekly-priorities.md) |  |
+| Resume my campaign, or pick up last week's work | [Continue my work](run-my-week.md#continue-my-work) | [Workboard](office/my-workboard.md) |
+| I have only two hours this week | [The starter routine](playbooks/weekly.md#if-you-only-have-two-hours) |  |
 | I have to plan next quarter, and have never done it | [Quarterly playbook](playbooks/quarterly.md) | [Write a quarterly plan](skills/budget-and-planning/write-quarterly-plan.md) |
 | The budget was cut, or I must split it | [Allocate the budget](skills/budget-and-planning/allocate-budget.md) |  |
 | The CEO wants a 90-day plan next week | [Plan for a new company](playbooks/from-zero.md#if-the-ceo-wants-a-plan-now) | [Write a quarterly plan](skills/budget-and-planning/write-quarterly-plan.md) |
 | I want to know what to stop doing | [Write a quarterly plan](skills/budget-and-planning/write-quarterly-plan.md) | [Evaluate a campaign](skills/analytics-and-campaign-evaluation/evaluate-campaign.md) |
-| The CEO asks how marketing is doing | [Write the monthly report](skills/analytics-and-campaign-evaluation/write-monthly-report.md) | [Read attribution](skills/analytics-and-campaign-evaluation/read-attribution.md) |
+| Prepare a CEO update, or the CEO asks how marketing is doing | [Write the monthly report](skills/analytics-and-campaign-evaluation/write-monthly-report.md) | [Read attribution](skills/analytics-and-campaign-evaluation/read-attribution.md) |
 | Did that campaign work? | [Evaluate a campaign](skills/analytics-and-campaign-evaluation/evaluate-campaign.md) |  |
 | I cannot tell if an output is any good | [Judge an output](guides/judge-an-output.md) | |
+| A fact changed, or I have notes from a call | [Update the context pack](skills/marketing-ops/update-context-pack.md) | |
 
 </div>
 

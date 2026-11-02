@@ -1,4 +1,4 @@
-// Page toolbar: Copy text fetches the raw markdown from GitHub and puts it on the clipboard.
+// Page toolbar: Copy full text fetches the raw markdown from GitHub and puts it on the clipboard.
 // If that fails, it opens the raw file so the reader can copy it by hand.
 (function () {
   function setStatus(button, message) {
@@ -24,6 +24,17 @@
     status.textContent = "";
     status.append(before + " ", link, " " + after);
     window.open(url, "_blank", "noopener");
+  }
+
+  // The clipboard is missing on insecure pages and can refuse a write, so failure must always show.
+  function copyText(text) {
+    if (!navigator.clipboard) return Promise.reject(new Error("No clipboard"));
+    return navigator.clipboard.writeText(text);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    if (node && selection) selection.selectAllChildren(node);
   }
 
   async function copyRaw(button) {
@@ -79,7 +90,7 @@
     });
   });
 
-  // On skill pages, fold the sections written for the model. The source and Copy text keep them.
+  // On skill pages, fold the sections written for the model. The source and Copy full text keep them.
   var inputs = document.querySelector(".doc-body.is-skill > #inputs");
   var checklist = document.querySelector(".doc-body.is-skill > #quality-checklist");
   if (inputs && checklist) {
@@ -107,8 +118,11 @@
       while (node && !node.querySelector("pre") && node.tagName !== "PRE") node = node.nextElementSibling;
       var code = node ? node.querySelector("code") || node : null;
       if (!code) return;
-      navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+      copyText(code.textContent.trim()).then(function () {
         setStatus(promptButton, "Prompt copied. Paste it into your AI tool.");
+      }).catch(function () {
+        selectText(document.querySelector(".prompt-preview code") || code);
+        setStatus(promptButton, "Could not copy. The prompt is selected, so press Ctrl or Cmd and C.");
       });
     });
   }
@@ -121,9 +135,13 @@
     button.textContent = "Copy";
     button.addEventListener("click", function () {
       var code = pre.querySelector("code");
-      navigator.clipboard.writeText((code || pre).textContent).then(function () {
+      copyText((code || pre).textContent).then(function () {
         button.textContent = "Copied";
         setTimeout(function () { button.textContent = "Copy"; }, 1500);
+      }).catch(function () {
+        selectText(code || pre);
+        button.textContent = "Press Ctrl or Cmd and C";
+        setTimeout(function () { button.textContent = "Copy"; }, 4000);
       });
     });
     pre.insertBefore(button, pre.firstChild);
@@ -161,8 +179,11 @@
       document.querySelectorAll(".skill-group").forEach(function (group) {
         group.hidden = !group.querySelector("tbody tr:not([hidden])");
       });
-      var empty = document.querySelector(".filter-empty");
+      var empty = document.querySelector(".filter-empty:not(.filter-partial)");
       if (empty) empty.hidden = shown !== 0;
+      // A partial match is not a full answer, so say so.
+      var partial = document.querySelector(".filter-partial");
+      if (partial) partial.hidden = strict || shown === 0 || words.length === 0;
     });
   }
 })();

@@ -454,7 +454,7 @@ summary: Runs the marketing cadence, sets priorities, reviews work against goals
 
 ## Mission
 
-Make sure one marketer spends limited time and money on the few things most likely to move the goals in goals-and-kpis.md. This role runs the weekly, monthly and quarterly cadence, says what to do and what to skip, and sends a request to the right agent role. It judges whether work serves a goal. The marketing reviewer judges whether a draft is accurate, and the marketing analyst judges results.
+Make sure one marketer spends limited time and money on the few things most likely to move the goals in goals-and-kpis.md. This role runs the weekly, monthly and quarterly cadence, says what to do and what to skip, and sends a request to the right agent role. It is the normal way in for a job that needs several skills: it runs them in order in one chat, under each owning role's charter, and pauses only for decisions on outcome, spending or approval. It judges whether work serves a goal. The marketing reviewer judges whether a draft is accurate, and the marketing analyst judges results.
 
 ## Owns
 
@@ -481,7 +481,7 @@ It also reads the office manual, which sets the cadence, the rule on facts and t
 
 - The ranking of candidates and the top three priorities it recommends for the week, using the rules in the skill.
 - What goes on the do-not-do list, and when to look at each item again.
-- Which agent role should take a request, and the order in which roles run.
+- Which agent role should take a request, and the order in which roles and skills run within a job.
 - Which bets to recommend for the quarter, and what to list as not doing.
 - The recommended budget split and cut order, stated as a recommendation with its rationale.
 
@@ -764,7 +764,7 @@ Act as the marketing analyst from the Marketing Office. Follow your charter. Rea
 ---
 title: Marketing operations manager
 type: agent
-reads: [company, icp-and-segments, personas, goals-and-kpis, channels-and-tools]
+reads: [company, product, icp-and-segments, personas, messaging, competitors, proof-points, brand-voice, goals-and-kpis, channels-and-tools]
 bring_it: Leads get lost on the way to sales, and nobody trusts the numbers.
 version: 0.1.0
 updated: 2026-11-02
@@ -784,12 +784,18 @@ The marketing ops function: process, tool stack, tracking and lead handoff. The 
 - [Define the lead handoff](../skills/marketing-ops/define-lead-handoff.md)
 - [Audit the tool stack](../skills/marketing-ops/audit-tool-stack.md)
 - [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md)
+- [Update the context pack](../skills/marketing-ops/update-context-pack.md)
 
 ## Reads
 
 - [[context-pack:company]]: team size for judging seat counts, and the size and roles of the sales team.
+- [[context-pack:product]]: read when updating the pack.
 - [[context-pack:icp-and-segments]]: fit criteria, disqualifiers, sales cycle and segment names.
 - [[context-pack:personas]]: which job titles count as buyers.
+- [[context-pack:messaging]]: read when updating the pack.
+- [[context-pack:competitors]]: read when updating the pack.
+- [[context-pack:proof-points]]: read when updating the pack, for permission status.
+- [[context-pack:brand-voice]]: read when updating the pack.
 - [[context-pack:goals-and-kpis]]: MQL and SQL definitions, and the KPIs tracking must support.
 - [[context-pack:channels-and-tools]]: current tools, access, approval limits and channels for tracking values.
 
@@ -814,12 +820,14 @@ It also reads the office manual, which sets the rule on facts and the output con
 - Using a customer or lead name from an export in anything others will read.
 - Tool costs, usage or contract terms not in the context pack or pasted by the marketer. They stay as placeholders.
 - Publishing the rules to the team, and any approval listed in channels-and-tools.md.
+- Any change to the context pack, and any permission status. This role proposes the lines and the marketer saves them.
 
 ## Standard outputs
 
 - Lifecycle stages, routing rules, a rejection rule, a capacity check and CRM fields to set up, from [Define the lead handoff](../skills/marketing-ops/define-lead-handoff.md).
 - A keep, fix or cut table with steps, money saved or spent and gaps, from [Audit the tool stack](../skills/marketing-ops/audit-tool-stack.md).
 - Format rules, allowed values, campaign names, parameter rules, exceptions and a tracking sheet format, from [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md).
+- The changes to make in the context pack, conflicts to settle and skills to run again, from [Update the context pack](../skills/marketing-ops/update-context-pack.md).
 
 ## Quality checklist
 
@@ -1516,11 +1524,25 @@ diagram: campaign
 diagram_caption: "The full sequence below falls into these six stages."
 ---
 
-Start with the minimum campaign, and use the full sequence only for a major campaign. You decide what runs and when to stop it. One person runs one launch or one major campaign at a time, and a minimum campaign can run beside one.
+Start with the minimum campaign, and use the full sequence only for a major campaign. You decide what runs and when to stop it. One person runs one launch or one major campaign at a time. A minimum campaign can run beside one only if the combined work fits [the capacity rule](weekly.md#total-time-and-what-to-drop).
 
 ## Minimum campaign
 
-Use this for one segment and one offer, with no paid, event or partner. It takes about 3 hours before launch, a rough estimate.
+Use this for one segment and one offer, with no paid, event or partner. Drafting takes about 3 hours before launch. Publishing and testing in your own tools take about 1 hour more, or longer if the page has to be built. These are rough estimates.
+
+**You bring:** the segment, an offer that already exists, a goal with a date, a start date, any budget, the lesson from your last similar campaign, and what sales agreed: who takes these leads, how fast and what counts as qualified. **You get:** a brief, a landing page, an email and a lead follow-up, each reviewed, and a [publishing handoff](#publishing-handoff). **Done means:** all three are approved and live, a test lead has reached sales, the live proof is recorded, and the evaluation has a date.
+
+Paste this into a new chat in your project to run steps 1 to 4 and the review in one chat. You still do step 5 yourself.
+
+```
+Act as the head of marketing from the Marketing Office. Follow your charter. Read the context pack. Today's task: run the minimum campaign from the campaign lifecycle playbook, in this chat.
+Segment: <segment>. Offer: <offer>. Goal: <goal and date>. Start date: <date>. Budget: <amount, or none>.
+What sales agreed: <who takes these leads, how fast, what counts as qualified>.
+Last similar campaign: <its result and lesson, or "none yet">.
+Write the brief, the web page, the email and the lead follow-up in that order, using each output in the next. Then review all three, and correct what the review finds. Show the working view, with the publishing handoff from the campaign lifecycle playbook before its last section. Pause only for decisions on outcome, spending or approval. Mark nothing approved.
+```
+
+You get the working view: a short decision summary, each final asset in its own block, blockers, corrections made, what still needs approval and your next action. Say `Show the full record` to see every skill's output, which came to about 6,500 words in an earlier test on the sample company. If a reply stops partway, say "continue". If the chat gets long, say `Close my session`, save what comes back in [your workboard](../office/my-workboard.md), then start a new chat with your workboard and `Start my session`.
 
 | Step | Skill or action | Time (estimate) |
 |---|---|---|
@@ -1528,8 +1550,9 @@ Use this for one segment and one offer, with no paid, event or partner. It takes
 | 2 | [Write a web page](../skills/content/write-web-page.md) for the landing page | 45 minutes |
 | 3 | [Write a marketing email](../skills/content/write-marketing-email.md) to your list | 30 minutes |
 | 4 | [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md) for the leads it brings in | 30 minutes |
+| 5 | After review and approval, publish in your own tools, using the [publishing handoff](#publishing-handoff). Then submit one test lead: check that it reaches sales with the campaign name, and check the live page, links and tracking. The office cannot do this for you | About 1 hour, on top of the 3 hours |
 
-Run [Review any output](../skills/marketing-ops/review-any-output.md) on the page and the email before they go out, and use one campaign name from your tracking conventions. Allow about 10 minutes for each. When the window ends, run [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) (marketing analyst, about 30 minutes).
+Run [Review any output](../skills/marketing-ops/review-any-output.md) on the page, the email and the follow-up before they go out, and use one campaign name from your tracking conventions. Allow about 10 minutes for each. On the date the brief promised, run [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) (marketing analyst, about 30 minutes), and again on any later read date.
 
 ## Full sequence
 
@@ -1550,23 +1573,51 @@ A major campaign takes about 7 to 9 hours before launch, spread over about three
 | Make | 11 | [Write a lead follow-up](../skills/campaign-design/write-lead-follow-up.md) for leads ready for sales | 30 minutes |
 | Make | 12 | [Design a nurture sequence](../skills/campaign-design/design-nurture-sequence.md) for leads not ready for sales | 30 minutes |
 | Check | 13 | [Review any output](../skills/marketing-ops/review-any-output.md) on every public output. Send to approvers in channels-and-tools.md | 10 minutes per item, plus approver time |
-| Run | 14 | Launch in your own tools and test every link. The office cannot do this for you. Tell sales it is live | 1 hour |
+| Run | 14 | Launch in your own tools from the [publishing handoff](#publishing-handoff), test every link, and submit one test lead to check it reaches sales. The office cannot do this for you. Tell sales it is live | 1 hour |
 | Run | 15 | [Adjust paid campaigns](../skills/paid-demand-gen/adjust-paid-campaigns.md) weekly, if paid is running | 20 minutes a week |
 | Run | 16 | Mid-window read: halfway through, compare MQLs, SQLs and spend with half of each target, and ask sales about the leads. This is a check, not a verdict. If the goal metric is behind, run [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) | 30 minutes |
 | Close | 17 | [Follow up after an event](../skills/events-and-webinars/follow-up-after-event.md), if there was one | 30 minutes |
-| Close | 18 | [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) when the window ends and leads have had time to mature | 30 minutes |
-| Close | 19 | Add results to proof-points.md if they are usable and permitted. Use the evaluation in the next brief | 15 minutes |
+| Close | 18 | [Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) on the date the brief promised, and again on any later read date | 30 minutes |
+| Close | 19 | Put the result and lesson in your workboard. Add results to proof-points.md if they are usable and permitted. The next brief starts from this lesson | 15 minutes |
+
+## Publishing handoff
+
+Ask for this when the assets are reviewed. It separates what goes live from the notes behind it, so you can move it into your own tools. The office publishes nothing.
+
+```
+Publishing handoff: <campaign name, as in the tracking conventions>
+
+Final copy
+<one block per asset, with no assumptions, review notes or internal comments. If the working view already shows them, point to those blocks>
+
+| Asset | Version | Approval still needed from | Destination | Link with tracking values | Live proof |
+<one row per asset. Live proof stays blank until the marketer supplies a URL or send reference>
+
+Field map
+<which block goes in which field of the page or email tool, only if the marketer supplied the fields>
+
+Before this counts as live
+- Page and form work on a computer and a phone
+- A test send arrived, and its links and suppression rules are right
+- A test lead reached its owner with the campaign name
+- The tracking values appear in analytics
+
+Result review date: <the read date from the brief>
+```
+
+If you paste into a page or email editor, ask for the final copy as HTML. For personal fields, give the office your tool's merge tag format, because it does not know your tool. Nothing counts as published until you record the live URL or send reference in your workboard.
 
 ## Exit check
 
 - Sales confirmed the handoff before the brief was written.
 - The brief stated a target, and the evaluation reports against it.
 - Every public output passed review and its approver.
+- A test lead reached sales before the campaign counted as live, and the live proof is recorded.
 - The evaluation ends in a verdict and keep, change or stop actions that you have accepted or overruled.
 
 ## Worked example: the February campaign
 
-This is a fictional illustration. CogniATion is invented, and nothing here is a real result. The February 15 date, the 90 SQL goal and the $70,000 budget come from its context pack, and anything else that is not in the pack is marked illustrative. Each stage is a new chat, and the output of one stage gets pasted into the next.
+This is a fictional illustration. CogniATion is invented, and nothing here is a real result. The February 15 date, the 90 SQL goal and the $70,000 budget come from its context pack, and anything else that is not in the pack is marked illustrative. The stages run in one chat, and the output of one stage feeds the next. A campaign this size runs over weeks, so when the chat gets long, the marketer closes the session and resumes from the job record in the workboard.
 
 ### Brief: the goal
 
@@ -1580,7 +1631,7 @@ Step 1 first. Tom Ferrant, head of sales, confirms account executives can take t
 >
 > Unknown: how much of the $70,000 quarter budget goes to this campaign?
 
-**Carried forward:** the marketer answers the budget question in the reply, then pastes the brief into each later chat.
+**Carried forward:** the marketer answers the budget question in the reply, and every later stage works from this brief.
 
 ### Plan: the tracking name
 
@@ -1613,7 +1664,7 @@ The brief's lead pillar, "you can see reasoning improve", goes into [Write a web
 
 The 22% Brightmere result stays on the page, because 90 characters cannot hold what it measures.
 
-**Carried forward:** the copy goes to the review chat, with the name of the skill it came from.
+**Carried forward:** the copy goes to review, with the name of the skill it came from.
 
 ### Check: the review catch
 
@@ -1637,18 +1688,18 @@ On March 8, illustrative numbers show 64 MQLs against 58, half the target, and 9
 
 ### Close: the evaluation verdict
 
-[Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) runs on April 14, 2027, with illustrative numbers:
+[Evaluate a campaign](../skills/analytics-and-campaign-evaluation/evaluate-campaign.md) runs on April 1, 2027, with illustrative numbers as of the promised date:
 
-> **Verdict.** Too early. Goal of 30 SQLs stands at 21. Read again June 29, 2027.
+> **Verdict.** Missed at March 31: 21 SQLs against 30. Later read April 30, for leads still qualifying.
 
-| Metric | Target | Actual | Difference | Status |
-|---|---|---|---|---|
-| MQLs | 116 | 124 | +8, +7% | Hit |
-| SQLs | 30 | 21 | -9, -30% | Too early |
+| Metric | Target | Read date | Actual | Difference | Status |
+|---|---|---|---|---|---|
+| MQLs | 116 | March 31 | 124 | +8, +7% | Hit |
+| SQLs | 30 | March 31 | 21 | -9, -30% | Missed |
 
-The sales cycle runs up to 90 days, so the reread date is the March 31 end date plus 90 days. No conclusion is drawn before then, and this fictional campaign has no real outcome to report.
+The goal had a date, so the result is reported against that date. MQLs from late March can still qualify, and they take up to 30 days, so April 30 is read separately. Whatever it shows, the March 31 result stands. Nothing is stopped before that read, and this fictional campaign has no real outcome to report.
 
-**Carried forward:** the verdict, the reread date and any keep, change or stop actions go into the next brief.
+**Carried forward:** the verdict, the later read date, the lesson and any keep, change or stop actions go into the workboard and the next brief.
 
 
 ===== FILE: playbooks/first-week.md =====
@@ -1839,7 +1890,7 @@ Two to three days a week of this, around whatever else the company needs from yo
 
 ## What to skip, and until when
 
-There are 56 skills, and these 90 days use 23 of them. Leave the others alone, including the ones below, until the reason stops being true. You are not behind.
+There are 57 skills, and these 90 days use 23 of them. Leave the others alone, including the ones below, until the reason stops being true. You are not behind.
 
 | Skip | Until |
 |---|---|
@@ -1912,9 +1963,9 @@ diagram_caption: "Weeks relative to launch day, for a large launch. Small and me
 
 Pick the sequence by tier, which you set with [Plan a product launch](../skills/go-to-market-and-launches/plan-product-launch.md), and decide the tier and date yourself. Tier 3 is small, about 2 hours of work. Tier 2 is medium, about 2 days over 4 weeks. Tier 1 is large, and takes about half your time for 8 weeks. These are rough estimates.
 
-One person runs one launch or one major campaign at a time. If a launch and a major campaign fall in the same weeks, move one, or shrink one to the small launch or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md).
+One person runs one launch or one major campaign at a time. If a launch and a major campaign fall in the same weeks, move one, or shrink one to the small launch or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md). The combined work must still fit [the capacity rule](weekly.md#total-time-and-what-to-drop).
 
-Two dates matter in every sequence that has them. Ask customers for proof early, since their approval takes weeks. Brief sales two weeks before launch day, before anything public.
+Two dates matter in every sequence that has them. Ask customers for proof early, since their approval takes weeks. Brief sales two weeks before launch day, before anything public. Before launch day, ask for a [publishing handoff](campaign-lifecycle.md#publishing-handoff) for everything public, and record the live proof in [your workboard](../office/my-workboard.md).
 
 ## Small launch: tier 3
 
@@ -1972,6 +2023,7 @@ The release changes who can buy or the price, adds a new product, or makes a new
 - Sales was briefed two weeks before launch day for a medium or large launch, and before launch day for a small one.
 - Any customer proof used has approved permission in proof-points.md. A pending request stays out of the launch.
 - Every link has tracking, per the conventions from [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md).
+- The live proof is recorded for everything public.
 - The context pack shows the new facts.
 
 
@@ -2102,7 +2154,7 @@ This takes about two hours a week (estimate), on top of your priorities. It does
 | Tuesday to Thursday | Work on the top priority, then the others if days allow | The days in your priorities table, not counted in the two hours |
 | Tuesday to Thursday | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number, then send it to its approver, and publish what comes back approved | 30 minutes |
 | Tuesday to Thursday | CEO requests and other interruptions, inside the block you hold for them. See the [interruption rule](#total-time-and-what-to-drop) | 2 hours held, not counted in the two hours |
-| Friday | Note what changed: new proof points, a competitor move, a sales objection. Update the context pack if it is a fact | 15 minutes |
+| Friday | Note what changed: new proof points, a competitor move, a sales objection. If it is a fact, run [Update the context pack](../skills/marketing-ops/update-context-pack.md) | 15 minutes |
 
 Move to the full routine one piece at a time, as each thing comes to exist:
 
@@ -2115,7 +2167,7 @@ Stay on the starter for anything still missing, for as long as it takes. You hav
 
 ## The full routine
 
-The full routine takes about one working day a week, 6 to 9 hours, spread across the days below, plus 2 hours held for CEO requests and other interruptions. That leaves up to four days for your priorities. Time estimates are rough, and assume the context pack is filled in and your reports exist.
+The full routine takes about one working day a week, 6 to 9 hours, spread across the days below, plus 2 hours held for CEO requests and other interruptions. That leaves 3.5 to 4 days for your priorities in a 40-hour week, before time off, fixed meetings and delivery you have already committed to. Time estimates are rough, and assume the context pack is filled in and your reports exist.
 
 | Day | Step | Skill or action | Time (estimate) |
 |---|---|---|---|
@@ -2131,10 +2183,28 @@ The full routine takes about one working day a week, 6 to 9 hours, spread across
 | Tuesday to Thursday | 10 | [Review any output](../skills/marketing-ops/review-any-output.md) for anything public or using a customer name or number | 10 minutes per item |
 | Tuesday to Thursday | 11 | Send items to the approvers listed in channels-and-tools.md, so they are back before next Tuesday | 15 minutes |
 | Tuesday to Thursday | 12 | CEO requests and other interruptions, inside the block you hold for them | 2 hours, at a fixed time |
-| Friday | 13 | Note what changed: new proof points, a competitor move, a sales objection. Update the context pack if it is a fact | 15 minutes |
+| Friday | 13 | Note what changed: new proof points, a competitor move, a sales objection. If it is a fact, run [Update the context pack](../skills/marketing-ops/update-context-pack.md). If you keep [a workboard](../office/my-workboard.md), say `Close my session` and save what comes back | 15 minutes |
 | Friday | 14 | Check that approvals are back for next week's publishing | 15 minutes |
 
 **Step 1's 20 minutes is only true once the reports exist.** Until then, pulling numbers by hand takes longer. Build the reports once: run [Specify a dashboard](../skills/analytics-and-campaign-evaluation/specify-dashboard.md), then save one report in your CRM and other tools for each number in step 1, with the date range set to last week. Allow half a day to a day (estimate), with whoever runs your CRM, and treat it as a priority for that week. After that, you only open them.
+
+## Run Monday in one chat
+
+Paste this into a new chat in your project, on either routine. Fill in what you have and write "none yet" for the rest.
+
+```
+Act as the head of marketing from the Marketing Office. Follow your charter. Read the context pack. Today's task: run my Monday review from the weekly playbook, in this chat.
+Week of: <date>. Days available, counted as in the capacity rule: <number>.
+Numbers, last week and to date: <pipeline, MQLs, SQLs, demo requests, paid spend>.
+MQLs older than 14 days, and how many became SQLs: <numbers, if you have them>.
+Due within two weeks: <items>. Slipped: <items>. New requests: <items>.
+What sales last said: <notes>.
+Paid export: <paste it, or "no paid">.
+Workboard: <paste it, or "none">.
+Set weekly priorities first. Adjust paid campaigns only if I pasted an export. Diagnose a pipeline gap only if pipeline is rated Behind. Show the working view. Pause only for decisions on outcome, spending or approval. Spend nothing and mark nothing approved.
+```
+
+**You get:** up to three priorities, a do-not-do list, the paid decisions and the pipeline check where they apply, in a short working view. Say `Show the full record` for each skill's full output. **Done means:** you have accepted or changed the priorities, and made any paid changes yourself in the ad tool.
 
 ## Total time and what to drop
 
@@ -2147,7 +2217,20 @@ The full routine takes about one working day a week, 6 to 9 hours, spread across
 | **Routine total** | **About 6 to 9 hours, roughly one working day** |
 | CEO requests and other interruptions | 2 hours |
 
-**Capacity rule.** Subtract the routine and the 2 hours from your working days, and give the rest to [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md) as days available. In a normal week that is up to four. When the week is over, drop in this order until it fits:
+**Capacity rule.** Use one calculation in every plan and calendar:
+
+```
+Working days
+minus time off and fixed meetings
+minus the routine
+minus the interruption block
+minus delivery you have already committed to
+= days available for new work
+```
+
+One day is 8 hours. Give the result to [Set weekly priorities](../skills/budget-and-planning/set-weekly-priorities.md) as days available. In a normal week with no time off, no fixed meetings beyond the routine and nothing already committed, that is 3.5 to 4. The routine is already out of that number, so do not count it again. Count each asset once, whether it sits in a campaign plan, the content calendar or a launch plan. Keep contractor days separate, and do not count waiting for approval as work. If you do not know the days or the effort, the answer is Not assessed, not "fits". A week with monthly or quarterly work names what that work replaces.
+
+When the week is over, drop in this order until it fits:
 
 1. Social posts for next week.
 2. The blog post for next week.
@@ -2156,9 +2239,9 @@ The full routine takes about one working day a week, 6 to 9 hours, spread across
 
 Do not drop the 30 minutes with sales, the review and approver steps, or the top priority. A customer conversation can move by one week, and not two in a row.
 
-**Interruption rule.** Hold 2 hours a week, at a fixed time, for CEO requests and other interruptions. That number is a starting rule, not a benchmark. A request goes in this block, not in a priority slot. When requests go over the block, drop from the list above, in the same order, and tell the person asking what moves before you start: "I can have this by Thursday. It moves the search ads review to next week. Is that the right trade?" Only the CEO can move your top priority, and they do it by answering that question. If you go over three weeks in a row, show the CEO the list, and agree a bigger block or fewer priorities.
+**Interruption rule.** Hold 2 hours a week, at a fixed time, for CEO requests and other interruptions. That number is a starting rule, not a benchmark. Once you have four weeks of actual numbers, use their average instead. A request goes in this block, not in a priority slot. When requests go over the block, drop from the list above, in the same order, and tell the person asking what moves before you start: "I can have this by Thursday. It moves the search ads review to next week. Is that the right trade?" Only the CEO can move your top priority, and they do it by answering that question. If you go over three weeks in a row, show the CEO the list, and agree a bigger block or fewer priorities.
 
-**One person runs one launch or one major campaign at a time.** If two fall in the same weeks, move one, or shrink one to the small sequence in [the launch playbook](launch.md) or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md).
+**One person runs one launch or one major campaign at a time.** If two fall in the same weeks, move one, or shrink one to the small sequence in [the launch playbook](launch.md) or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md). A small second campaign still takes days, so the combined work must also fit the capacity rule.
 
 ## Exit check
 
@@ -2194,13 +2277,13 @@ Days available: 4.
 
 The draft comes back with this pace check. Pipeline pace is ($1.2 million minus $270,000) divided by 10 weeks left, an estimate.
 
-| KPI | Last week | To date | Pace needed | Rating |
-|---|---|---|---|---|
-| New qualified pipeline | $70,000 | $270,000 | $93,000 | Behind |
-| MQLs | 24 | 72 | 20 | Ahead |
-| Website demo requests | 4 | 16 | About 4.5 | Close |
+| KPI | Last week | To date | Target pace | Against target | Baseline pace | Against baseline |
+|---|---|---|---|---|---|---|
+| New qualified pipeline | $70,000 | $270,000 | $93,000 | Behind | $69,000 | Above |
+| MQLs | 24 | 72 | About 27 | Close | 20 | Above |
+| Website demo requests | 4 | 16 | No target | No target | About 4.5 | Level |
 
-Ask "Ahead against what?" The pipeline row measures against this quarter's goal. MQLs have no goal in the pack, so their pace of 20 comes from the baseline, 260 in Q3 2026 divided by 13 weeks. Ahead means more than a usual Q3 week. It does not mean enough.
+The two comparisons answer different questions. Pipeline is behind what this quarter's goal needs, though above a usual Q3 week. MQLs have no goal of their own in the pack, so their target pace works back from the 90 SQL goal and the 26% rate, about 27 a week. Their baseline pace is 260 in Q3 2026 divided by 13 weeks. So 24 beats a usual week and still falls short. Demo requests have no goal to work back from, so they show No target.
 
 And these three priorities:
 
@@ -2210,7 +2293,7 @@ And these three priorities:
 | 2 | Find out why pipeline is behind | Search ads export reviewed, likely cause named | The marketer | $1.2 million pipeline | 1 |
 | 3 | Send conference budget for approval | Request with Marta Ilves, CEO, who needs 3 days | The marketer | Pipeline, SQLs | 0.5 |
 
-**Feeds the next step:** one Behind week earns a check rather than a fix, so priority 2 starts with a [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) run. The days add up to 4, the most the capacity rule allows.
+**Feeds the next step:** one Behind week earns a check rather than a fix, so priority 2 starts with a [Diagnose a pipeline gap](../skills/analytics-and-campaign-evaluation/diagnose-pipeline-gap.md) run. The days add up to 4, the top of what the capacity rule allows.
 
 ### Monday: the paid decisions
 
@@ -2240,7 +2323,7 @@ So both readings are true: 24 MQLs beats Q3's usual 20, and falls short of the 2
 
 ### Tuesday: publish and make
 
-Last week's approved items go out on Tuesday. From Tuesday to Thursday, priority 1 runs through [Write a web page](../skills/content/write-web-page.md) and [Write a marketing email](../skills/content/write-marketing-email.md), then [Review any output](../skills/marketing-ops/review-any-output.md). The brief gets pasted into each of those chats. Priority 3 goes to Marta Ilves on Tuesday, leaving her 3 days, so it is done. No customer conversation is due this week.
+Last week's approved items go out on Tuesday. From Tuesday to Thursday, priority 1 runs through [Write a web page](../skills/content/write-web-page.md) and [Write a marketing email](../skills/content/write-marketing-email.md), then [Review any output](../skills/marketing-ops/review-any-output.md). They run in one chat, so each one reads the brief. Priority 3 goes to Marta Ilves on Tuesday, leaving her 3 days, so it is done. No customer conversation is due this week.
 
 ### Wednesday: the CEO request pushes out a priority
 

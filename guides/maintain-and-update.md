@@ -26,7 +26,7 @@ A marketer running the office for more than a month. Outdated facts in the conte
    Read the context pack. List anything that looks out of date: dates more than 90 days old, goals for a past quarter, proof points without a recent approval, competitor facts without a recent check date. Do not change anything, only report.
    ```
 
-2. Fix what matters in `my-context-pack.md`. Put a date on each fact you change.
+2. Fix what matters in `my-context-pack.md`. Put a date on each fact you change. When a call or email brings new facts during the month, run [Update the context pack](../skills/marketing-ops/update-context-pack.md) with your notes. It returns only the lines to change.
 3. Upload the changed file to your project, then delete the old copy. Two versions of the same file produce mixed answers.
 
 ### Improve one section

@@ -2,7 +2,7 @@
 title: Output conventions
 type: office
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: The rules every skill output follows, so outputs look and read the same across roles and months.
 ---
 
@@ -11,7 +11,7 @@ Every output from a skill or an agent role follows these rules. The office manua
 ## Structure
 
 1. Start with the result. No introduction, no recap of the task, no closing remarks.
-2. Use the template from the skill's Output format section. Keep its field names and section order.
+2. Use the template from the skill's Output format section. Keep its field names and section order. When one job runs several skills in a chat, show the working view the office manual describes, and the full record on request.
 3. Stay inside the length limits in the template. Limits count a field's content, not its label. If the content does not fit, cut it and say what you cut under "Assumptions and open questions".
 4. End with the section "Assumptions and open questions". Nothing comes after it.
 
@@ -33,6 +33,7 @@ Use this title and these four labels. Skip a label that has no items. If no labe
 |---|---|
 | Fact about the company in the context pack | Use it as written |
 | Fact about the company not in the context pack | Ask first if it changes the whole output. Otherwise, leave a placeholder in square brackets and ask in the last section |
+| Task evidence: an export, note or answer the marketer supplied for this task | Use it for this task and name it as the source. It does not clear a customer, number or quote for public use. If it conflicts with the context pack, show both and ask |
 | Customer name, quote or result | Use only if proof-points.md shows the right permission status for that use |
 | Company number | Use anywhere only if company.md marks it publishable. Any other number stays in internal output. Never use a number company.md says never to mention |
 | Competitor claim | Use only if competitors.md has it with a source and date. Otherwise label it unknown |

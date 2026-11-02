@@ -24,7 +24,7 @@ Every skill has exactly one owner. A function can have skills owned by a second 
 | [Partner marketing manager](../agents/partner-marketing-manager.md) | Builds joint marketing with partners and equips them to sell | Partner and channel marketing | 2 |
 | [Brand and creative director](../agents/brand-and-creative-director.md) | Keeps the brand voice and writes briefs for designers | Brand and design briefs | 2 |
 | [Marketing analyst](../agents/marketing-analyst.md) | Reads performance, evaluates campaigns and says what to do next | Analytics and campaign evaluation | 5 |
-| [Marketing operations manager](../agents/marketing-operations-manager.md) | Keeps process, tools, tracking and lead handoff working | Marketing ops | 3 |
+| [Marketing operations manager](../agents/marketing-operations-manager.md) | Keeps process, tools, tracking and lead handoff working | Marketing ops | 4 |
 | [Marketing reviewer](../agents/marketing-reviewer.md) | Quality gate: critiques any output against the context pack and the originating skill's checklist | Review skills in positioning, launches and all other outputs | 3 |
 
 ## Review versus evaluation

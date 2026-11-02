@@ -2,7 +2,7 @@
 title: Goals and KPIs (CogniATion example)
 type: context-example
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Filled example of goals-and-kpis.md for a fictional company.
 ---
 
@@ -45,6 +45,10 @@ Accepted by an account executive after a first call
 **Pipeline**
 
 Value of opportunities accepted by sales, created this quarter, with marketing as first or last touch. Opportunities open at the value of the pilot and first team, about $13,500 on average, and grow after the pilot
+
+**Stage timing**
+
+MQL to SQL: usually within 14 days, up to 30. SQL to pipeline: same day, because pipeline opens when sales accepts
 
 **Attribution model**
 

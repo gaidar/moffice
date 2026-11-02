@@ -4,10 +4,10 @@ type: skill
 function: content
 owner: content-lead
 reads: [company, product, icp-and-segments, messaging, proof-points, goals-and-kpis, channels-and-tools]
-you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, and hours per item if you know them.
+you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, hours per item and the hours you have for content.
 also_for: [content plan, editorial calendar, what to publish, blog schedule, social schedule, posting schedule, content ideas, content for demand]
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: Produces a dated content calendar for a set period, with every item tied to a goal or campaign and checked against capacity and approval times.
 ---
 
@@ -27,19 +27,19 @@ Use this to turn goals and campaigns into a dated list of what gets published, w
 - [[context-pack:proof-points]]: which customers and numbers may appear in public.
 - [[context-pack:product]]: what may and may not be said about the roadmap.
 
-The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, hours per item.
+The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, hours per item and hours available, as the office manual counts capacity.
 
 ## Procedure
 
 1. Set the period from the request. If none is given, ask. Treat Monday to Friday as working days unless told otherwise.
 2. List the fixed dates: deadlines from goals-and-kpis.md, dated priorities, and anything the marketer supplied. Give each goal in the period a one-letter tag (A, B).
-3. Count the slots. For each channel in channels-and-tools.md, multiply its stated cadence by the length of the period. Do not add slots beyond the cadence unless the marketer asks. If a channel has no stated cadence, write [cadence needed], leave that channel out of the calendar and ask in the last section.
-4. Fill the slots in this order. First, items tied to a fixed date, published at least two working days before a hard deadline. Second, items supporting a campaign in the four weeks before its date. Third, remaining slots, rotated through the segments in priority order, with the top segment getting the most. The two-day and four-week windows are starting rules the marketer can change.
+3. Count the slots. For each channel in channels-and-tools.md, multiply its stated cadence by the length of the period, rounding up. That count is a ceiling, not a quota. Do not add slots beyond the cadence unless the marketer asks. If a channel has no stated cadence, write [cadence needed], leave that channel out of the calendar, except for fixed-date items, and ask in the last section.
+4. Fill the slots in this order. First, items tied to a fixed date, published at least two working days before a hard deadline. Second, items supporting a campaign in the four weeks before its date. Third, remaining slots that can serve a goal, rotated through the segments in priority order, with the top segment getting the most. Leave the rest empty. The two-day and four-week windows are starting rules the marketer can change.
 5. Give every item a goal tag. An item that serves no goal goes under "Cut or held", not on the calendar.
 6. Name the skill that produces each item. If no skill fits, write "no skill".
 7. Set the draft due date: publish date, minus the approver's typical time, minus one working day. A same-day approver counts as zero. Item types with no listed approver get [approver needed], and the draft due date is worked out as if the approver were same-day.
 8. Move to "Cut or held" any item that depends on a roadmap item not cleared in product.md, an internal-only fact, or a proof point with status pending, sales only, internal only or none. Give held items no public date.
-9. Run the capacity check. Count items per week and items needing design work, and compare them with the team in company.md. If the marketer gave hours per item, show the sum as an Estimate. If not, write [hours per item needed] and do not guess. If the load exceeds capacity, remove items from the bottom of the order in step 4 and list them under "Cut or held".
+9. Run the capacity check. Count items per week and items needing design work. Count an item already in a campaign or launch plan once. If the marketer gave hours per item and hours available, show both as Estimates. If not, write [hours per item needed] or [hours available needed], give the verdict "Not assessed" and do not guess. If the load exceeds the hours, remove items from the bottom of the order in step 4 and list them under "Cut or held".
 10. Check the draft against the context pack: every date, cadence, approver and title. Remove words to avoid, and fix anything that contradicts a file.
 11. List everything assumed, including publishing days you chose, under "Assumptions and open questions". If a needed context pack field is blank, leave a placeholder in square brackets and ask in the last section. Never invent.
 
@@ -60,18 +60,15 @@ Fixed dates: <dated items, up to 8, or "None">
 
 ## Capacity check
 Items per week: <count by week>
-Marketer: <hours estimate with method, or [hours per item needed]>
+Marketer: <hours needed and available with method, or the placeholder>
 Design: <items needing design against available days>
-Verdict: <fits, tight or over, in one sentence>
+Verdict: <fits, tight, over or Not assessed, in one sentence>
 
 ## Cut or held
 <each item with its reason in up to 15 words, or "None">
 
 ## Assumptions and open questions
-- Assumption: <what you took as true, and why>
-- Estimate: <the number, and how you worked it out>
-- Inference: <what you concluded, and from which inputs>
-- Unknown: <what you need from the marketer, as a question>
+- <Assumption, Estimate, Inference or Unknown>: <one item, unknowns as questions>
 ```
 
 ## Quality checklist
@@ -81,7 +78,7 @@ Verdict: <fits, tight or over, in one sentence>
 - [ ] Are hard deadlines met at least two working days early?
 - [ ] Is every draft due date worked out from the approver's typical time?
 - [ ] Are roadmap items and unapproved proof points off the calendar?
-- [ ] Does the capacity check give a verdict without made-up hours?
+- [ ] Is the verdict Not assessed whenever hours are unknown, with none made up?
 
 ## Example (fictional company)
 
@@ -106,7 +103,7 @@ Verdict: <fits, tight or over, in one sentence>
 
 **Capacity check**
 
-Items per week: six. Marketer: [hours per item needed]. Design: one page against about four designer days a month. Verdict: tight for one marketer.
+Items per week: six. Marketer: [hours per item needed]. Design: one page against about four designer days a month. Verdict: Not assessed until the hours are known.
 
 **Cut or held**
 

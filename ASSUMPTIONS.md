@@ -19,9 +19,10 @@ These corrections override the requirements document where they conflict.
 
 A CMO review, a new marketer review and two rounds of a from-zero CMO review were run and acted on. The reviews themselves are in `dev/reviews/`, which is not committed.
 
-- Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60. The owner accepted 56 on 2026-11-02.
+- Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60. The owner accepted 56 on 2026-11-02, then approved a 57th, Update the context pack, the same day.
 - The default setup is 3 files rather than 74. One combined context pack replaces 10 separate files, and the office manual accepts this. The 10 templates remain as the source.
-- Setup stays in the top bar and the function table stays on the home page, because the Definition of done and the website spec name them, though the CMO wanted both cut.
+- The function table stays on the home page, because the website spec names it, though the CMO wanted it cut.
+- On 2026-11-02 the owner cut the top bar to five items with no dropdowns, then approved Start here, Try it, Find a task, Run my week and FAQ the same day. Playbooks, Setup, Context pack and Agents are in the footer. Find a task is the existing Skills page at the same address, and Run my week links to the playbooks. The Definition of done only requires two clicks or fewer.
 - "Unverified" labels stay in the vendor guides, though the CMO wanted them moved. Nothing was tested on paid accounts, and the spec requires them.
 - PDFs now cover 19 documents, because the two new guides and the new playbook are procedures people read.
 - Worked examples were produced by following the skills by hand with the sample context pack, and are labeled where figures are illustrative. They were not run in a live vendor account.
@@ -32,8 +33,13 @@ A CMO review, a new marketer review and two rounds of a from-zero CMO review wer
 - Plain requests were added to the office manual. The exact prompt form stays in every skill and charter, as the spec requires.
 - The agent role charters and the playbooks now share one bundle, `bundles/roles-and-playbooks.md`, because the manual sends the model to the playbooks and no uploaded file held them.
 - Owner role columns were removed from playbook tables, because the person running them is one person. Each skill page still names its owner.
-- Skill pages fold Inputs, Procedure and Output format in the browser, using script. The markdown, the section order and Copy text do not change, and with no script nothing is folded.
-- Examples left the top bar and stays in the footer, linked from Home and Try it. Setup and Agents stay in the top bar.
+- Skill pages fold Inputs, Procedure and Output format in the browser, using script. The markdown, the section order and Copy full text do not change, and with no script nothing is folded.
+- Examples left the top bar and stays in the footer, linked from Home and Try it.
+- One review recommended collapsing the 14 roles into 3 modes, 4 macro-skills, a QA checkmark block in every skill, and an MCP track. The owner approved not doing these on 2026-11-02: the spec requires 14 roles and rules out MCP servers, and a model ticking its own work looks like proof it is not. One-chat runs give the benefit the first two were after.
+- Two more reviews were worked through on 2026-11-02, and the owner approved these decisions the same day. The short working view applies only to jobs that run several skills, so single-skill templates and the validator are unchanged. Capacity stays in days, with one day as 8 hours. The interruption block stays at 2 hours as a starting rule, and the marketer's own four-week average replaces it. Downloads stay on GitHub, pinned to the release tag, with no copies on the site. The home headline became "Run B2B marketing alone with the AI you already pay for".
+- Deferred until the pilot: smaller workflow bundles, an action panel on all 57 skill pages, one recovery page, a downloadable worked campaign and editable slide and page templates. The reviews' targets, such as a 70% draft-to-live ratio, were not adopted, because they have no baseline.
+- To keep skills under the spec's 1,200 words and the manual under 1,500, some text was cut: the four-label block in skill templates became one line, as the labels are defined in the manual, and the manual's cadence list and its opening line about where to load it went, as the playbooks and setup guides hold them. Diagnose a pipeline gap no longer reads channels-and-tools.md, and no longer points to Set tracking conventions or Build a market segmentation. Evaluate a campaign lost two checklist items that its procedure already covers. The stage timing in the sample pack and the decision check lines in examples are illustrative.
+- One-chat runs, the workboard and the 15-minute quick start have been traced with a fresh reader on the setup files. They have not been run in live vendor accounts or with real marketers. A pilot with about five solo marketers is planned after release.
 
 ## Spec gaps and conflicts
 

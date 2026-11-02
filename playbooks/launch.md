@@ -10,9 +10,9 @@ diagram_caption: "Weeks relative to launch day, for a large launch. Small and me
 
 Pick the sequence by tier, which you set with [Plan a product launch](../skills/go-to-market-and-launches/plan-product-launch.md), and decide the tier and date yourself. Tier 3 is small, about 2 hours of work. Tier 2 is medium, about 2 days over 4 weeks. Tier 1 is large, and takes about half your time for 8 weeks. These are rough estimates.
 
-One person runs one launch or one major campaign at a time. If a launch and a major campaign fall in the same weeks, move one, or shrink one to the small launch or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md).
+One person runs one launch or one major campaign at a time. If a launch and a major campaign fall in the same weeks, move one, or shrink one to the small launch or the minimum campaign in [the campaign lifecycle](campaign-lifecycle.md). The combined work must still fit [the capacity rule](weekly.md#total-time-and-what-to-drop).
 
-Two dates matter in every sequence that has them. Ask customers for proof early, since their approval takes weeks. Brief sales two weeks before launch day, before anything public.
+Two dates matter in every sequence that has them. Ask customers for proof early, since their approval takes weeks. Brief sales two weeks before launch day, before anything public. Before launch day, ask for a [publishing handoff](campaign-lifecycle.md#publishing-handoff) for everything public, and record the live proof in [your workboard](../office/my-workboard.md).
 
 ## Small launch: tier 3
 
@@ -70,4 +70,5 @@ The release changes who can buy or the price, adds a new product, or makes a new
 - Sales was briefed two weeks before launch day for a medium or large launch, and before launch day for a small one.
 - Any customer proof used has approved permission in proof-points.md. A pending request stays out of the launch.
 - Every link has tracking, per the conventions from [Set tracking conventions](../skills/marketing-ops/set-tracking-conventions.md).
+- The live proof is recorded for everything public.
 - The context pack shows the new facts.

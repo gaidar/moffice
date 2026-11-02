@@ -35,14 +35,15 @@ The marketer pastes into the chat:
 - The output to review, in full.
 - The title of the skill it came from, and its checklist if not available.
 - Where it will appear: public, one-to-one sales or internal.
+- Any task evidence behind the draft: exports, notes, answers.
 
 ## Procedure
 
-1. Set the audience from the marketer's statement. If none was given, review it as public, the strictest case, and record that as an assumption.
+1. Set the audience from the marketer's statement. If none was given, review it as public and record that as an assumption.
 2. Find the quality checklist of the skill it came from. If it is not available, ask for it. If the marketer wants the review anyway, write "checklist not run" and do not improvise one.
 3. Go through the output line by line and list each factual claim, name, number, quote, price, date and competitor statement.
-4. Check each item against the context pack and mark it supported, contradicted or not found. Anything not found is a problem unless it is a visible placeholder. If a file needed for a check is blank, write "could not check" and ask. Never invent.
-5. Apply the permission check for the audience. Every customer name, number and quote must have a status in proof-points.md that allows this use. Every company number must have a status in company.md that allows it.
+4. Check each item against the context pack and any task evidence, and mark it supported, contradicted or not found. Show any conflict between the two. Anything not found is a problem unless it is a visible placeholder. If a file needed for a check is blank, write "could not check" and ask. Never invent.
+5. Apply the permission check for the audience. Task evidence grants no permission. Every customer name, number and quote must have a status in proof-points.md that allows this use. Every company number must have a status in company.md that allows it.
 6. Check the product limits in product.md, the competitor sources in competitors.md, and the hard rules in channels-and-tools.md.
 7. For public copy, check the words to avoid in messaging.md and the rules in brand-voice.md.
 8. Run the checklist of the skill it came from. Answer each question yes or no, with the line or fact that shows it.
@@ -51,7 +52,7 @@ The marketer pastes into the chat:
 11. Name the single weakest idea in the draft, the one a senior marketer would push on first. Ask it as a question for the marketer, and say why. It does not change the verdict.
 12. List the approvers from channels-and-tools.md that this output needs.
 13. Say what to change in each problem row, in one line. Do not rewrite the output unless the marketer asks.
-14. List every assumption, estimate, inference and unknown in the last section, including anything you could not check.
+14. List every assumption, estimate, inference and unknown in the last section.
 
 ## Output format
 
@@ -86,7 +87,7 @@ Weakest idea: <the single weakest idea, and why, as a question for the marketer.
 
 ## Quality checklist
 
-- [ ] Was every claim, name, number and quote checked, not just the obvious ones?
+- [ ] Was every claim, name, number and quote checked?
 - [ ] Was the permission check run for the stated audience?
 - [ ] Does each problem name the context pack file behind it?
 - [ ] Do the verdict and the problem sorting follow the rules?
@@ -134,7 +135,7 @@ Weakest idea: why would a head of learning care that you beat Arguvia, when the 
 
 **Assumptions and open questions**
 
-- Assumption: the skill it came from is [Write ad variations](../paid-demand-gen/write-ad-variations.md). One checklist question is shown, condensed for length.
+- Assumption: the skill it came from is [Write ad variations](../paid-demand-gen/write-ad-variations.md).
 - Inference: "64 customer companies" is publishable, from company.md, as of September 30, 2026.
 - Unknown: What character limits apply?
 

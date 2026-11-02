@@ -2,7 +2,7 @@
 title: Glossary
 type: office
 version: 0.1.0
-updated: 2026-11-01
+updated: 2026-11-02
 summary: What the words in the office mean.
 ---
 
@@ -20,6 +20,13 @@ summary: What the words in the office mean.
 | Office manual | The document loaded into persistent instructions |
 | Playbook | A sequence of skills for a period or a project |
 | Guide | Instructions for the marketer on setting up and running the office |
+| Task evidence | An export, note or answer the marketer supplies for one task. It can be used for that task, and it gives no permission for public use |
+| Workboard | One table of the marketer's current jobs, kept in `my-workboard.md` or the marketer's own task tool |
+| Job record | A short record of one campaign or launch: approved brief, asset versions, decisions, next step and live proof. It links to drafts and does not copy them |
+| Working view | The short form of a job that runs several skills: decision summary, final assets, blockers, approvals and next action |
+| Stage timing | How long leads take to move from one stage to the next, such as MQL to SQL |
+| Read date | The date a target is judged. A missed target can also get a later read, for leads still maturing, and that later result does not change the first one |
+| Not assessed | The capacity verdict when effort or days available are unknown |
 | Output | What a skill or agent role produces |
 | Draft | An output not yet reviewed by the marketer |
 | Review | A critique of an output against the context pack and a checklist |
