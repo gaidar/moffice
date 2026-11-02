@@ -6,12 +6,7 @@
 {%- if page.type == "playbook" -%}{%- assign has_pdf = true -%}{%- endif -%}
 {%- if page.type == "guide" and page.path != "guides/faq.md" -%}{%- assign has_pdf = true -%}{%- endif -%}
 <div class="toolbar" role="toolbar" aria-label="Page actions">
-  {%- if page.type == "skill" or page.type == "agent" -%}
-    <button type="button" class="btn primary office-copy-prompt">Copy prompt</button>
-  {%- endif -%}
-  {%- if page.type == "skill" -%}
-    <a class="btn" href="#example-fictional-company">See example</a>
-  {%- endif -%}
+  <span class="toolbar-label">This page:</span>
   <button type="button" class="btn quiet office-copy" data-raw-url="{{ raw_url }}">Copy full text</button>
   <a class="btn quiet" href="{{ blob_url }}">Open on GitHub</a>
   <a class="btn quiet office-download" href="{{ raw_url }}">Download file</a>
@@ -20,4 +15,5 @@
     <a class="btn quiet" href="{{ pdf_path }}" download>Download PDF</a>
   {%- endif -%}
   <span class="toolbar-status" role="status" aria-live="polite"></span>
+  {%- if page.type == "skill" and owner -%}<span class="toolbar-owner">Owned by <a href="{{ owner.url | relative_url }}">{{ owner.title }}</a></span>{%- endif -%}
 </div>

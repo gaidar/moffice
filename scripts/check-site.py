@@ -37,6 +37,14 @@ def main():
     if not (site / "run-my-week.html").exists():
         errors.append("run-my-week.html: missing")
 
+    # The prompt and its button must stay together on every skill and charter.
+    for folder in ("skills", "agents"):
+        for page in sorted((site / folder).rglob("*.html")) if (site / folder).exists() else []:
+            text = page.read_text(encoding="utf-8")
+            panel = text[text.find('class="prompt-panel"'):] if 'class="prompt-panel"' in text else ""
+            if "office-copy-prompt" not in panel or "prompt-preview" not in panel:
+                errors.append(f"{page.relative_to(site)}: no prompt panel with its Copy prompt button and preview")
+
     # These left the top bar, so the footer must keep them one click away on every page.
     home = site / "index.html"
     if home.exists():

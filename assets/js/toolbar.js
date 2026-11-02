@@ -147,16 +147,127 @@
     pre.insertBefore(button, pre.firstChild);
   });
 
+  // Places that scroll sideways get a visible cue, and keyboard users can reach them.
+  var scrollers = [];
+  function addScrollCue(box, text) {
+    var cue = document.createElement("p");
+    cue.className = "scroll-cue";
+    cue.textContent = text;
+    box.insertAdjacentElement("afterend", cue);
+    scrollers.push(box);
+  }
+  function markWide() {
+    scrollers.forEach(function (box) {
+      var wide = box.scrollWidth > box.clientWidth + 1;
+      box.classList.toggle("is-wide", wide);
+      if (wide) {
+        box.tabIndex = 0;
+        box.setAttribute("role", "region");
+        box.setAttribute("aria-label", box.classList.contains("scroll") ? "Diagram that scrolls sideways" : "Table that scrolls sideways");
+      } else {
+        box.removeAttribute("tabindex");
+        box.removeAttribute("role");
+        box.removeAttribute("aria-label");
+      }
+    });
+  }
+
+  // On a phone, tables with sentences in them become labeled fields. Tables of short values keep their columns and scroll.
+  document.querySelectorAll(".doc-body table").forEach(function (table) {
+    var heads = Array.prototype.map.call(table.querySelectorAll("thead th"), function (th) { return th.textContent.trim(); });
+    var wordy = Array.prototype.some.call(table.querySelectorAll("tbody td"), function (td) { return td.textContent.trim().length > 32; });
+    if (wordy && heads.length) {
+      table.classList.add("stack");
+      // Display changes can remove table meaning from assistive technology, so state it.
+      table.setAttribute("role", "table");
+      table.querySelectorAll("thead, tbody").forEach(function (part) { part.setAttribute("role", "rowgroup"); });
+      table.querySelectorAll("tr").forEach(function (row) { row.setAttribute("role", "row"); });
+      table.querySelectorAll("th").forEach(function (th) { th.setAttribute("role", "columnheader"); });
+      table.querySelectorAll("tbody tr").forEach(function (row) {
+        Array.prototype.forEach.call(row.children, function (cell, index) {
+          cell.setAttribute("role", "cell");
+          cell.setAttribute("data-label", heads[index] || "");
+          if (cell.textContent.trim() === "") cell.classList.add("is-empty");
+        });
+      });
+    }
+    // Above phone width a stacked table is still a table, and can still be too wide for the page.
+    var box = document.createElement("div");
+    box.className = "table-scroll";
+    table.parentNode.insertBefore(box, table);
+    box.appendChild(table);
+    addScrollCue(box, "Scroll sideways to see the whole table.");
+  });
+
+  // On a phone, diagrams fold away, because the text around them says the same thing.
+  var phone = window.matchMedia("(max-width: 760px)");
+  var folds = [];
+  document.querySelectorAll("figure > .scroll").forEach(function (scroll) {
+    if (!scroll.querySelector(".dg")) return;
+    var fold = document.createElement("details");
+    fold.className = "fig-fold";
+    var label = document.createElement("summary");
+    fold.appendChild(label);
+    scroll.parentNode.insertBefore(fold, scroll);
+    fold.appendChild(scroll);
+    addScrollCue(scroll, "Scroll sideways to see the whole diagram.");
+    function setLabel() { label.textContent = fold.open ? "Hide diagram" : "Show diagram"; }
+    fold.addEventListener("toggle", function () { setLabel(); markWide(); });
+    fold.open = !phone.matches;
+    setLabel();
+    folds.push(fold);
+  });
+  phone.addEventListener("change", function () {
+    folds.forEach(function (fold) { fold.open = !phone.matches; });
+  });
+  window.addEventListener("resize", markWide);
+  markWide();
+
+  // On this page: a list of the page's sections, for long guides, playbooks and office documents.
+  var longPage = document.querySelector(".doc-body[data-contents]");
+  if (longPage) {
+    var sections = longPage.querySelectorAll(":scope > h2[id]");
+    if (sections.length >= 4) {
+      var contents = document.createElement("details");
+      contents.className = "toc";
+      var contentsLabel = document.createElement("summary");
+      contentsLabel.textContent = "On this page";
+      var contentsList = document.createElement("ul");
+      sections.forEach(function (heading) {
+        var item = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = "#" + heading.id;
+        link.textContent = heading.textContent;
+        item.appendChild(link);
+        contentsList.appendChild(item);
+      });
+      contents.append(contentsLabel, contentsList);
+      var before = document.querySelector(".lead-figure") || longPage;
+      before.parentNode.insertBefore(contents, before);
+    }
+  }
+
   // One filter on the skills page, over the situations and the full list.
   var filter = document.querySelector(".filter");
   if (filter) {
     var rows = document.querySelectorAll(".skill-group tbody tr");
+    var filterCount = document.querySelector(".filter-count");
+    var filterClear = document.querySelector(".filter-clear");
+    function plural(number, word) { return number + " " + word + (number === 1 ? "" : "s"); }
+    if (filterClear) {
+      filterClear.addEventListener("click", function () {
+        filter.value = "";
+        filter.dispatchEvent(new Event("input"));
+        filter.focus();
+      });
+    }
     filter.addEventListener("input", function () {
       // Match on any word of three letters or more, so "pipeline down" and "leads are bad" still find something.
       var words = filter.value.toLowerCase().split(/\s+/).filter(function (w) {
         return w.length > 2 && ["are", "the", "and", "our", "for", "not", "why", "how", "next", "month"].indexOf(w) === -1;
       });
       var shown = 0;
+      var shownSkills = 0;
       function haystack(row) {
         return (row.textContent + " " + (row.getAttribute("data-keywords") || "")).toLowerCase();
       }
@@ -174,7 +285,10 @@
           ? words.every(function (w) { return has(row, w); })
           : words.some(function (w) { return has(row, w); }));
         row.hidden = !hit;
-        if (hit) shown += 1;
+        if (hit) {
+          shown += 1;
+          if (row.hasAttribute("data-skill")) shownSkills += 1;
+        }
       });
       document.querySelectorAll(".skill-group").forEach(function (group) {
         group.hidden = !group.querySelector("tbody tr:not([hidden])");
@@ -184,6 +298,13 @@
       // A partial match is not a full answer, so say so.
       var partial = document.querySelector(".filter-partial");
       if (partial) partial.hidden = strict || shown === 0 || words.length === 0;
+      if (filterClear) filterClear.hidden = filter.value === "";
+      if (filterCount) {
+        var parts = [];
+        if (shown - shownSkills > 0) parts.push(plural(shown - shownSkills, "situation"));
+        if (shownSkills > 0) parts.push(plural(shownSkills, "skill"));
+        filterCount.textContent = words.length > 0 && shown > 0 ? parts.join(" and ") + " shown." : "";
+      }
     });
   }
 })();

@@ -6,7 +6,13 @@ updated: 2026-11-02
 summary: Start from what you need to do. Each skill is a written procedure with a fixed output format. It produces a draft, and you decide what to use.
 ---
 
-<input class="filter" type="search" placeholder="What do you need? For example new company, pipeline or website" aria-label="Filter skills and situations">
+<label class="filter-label" for="task-filter">Search situations and skills</label>
+<div class="filter-row">
+<input id="task-filter" class="filter" type="search" placeholder="For example, pipeline" aria-describedby="filter-help">
+<button type="button" class="btn quiet filter-clear" hidden>Clear</button>
+</div>
+<p id="filter-help" class="filter-help">Describe the job in a word or two, such as new company, leads or website.</p>
+<p class="filter-count" role="status" aria-live="polite"></p>
 <p class="filter-empty" hidden>Nothing matches. Try one word, such as leads or pipeline, or just describe the job to your AI tool.</p>
 <p class="filter-empty filter-partial" hidden>No row matches every word, so these match only some of them. Check that the row fits your job.</p>
 

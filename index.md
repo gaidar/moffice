@@ -31,6 +31,14 @@ Three things to notice. The numbers come from your context pack, with their perm
 2. **Give it the facts that job needs.** [One file]({{ '/guides/fill-the-context-pack.html' | relative_url }}), from your answers, your documents or a conversation with the founders. Blanks are fine.
 3. **Set up your AI tool**, then ask for it: [Claude]({{ '/guides/setup-claude.html' | relative_url }}), [ChatGPT and Codex]({{ '/guides/setup-chatgpt-codex.html' | relative_url }}), [Grok]({{ '/guides/setup-grok.html' | relative_url }}) or [Google Gemini]({{ '/guides/setup-google.html' | relative_url }}).
 
+<div class="statrow">
+  <div class="stat"><div class="v t">15 minutes to 1 hour</div><div class="k">Give it the facts your job needs</div></div>
+  <div class="stat"><div class="v t">About 30 minutes</div><div class="k">Set up your AI tool</div></div>
+  <div class="stat"><div class="v t">About 15 minutes</div><div class="k">Get your first draft</div></div>
+  <div class="stat"><div class="v t">Each week</div><div class="k">Run the routine</div></div>
+</div>
+<p class="note" style="margin:10px 0 18px">Times are estimates from the steps, not measurements.</p>
+
 Want to see a result first? [Try a sample company]({{ '/try.html' | relative_url }}) in 10 minutes. [Start here]({{ '/guides/start-here.html' | relative_url }}) walks you through it. After that, it depends on where the company is:
 
 | Where you are | What to run |

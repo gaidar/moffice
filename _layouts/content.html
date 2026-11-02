@@ -2,26 +2,27 @@
 layout: default
 ---
 {%- assign eyebrow = "" -%}
+{%- assign eyebrow_url = "" -%}
 {%- case page.type -%}
   {%- when "skill" -%}
     {%- assign fn = site.data.functions | where: "slug", page.function | first -%}
     {%- capture eyebrow -%}Skill in {{ fn.label }}{%- endcapture -%}
-  {%- when "agent" -%}{%- assign eyebrow = "Agent role" -%}
-  {%- when "playbook" -%}{%- assign eyebrow = "Playbook" -%}
-  {%- when "guide" -%}{%- assign eyebrow = "Guide" -%}
-  {%- when "office" -%}{%- assign eyebrow = "Office document" -%}
-  {%- when "context-template" -%}{%- assign eyebrow = "Context pack template" -%}
-  {%- when "context-example" -%}{%- assign eyebrow = "Context pack example, fictional company" -%}
+    {%- capture eyebrow_url -%}/skills.html#{{ fn.slug }}{%- endcapture -%}
+  {%- when "agent" -%}{%- assign eyebrow = "Agent role" -%}{%- assign eyebrow_url = "/agents.html" -%}
+  {%- when "playbook" -%}{%- assign eyebrow = "Playbook" -%}{%- assign eyebrow_url = "/playbooks.html" -%}
+  {%- when "guide" -%}{%- assign eyebrow = "Guide" -%}{%- assign eyebrow_url = "/guides.html" -%}
+  {%- when "office" -%}{%- assign eyebrow = "Office document" -%}{%- assign eyebrow_url = "/office.html" -%}
+  {%- when "context-template" -%}{%- assign eyebrow = "Context pack template" -%}{%- assign eyebrow_url = "/context-pack.html" -%}
+  {%- when "context-example" -%}{%- assign eyebrow = "Context pack example, fictional company" -%}{%- assign eyebrow_url = "/context-pack.html" -%}
 {%- endcase -%}
 <header class="page">
   <div class="wrap">
-    {%- if eyebrow != "" -%}<p class="eyebrow">{{ eyebrow }}</p>{%- endif -%}
+    {%- if eyebrow != "" -%}<p class="eyebrow"><a href="{{ eyebrow_url | relative_url }}">{{ eyebrow }}</a></p>{%- endif -%}
     <h1>{{ page.title }}</h1>
     <p class="lede">{{ page.summary }}</p>
     {%- if page.type == "skill" -%}
       {%- assign owner = site.pages | where: "type", "agent" | where_exp: "a", "a.path contains page.owner" | first -%}
       {%- if page.you_bring -%}<p class="bring"><strong>You bring:</strong> {{ page.you_bring }}</p>{%- endif -%}
-      <p class="meta">Owned by <a href="{{ owner.url | relative_url }}">{{ owner.title }}</a></p>
     {%- endif -%}
     {%- if page.type == "agent" and page.bring_it -%}<p class="bring"><strong>Bring it:</strong> {{ page.bring_it }}</p>{%- endif -%}
     {%- if page.type == "skill" or page.type == "agent" -%}
@@ -29,8 +30,16 @@ layout: default
       {%- assign marker = 'id="how-to-run-it"' -%}
       {%- if page.type == "agent" -%}{%- assign marker = 'id="how-to-invoke"' -%}{%- endif -%}
       {%- assign prompt = content | split: marker | last | split: "<code>" | slice: 1 | first | split: "</code>" | first -%}
-      {%- if prompt -%}<pre class="prompt-preview"><code>{{ prompt | strip }}</code></pre>{%- endif -%}
-      {%- if page.type == "skill" -%}<p class="note">Or say what you need in plain words, once your project is set up.</p>{%- endif -%}
+      <section class="prompt-panel" aria-label="Prompt to paste">
+        <div class="prompt-head">
+          <span class="prompt-label">Prompt to paste</span>
+          <button type="button" class="btn primary office-copy-prompt">Copy prompt</button>
+          {%- if page.type == "skill" -%}<a class="btn" href="#example-fictional-company">See example</a>{%- endif -%}
+          <span class="toolbar-status" role="status" aria-live="polite"></span>
+        </div>
+        {%- if prompt -%}<pre class="prompt-preview"><code>{{ prompt | strip }}</code></pre>{%- endif -%}
+        {%- if page.type == "skill" -%}<p class="note">Or say what you need in plain words, once your project is set up.</p>{%- endif -%}
+      </section>
     {%- endif -%}
     {%- unless page.type == "index" -%}{%- include toolbar.html -%}{%- endunless -%}
   </div>
@@ -83,7 +92,7 @@ a code block escapes its angle brackets, so it can never contain the marker spli
       {%- if page.show_to -%}<p><strong>Show it to:</strong> {{ page.show_to }}</p>{%- endif -%}
     </aside>
   {%- endif -%}
-  <article class="doc-body{% if page.type == 'skill' or page.type == 'agent' %} numbered{% endif %}{% if page.type == 'skill' %} is-skill{% endif %}">
+  <article class="doc-body{% if page.type == 'skill' or page.type == 'agent' %} numbered{% endif %}{% if page.type == 'skill' %} is-skill{% endif %}"{% if page.type == 'guide' or page.type == 'playbook' or page.type == 'office' %} data-contents{% endif %}>
     {{ body }}
   </article>
 </div>

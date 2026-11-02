@@ -23,7 +23,7 @@
           {%- if item.section and page.path contains item.section -%}{%- assign active = true -%}{%- endif -%}
           <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.label }}</a>
         {%- endfor -%}
-        <a href="https://github.com/{{ site.repository }}">GitHub</a>
+        <a class="nav-github" href="https://github.com/{{ site.repository }}">GitHub</a>
       </div>
     </div>
   </nav>
@@ -33,24 +33,37 @@
   <footer class="site">
     <div class="wrap">
       <div class="foot-links">
-        {%- for item in site.data.nav -%}<a href="{{ item.url | relative_url }}">{{ item.label }}</a>{%- endfor -%}
-        <a href="{{ '/playbooks.html' | relative_url }}">Playbooks</a>
-        <a href="{{ '/setup.html' | relative_url }}">Setup</a>
-        <a href="{{ '/context-pack.html' | relative_url }}">Context pack</a>
-        <a href="{{ '/agents.html' | relative_url }}">Agents</a>
-        <a href="{{ '/examples.html' | relative_url }}">Examples</a>
-        <a href="{{ '/office/glossary.html' | relative_url }}">Glossary</a>
-        <a href="{{ '/guides.html' | relative_url }}">Guides</a>
-        <a href="{{ '/office.html' | relative_url }}">Office</a>
-        <a href="{{ '/CONTRIBUTING.html' | relative_url }}">Contributing</a>
+        <div>
+          <p class="foot-head">Get started</p>
+          <a href="{{ '/guides/start-here.html' | relative_url }}">Start here</a>
+          <a href="{{ '/try.html' | relative_url }}">Try it</a>
+          <a href="{{ '/setup.html' | relative_url }}">Setup</a>
+          <a href="{{ '/run-my-week.html' | relative_url }}">Run my week</a>
+          <a href="{{ '/guides/faq.html' | relative_url }}">FAQ</a>
+        </div>
+        <div>
+          <p class="foot-head">Library</p>
+          <a href="{{ '/skills.html' | relative_url }}">Find a task</a>
+          <a href="{{ '/playbooks.html' | relative_url }}">Playbooks</a>
+          <a href="{{ '/agents.html' | relative_url }}">Agents</a>
+          <a href="{{ '/context-pack.html' | relative_url }}">Context pack</a>
+          <a href="{{ '/examples.html' | relative_url }}">Examples</a>
+        </div>
+        <div>
+          <p class="foot-head">Reference</p>
+          <a href="{{ '/guides.html' | relative_url }}">Guides</a>
+          <a href="{{ '/office.html' | relative_url }}">Office</a>
+          <a href="{{ '/office/glossary.html' | relative_url }}">Glossary</a>
+        </div>
+        <div>
+          <p class="foot-head">Project</p>
+          <a href="https://github.com/{{ site.repository }}">GitHub</a>
+          <a href="{{ '/CONTRIBUTING.html' | relative_url }}">Contributing</a>
+          <a href="https://github.com/{{ site.repository }}/issues/new">Report an issue</a>
+          <a href="https://github.com/{{ site.repository }}/blob/main/LICENSE">Apache License 2.0</a>
+        </div>
       </div>
-      <p>
-        <a href="https://github.com/{{ site.repository }}/blob/main/LICENSE">Apache License 2.0</a> ·
-        Version {{ site.office_version }} ·
-        Author: Gaidar Magdanurov ·
-        <a href="https://github.com/{{ site.repository }}">GitHub</a> ·
-        <a href="https://github.com/{{ site.repository }}/issues/new">Report an issue</a>
-      </p>
+      <p>Version {{ site.office_version }}. Author: Gaidar Magdanurov.</p>
       <p>The office produces drafts, plans, analyses and reviews. The marketer decides. All company names in the examples are fictional.</p>
     </div>
   </footer>

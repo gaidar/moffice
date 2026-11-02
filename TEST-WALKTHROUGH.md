@@ -80,3 +80,19 @@ These ran on the changed text with one Anthropic model and the fictional sample 
 | Filter phrases, top bar, phone width | Browser on the local build | "Resume my campaign", "I have two hours", "Prepare a CEO update" and "Turn this into a sales PDF" each find their row. The partial match and empty messages show. No sideways page scroll at 390 pixels |
 
 Pinned download links could not be tested, because the tag does not exist and the repository is private. Test them at the release.
+
+## Readability pass, 2026-11-02
+
+Run in one browser engine on the local build. The live site is offline while the repository is private. No real reader has used it, so whether this makes tasks faster is unknown.
+
+| Check | Result |
+|---|---|
+| No sideways page scroll at 320, 390, 761, 768, 800, 1024 and 1280 pixels, on a sample of pages including the workboard, Weekly and a skill | Pass, after fixing a 133-pixel overflow of the workboard at 768 |
+| Tables and diagrams that still scroll sideways can be reached by keyboard and show a cue | Pass on the pages sampled |
+| Copy prompt copies exactly the preview, and a refused clipboard shows a message and selects the prompt | Pass, on one skill with a simulated clipboard |
+| On this page links land below the top bar and change the address | Pass, one guide |
+| Search counts, partial match, no match, one-letter query and Clear | Pass |
+| Skip link appears on the first Tab, and search keeps a visible outline | Pass |
+| Dark mode | One skill page looked at. Colors calculated for the rest |
+
+Not tested: browser zoom, other browser engines, a screen reader, a real phone, and downloads from the release tag, which need the release.
