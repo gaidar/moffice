@@ -19,13 +19,14 @@ These five corrections override the requirements document where they conflict.
 
 A CMO review and a new marketer review were run and acted on. The reviews themselves are in `dev/reviews/`, which is not committed.
 
-- Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60.
+- Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60. The owner accepted 56 on 2026-11-02.
 - The default setup is 3 files rather than 74. One combined context pack replaces 10 separate files, and the office manual accepts this. The 10 templates remain as the source.
 - Setup stays in the top bar and the function table stays on the home page, because the Definition of done and the website spec name them, though the CMO wanted both cut.
 - "Unverified" labels stay in the vendor guides, though the CMO wanted them moved. Nothing was tested on paid accounts, and the spec requires them.
 - PDFs now cover 18 documents, because the two new guides are procedures people read.
 - Worked examples were produced by following the skills by hand with the sample context pack, and are labeled where figures are illustrative. They were not run in a live vendor account.
-- A new skill's goal options use a 15% growth starting rule when there is no history. It is labeled a starting rule, not a benchmark.
+- A new skill's goal options use a 15% growth starting rule when there is no history. It is labeled a starting rule, not a benchmark. The owner accepted it on 2026-11-02.
+- The worked examples use two illustrative webinars: February 24, 2027 in Plan a webinar and March 4, 2027 in Use a skill. The owner chose to keep both on 2026-11-02.
 - "How to judge this" questions are the reviewers' and writers' judgment, not sourced from research.
 
 ## Spec gaps and conflicts
@@ -36,7 +37,7 @@ A CMO review and a new marketer review were run and acted on. The reviews themse
 - The press release says a fictional customer quote must not appear, but the text supplied contains no quote. Nothing to remove. Grep for the press release text is in the final report.
 - "[CONFIRM: Jekyll + just-the-docs]" and "[CONFIRM: 14]" were not answered. Proceeded with Jekyll, just-the-docs and 14 agent roles, with no merged roles.
 - "CNAME (if confirmed)": no domain was confirmed, so there is no `CNAME` file.
-- Skills target: "around 50" in one place and "40–50" in another. Built 50, and the validator enforces 40–50.
+- Skills target: "around 50" in one place and "40–50" in another. Built 50 first. The reviews took it to 56, and the validator now allows 40–60.
 - `updated: 2026-11-XX` in the frontmatter spec was set to the build date, 2026-11-01.
 - "How to run it" is called a two-line prompt, but the sample is one line. Skills use two lines, and the validator accepts either.
 
