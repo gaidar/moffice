@@ -31,14 +31,14 @@ layout: default
 Markdown links point at .md files so they work on GitHub. Pages mirror the source
 paths, so swapping the extension makes the same links work on the site.
 {%- endcomment -%}
-{%- comment -%}External links, such as GitHub file links, keep their .md ending.{%- endcomment -%}
-{%- assign chunks = content | split: 'href="https://' -%}
+{%- comment -%}External URLs in any attribute, such as GitHub file links and data-raw-url, keep their .md ending.{%- endcomment -%}
+{%- assign chunks = content | split: '="https://' -%}
 {%- capture protected -%}
   {%- for chunk in chunks -%}
     {%- if forloop.first -%}{{ chunk }}{%- else -%}
       {%- assign target = chunk | split: '"' | first -%}
       {%- assign safe = target | replace: '.md', '.MDKEEP' -%}
-      href="https://{{ chunk | replace_first: target, safe }}
+      ="https://{{ chunk | replace_first: target, safe }}
     {%- endif -%}
   {%- endfor -%}
 {%- endcapture -%}
