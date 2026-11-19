@@ -210,6 +210,8 @@ figcaption { font-family: var(--sans); font-size: 0.875rem; color: var(--ink-sof
 .judge p:last-child { margin-bottom: 0; }
 
 /* Skills filter */
+/* Without JavaScript, hide the controls that need it. A noscript note says what to do instead. */
+html:not(.js) .office-copy, html:not(.js) .office-copy-prompt, html:not(.js) .filter-label, html:not(.js) .filter-row, html:not(.js) #filter-help { display: none; }
 .filter-label { display: block; font-family: var(--sans); font-size: 1rem; font-weight: 700; margin: 24px 0 8px; }
 .filter-row { display: flex; gap: 8px; max-width: 520px; }
 .filter { flex: 1; min-width: 0; min-height: 44px; padding: 9px 12px; font-family: var(--sans); font-size: 1rem; color: var(--ink); background: var(--panel); border: 1.5px solid var(--rule-control); border-radius: 6px; }

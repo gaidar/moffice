@@ -2,7 +2,7 @@
 title: Set up on ChatGPT and Codex
 type: guide
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Set up the Marketing Office in a ChatGPT project on Plus or Pro, with an optional note on Codex and a plain-chat fallback.
 diagram: setup
 diagram_caption: "The steps below cover the top path. The plain-chat fallback covers the bottom one."
@@ -12,11 +12,11 @@ diagram_caption: "The steps below cover the top path. The plain-chat fallback co
 
 A marketer with a personal ChatGPT Plus or Pro subscription. Both plans include projects: Plus allows 25 files per project, Pro allows 40.
 
-**Last checked against documentation:** 2026-11-01. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
+**Last checked against documentation:** 2026-11-19. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
 
 ## What you need
 
-- A decision on your data settings. OpenAI says data sharing is on by default in personal Free, Plus and Pro workspaces. To turn it off, go to Settings, then Data controls: [Data controls in ChatGPT](https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt). Do this before you upload company facts, and never upload what the context pack guide tells you to strip.
+- A decision on your data settings. OpenAI says data sharing is on by default in personal Free, Plus and Pro workspaces. To turn it off, go to Settings, then Data controls, and switch off **Improve the model for everyone**: [Data controls in ChatGPT](https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt). Do this before you upload company facts, and never upload what the context pack guide tells you to strip.
 - A ChatGPT Plus or Pro subscription and a browser.
 - The two office files. Step 1 links them.
 - `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
@@ -30,7 +30,7 @@ A marketer with a personal ChatGPT Plus or Pro subscription. Both plans include 
 
 3. Open [the office manual](../office/office-manual.md) and click **Copy full text** at the top of the page. In the project, open the more options menu (•••), select **Project settings**, paste the text as the project instructions and save. Reopen the settings and check that the last line, which starts "When the marketer asks", is still there. If it was cut off, see Notes.
 
-4. Upload these 3 files to the project's sources: `my-context-pack.md`, `all-skills.md` and `roles-and-playbooks.md`. If a file is rejected, rename it to end in `.txt`. Unverified – check the vendor help page: [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq).
+4. In the project's **Sources** tab, select **Add sources** and upload these 3 files: `my-context-pack.md`, `all-skills.md` and `roles-and-playbooks.md`. OpenAI's [upload article](https://help.openai.com/en/articles/8555545-file-uploads-faq) lists Markdown (.md) files. If a file is rejected, rename it to end in `.txt`.
 
 5. Start a new chat inside the project and paste this check:
 
@@ -61,7 +61,7 @@ A marketer with a personal ChatGPT Plus or Pro subscription. Both plans include 
   ```
 
 - **Why combined files.** The individual files do not fit under the limit of 25 on Plus or 40 on Pro, and 3 files do, or 4 with the manual. OpenAI's project page says only 10 files can be uploaded at the same time, so one batch is enough.
-- **Memory.** You can change the memory choice later under **Project settings**, in **Memory**.
+- **Memory.** You can change the memory choice later under **Project settings**, in **Memory**. OpenAI says the change can take a few hours to apply.
 
 ## What success looks like
 
@@ -117,16 +117,17 @@ Use this if you do not want a project, or a project gives you trouble. It needs 
 - **The check lists fewer than 10 sections.** Check that `my-context-pack.md` holds all 10 and upload it again. Project files stay across the project's chats, so also check that you are not in a chat outside the project.
 - **You forgot files in a new chat.** In a project, start the chat inside the project and the files come with it. In the plain-chat fallback, upload them again.
 - **You updated your context pack.** In the project's sources list, delete the old `my-context-pack.md`, upload the new one, and start a new chat.
-- **You do not see the project-only memory option.** Skip it. OpenAI says availability depends on your plan.
+- **You do not see the project-only memory option.** OpenAI's Projects page says that on personal plans it needs **Reference saved memories** and **Reference chat history** turned on in your personal settings. Turn them on, or skip the option.
 
 ## Verification
 
-Verified on 2026-11-01 against vendor documentation. Not yet tested in a live account. The data settings note was checked on 2026-11-02 from search excerpts of the linked page.
+Verified on 2026-11-19 against vendor documentation. Not yet tested in a live account.
 
 - [Downloading source code archives](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives): GitHub's Code and Download ZIP steps
-Fetched directly. The developers.openai.com pages for these topics redirect to learn.chatgpt.com.
 
-- [Quickstart](https://learn.chatgpt.com/docs/quickstart): desktop and web setup, no terminal, the ChatGPT dropdown and Codex choice, folders.
+Fetched directly on 2026-11-19. The developers.openai.com pages for these topics redirect to learn.chatgpt.com.
+
+- [Quickstart](https://learn.chatgpt.com/docs/quickstart): desktop and web setup, the ChatGPT dropdown and Codex choice, folders.
 - [ChatGPT desktop app](https://learn.chatgpt.com/docs/app): starting a chat, project or folder.
 - [Projects and chats](https://learn.chatgpt.com/docs/projects): project instructions apply across chats, Sources, folder access can read and change files.
 - [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt): what Chat, Work and Codex are for, and Codex for knowledge work.
@@ -137,18 +138,20 @@ Fetched directly. The developers.openai.com pages for these topics redirect to l
 - [Pricing](https://learn.chatgpt.com/docs/pricing): Work and Codex on Plus and Pro, shared usage limits.
 - [Documentation index](https://learn.chatgpt.com/docs): where the topic pages are.
 
-Read only as excerpts in search results, because direct fetches of help.openai.com and openai.com returned an access error.
+Read only as excerpts in search results, because direct fetches of help.openai.com returned an access error again on 2026-11-19.
 
-- [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt): plan availability, 25 and 40 file limits, 10 uploads at a time, **New project**, **Project settings**, **Memory**, deleting from the sources list, Work unavailable with project-only memory (checked 2026-11-02).
-- [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq): per-project limits, TXT listed, 80 files every 3 hours.
+- [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt): plan availability, 25 and 40 file limits, 10 uploads at a time, **New project**, **Project settings**, **Memory**, files in the **Sources** tab and **Add sources**, deleting from the sources list, the memory settings project-only memory needs, Work unavailable with project-only memory.
+- [Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-file-uploads-faq): per-project limits, Markdown (.md) and TXT listed, 80 files every 3 hours.
+- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes): Plus raised to 25 files per project on September 3, 2025.
+- [Data controls in ChatGPT](https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt): data sharing on by default in personal Free, Plus and Pro workspaces, Settings, then Data controls, **Improve the model for everyone**.
 - [ChatGPT custom instructions](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions): 5,000 characters on Plus and Pro, for account-wide instructions only.
 - [Data analysis with ChatGPT](https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt): `.md` named for data analysis.
 - [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt): eligible plans.
-- [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex): Codex is separate, for technical work, included with Plus and Pro, Work from a project.
-- [Using Codex Cloud](https://help.openai.com/en/articles/20001545-using-codex-cloud): the Codex view is in the desktop app, and cloud tasks can run from the web and mobile (checked 2026-11-02).
+- [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex): Codex is a separate view in the desktop app, for technical work, included with Plus and Pro, Work from a project.
+- [Using Codex Cloud](https://help.openai.com/en/articles/20001545-using-codex-cloud): the Codex view is in the desktop app, and cloud tasks can run from the web and mobile.
 
 What could not be verified:
 
-- Notes: the character limit for project instructions. No page found states one.
-- Step 4: whether project uploads accept `.md` files, and the name of the upload button.
-- Steps 2, 3 and 4, and Troubleshooting, "You updated your context pack": every help.openai.com detail comes from search excerpts, not a full page read. One older version of the upload FAQ gives Plus 20 files per project. The 4 files in this guide fit either way.
+- Notes: the character limit for project instructions. No OpenAI page found states one.
+- Step 4: whether project sources accept every file type that chat accepts. The Projects page lists PDFs, spreadsheets, docs, images and pasted text, and does not name `.md`. One indexed copy of that page calls the button **Add source**.
+- Steps 2, 3 and 4, and Troubleshooting: every help.openai.com detail comes from search excerpts, not a full page read. An older copy of the upload FAQ gives Plus 20 files per project. The Projects page and the September 2025 release note give 25, so this guide uses 25.

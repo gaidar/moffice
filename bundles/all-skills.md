@@ -1468,7 +1468,7 @@ reads: [goals-and-kpis, company, icp-and-segments, channels-and-tools, product]
 you_bring: Last quarter's results, the days you can spend on this plan, and any hard dates not in the context pack.
 also_for: [quarterly plan, marketing plan, 90-day plan, stop doing, what to stop, next quarter, what to focus on, plan for the ceo, goals for the quarter, hit the pipeline goal, one person team]
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Goals, bets, calendar, owners and a capacity check for one quarter.
 judge: ["If you could only finish one bet this quarter which would it be and is it ranked first?", "Which bet would you cut if the CEO added a project next month?", "Did you reason the expected effect from your numbers or is it what you hope for?", "Would these bets close the gap even if they all went well?"]
 show_to: your CEO, before you start, and ask which bet they would cut first
@@ -1503,7 +1503,7 @@ The marketer pastes into the chat:
 4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps.
 5. Build the calendar. Place hard dates first, then count back from each one, using the approval times in channels-and-tools.md. Add the first draft date for each item needing approval.
 6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Mark anyone outside marketing "needs to agree".
-7. Run the capacity check, as the office manual counts it. Estimate days per bet from its pieces, add rows for routine and for the interruption block, and compare the total with the marketer's days. Keep freelance days separate. If effort or days are unknown, write Not assessed. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
+7. Run the capacity check, as the office manual counts it. Estimate days per bet from its pieces, and compare the total with days available, showing the manual's subtraction once. Keep freelance days separate. If effort or days are unknown, write Not assessed. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
 8. Check the money. If the estimated cost of the bets exceeds the budget, say by how much and cut the lowest ranked bet.
 9. Write the decision check from the office manual for the top bet.
 10. Write up to 3 risks, each with its signal and response.
@@ -1531,7 +1531,7 @@ Company goal: <word for word, one line>
 
 ## Capacity check
 | Work | Marketer days and reasoning | Freelance days |
-<one row per bet, routine, interruption block, total, available>
+<one row per bet, total, days available>
 Result: <fits, Not assessed, or what was cut>
 
 ## Not doing
@@ -1553,7 +1553,7 @@ Result: <fits, Not assessed, or what was cut>
 - [ ] Does every goal have a bet, and does every bet serve a goal?
 - [ ] Does each calendar date allow for the approval time of its approver?
 - [ ] Does each item have one owner named in the context pack, or the marketer?
-- [ ] Does the capacity check fit, after cuts, with routine and interruptions counted?
+- [ ] Does the capacity check fit, after cuts, with routine and interruptions subtracted once?
 - [ ] Are all derived numbers labeled as estimates, with the math shown?
 - [ ] Are internal-only items marked?
 
@@ -1582,7 +1582,7 @@ Result: <fits, Not assessed, or what was cut>
 
 **Calendar:** January 29 first drafts, February 15 live, March 9–11 conference.
 
-**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10 (3 on site). Release 15. Routine 13 (1 day a week). Interruptions 3 (2 hours a week). Total 61, 60 available (13 weeks, 5 off). Result: bet 3 shrinks by 1.
+**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10. Release 15. Total 45. Available 44: 65 working days, minus 5 off, 13 routine (1 day a week) and 3 interruptions (2 hours a week). Result: bet 3 shrinks by 1.
 
 **Not doing:** outbound for software companies.
 
@@ -2342,7 +2342,7 @@ reads: [company, product, icp-and-segments, messaging, proof-points, goals-and-k
 you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, hours per item and the hours you have for content.
 also_for: [content plan, editorial calendar, what to publish, blog schedule, social schedule, posting schedule, content ideas, content for demand]
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Produces a dated content calendar for a set period, with every item tied to a goal or campaign and checked against capacity and approval times.
 ---
 
@@ -2362,7 +2362,7 @@ Use this to turn goals and campaigns into a dated list of what gets published, w
 - [[context-pack:proof-points]]: which customers and numbers may appear in public.
 - [[context-pack:product]]: what may and may not be said about the roadmap.
 
-The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, hours per item and hours available, as the office manual counts capacity.
+The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, effort per item and days available, as the office manual counts capacity.
 
 ## Procedure
 
@@ -2374,7 +2374,7 @@ The marketer supplies the period, any campaign briefs, items already scheduled, 
 6. Name the skill that produces each item. If no skill fits, write "no skill".
 7. Set the draft due date: publish date, minus the approver's typical time, minus one working day. A same-day approver counts as zero. Item types with no listed approver get [approver needed], and the draft due date is worked out as if the approver were same-day.
 8. Move to "Cut or held" any item that depends on a roadmap item not cleared in product.md, an internal-only fact, or a proof point with status pending, sales only, internal only or none. Give held items no public date.
-9. Run the capacity check. Count items per week and items needing design work. Count an item already in a campaign or launch plan once. If the marketer gave hours per item and hours available, show both as Estimates. If not, write [hours per item needed] or [hours available needed], give the verdict "Not assessed" and do not guess. If the load exceeds the hours, remove items from the bottom of the order in step 4 and list them under "Cut or held".
+9. Run the capacity check. Count items per week and items needing design work. Count an item already in a campaign or launch plan once. If the marketer gave effort per item and days available, show both in days, as Estimates. If not, write [effort per item needed] or [days available needed], give the verdict "Not assessed" and do not guess. If the load exceeds them, remove items from the bottom of the order in step 4 and list them under "Cut or held".
 10. Check the draft against the context pack: every date, cadence, approver and title. Remove words to avoid, and fix anything that contradicts a file.
 11. List everything assumed, including publishing days you chose, under "Assumptions and open questions". If a needed context pack field is blank, leave a placeholder in square brackets and ask in the last section. Never invent.
 
@@ -2395,7 +2395,7 @@ Fixed dates: <dated items, up to 8, or "None">
 
 ## Capacity check
 Items per week: <count by week>
-Marketer: <hours needed and available with method, or the placeholder>
+Marketer: <days needed and days available with method, or the placeholder>
 Design: <items needing design against available days>
 Verdict: <fits, tight, over or Not assessed, in one sentence>
 
@@ -2438,7 +2438,7 @@ Verdict: <fits, tight, over or Not assessed, in one sentence>
 
 **Capacity check**
 
-Items per week: six. Marketer: [hours per item needed]. Design: one page against about four designer days a month. Verdict: Not assessed until the hours are known.
+Items per week: six. Marketer: [effort per item needed]. Design: one page against about four designer days a month. Verdict: Not assessed until the hours are known.
 
 **Cut or held**
 

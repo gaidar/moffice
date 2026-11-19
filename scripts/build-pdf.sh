@@ -14,7 +14,11 @@ fi
 import pathlib, re, shutil, subprocess, sys, tempfile
 import pypandoc, typst
 
-site = "https://gaidar.github.io/moffice/"
+# The published address comes from _config.yml, so a domain change needs no edit here.
+config = pathlib.Path("_config.yml").read_text(encoding="utf-8")
+url = re.search(r'^url:\s*"?([^"\s]+)', config, re.M).group(1).rstrip("/")
+baseurl = re.search(r'^baseurl:\s*"?([^"\s]*)', config, re.M)
+site = url + (baseurl.group(1) if baseurl else "").rstrip("/") + "/"
 pandoc = pypandoc.get_pandoc_path()
 # PDFs only for the procedures people read. Everything else is a text file on GitHub.
 sources = sorted(
@@ -30,10 +34,26 @@ with tempfile.TemporaryDirectory() as tmp:
     tmp = pathlib.Path(tmp)
     # Relative .md links would be dead in a PDF, so point them at the published page.
     lua = tmp / "links.lua"
+    # Paths are resolved here, so a PDF never links to ".../guides/../office/...".
+    # agent-roles.md is the one page whose URL differs from its file name.
     lua.write_text(
+        'local function normalize(path)\n'
+        '  local parts = {}\n'
+        '  for seg in path:gmatch("[^/]+") do\n'
+        '    if seg == ".." then\n'
+        '      if #parts > 0 then table.remove(parts) end\n'
+        '    elseif seg ~= "." then\n'
+        '      table.insert(parts, seg)\n'
+        '    end\n'
+        '  end\n'
+        '  return table.concat(parts, "/")\n'
+        'end\n'
         'function Link(el)\n'
         '  if not el.target:match("^%a+:") and not el.target:match("^#") then\n'
-        '    el.target = "SITE" .. "BASE/" .. el.target:gsub("%.md", ".html")\n'
+        '    local target = el.target:gsub("%.md", ".html")\n'
+        '    target = normalize("PAGE_DIR/" .. target)\n'
+        '    target = target:gsub("^agent%-roles%.html", "agents.html")\n'
+        '    el.target = "SITE_ROOT" .. target\n'
         '  end\n'
         '  return el\n'
         'end\n'
@@ -51,8 +71,7 @@ with tempfile.TemporaryDirectory() as tmp:
         target = out_root / src.with_suffix(".pdf")
         target.parent.mkdir(parents=True, exist_ok=True)
         typ = tmp / (src.as_posix().replace("/", "__") + ".typ")
-        base = (site + src.parent.as_posix()).rstrip("/")
-        lua_text = lua.read_text().replace('"SITE" .. "BASE/"', '"' + base + '/"')
+        lua_text = lua.read_text().replace("PAGE_DIR", src.parent.as_posix()).replace("SITE_ROOT", site)
         lua_file = tmp / "links-current.lua"
         lua_file.write_text(lua_text)
         # Pandoc reads "[[context-pack:x]]: text" as a link definition and drops the line.

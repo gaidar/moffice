@@ -4,7 +4,7 @@ A free, open source playbook of skills and agent roles that you load into Claude
 
 The office produces drafts, plans, analyses and reviews. It does not know your market. You decide.
 
-Website: <https://gaidar.github.io/moffice/>. See [DEPLOY.md](DEPLOY.md) for the deployment status and steps.
+Website: <https://marketingoffice.net/>. See [DEPLOY.md](DEPLOY.md) for the deployment status and steps.
 
 ## Start
 

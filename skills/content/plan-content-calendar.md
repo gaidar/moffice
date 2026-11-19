@@ -7,7 +7,7 @@ reads: [company, product, icp-and-segments, messaging, proof-points, goals-and-k
 you_bring: The period, any campaign briefs, items already scheduled, dates to avoid, hours per item and the hours you have for content.
 also_for: [content plan, editorial calendar, what to publish, blog schedule, social schedule, posting schedule, content ideas, content for demand]
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Produces a dated content calendar for a set period, with every item tied to a goal or campaign and checked against capacity and approval times.
 ---
 
@@ -27,7 +27,7 @@ Use this to turn goals and campaigns into a dated list of what gets published, w
 - [[context-pack:proof-points]]: which customers and numbers may appear in public.
 - [[context-pack:product]]: what may and may not be said about the roadmap.
 
-The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, hours per item and hours available, as the office manual counts capacity.
+The marketer supplies the period, any campaign briefs, items already scheduled, dates to avoid and, if known, effort per item and days available, as the office manual counts capacity.
 
 ## Procedure
 
@@ -39,7 +39,7 @@ The marketer supplies the period, any campaign briefs, items already scheduled, 
 6. Name the skill that produces each item. If no skill fits, write "no skill".
 7. Set the draft due date: publish date, minus the approver's typical time, minus one working day. A same-day approver counts as zero. Item types with no listed approver get [approver needed], and the draft due date is worked out as if the approver were same-day.
 8. Move to "Cut or held" any item that depends on a roadmap item not cleared in product.md, an internal-only fact, or a proof point with status pending, sales only, internal only or none. Give held items no public date.
-9. Run the capacity check. Count items per week and items needing design work. Count an item already in a campaign or launch plan once. If the marketer gave hours per item and hours available, show both as Estimates. If not, write [hours per item needed] or [hours available needed], give the verdict "Not assessed" and do not guess. If the load exceeds the hours, remove items from the bottom of the order in step 4 and list them under "Cut or held".
+9. Run the capacity check. Count items per week and items needing design work. Count an item already in a campaign or launch plan once. If the marketer gave effort per item and days available, show both in days, as Estimates. If not, write [effort per item needed] or [days available needed], give the verdict "Not assessed" and do not guess. If the load exceeds them, remove items from the bottom of the order in step 4 and list them under "Cut or held".
 10. Check the draft against the context pack: every date, cadence, approver and title. Remove words to avoid, and fix anything that contradicts a file.
 11. List everything assumed, including publishing days you chose, under "Assumptions and open questions". If a needed context pack field is blank, leave a placeholder in square brackets and ask in the last section. Never invent.
 
@@ -60,7 +60,7 @@ Fixed dates: <dated items, up to 8, or "None">
 
 ## Capacity check
 Items per week: <count by week>
-Marketer: <hours needed and available with method, or the placeholder>
+Marketer: <days needed and days available with method, or the placeholder>
 Design: <items needing design against available days>
 Verdict: <fits, tight, over or Not assessed, in one sentence>
 
@@ -103,7 +103,7 @@ Verdict: <fits, tight, over or Not assessed, in one sentence>
 
 **Capacity check**
 
-Items per week: six. Marketer: [hours per item needed]. Design: one page against about four designer days a month. Verdict: Not assessed until the hours are known.
+Items per week: six. Marketer: [effort per item needed]. Design: one page against about four designer days a month. Verdict: Not assessed until the hours are known.
 
 **Cut or held**
 

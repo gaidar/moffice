@@ -6,10 +6,72 @@ Exit code 0 means zero errors.
 """
 import re
 import sys
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 RELATIVE_MD_LINK = re.compile(r'<a [^>]*href="(?![a-z]+:)[^"]*\.md(?:#[^"]*)?"')
+ID_ATTR = re.compile(r'\s(?:id|name)="([^"]+)"')
+STYLESHEET = re.compile(r'href="([^"]*)/assets/css/site\.css"')
+
+
+class LinkCollector(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag in ("a", "link") and attrs.get("href"):
+            self.links.append(attrs["href"])
+        elif tag in ("script", "img") and attrs.get("src"):
+            self.links.append(attrs["src"])
+
+
+def check_internal_links(site, pages):
+    """Every internal link and #fragment must land on a built file and an existing id.
+
+    A file whose URL differs from its name, such as agent-roles.md at /agents.html, breaks
+    links that only swap .md for .html, and the other checks cannot see that.
+    """
+    errors = []
+    home = site / "index.html"
+    found = STYLESHEET.search(home.read_text(encoding="utf-8")) if home.exists() else None
+    base = found.group(1) if found else ""
+    ids = {}
+
+    def ids_in(path):
+        if path not in ids:
+            ids[path] = set(ID_ATTR.findall(path.read_text(encoding="utf-8")))
+        return ids[path]
+
+    for page in pages:
+        collector = LinkCollector()
+        collector.feed(page.read_text(encoding="utf-8"))
+        for href in collector.links:
+            parts = urlsplit(href)
+            if parts.scheme or href.startswith("//") or href.startswith("data:"):
+                continue
+            if parts.path == "":
+                target = page
+            elif parts.path.startswith("/"):
+                if base and not (parts.path == base or parts.path.startswith(base + "/")):
+                    errors.append(f"{page.relative_to(site)}: link outside the site base {base!r}: {href}")
+                    continue
+                target = site / unquote(parts.path[len(base):]).lstrip("/")
+            else:
+                target = page.parent / unquote(parts.path)
+            target = Path(target)
+            if target.is_dir():
+                target = target / "index.html"
+            if not target.resolve().is_file():
+                errors.append(f"{page.relative_to(site)}: broken link: {href}")
+                continue
+            fragment = unquote(parts.fragment)
+            if fragment and target.suffix == ".html" and fragment not in ids_in(target.resolve()):
+                errors.append(f"{page.relative_to(site)}: no #{fragment} in {target.resolve().relative_to(site.resolve())}: {href}")
+    return errors
 
 
 def main():
@@ -53,6 +115,8 @@ def main():
         for target in ("playbooks.html", "setup.html", "context-pack.html", "agents.html"):
             if f'{target}"' not in footer:
                 errors.append(f"index.html: footer has no link to {target}")
+
+    errors.extend(check_internal_links(site, pages))
 
     for line in errors:
         print(f"ERROR {line}")

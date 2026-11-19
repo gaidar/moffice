@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.0 – 2026-11-01
+## v0.1.0 – 2026-11-19
 
 First release.
 
@@ -9,9 +9,9 @@ First release.
 - Context pack: 10 blank templates and one filled example for a fictional company, CogniATion.
 - Office manual, output conventions, glossary, agent roster and a one-table workboard for current jobs.
 - Seven playbooks: starting from zero, first week, weekly, monthly, quarterly, launch, campaign lifecycle.
-- Vendor setup guides for Claude, ChatGPT and Codex, Grok, and Google Gemini, verified against vendor documentation on 2026-11-01, each with a plain-chat fallback.
+- Vendor setup guides for Claude, ChatGPT and Codex, Grok, and Google Gemini, rechecked against vendor documentation on 2026-11-19, each with a plain-chat fallback.
 - Guides for filling in the context pack, using a skill, invoking an agent role, writing your own skill and keeping the office up to date, plus an FAQ.
-- Task-first setup with three routes, an optional 10-minute trial on a sample company, a 15-minute quick start, a one-hour first pass of the context pack in one file, with a founder interview route for companies with no documents, and a 3-file project setup.
+- Task-first setup with three routes, plus a 10-minute trial on a sample company for anyone only looking, a 15-minute quick start, a one-hour first pass of the context pack in one file, with a founder interview route for companies with no documents, and a 3-file project setup.
 - Plain requests: in a project, say what you need, and the office picks the skill and says which one. The exact prompt stays as the fallback.
 - One-chat runs: a job that needs several skills runs in one chat and shows a short working view, with the full record on request, with copyable prompts for the minimum campaign and the Monday review.
 - Session prompts, job records and a Run my week page, so a new chat can resume the right draft and next step.

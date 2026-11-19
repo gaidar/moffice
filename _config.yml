@@ -1,7 +1,7 @@
 title: Marketing Office
 description: A free, open source playbook of skills and agent roles for one marketer. Plain text. No servers, no API keys, no code.
-url: https://gaidar.github.io
-baseurl: /moffice
+url: https://marketingoffice.net
+baseurl: ""
 repository: gaidar/moffice
 office_version: 0.1.0
 

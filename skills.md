@@ -2,10 +2,11 @@
 title: Find a task
 type: index
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Start from what you need to do. Each skill is a written procedure with a fixed output format. It produces a draft, and you decide what to use.
 ---
 
+<noscript><p class="filter-help">Search needs JavaScript. Every situation and skill is listed below.</p></noscript>
 <label class="filter-label" for="task-filter">Search situations and skills</label>
 <div class="filter-row">
 <input id="task-filter" class="filter" type="search" placeholder="For example, pipeline" aria-describedby="filter-help">

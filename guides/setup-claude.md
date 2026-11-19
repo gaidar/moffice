@@ -2,7 +2,7 @@
 title: Set up on Claude
 type: guide
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Create one Claude project with the office manual in its instructions and 3 files in its knowledge, or run the office in plain chat.
 diagram: setup
 diagram_caption: "The steps below cover the top path. The plain-chat fallback covers the bottom one."
@@ -10,14 +10,14 @@ diagram_caption: "The steps below cover the top path. The plain-chat fallback co
 
 ## Who it is for
 
-Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Free too, with a limit of five, but says project instructions are for paid plans and limits automatic capacity expansion to paid plans.
+Marketers with a personal Claude Pro, Max or Ultra plan. Anthropic lists projects on Free too, with a limit of five, but says project instructions are for paid plans and limits automatic capacity expansion to paid plans.
 
-**Last checked against documentation:** 2026-11-01. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
+**Last checked against documentation:** 2026-11-19. **Last tested in a live account:** not yet. If a screen differs, trust the help page.
 
 ## What you need
 
-- A decision on your data settings. On consumer plans, whether your chats help improve Claude is a privacy setting you control. Check it before you upload company facts: [who can view your chats](https://support.claude.com/en/articles/8325621-i-would-like-to-input-sensitive-data-into-my-chats-with-claude-who-can-view-my-conversations). Never upload what the context pack guide tells you to strip.
-- A Claude Pro or Max subscription, signed in at claude.ai in a browser
+- A decision on your data settings. On consumer plans, whether your chats help improve Claude is a privacy setting you control. It is the toggle under "Help Improve our AI models" in **Settings**, then **Privacy**. Check it before you upload company facts: [who can view your chats](https://support.claude.com/en/articles/8325621-i-would-like-to-input-sensitive-data-into-my-chats-with-claude-who-can-view-my-conversations). Never upload what the context pack guide tells you to strip.
+- A Claude Pro, Max or Ultra subscription, signed in at claude.ai in a browser
 - The two office files. Step 1 links them.
 - `my-context-pack.md`, from the [fast first pass](fill-the-context-pack.md#fast-first-pass). Blanks in it are fine.
 - About 30 minutes, an estimate, not counting the context pack
@@ -30,7 +30,7 @@ Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Fr
 
 3. Open [the office manual](../office/office-manual.md) and click **Copy full text** at the top of the page. In the project, click **Set project instructions**, paste and click **Save instructions**. If it does not fit, see Notes.
 
-4. In the project knowledge area on the right, click the **+** button and upload `my-context-pack.md`. If it is rejected, change the file's ending from .md to .txt and upload it again.
+4. In the project knowledge area on the right, which Anthropic's upload page calls **Files**, click the **+** button and upload `my-context-pack.md`. If it is rejected, change the file's ending from .md to .txt and upload it again.
 
 5. Upload `all-skills.md` and `roles-and-playbooks.md` the same way. Unverified – check the vendor help page: [upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude).
 
@@ -56,13 +56,13 @@ Marketers with a personal Claude Pro or Max plan. Anthropic lists projects on Fr
 
 ### Notes
 
-- **If the instructions do not fit**, paste this pointer instead, and upload `office-manual.md` with the other files. The manual is about 8,800 characters, and Anthropic states no limit for project instructions. Unverified – check the vendor help page: [create and manage projects](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects).
+- **If the instructions do not fit**, paste this pointer instead, and upload `office-manual.md` with the other files. The manual is about 8,800 characters. Anthropic states no limit for project instructions in the current version. Unverified – check the vendor help page: [create and manage projects](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects). The Claude Code docs set a limit of 16,000 characters for the new version (see Which Projects).
 
   ```
   You are the Marketing Office. Before every response, read the file office-manual.md in this project's files and follow it exactly. It sets how skills and agent roles are used, the rule on facts, the assumption labels and the output conventions. Never invent facts about the company. If you cannot find office-manual.md, say so and ask the marketer to upload it.
   ```
 
-- **Which Projects.** Use claude.ai/projects, not the "Projects" item at claude.ai/code, which is a separate beta for running Claude Code threads. Claude cannot read the project's name or description, so these can say anything.
+- **Which Projects.** These steps are for the current version of projects, at claude.ai/projects. The "Projects" item at claude.ai/code is a new beta version, where one conversation runs tasks as parallel cloud threads. Anthropic has started moving existing projects for some Pro, Max and Ultra users to it, with their instructions, files and chat history, and says chat will follow. If yours have moved, the screens may differ from steps 2 to 5. Unverified – check the vendor help page: [what are projects?](https://support.claude.com/en/articles/9517075-what-are-projects). Claude cannot read the project's name or description, so these can say anything.
 - **File types.** Anthropic's list names TXT and does not name Markdown, which is why step 4 has the .txt route. Unverified – check the vendor help page: [upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude).
 - **Capacity.** Anthropic sets no fixed file count for a project: each file can be up to 30MB, and all content must fit Claude's context window. On paid plans, Claude switches on [retrieval mode](https://support.claude.com/en/articles/11473015-retrieval-augmented-generation-rag-for-projects) automatically as the project nears that limit, which Anthropic says expands capacity by up to 10x.
 
@@ -117,12 +117,12 @@ This works with chat and file upload only. It costs a few minutes at the start o
 
 ## Verification
 
-Verified on 2026-11-01 against vendor documentation. Not yet tested in a live account. The data settings note was checked on 2026-11-02 from search excerpts of the linked page.
+Verified on 2026-11-19 against vendor documentation. Not yet tested in a live account.
 
 - [Downloading source code archives](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives): GitHub's Code and Download ZIP steps
-- [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects): plans, five-project Free limit, paid retrieval mode
+- [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects): plans, five-project Free limit, paid retrieval mode, the new beta version and moved projects
 - [How can I create and manage projects?](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects): project, instructions and file upload steps, button names
-- [Upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude): file types, chat and project limits, chat upload buttons
+- [Upload files to Claude](https://support.claude.com/en/articles/8241126-upload-files-to-claude): file types, chat and project limits, chat upload buttons, the project's Files section
 - [Retrieval augmented generation for projects](https://support.claude.com/en/articles/11473015-retrieval-augmented-generation-rag-for-projects): automatic switch, up to 10x capacity, paid plans
 - [Understanding Claude's personalization features](https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features): project instructions for paid plans, apply only inside the project
 - [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills): what skills are, plans, code execution requirement
@@ -130,13 +130,16 @@ Verified on 2026-11-01 against vendor documentation. Not yet tested in a live ac
 - [How to create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills): required skill.md, name, description and ZIP structure
 - [How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work): long chats, summarizing, starting a new chat
 - [How large is the context window on paid Claude plans?](https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans): context window, automatic summarizing on paid plans
-- [Claude pricing](https://claude.com/pricing): Pro and Max include projects and skills
-- [Projects in Claude Code docs](https://code.claude.com/docs/en/claude-projects): the separate beta at claude.ai/code
+- [Claude pricing](https://claude.com/pricing): Pro, Max and Ultra include projects and skills
+- [Projects in Claude Code docs](https://code.claude.com/docs/en/claude-projects): the new beta version at claude.ai/code, 16,000-character instructions
 - [Introduction to projects, Claude Academy](https://academy.claude.com/courses/claude-101/introduction-to-projects): "Instructions" panel name, file types named
+- [Who can view my conversations?](https://support.claude.com/en/articles/8325621-i-would-like-to-input-sensitive-data-into-my-chats-with-claude-who-can-view-my-conversations): consumer privacy controls
+- [How do I change my model improvement privacy settings?](https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings): Settings, Privacy and the toggle name
 
 What could not be verified:
 
 - Notes: the character limit for project instructions. No page fetched states one for projects at claude.ai/projects.
 - Notes: whether .md files upload. No page fetched lists Markdown as supported or rejected.
 - Step 5: selecting several files at once.
+- Notes, "Which Projects": whether steps 2 to 5 match the new beta version of projects.
 - Troubleshooting, "You updated your context pack": how to remove a file from a project.

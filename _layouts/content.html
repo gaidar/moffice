@@ -37,6 +37,7 @@ layout: default
           {%- if page.type == "skill" -%}<a class="btn" href="#example-fictional-company">See example</a>{%- endif -%}
           <span class="toolbar-status" role="status" aria-live="polite"></span>
         </div>
+        <noscript><p class="note">Copy prompt needs JavaScript. Select the prompt below and copy it.</p></noscript>
         {%- if prompt -%}<pre class="prompt-preview"><code>{{ prompt | strip }}</code></pre>{%- endif -%}
         {%- if page.type == "skill" -%}<p class="note">Or say what you need in plain words, once your project is set up.</p>{%- endif -%}
       </section>
@@ -61,7 +62,8 @@ a code block escapes its angle brackets, so it can never contain the marker spli
       {%- if target contains '://' or target contains 'mailto:' -%}
         {{ link_marker }}{{ chunk }}
       {%- else -%}
-        {%- assign site_target = target | append: '"' | replace: '.md"', '.html"' | replace: '.md#', '.html#' | remove: '"' -%}
+        {%- comment -%}agent-roles.md is the one page whose URL differs from its file name. See ASSUMPTIONS.md.{%- endcomment -%}
+        {%- assign site_target = target | append: '"' | replace: '.md"', '.html"' | replace: '.md#', '.html#' | remove: '"' | replace: 'agent-roles.html', 'agents.html' -%}
         {{ link_marker }}{{ chunk | replace_first: target, site_target }}
       {%- endif -%}
     {%- endif -%}

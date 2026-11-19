@@ -7,7 +7,7 @@ reads: [goals-and-kpis, company, icp-and-segments, channels-and-tools, product]
 you_bring: Last quarter's results, the days you can spend on this plan, and any hard dates not in the context pack.
 also_for: [quarterly plan, marketing plan, 90-day plan, stop doing, what to stop, next quarter, what to focus on, plan for the ceo, goals for the quarter, hit the pipeline goal, one person team]
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: Goals, bets, calendar, owners and a capacity check for one quarter.
 judge: ["If you could only finish one bet this quarter which would it be and is it ranked first?", "Which bet would you cut if the CEO added a project next month?", "Did you reason the expected effect from your numbers or is it what you hope for?", "Would these bets close the gap even if they all went well?"]
 show_to: your CEO, before you start, and ask which bet they would cut first
@@ -42,7 +42,7 @@ The marketer pastes into the chat:
 4. Rank the bets. Dated goals come first, then bets for the top segment in the priority order, then the rest. State each bet's expected effect as an estimate, with its reasoning in a few words, worked from your baselines. Write unknown only if no baseline helps.
 5. Build the calendar. Place hard dates first, then count back from each one, using the approval times in channels-and-tools.md. Add the first draft date for each item needing approval.
 6. Assign one owner to each bet and each calendar item. Use only people named in the context pack, or "the marketer". Mark anyone outside marketing "needs to agree".
-7. Run the capacity check, as the office manual counts it. Estimate days per bet from its pieces, add rows for routine and for the interruption block, and compare the total with the marketer's days. Keep freelance days separate. If effort or days are unknown, write Not assessed. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
+7. Run the capacity check, as the office manual counts it. Estimate days per bet from its pieces, and compare the total with days available, showing the manual's subtraction once. Keep freelance days separate. If effort or days are unknown, write Not assessed. If demand exceeds supply, shrink or cut the lowest ranked bet until it fits, and record the cut under "Not doing".
 8. Check the money. If the estimated cost of the bets exceeds the budget, say by how much and cut the lowest ranked bet.
 9. Write the decision check from the office manual for the top bet.
 10. Write up to 3 risks, each with its signal and response.
@@ -70,7 +70,7 @@ Company goal: <word for word, one line>
 
 ## Capacity check
 | Work | Marketer days and reasoning | Freelance days |
-<one row per bet, routine, interruption block, total, available>
+<one row per bet, total, days available>
 Result: <fits, Not assessed, or what was cut>
 
 ## Not doing
@@ -92,7 +92,7 @@ Result: <fits, Not assessed, or what was cut>
 - [ ] Does every goal have a bet, and does every bet serve a goal?
 - [ ] Does each calendar date allow for the approval time of its approver?
 - [ ] Does each item have one owner named in the context pack, or the marketer?
-- [ ] Does the capacity check fit, after cuts, with routine and interruptions counted?
+- [ ] Does the capacity check fit, after cuts, with routine and interruptions subtracted once?
 - [ ] Are all derived numbers labeled as estimates, with the math shown?
 - [ ] Are internal-only items marked?
 
@@ -121,7 +121,7 @@ Result: <fits, Not assessed, or what was cut>
 
 **Calendar:** January 29 first drafts, February 15 live, March 9–11 conference.
 
-**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10 (3 on site). Release 15. Routine 13 (1 day a week). Interruptions 3 (2 hours a week). Total 61, 60 available (13 weeks, 5 off). Result: bet 3 shrinks by 1.
+**Capacity check (estimates):** Campaign 20 days (5 assets x 4). Conference 10. Release 15. Total 45. Available 44: 65 working days, minus 5 off, 13 routine (1 day a week) and 3 interruptions (2 hours a week). Result: bet 3 shrinks by 1.
 
 **Not doing:** outbound for software companies.
 

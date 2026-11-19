@@ -10,7 +10,7 @@ These corrections override the requirements document where they conflict.
 - `bundles/all-skills.md` and `bundles/roles-and-playbooks.md` are now committed files, because ChatGPT's project limit needs them and the zip no longer carries them. `scripts/build-bundles.sh` generates them, and the workflow fails if they are stale.
 - PDFs exist only for playbooks and guides, except the FAQ. "Standard operating procedures for people to read" was read as those documents, now 19. Skills, charters, the context pack and office documents have no PDF, and link to their text files on GitHub.
 - "Avoid duplication with PDFs" was read as: PDFs drop from 105 to 19, and all are generated from the same markdown as the web page, so nothing is maintained twice. HTML pages for skills and charters stay, because they cost no upkeep and the original spec asks for them. Removing them is a small change if the owner prefers GitHub only.
-- The site design follows marketingoffice.net: its palette, Archivo, Source Serif 4 and IBM Plex Mono fonts, a top bar, full-length pages and SVG diagrams. just-the-docs is removed, which also removes its site search. The Skills page has a filter instead.
+- The site design follows the owner's earlier site at marketingoffice.net, which this project replaced on 2026-11-19: its palette, Archivo, Source Serif 4 and IBM Plex Mono fonts, a top bar, full-length pages and SVG diagrams. just-the-docs is removed, which also removes its site search. The Skills page has a filter instead.
 - Diagrams live in `_includes/diagrams/` and are named in a page's frontmatter, so they do not appear in the raw markdown or the PDFs.
 - Fonts load from Google Fonts, as on the reference site, with system fallbacks. This replaces the spec's system or Aptos font stack.
 - The sample company is CogniATion, as the owner named it. The rest of the example was built to fit.
@@ -20,7 +20,7 @@ These corrections override the requirements document where they conflict.
 A CMO review, a new marketer review and two rounds of a from-zero CMO review were run and acted on. The reviews themselves are in `dev/reviews/`, which is not committed.
 
 - Skills went from 50 to 56, above the 40–50 in the original layout, because the reviews found jobs nothing covered: pipeline diagnosis, interview guides, customer proof requests, sales decks, lead follow-up and goal setting. The validator now allows 40–60. The owner accepted 56 on 2026-11-02, then approved a 57th, Update the context pack, the same day.
-- The default setup is 3 files rather than 74. One combined context pack replaces 10 separate files, and the office manual accepts this. The 10 templates remain as the source.
+- The default setup is 3 files rather than 81. One combined context pack replaces 10 separate files, and the office manual accepts this. The 10 templates remain as the source.
 - The function table stays on the home page, because the website spec names it, though the CMO wanted it cut.
 - On 2026-11-02 the owner cut the top bar to five items with no dropdowns, then approved Start here, Try it, Find a task, Run my week and FAQ the same day. Playbooks, Setup, Context pack and Agents are in the footer. Find a task is the existing Skills page at the same address, and Run my week links to the playbooks. The Definition of done only requires two clicks or fewer.
 - "Unverified" labels stay in the vendor guides, though the CMO wanted them moved. Nothing was tested on paid accounts, and the spec requires them.
@@ -29,7 +29,7 @@ A CMO review, a new marketer review and two rounds of a from-zero CMO review wer
 - A new skill's goal options use a 15% growth starting rule when there is no history. It is labeled a starting rule, not a benchmark. The owner accepted it on 2026-11-02.
 - The worked examples use two illustrative webinars: February 24, 2027 in Plan a webinar and March 4, 2027 in Use a skill. The owner chose to keep both on 2026-11-02.
 - "How to judge this" questions are the reviewers' and writers' judgment, not sourced from research.
-- `playbooks/from-zero.md` was added as a seventh playbook, not as new skills, so the skill count stays at 56. Its order, time splits, the skip list and its thresholds are the reviewer's judgment, labeled as starting rules, and have not been run at a real company.
+- `playbooks/from-zero.md` was added as a seventh playbook, not as new skills, so it did not add to the skill count. Its order, time splits, the skip list and its thresholds are the reviewer's judgment, labeled as starting rules, and have not been run at a real company.
 - Plain requests were added to the office manual. The exact prompt form stays in every skill and charter, as the spec requires.
 - The agent role charters and the playbooks now share one bundle, `bundles/roles-and-playbooks.md`, because the manual sends the model to the playbooks and no uploaded file held them.
 - Owner role columns were removed from playbook tables, because the person running them is one person. Each skill page still names its owner.
@@ -42,15 +42,26 @@ A CMO review, a new marketer review and two rounds of a from-zero CMO review wer
 - To keep skills under the spec's 1,200 words and the manual under 1,500, some text was cut: the four-label block in skill templates became one line, as the labels are defined in the manual, and the manual's cadence list and its opening line about where to load it went, as the playbooks and setup guides hold them. Diagnose a pipeline gap no longer reads channels-and-tools.md, and no longer points to Set tracking conventions or Build a market segmentation. Evaluate a campaign lost two checklist items that its procedure already covers. The stage timing in the sample pack and the decision check lines in examples are illustrative.
 - One-chat runs, the workboard and the 15-minute quick start have been traced with a fresh reader on the setup files. They have not been run in live vendor accounts or with real marketers. A pilot with about five solo marketers is planned after release.
 
+## Owner decisions, 2026-11-19
+
+The owner answered the review notes left after the build.
+
+- Google Gemini stays a full fourth vendor guide. The sample approvers and the labeled starting-rule thresholds stay as built. The requirements document stays unpublished.
+- Downloads stay on GitHub: setup links open each file from GitHub, pinned to the release tag, and the individual-files route sends the marketer to the repository, where GitHub's Code and Download ZIP buttons work. Read as confirming the current setup, so nothing changed.
+- "Only HTML and .md files in GitHub. No rendering." was read as: skill and charter pages stay as HTML pages, with their .md files on GitHub and no PDFs, which is how the site already works. If the owner meant the site should not render them at all, removing them is a separate change.
+- The footer shows only the version. The author line was removed from every page.
+- The commit email in the history was replaced with a GitHub noreply address before the repository went public.
+- marketingoffice.net now points at this project.
+
 ## Spec gaps and conflicts
 
 - Definition of done lists four vendor guides (Claude, ChatGPT/Codex, Grok, Google), while the repo layout, the home page spec and the press release list three. Built four, added `guides/setup-google.md`, and linked all four from the home page.
 - Google and Gemini are treated as allowed real names, because that guide requires them, and only in files that refer to the guide. The validator enforces this.
 - The Definition of done skips item 10, and Phase 7 calls the walkthrough "item 9" while it is item 8. Treated the numbering as a typo and did the walkthrough.
 - The press release says a fictional customer quote must not appear, but the text supplied contains no quote. Nothing to remove. Grep for the press release text is in the final report.
-- "[CONFIRM: Jekyll + just-the-docs]" and "[CONFIRM: 14]" were not answered. Proceeded with Jekyll, just-the-docs and 14 agent roles, with no merged roles.
-- "CNAME (if confirmed)": no domain was confirmed, so there is no `CNAME` file.
-- Skills target: "around 50" in one place and "40–50" in another. Built 50 first. The reviews took it to 56, and the validator now allows 40–60.
+- "[CONFIRM: Jekyll + just-the-docs]" and "[CONFIRM: 14]" were not answered. Proceeded with Jekyll and 14 agent roles, with no merged roles. just-the-docs was used first and then removed at the owner's request.
+- "CNAME (if confirmed)": on 2026-11-19 the owner moved marketingoffice.net to this project. The domain is set in the Pages settings, and there is no `CNAME` file, because GitHub ignores it for a site deployed by GitHub Actions.
+- Skills target: "around 50" in one place and "40–50" in another. Built 50 first. The reviews took it to 56, the owner approved a 57th, and the validator allows 40–60.
 - `updated: 2026-11-XX` in the frontmatter spec was set to the build date, 2026-11-01.
 - "How to run it" is called a two-line prompt, but the sample is one line. Skills use two lines, and the validator accepts either.
 
@@ -96,5 +107,5 @@ A CMO review, a new marketer review and two rounds of a from-zero CMO review wer
 
 ## Deployment
 
-- The repository is private until the release, by the owner's decision. History starts from this commit. GitHub Pages is not enabled, so the site is offline until then.
-- Published URL assumed to be the default for the repository, `https://gaidar.github.io/moffice/`.
+- The repository stayed private until the release on 2026-11-19, by the owner's decision. Before it went public, the commit email in its history was replaced with the owner's GitHub noreply address, at the owner's request.
+- The site is published at <https://marketingoffice.net/>, by the owner's decision on 2026-11-19. That domain previously served a separate reference project.
