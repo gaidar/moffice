@@ -1,12 +1,12 @@
 ---
 layout: home
 title: Home
-heading: Run B2B marketing alone with the AI you already pay for
+heading: Run B2B marketing using AI
 type: index
 version: 0.1.0
-updated: 2026-11-02
+updated: 2026-11-19
 summary: A free library of written marketing procedures and company-fact templates. Load them into your AI tool, start with the job you need to finish, and ask for a one-pager, a campaign brief or this week's priorities. You provide the facts, make the decisions and publish through your own tools.
-scope_note: Built for sales-led B2B tech companies. It covers getting and converting new business, with sales support. Retention, expansion, pricing and product-led growth are outside the current library. A spreadsheet counts as a CRM, and if a founder still sells, with few or no customers, there is a route for that.
+scope_note: Built for sales-led B2B tech companies. It covers getting and converting new business, with sales support.
 ---
 
 ## What you get
